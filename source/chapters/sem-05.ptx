@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-05">
+  <title>Семинар 5</title>
+  <exercises xml:id="exercises-seminar-05">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem05-1">
+      <statement><p>Коши–Риманы нөхцөлөөр дифференциалчлагдах цэгүүдийг ол: <m>f=\overline z</m>, <m>f=|z|^2</m>, <m>f=z\re z</m>.</p></statement>
+      <hint><p><m>u_x=v_y</m>, <m>u_y=-v_x</m> шалга. <m>\overline z</m>: хаана ч үгүй. <m>|z|^2</m>: зөвхөн <m>z=0</m>. <m>z\re z=x^2+ixy</m>: <m>2x=x</m>, <m>0=-y</m> тул зөвхөн <m>z=0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-2">
+      <statement><p><m>f(z)=e^z</m> нь Коши–Риманы нөхцөлийг хангаж, <m>f'(z)=e^z</m> гэж харуул.</p></statement>
+      <hint><p><m>u=e^x\cos y</m>, <m>v=e^x\sin y</m>. <m>f'=u_x+iv_x</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-3">
+      <statement><p><m>f(z)=x^2+iy^2</m> функц хаана дифференциалчлагдах вэ? Хаана нэгэн утгат голоморф вэ?</p></statement>
+      <hint><p><m>u_x=2x=v_y=2y</m> тул <m>y=x</m> шулуун дээр л дифференциалчлагдана, <m>f'=2x</m>. Шулуун нь нээлттэй олонлог биш тул хаана ч голоморф биш.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-4">
+      <statement><p><m>f=x^2+axy+by^2+i(cx^2+dxy+y^2)</m> функц голоморф байх <m>a,b,c,d</m>-г олж, <m>f</m>-ийг <m>z</m>-ээр илэрхийл.</p></statement>
+      <hint><p>Коши–Риманы нөхцөлөөс <m>a=d=2</m>, <m>c=b=-1</m>. <m>f=(1-i)z^2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-5">
+      <statement><p>Туйлын координатад Коши–Риманы нөхцөл <m>u_r=\frac1rv_\theta</m>, <m>v_r=-\frac1ru_\theta</m> хэлбэртэй гэж гаргаад, <m>\ln z=\ln r+i\theta</m> дээр шалга.</p></statement>
+      <hint><p><m>x=r\cos\theta</m>, <m>y=r\sin\theta</m> ба гинжин дүрмээр <m>u_r,u_\theta</m>-г <m>u_x,u_y</m>-ээр илэрхийл. <m>\ln z</m>-ийн хувьд <m>u_r=\frac1r</m>, <m>v_\theta=1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-6">
+      <statement><p><m>f</m> нь <m>D</m> мужид голоморф ба <m>|f|</m> тогтмол бол <m>f</m> тогтмол гэж батал.</p></statement>
+      <hint><p><m>u^2+v^2=c</m>-г <m>x,y</m>-ээр дифференциалчилж, Коши–Римантай хамт <m>u_x,u_y</m>-ийн хувьд шугаман систем гарга. Тодорхойлогч нь <m>u^2+v^2</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

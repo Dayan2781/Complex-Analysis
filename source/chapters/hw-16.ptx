@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-16">
+  <title>Гэрийн даалгавар 16</title>
+  <exercises xml:id="exercises-homework-16">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw16-1">
+      <statement><p><m>z^8-4z^5+z^2-1=0</m> тэгшитгэл <m>|z|&lt;1</m> дугуйд хэдэн язгууртай вэ?</p></statement>
+      <solution><p><m>|z|=1</m> дээр <m>|-4z^5|=4&gt;3\ge|z^8+z^2-1|</m>. Рушегийн теоремоор <m>-4z^5</m>-тай ижил тооны, өөрөөр хэлбэл <m>5</m> язгууртай.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-2">
+      <statement><p><m>\lambda&gt;1</m> үед <m>\lambda-z-e^{-z}=0</m> тэгшитгэл <m>\re z&gt;0</m> хагас хавтгайд яг нэг язгууртай бөгөөд тэр нь бодит гэж батал.</p></statement>
+      <solution><p><m>R&gt;\lambda+1</m> байх <m>\{|z|&lt;R,\ \re z&gt;0\}</m> хагас дугуйн хил дээр <m>f=\lambda-z</m>, <m>g=-e^{-z}</m> гэе. <m>\re z\ge0</m> тул <m>|g|=e^{-\re z}\le1</m>. Хуурмаг тэнхлэг дээр <m>|\lambda-iy|\ge\lambda&gt;1</m>, хагас тойрог дээр <m>|\lambda-z|\ge R-\lambda&gt;1</m>. Рушегээр <m>f+g</m> нь <m>f</m>-тэй адил <m>1</m> тэгтэй (<m>z=\lambda</m>). <m>R\to\infty</m>. Бодит: <m>h(x)=\lambda-x-e^{-x}</m>, <m>h(0)=\lambda-1&gt;0</m>, <m>h(\lambda)=-e^{-\lambda}&lt;0</m> тул <m>(0,\lambda)</m>-д бодит язгуур бий, тэр нь цорын ганц язгуур.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-3">
+      <statement><p><m>f:\mathbb D\to\mathbb D</m> голоморф, <m>f(0)=0</m>, <m>f(\frac12)=\frac12</m> байх бүх <m>f</m>-ийг ол.</p></statement>
+      <solution><p>Шварцын леммээр <m>|f(z)|\le|z|</m>, харин <m>z=\frac12</m> цэгт тэнцэл биелж байна. Иймд <m>f(z)=e^{i\theta}z</m>, <m>f(\frac12)=\frac12</m>-ээс <m>e^{i\theta}=1</m>. Хариу: <m>f(z)=z</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-4">
+      <statement><p>Нээлттэй буулгалтын теоремоос максимум модулийн зарчмыг гарга.</p></statement>
+      <solution><p><m>f</m> тогтмол биш, <m>D</m>-д голоморф ба <m>|f|</m> нь <m>z_0\in D</m> цэгт хамгийн их утгаа авдаг гэж үзье. <m>z_0</m>-ийн орчин <m>U</m>-ийн дүр <m>f(U)</m> нээлттэй тул <m>f(z_0)</m>-ийг агуулсан дугуйг агуулна. Тэр дугуйд <m>|w|&gt;|f(z_0)|</m> цэг олдоно: зөрчил.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-5">
+      <statement><p><m>\displaystyle\frac{1}{2\pi i}\oint_{|z|=4}\cot z\,dz</m>-ийг аргументийн зарчмаар ол.</p></statement>
+      <solution><p><m>\cot z=\frac{(\sin z)'}{\sin z}</m>. <m>|z|&lt;4</m> дахь <m>\sin z</m>-ийн тэгүүд: <m>0,\pm\pi</m> (бүгд энгийн), туйлгүй. Хариу: <m>3</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

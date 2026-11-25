@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-15">
+  <title>Семинар 15</title>
+  <exercises xml:id="exercises-seminar-15">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem15-1">
+      <statement><p><m>|z|&lt;1</m> дээрх <m>f(z)=\sum_{n\ge1}\frac{z^n}{n}</m> функц <m>\C\setminus[1,\infty)</m> мужид аналитик үргэлжлэлтэй гэж харуулаад, түүнийг ол.</p></statement>
+      <hint><p><m>f'(z)=\sum z^{n-1}=\frac1{1-z}</m>. Хариу: <m>-\ln(1-z)</m> (гол салбар).</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-2">
+      <statement><p><m>f_1(z)=\sum_{n\ge0}z^n</m> (<m>|z|&lt;1</m>) ба <m>f_2(z)=\sum_{n\ge0}\frac{(z-i)^n}{(1-i)^{n+1}}</m> функцүүд бие биеийнхээ шууд аналитик үргэлжлэл гэж харуул.</p></statement>
+      <hint><p><m>f_2</m>-ийг геометр цувааны нийлбэрээр бод: <m>f_2(z)=\frac{1}{1-z}</m>, <m>|z-i|&lt;\sqrt2</m>. Хоёр дугуй огтлолцох ба огтлолцол дээр функцүүд тэнцүү.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-3">
+      <statement><p><m>f(z)=\sum_{n\ge0}z^{2^n}</m> функцийн хувьд <m>|z|=1</m> нь байгалийн хил гэж батал.</p></statement>
+      <hint><p><m>f(z)=z+f(z^2)</m> ба <m>\zeta^{2^k}=1</m> байх цэг рүү радиусын дагуу ойртоход <m>f\to\infty</m>. Ийм цэгүүд тойрог дээр хаа сайгүй нягт.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-4">
+      <statement><p><m>\Gamma(\frac12)=\sqrt\pi</m> гэж мэдэгдсэн бол <m>\Gamma(-\frac12)</m> ба <m>\Gamma(-\frac32)</m>-г ол.</p></statement>
+      <hint><p><m>\Gamma(s)=\frac{\Gamma(s+1)}{s}</m>. Хариу: <m>-2\sqrt\pi</m> ба <m>\frac{4\sqrt\pi}{3}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-5">
+      <statement><p><m>\zeta(-n)=(-1)^n\frac{B_{n+1}}{n+1}</m> томьёогоор <m>\zeta(-3)</m> ба <m>\zeta(-5)</m>-г ол (<m>B_4=-\frac1{30}</m>, <m>B_6=\frac1{42}</m>).</p></statement>
+      <hint><p>Хариу: <m>\zeta(-3)=\frac1{120}</m>, <m>\zeta(-5)=-\frac1{252}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-6">
+      <statement><p>Функциональ тэгшитгэл ба <m>\zeta(4)=\frac{\pi^4}{90}</m>-ийг ашиглан <m>\zeta(-3)</m>-ийг ол. Мөн <m>\zeta(-2k)=0</m> (<m>k\in\N</m>) гэж харуул.</p></statement>
+      <hint><p><m>s=-3</m>: <m>\sin(-\frac{3\pi}2)=1</m>, <m>\Gamma(4)=6</m>. Хариу <m>\frac1{120}</m> нь өмнөх бодлоготой таарна. <m>s=-2k</m> үед <m>\sin(-k\pi)=0</m>, бусад үржигдэхүүн төгсгөлөг.</p></hint>
+    </exercise>
+  </exercises>
+</section>

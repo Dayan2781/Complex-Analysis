@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch05" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Комплекс уламжлал. Коши–Риманы нөхцөл</title>
+<section xml:id="lec05-s1"><title>Уламжлал ба дифференциал. Эйлер-Даламберийн нөхцөл, Голоморф функц</title><p>Комплекс хувьсагчийн функцийн уламжлалын тодорхойлолт бодит хувьсагчийн функцийнх шиг формаль байдлаар өгөгдөнө. <m>z_0</m>-цэгийн ямар нэг <m>U=U(z_0,\delta)=\{|z-z_0|&lt;\delta\}</m> орчинд нэг утгат <m>w=f(z)=u+iv</m> функц тодорхойлогдсон байг. Удирдан хувьсах <m>z</m> хэмжигдэхүүн өөрийн <m>U</m> орчноос үл гарах бүх боломжит
+<me>\Delta z=z-z_0=(x-x_0)+i(y-y_0)=\Delta z+i\Delta y\neq 0</me>
+өөрчлөлт авч байг. <m>\Delta z</m> өөрчлөлт бүрд харгалзах функцийн өөрчлөлт
+<me>\Delta w=\Delta f(z_0)=f(z)-f(z_0) =\Delta u+i\Delta v</me>
+байна гэж үзье. Функцийн <m>\Delta w</m> өөрчлөлтийг удирдан хувьсах хэмжигдэхүүний <m>\Delta z</m> өөрчлөлтөд хувааж <m>\Delta z\rightarrow 0</m> байхаар хязгаарт шилжье. Хэрэв энэ хязгаар оршин байвал түүнийг  <m>w=f(z)</m> функцийн <m>z_0</m> цэг дээрх уламжлал гэж нэрлэх бөгөөд 
+<mdn><mrow xml:id="r-4diffeu3a3_1">\dfrac{dw}{dz}\Big |_{z=z_0}=f'(z_0)=\lim\limits_{\Delta z\rightarrow 0}\dfrac{\Delta w}{\Delta z}</mrow></mdn></p><p>тэмдэглэл хэрэглэнэ.</p><p><m>w=f(z)</m> функц <m>z_0</m> цэгийн ямар нэг <m>U=U(z_0,\delta)</m> орчинд тодорхойлогдохын хамт түүний <m>\Delta w</m> өөрчлөлтийг <m>\Delta z</m>-ийн хувьд шугаман <m>A\cdot \Delta z</m> хэсэг ба <m>\Delta z</m>-тэй жишихэд дээд эрэмбийн төгсгөлгүй багасах хэмжигдэхүүний нийлбэрийн
+<mdn><mrow xml:id="r-4diffeu3a3_2">\Delta w=\Delta f(z_0)=A\cdot \Delta z+\circ (\Delta z)=A\cdot \Delta z+\alpha (\Delta z)\cdot \Delta z</mrow></mdn></p><p>дүрстэй бичигдэж байвал <m>w=f(z)</m>-ийг <m>z_0</m> цэг дээр дифференциалчлагдах функц гэнэ. Энд <m>A</m> тоо <m>\Delta z</m>-ээс үл хамаарах бөгөөд харин <m>\alpha (\Delta z)</m> нь <m>\Delta z\rightarrow 0</m> үед төгсгөлгүй бага функц, өөрөөр хэлбэл <m>\lim\limits_{\Delta z\rightarrow 0}\alpha (\Delta z)=0</m>, иймд <m>\circ (\Delta z)=\alpha (\Delta z)\cdot \Delta z</m> нь <m>\Delta z</m>-тэй жишихэд дээд эрэмбийн төгсгөлгүй багасах хэмжигдэхүүн.</p><theorem><statement><p><m>w=f(z)</m> функц <m>z_0</m> цэг дээр дифференциалчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь уул функц <m>z_0</m> дээр уламжлалтай, тухайлбал <m>A=f'(z_0)</m> байх явдал мөн.</p></statement><proof><p><alert>Зайлшгүй:</alert> <xref ref="r-4diffeu3a3_2"/> биелэгдэж байна гэдгээс
+<me>\frac{\Delta w}{\Delta z}=A+\frac{\circ (\Delta z)}{\Delta z}</me> бөгөөд <m>\Delta z \rightarrow 0</m> үед 
+<me>A=\lim\limits_{\Delta z \rightarrow 0} \frac{\Delta w}{\Delta z}=w'(z_0)</me> болов.  
+<alert>Хүрэлцээтэй нь:</alert> <m>w'(z_0)</m> оршин байна гэдгээс <m>\Delta z\rightarrow 0</m> үед
+<me>\Delta w=A\cdot \Delta z+\alpha (\Delta z)\cdot \Delta z</me> болж батлагдлаа.</p></proof></theorem><p><m>w=f(z)</m> функцийн <m>z_0</m> цэг дээрх дифференциал  гэж
+<md><mrow>dw=df(z_0)=f'(z_0)dz</mrow></md>-ийг нэрлэнэ. Дифференциал нь функцийн өөрчлөлтийн гол хэсэг.</p><p>Комплекс хувьсагчийн функцийн дифференциалчлагдах нөхцөл бодит хувьсагчийн функцийн дифференциалчлагдах нөхцөлөөс гадна нэмэлт нөхцөл шаардахыг дараах теорем харуулна.</p><theorem><statement><p>Комплекс <m>w=f(z)=u(x,y)+iv (x,y)</m> функц <m>z_0=x_0+iy_0</m> цэгийн орчинд тодорхойлогдсон байг. Энэ функц <m>z_0</m> цэг дээр дифференциалчдаглах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь
+<ol><li><p><m>u(x,y)</m>, <m>v(x,y)</m> функцүүд <m>(x_0,y_0)</m> цэг дээр дифференциалчлагдах,</p></li><li><p>Эйлер-Даламберийн 
+    <me>\tag{E-D}
+\dfrac{\partial u}{\partial x}=\dfrac{\partial v}{\partial y}, \qquad \dfrac{\partial u}{\partial y}=-\dfrac{\partial v}{\partial x}</me> нөхцөл <m>(x_0,y_0)</m> цэг дээр биелэгдэх явдал мөн.</p></li></ol></p></statement><proof><p><alert>Зайлшгүй:</alert> <xref ref="r-4diffeu3a3_1"/> биелэгдэж байг. 
+<me>\Delta f(z_0)=\Delta u+i\Delta v=f'(z_0)\Delta z+\circ (\Delta z)</me> бөгөөд <m>f'(z_0)=a+ib</m>, <m>\circ (\Delta z)= \alpha +i\beta</m> гэж орлуулахдаа <m>a,b\in\mathbb{R}</m>, <m>\alpha</m>, <m>\beta</m> нь <m>\Delta z\rightarrow 0</m> үед дээд эрэмбийн төгсгөлгүй багасах бодит тоонууд гэж тооцъё.</p><p>Тэгтэл 
+<md><mrow>\Delta u+i \Delta v=(a+ib) (\Delta x+i\Delta y)+\alpha +i\beta</mrow></md> болж 
+<md><mrow>\Delta u=a \Delta x-b\Delta y+\alpha, \qquad \Delta v=b\Delta x+a\Delta y +\beta</mrow></md></p><p>эндээс <m>u(x,y)</m>, <m>v(x,y)</m> нь <m>(x_0,y_0)</m> цэг дээр дифференциалчлагдах функцүүд болох нь батлагдаж түүнчлэн (3.5)-аас
+<me>a=\dfrac{\partial u}{\partial x}=\dfrac{\partial v}{\partial y}, \quad b=\dfrac{\partial u}{\partial y}=-\dfrac{\partial v}{\partial x}</me>
+гээд (E-D) гарч ирлээ. Ингэж теоремын зайлшгүй нөхцөл батлагдав. Теоремын нөхцөлүүдийн хүрэлцээтэйг баталъя.
+1) ба 2) нөхцөл биелэгдсэн байг, өөрөөр хэлбэл
+<me>\begin{cases}
+\Delta  u=\dfrac{\partial u}{\partial x}\Delta x+\dfrac{\Delta u}{\Delta y}\Delta y+\alpha_1\Delta x+\alpha_2\Delta y\\
+\Delta v=\dfrac{\partial v}{\partial x}\Delta x+\dfrac{\Delta v}{\Delta y}\Delta y+\beta_1\Delta x+\beta_2\Delta y
+\end{cases}</me> 
+Энд <m>\alpha_1</m>, <m>\alpha_2</m>, <m>\beta_1</m>, <m>\beta_2</m> нь <m>\Delta x</m>, <m>\Delta y</m>-ийн тэг рүү тэмүүлэх нөхцөлд тэг рүү тэмүүлэх хэмжигдэхүүнүүд байг. Түүнээс гадна
+<md><mrow>\dfrac{\partial u}{\partial x}=\dfrac{\partial v}{\partial y}=a, \qquad -\dfrac{\partial u}{\partial y}=\dfrac{\partial v}{\partial x}=b</mrow></md>
+гэе. Иймд
+<me>\Delta u=a\Delta x-b\Delta y+\alpha_1\Delta x+\alpha_2\Delta y</me>
+<me>\Delta v=b\Delta x+a\Delta y+\beta_1\Delta x+\beta_2\Delta y</me> ба 
+<md><mrow>\Delta f(z)&amp;=\Delta u+i\Delta с</mrow><mrow>&amp;=a(\Delta x+i\Delta y)+ib(\Delta x+i\Delta y)+</mrow><mrow>&amp;+(\alpha_1+i\beta_1)\Delta x+(\alpha_2+i\beta_2)\Delta y</mrow><mrow>&amp;=(a+ib) \Delta z+\varepsilon \cdot \Delta z</mrow></md>
+ болж эндээс 
+<me>|\varepsilon| =\left|(\alpha_1+i\beta_1)\frac{\Delta x}{\Delta z}+(\alpha_2+i\beta_2)\frac{\Delta y }{\Delta z}\right|\leq |\alpha_1|+|\beta_1|+|\alpha_2|+|\beta_2|</me> бөгөөд  <m>\Delta z=\Delta x+i\Delta y</m>-ийн тэг рүү тэмүүлэх үед <m>\alpha_1</m>, <m>\alpha_2</m>, <m>\beta_1</m>, <m>\beta_2</m> тэг рүү тэмүүлэх тул улмаар <m>\varepsilon\rightarrow 0</m> теорем бүрэн батлагдав.</p></proof></theorem><p>Энэ теорем ёсоор 
+<md><mrow>f'(z)&amp;=a+ib=\dfrac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=\frac{\partial u}{\partial x}-i\frac{\partial u}{\partial y}</mrow><mrow>&amp;=\dfrac{\partial v}{\partial y}+i\frac{\partial v}{\partial x}=\frac{\partial v}{\partial y}-i\frac{\partial u}{\partial y}</mrow></md>
+байна.</p><p>Хэрэв <m>z=re^{i\varphi}</m> ба <m>f(z)=u(r,\varphi)+iv(r,\varphi)</m> гэж өгөгдсөн байг. Тэгвэл Эйлер-Даламберийн (E-D) нөхцөл туйлын координатад
+<mdn><mrow xml:id="r-4diffeu3a3_9">\dfrac{\partial u}{\partial r}=\dfrac{1}{r}\cdot \dfrac{\partial v}{\partial \varphi}, \quad
+ \dfrac{\partial v}{\partial r}=-\dfrac{1}{r}\cdot \dfrac{\partial u}{\partial \varphi}</mrow></mdn>
+дүрстэй байна. Үүнийг өөрсдөө батлаарай.<xref ref="r-4diffeu3a3_9"/> ёсоор
+<md><mrow>f'(z)=\dfrac{r}{z}\left(\dfrac{\partial u}{\partial r}+i\dfrac{\partial v}{\partial r}\right)=\dfrac{1}{z}\left(\dfrac{\partial v}{\partial \varphi}-i\dfrac{\partial u}{\partial \varphi}\right)</mrow></md>
+байна.</p><p>Формаль уламжлал ашиглаж (Е-D) нөхцөлийг өөр дүрстэй тавьж болно.</p><p><m>f(z)=u(x,y)+iv(x,y)</m> функц <m>x,y</m> хувьсагчаараа дифференциалчдаглах функц байг. <m>z=x+iy</m> гэвэл
+<me>x=\frac{1}{2}(z+\overline{z}), \qquad y=-\frac{i}{2}(z-\overline{z})</me> тул 
+<me>\frac{\partial f}{\partial z}=\frac{1}{2}\left(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y}\right)=\dfrac{1}{2} \left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right) +\frac{i}{2} \left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right),</me>
+<me>\frac{\partial f}{\partial \overline{z}}=\frac{1}{2}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)=\dfrac{1}{2} \left(\frac{\partial u}{\partial x}-\frac{\partial v}{\partial y}\right) +\frac{i}{2} \left(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\right),</me>
+Эндээс харахад (E-D) биелэгдэж байвал
+<me>\tag{$\overline{E-D}$}
+ \dfrac{\partial f}{\partial \overline{z}}=0</me>
+байна. Энэ нөхцөл биелсэн гэвэл <m>f(z)</m>-ийн уламжлал
+<me>\frac{\partial f}{\partial z}=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=f'(z)</me>
+байна.</p><definition><statement><p><m>u(x,y)</m>, <m>v(x,y)</m> функцүүд <m>z_0=(x_0, y_0)\in D</m> цэг дээр тухайн уламжлалуудын хамт тасралтгүй байхын дээр мөнхүү цэг дээр дифференциалчлагдах функцүүд байвал <m>w=f(z)=u(x,y)+iv(x,y)</m> функцийг <m>z_0\in D</m> дээр бодит анализын утгаар буюу <m>\mathbb{R}</m>-дифференциалчлагдах функц гэнэ.   <m>w=f(z)=u(x,y)+iv(x,y)</m> функц <m>z_0</m> дээр <m>\mathbb{R}</m>-дифференциалчлаг-
+дахаас гадна энэ цэг дээр <m>(E-D)</m> нөхцөл биелэгдэж байвал уул функцийг <m>z_0\in D</m>-дээр комплекс анализын утгаар буюу <m>\mathbb{C}</m>-дифференциалчлагдах функц гэнэ.</p></statement></definition><example><statement><p><m>w= \ch z</m> нь <m>\mathbb{C}</m>-дээр <m>\mathbb{C}</m> дифференциалчлагдах функц. Учир нь <m>u= \re z</m> <m>\ch z=\ch x \ch y</m>; <m>v= \im \ch z= \sh x \sh y.</m></p></statement><solution><p><me>\frac{\partial u}{\partial x}=\sh x \cos y, \quad \frac{\partial v}{\partial y}=\sh x\cos y</me>
+<me>\frac{\partial u}{\partial y}=-\ch x \sin  y, \quad \frac{\partial v}{\partial x}=\ch  x\sin y</me>
+Иймд <m>u</m>, <m>v</m> функцүүд дифференциалчдагдахын хамт <m>(E-D)</m> нөхцөл хангах <m>w=\ch z</m> нь <m>\mathbb{C}</m>-дээр <m>\mathbb{C}</m>-утгаар дифференциалчлагдах функц.</p></solution></example><definition><statement><p>Нэг утгат <m>w=f(z)</m> функц зөвхөн <m>z_0</m> цэг дээр төдийгүй энэ цэгийн ямар нэг орчинд  <m>\mathbb{C}</m>- дифференциалчлагдаж байвал түүнийг <m>z_0</m> цэг дээр голоморф буюу аналитик функц гэнэ. <m>D</m> мужийн цэг бүр дээр голоморф функцийг <m>D</m> муж дээр голоморф функц  гэнэ. <m>f(z)</m> нь <m>D</m> муж дээр голоморф гэхийг <m>f(z)\in H(D)</m> гэж тэмдэглэдэг.</p></statement></definition><example><statement><p><m>w=e^z=e^x(\cos y +i\sin y)</m> функц авбал</p></statement><solution><p><me>\frac{\partial u}{\partial x}=e^x\cos y, \quad \frac{\partial u}{\partial y}=-e^x\sin y</me>
+<me>\frac{\partial v}{\partial x}=e^x\sin y, \quad \frac{\partial v}{\partial y}=e^x\cos y</me> болж <m>(E-D)</m> нөхцөл биелэгдэх тул 
+<me>(e^z)'=e^x \cos y+ie^x\sin y= e^z, \qquad \forall z\in \mathbb{C}</me> болов.</p><p>Иймд <m>w=e^z</m> функц <m>\mathbb{C}</m> хавтгай дээр голоморф, өөрөөр хэлбэл <m>e^z\in H(\mathbb{C}).</m></p></solution></example><example><statement><p><m>w= \re z</m> функц авч үзье.</p></statement><solution><p><m>u(x,y)=x</m>, <m>v(x,y)=0</m> байх тул
+<me>\frac{\partial u}{\partial x}=1, \quad \frac{\partial u}{\partial y}=0, \quad \frac{\partial v}{\partial x}=0, \quad \frac{\partial v}{\partial y}=0</me>
+болж <m>(E-D)</m> нөхцөл биелэгдэхгүй <m>\left(\dfrac{\partial u}{\partial x}\neq \dfrac{\partial v}{\partial y}\right)</m> тул <m>w= \re z</m> функц хаа ч дифференциалчлагдахгүй улмаар хаа ч голоморф биш функц.</p></solution></example></section>
+  <xi:include href="./ai-05.ptx" />
+  <xi:include href="./sem-05.ptx" />
+  <xi:include href="./hw-05.ptx" />
+</chapter>

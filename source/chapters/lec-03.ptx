@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch03" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Комплекс функц, хязгаар ба тасралтгүй чанар</title>
+<section xml:id="lec03-s1"><title>Комплекс хувьсагчийн функц</title><definition><statement><p><m>D\subset\mathbb{C}</m> олонлог дээр <m>f</m> дүрэм өгөгдөж, <m>z\in D</m> бүрт комплекс тоо <m>w</m>-г
+<m>w=f(z)</m> гэж харгалзуулж байвал <m>f</m>-г <em>комплекс хувьсагчийн функц</em> гэнэ:
+<me>f: D\to \mathbb{C},\qquad z\mapsto w=f(z).</me>
+<m>D</m>-г <em>тодорхойлогдох муж</em> гэнэ.</p></statement></definition><p>Хэрэв <m>z=x+iy</m>, <m>w=u+iv</m> (<m>x,y,u,v\in\mathbb{R}</m>) гэвэл
+<me>f(z)=u(x,y)+iv(x,y),</me>
+өөрөөр хэлбэл комплекс функц нь хоёр хувьсагчийн бодит утгат <m>u(x,y)</m>, <m>v(x,y)</m> функцүүдээр тодорхойлогдоно:
+<me>u(x,y)=\Re f(z),\qquad v(x,y)=\Im f(z).</me></p><example><statement><p><m>w=z^2</m> функцийн бодит ба хуурмаг хэсгийг ол.</p></statement><solution><p><m>z=x+iy</m> гэвэл
+<me>z^2=(x+iy)^2=x^2-y^2+2xy\,i.</me>
+Иймээс
+<me>u(x,y)=x^2-y^2,\qquad v(x,y)=2xy.</me></p></solution></example></section><section xml:id="lec03-s2"><title>Функцийн хязгаар</title><introduction><definition><statement><p><m>z_0\in D</m> байг. Хэрэв <m>A\in\mathbb{C}</m> тоо олдож
+<me>\forall \varepsilon&gt;0\ \exists \delta&gt;0:\ 
+0&lt;|z-z_0|&lt;\delta \Rightarrow |f(z)-A|&lt;\varepsilon</me>
+нөхцөл биелбэл <m>A</m>-г <m>f(z)</m>-ийн <m>z\to z_0</m> үед авах <em>хязгаар</em> гэнэ.
+Тэмдэглэгээ:
+<me>\lim_{z\to z_0} f(z)=A.</me></p></statement></definition><theorem><title>Хязгаарын бодит ба хуурмаг хэсэг</title><statement><p><m>f(z)=u(x,y)+iv(x,y)</m>, <m>z_0=x_0+iy_0</m>, <m>A=\alpha+i\beta</m> гэе.
+Тэгвэл
+<me>\lim_{z\to z_0} f(z)=A</me>
+байх нь
+<me>\lim_{(x,y)\to(x_0,y_0)}u(x,y)=\alpha,\qquad
+\lim_{(x,y)\to(x_0,y_0)}v(x,y)=\beta</me>
+байхтай эквивалент.</p></statement><proof><p><m>(\Rightarrow)</m> гэж үзье. 
+<me>\lim_{z\to z_0} f(z)=A</me>
+гэж авъя. Тэгвэл <m>\forall \varepsilon&gt;0</m> тоо бүрт <m>\exists \delta&gt;0</m> олдож
+<me>0&lt;|z-z_0|&lt;\delta \ \Rightarrow\ |f(z)-A|&lt;\varepsilon</me>
+биелнэ.</p><p>Энд
+<me>f(z)-A=(u(x,y)-\alpha)+i(v(x,y)-\beta)</me>
+учир
+<me>|u(x,y)-\alpha|\le |f(z)-A|,\qquad |v(x,y)-\beta|\le |f(z)-A|</me>
+гэж үнэлж болно. Иймээс дээрх нөхцлөөс
+<me>0&lt;|z-z_0|&lt;\delta \ \Rightarrow\ |u(x,y)-\alpha|&lt;\varepsilon</me>
+мөн
+<me>0&lt;|z-z_0|&lt;\delta \ \Rightarrow\ |v(x,y)-\beta|&lt;\varepsilon</me>
+гарна. Харин <m>|z-z_0|=\sqrt{(x-x_0)^2+(y-y_0)^2}</m> тул энэ нь яг
+<me>\lim_{(x,y)\to(x_0,y_0)}u(x,y)=\alpha,\qquad
+\lim_{(x,y)\to(x_0,y_0)}v(x,y)=\beta</me>
+гэдгийг илэрхийлнэ.</p><p><m>(\Leftarrow)</m> Одоо эсрэгээр нь
+<me>\lim_{(x,y)\to(x_0,y_0)}u(x,y)=\alpha,\qquad
+\lim_{(x,y)\to(x_0,y_0)}v(x,y)=\beta</me>
+гэж үзье. Тэгвэл <m>\forall \varepsilon&gt;0</m> тоо бүрт <m>\exists \delta_1&gt;0</m>, <m>\exists \delta_2&gt;0</m> олдож
+<me>0&lt;\sqrt{(x-x_0)^2+(y-y_0)^2}&lt;\delta_1 \Rightarrow |u(x,y)-\alpha|&lt;\frac{\varepsilon}{\sqrt2},</me>
+<me>0&lt;\sqrt{(x-x_0)^2+(y-y_0)^2}&lt;\delta_2 \Rightarrow |v(x,y)-\beta|&lt;\frac{\varepsilon}{\sqrt2}</me>
+биелнэ. <m>\delta=\min\{\delta_1,\delta_2\}</m> гэж авбал
+<me>0&lt;|z-z_0|&lt;\delta \Rightarrow 
+|u(x,y)-\alpha|&lt;\frac{\varepsilon}{\sqrt2},\quad
+|v(x,y)-\beta|&lt;\frac{\varepsilon}{\sqrt2}.</me></p><p>Тэгвэл
+<me>|f(z)-A|^2
+=
+|(u-\alpha)+i(v-\beta)|^2
+=
+(u-\alpha)^2+(v-\beta)^2
+&lt;
+\frac{\varepsilon^2}{2}+\frac{\varepsilon^2}{2}
+=\varepsilon^2.</me>
+Иймээс
+<me>0&lt;|z-z_0|&lt;\delta \Rightarrow |f(z)-A|&lt;\varepsilon.</me>
+Энэ нь
+<me>\lim_{z\to z_0} f(z)=A</me>
+гэдгийг баталж байна.</p></proof></theorem><fact><statement><p>Хэрэв <m>f(z)</m>-ийн хязгаар орших бол <m>z_0</m> руу ямар ч замаар ойртсон
+утга ижил байна.</p></statement></fact><example><statement><p><me>\lim_{z\to 0} \frac{z}{\overline{z}}</me>
+орших уу?</p></statement><solution><p><m>z=re^{i\theta}</m> гэж бичвэл
+<me>\frac{z}{\overline{z}}=e^{2i\theta}.</me>
+<m>z\to 0</m> гэдэг нь <m>r\to 0</m> гэсэн үг. Гэтэл <m>\dfrac{z}{\overline{z}}=e^{2i\theta}</m>
+нь <m>\theta</m>-оос хамаарна. Иймээс хязгаар <m>r\to 0</m> үед <m>\theta</m> хамаарсан тул хязгаар оршихгүй.</p></solution></example><example><statement><p><me>\lim_{(x,y)\to(0,0)} \frac{x^2}{x^2+y^2}</me>
+орших уу?</p></statement><solution><p><m>y=0</m> үед утга <m>1</m>,
+<m>x=0</m> үед утга <m>0</m>.
+Хоёр өөр утга гарч байна.
+Иймээс хязгаар оршихгүй.</p></solution></example><fact><title>Шахах зарчим</title><statement><p>Хэрэв
+<me>|f(z)|\le g(z)</me>
+мөн
+<me>\lim_{z\to z_0} g(z)=0</me>
+бол
+<me>\lim_{z\to z_0} f(z)=0.</me></p></statement></fact><example><statement><p><me>\lim_{z\to 0} z^2 \sin \frac{1}{z}</me>
+утгыг ол.</p></statement><solution><p><me>|z^2\sin \tfrac{1}{z}| \le |z|^2.</me>
+<me>\lim_{z\to 0} |z|^2=0.</me>
+Иймээс
+<me>\lim_{z\to 0} z^2 \sin \frac{1}{z}=0.</me></p></solution></example></introduction><subsection xml:id="lec03-s2-1"><title>Хязгаар <m>z\to\infty</m> үед</title><definition><statement><p>Хэрэв
+<me>\forall \varepsilon&gt;0\ \exists R&gt;0:\ |z|&gt;R \Rightarrow |f(z)-A|&lt;\varepsilon</me>
+бол
+<me>\lim_{z\to\infty} f(z)=A.</me></p></statement></definition><example><statement><p><me>\lim_{z\to\infty} \frac{1}{z}</me>
+утгыг ол.</p></statement><solution><p><me>\left|\frac{1}{z}\right|=\frac{1}{|z|}\to 0.</me>
+Иймээс
+<me>\lim_{z\to\infty} \frac{1}{z}=0.</me></p></solution></example><theorem><title>Хязгаарын арифметик үйлдлүүд</title><statement><p>Хэрэв
+<me>\lim_{z\to z_0} f(z)=A,\qquad
+\lim_{z\to z_0} g(z)=B</me>
+бол дараах тэнцэтгэлүүд биелнэ:
+<ol><li><p>ямар ч тогтмол <m>c\in\mathbb{C}</m>-ийн хувьд.
+<m>\lim\limits_{z\to z_0} c\,f(z)=cA</m></p></li><li><p><m>\lim\limits_{z\to z_0} (f(z)+g(z))=A+B</m></p></li><li><p><m>\lim\limits_{z\to z_0} (f(z)-g(z))=A-B</m></p></li><li><p><m>\lim\limits_{z\to z_0} (f(z)g(z))=AB</m></p></li><li><p><m>\lim\limits_{z\to z_0} \dfrac{f(z)}{g(z)}=\dfrac{A}{B} \qquad B\neq 0.</m></p></li></ol></p></statement></theorem><example><statement><p>Дараах хязгаарыг батал:
+<me>\lim_{z\to z_0}\sin z=\sin z_0.</me></p></statement><solution><p><m>z=x+iy</m>, <m>z_0=x_0+iy_0</m> гэж бичье.
+Дараах томьёог ашиглая:
+<me>\sin(x+iy)=\sin x\,\ch y+i\cos x\,\sh y.</me></p><p>Тэгвэл
+<me>\sin z-\sin z_0
+=
+(\sin x\,\ch y-\sin x_0\,\ch y_0)
++i(\cos x\,\sh y-\cos x_0\,\sh y_0).</me></p><p>Бодит хэсгийг задлавал
+<me>\sin x\,\ch y-\sin x_0\,\ch y_0
+=
+(\sin x-\sin x_0)\ch y
++
+\sin x_0(\ch y-\ch y_0).</me></p><p><m>x\to x_0</m>, <m>y\to y_0</m> үед
+<me>\sin x-\sin x_0\to 0,\qquad
+\ch y-\ch y_0\to 0.</me>
+Иймээс бодит хэсэг 0 рүү тэмүүлнэ.</p><p>Хуурмаг хэсгийг мөн адил задлахад
+<me>\cos x\,\sh y-\cos x_0\,\sh y_0
+=
+(\cos x-\cos x_0)\sh y
++
+\cos x_0(\sh y-\sh y_0),</me>
+эндээс мөн 0 гарна.</p><p>Иймээс
+<me>\lim_{z\to z_0}\sin z=\sin z_0.</me></p></solution></example><theorem><title>Давхар функцийн хязгаар</title><statement><p>Хэрэв
+<me>\lim_{z\to z_0} f(z)=w_0,
+\qquad
+\lim_{w\to w_0} g(w)=L,</me>
+бол
+<me>\lim_{z\to z_0} g(f(z)) = L.</me></p></statement></theorem><example><statement><p><me>\lim_{z\to 1} \sin(z^2)</me>
+утгыг ол.</p></statement><solution><p><me>\lim_{z\to 1} z^2 = 1.</me>
+Синус функц бүх цэгт тасралтгүй тул
+<me>\lim_{z\to 1} \sin(z^2)=\sin(1).</me></p></solution></example></subsection></section><section xml:id="lec03-s3"><title>Тасралтгүй чанар</title><definition><statement><p>Хэрэв
+<me>\lim_{z\to z_0} f(z)=f(z_0)</me>
+бол <m>f</m>-г <m>z_0</m> дээр тасралтгүй гэнэ.</p></statement></definition><theorem><statement><p><m>f(z)=u(x,y)+iv(x,y)</m> бол <m>f</m> нь <m>z_0</m> дээр тасралтгүй байх нь
+<me>u(x,y)\ \text{ба}\ v(x,y)</me>
+нь <m>(x_0,y_0)</m> дээр тасралтгүй байхтай эквивалент.</p></statement></theorem><theorem><statement><p>Хэрэв <m>f</m> ба <m>g</m> нь <m>z_0</m> дээр тасралтгүй бол
+<me>f+g,\quad fg,\quad \frac{f}{g}\ (g(z_0)\neq 0)</me>
+нь мөн <m>z_0</m> дээр тасралтгүй.</p></statement></theorem><theorem><statement><p><m>P(z)</m> олон гишүүнт нь <m>\mathbb{C}</m> дээр бүх цэгт тасралтгүй.
+Рациональ функц
+<me>R(z)=\frac{P(z)}{Q(z)}</me>
+нь
+<me>Q(z)\neq 0</me>
+байх бүх цэгт тасралтгүй.</p></statement></theorem><theorem><statement><p>Комплекс экспонент функц
+<me>f(z)=e^z</me>
+нь <m>\mathbb{C}</m> хавтгай дээр бүх цэгт тасралтгүй.</p></statement><proof><p><m>z=x+iy</m> гэж бичвэл
+<me>e^z=e^{x+iy}=e^x(\cos y+i\sin y).</me></p><p>Иймээс
+<me>u(x,y)=e^x\cos y,\qquad v(x,y)=e^x\sin y.</me></p><p>Бодит функцууд <m>e^x,\cos y,\sin y</m> нь <m>\mathbb{R}</m> дээр тасралтгүй.
+Үржвэр нь мөн тасралтгүй тул <m>u(x,y)</m> ба <m>v(x,y)</m> нь
+<m>(x_0,y_0)</m> дээр тасралтгүй.</p><p>Тэгвэл “<m>u,v</m> тасралтгүй <m>\Rightarrow</m> <m>f</m> тасралтгүй” шалгуураар
+<m>e^z</m> нь бүх <m>z_0\in\mathbb{C}</m> дээр тасралтгүй.</p></proof></theorem><theorem><statement><p>Логарифм
+<me>\ln z=\ln|z|+i\arg z</me>
+нь
+<me>\Omega=\mathbb{C}\setminus\{x\le 0,\ y=0\}</me>
+муж дээр тасралтгүй.</p></statement><proof><p><m>z=x+iy</m> гэж бичье.</p><p>Тэгвэл
+<me>\ln z=\frac12\ln(x^2+y^2)
++i\,\arg(z).</me></p><p>1) <m>\ln(x^2+y^2)</m> нь <m>(0,0)</m>-оос бусад бүх цэг дээр тасралтгүй.</p><p>2) <m>\Arg(z)</m> нь сөрөг бодит тэнхлэгийг хассан муж дээр тасралтгүй.</p><p>Иймээс бодит ба хуурмаг хэсгүүд нь <m>\Omega</m> муж дээр тасралтгүй.</p><p>“<m>u,v</m> тасралтгүй <m>\Rightarrow</m> <m>f</m> тасралтгүй” шалгуураар
+<m>\Ln z</m> нь <m>\Omega</m> муж дээр тасралтгүй.</p></proof></theorem></section>
+  <xi:include href="./ai-03.ptx" />
+  <xi:include href="./sem-03.ptx" />
+  <xi:include href="./hw-03.ptx" />
+</chapter>

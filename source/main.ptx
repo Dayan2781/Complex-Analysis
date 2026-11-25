@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="complex-analysis-book">
+    <title>Комплекс анализ</title>
+    <subtitle>MATH311 хичээлийн 16 лекцийн гарын авлага</subtitle>
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Д. Даянцолмон</personname>
+          <institution>Монгол Улсын Их Сургууль</institution>
+        </author>
+        <date><today /></date>
+      </titlepage>
+
+      <xi:include href="./syllabus.ptx" />
+
+      <preface xml:id="preface-students">
+        <title>Оюутнуудад зориулсан өмнөх үг</title>
+        <p>Энэ ном нь MATH311 Комплекс анализ хичээлийн 16 лекцийг хамарна. Лекц бүр (номын нэг бүлэг) дараах бүтэцтэй:</p>
+        <p><ul>
+          <li><term>Лекцийн агуулга</term> — тодорхойлолт, теорем, баталгаа, жишээ. Баталгаа ба бодолтыг товшиж нээнэ.</li>
+          <li><p><term>AI-тай дасгал хийх</term> — тухайн лекцийн сэдвээр Claude AI бодлогыг тухай бүрт шинээр үүсгэнэ. Гурван түвшинтэй:
+            <ul>
+              <li><alert>Хөнгөн</alert> — лекцийн агуулгатай холбоотой өгүүлбэр үнэн эсэхийг (Зөв/Буруу) шийднэ. Хариуг шууд шалгана.</li>
+              <li><alert>Дунд</alert> — тооцоолох бодлого, A/B/C/D сонголттой. Хариуг шууд шалгаж, тайлбарыг үзүүлнэ.</li>
+              <li><alert>Хүнд</alert> — батлах, жишээ байгуулах бодлого. Эхлээд өөрөө бод, дараа нь <q>Заавар</q>, <q>Бодолт</q> товчийг дарж харьцуул.</li>
+            </ul></p>
+          </li>
+          <li><term>Семинарын бодлогууд</term> — семинарын хичээл дээр бодох бодлогууд. Ихэнх нь <term>Заавар</term>-тай: эхлээд зааваргүй бодож үзээрэй.</li>
+          <li><term>Гэрийн даалгавар</term> — бодолт нь даалгавар өгснөөс 14 хоногийн дараа сайт дээр автоматаар нээгдэнэ.</li>
+        </ul></p>
+      </preface>
+    </frontmatter>
+
+    <xi:include href="./chapters/lec-01.ptx" />
+    <xi:include href="./chapters/lec-02.ptx" />
+    <xi:include href="./chapters/lec-03.ptx" />
+    <xi:include href="./chapters/lec-04.ptx" />
+    <xi:include href="./chapters/lec-05.ptx" />
+    <xi:include href="./chapters/lec-06.ptx" />
+    <xi:include href="./chapters/lec-07.ptx" />
+    <!-- Явцын шалгалт: 9-р долоо хоног (Лекц 1–7) -->
+    <xi:include href="./chapters/lec-08.ptx" />
+    <xi:include href="./chapters/lec-09.ptx" />
+    <xi:include href="./chapters/lec-10.ptx" />
+    <xi:include href="./chapters/lec-11.ptx" />
+    <xi:include href="./chapters/lec-12.ptx" />
+    <xi:include href="./chapters/lec-13.ptx" />
+    <xi:include href="./chapters/lec-14.ptx" />
+    <xi:include href="./chapters/lec-15.ptx" />
+    <xi:include href="./chapters/lec-16.ptx" />
+
+    <backmatter xml:id="backmatter">
+      <title>Хавсралт</title>
+      <xi:include href="./chapters/app-products.ptx" />
+      <xi:include href="./chapters/app-elliptic.ptx" />
+      <xi:include href="./chapters/app-laplace.ptx" />
+      <colophon>
+        <p>Энэ ном нь <pubtitle>PreTeXt</pubtitle> систем дээр бичигдсэн.</p>
+      </colophon>
+    </backmatter>
+  </book>
+</pretext>

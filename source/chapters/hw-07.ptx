@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-07">
+  <title>Гэрийн даалгавар 7</title>
+  <exercises xml:id="exercises-homework-07">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw07-1">
+      <statement><p>Нэгж дугуйг дээд хагас хавтгайд буулгаж, <m>-1\mapsto0</m>, <m>1\mapsto\infty</m>, <m>i\mapsto-1</m> байх бутархай шугаман буулгалтыг ол.</p></statement>
+      <solution><p><m>-1\mapsto0</m>, <m>1\mapsto\infty</m> тул <m>w=k\frac{1+z}{1-z}</m>. <m>z=i</m>: <m>k\frac{1+i}{1-i}=ki=-1</m>, <m>k=i</m>. <m>w=i\frac{1+z}{1-z}</m>. Шалгалт: <m>z=0\mapsto i</m> нь дээд хагас хавтгайд оршино.</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-2">
+      <statement><p>Гурван ялгаатай үл хөдлөх цэгтэй бутархай шугаман буулгалт нь адилтгал гэж батал. <m>w=\frac{z-1}{z+1}</m>-ийн үл хөдлөх цэгүүдийг ол.</p></statement>
+      <solution><p>Үл хөдлөх цэг нь <m>cz^2+(d-a)z-b=0</m>-ийн шийд. Адилтгал биш үед энэ нь тэг биш, хамгийн ихдээ <m>2</m>-р зэргийн тэгшитгэл (<m>c=0</m> үед <m>\infty</m> үл хөдлөх) тул хамгийн ихдээ <m>2</m> шийдтэй. <m>\frac{z-1}{z+1}=z\iff z^2=-1</m>: <m>z=\pm i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-3">
+      <statement><p><m>\{|z|&lt;1,\ \im z&gt;0\}</m> хагас дугуйг <m>w=\left(\dfrac{1+z}{1-z}\right)^2</m> буулгалт юунд буулгах вэ?</p></statement>
+      <solution><p><m>\zeta=\frac{1+z}{1-z}</m>: <m>(-1,1)</m> хэрчим эерэг бодит хагас тэнхлэгт, <m>z=e^{it}</m> (<m>0&lt;t&lt;\pi</m>) хагас тойрог <m>\zeta=i\cot\frac t2</m>, өөрөөр хэлбэл эерэг хуурмаг хагас тэнхлэгт буух; <m>z=\frac i2\mapsto\frac{3+4i}{5}</m> тул хагас дугуй I мөчид буух. <m>w=\zeta^2</m> нь I мөчийг дээд хагас хавтгайд буулгана.</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-4">
+      <statement><p>Жуковскийн функц <m>w=\frac12\left(z+\frac1z\right)</m>-ээр <m>|z|=2</m> тойрог юунд буух вэ?</p></statement>
+      <solution><p><m>z=2e^{it}</m>: <m>w=\frac12(2e^{it}+\frac12e^{-it})=\frac54\cos t+\frac34i\sin t</m>. Эллипс <m>\frac{u^2}{(5/4)^2}+\frac{v^2}{(3/4)^2}=1</m>, голомт нь <m>\pm1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-5">
+      <statement><p><m>z_1,z_2,z_3,z_4</m> цэгүүд нэг тойрог (эсвэл шулуун) дээр оршино <m>\iff</m> давхар харьцаа <m>(z_1,z_2,z_3,z_4)</m> бодит гэж батал.</p></statement>
+      <solution><p><m>z_2,z_3,z_4</m>-ийг <m>1,0,\infty</m>-д буулгах <m>T(z)=(z,z_2,z_3,z_4)</m> бутархай шугаман буулгалт тойргийг тойрогт буулгана. <m>z_2,z_3,z_4</m>-ийг дайрах тойрог <m>1,0,\infty</m>-г дайрах тойрог, өөрөөр хэлбэл бодит тэнхлэгт шилжинэ. Иймд <m>z_1</m> тэр тойрог дээр <m>\iff T(z_1)\in\R</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

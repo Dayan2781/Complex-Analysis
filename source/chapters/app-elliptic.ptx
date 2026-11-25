@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="app-elliptic" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Эллипслэг функц</title>
+<section xml:id="app-elliptic-s1"><title>Эллипслэг функц</title><definition><statement><p>Коллинеар биш 2 үетэй мероморф функцийг эллипслэг функц гэж тодорхойлдог. Өөрөөр хэлбэл <m>w=f(z)</m> мероморф функц ба <m>T_1, T_2\in\mathbb{C}\setminus \{0\}:\dfrac{T_1}{T_2}\notin \mathbb{R}</m> үед <m>\forall z:f(z+T_1)=f(z+T_2)=f(z)</m>  бол уг функцийг эллипслэг функц гэж нэрлэдэг. Дараах жишээг авч үзье. 
+<me>F(z,k)=\int\limits_{0}^z\frac{dz}{\sqrt{(1-z^2)(1-k^2z^2)}}</me> (энд <m>0&lt;k&lt;1</m> ба <m>x&gt;0</m> үед <m>\sqrt{x}&gt;0</m> мөчир авна).</p><p>Уг функц <m>\{\im z&gt;0\}</m> мужийг
+ <md><mrow>\left\{ \right.
+    \pm K; \pm K+iK':&amp;K=\int\limits_0^1\frac{dx}{\sqrt{(1-x^2)(1-k^2x^2)}} ,</mrow><mrow>&amp;\left.K'=\int\limits_1^{\frac{1}{k}}\frac{dx}{\sqrt{(x^2-1)(1-k^2x^2)}} \right\}</mrow></md></p></statement></definition><p>оройнууд бүхий тэгш өнцөгтөд буулгана.</p><p>Үүний урвуу функцийг авч үзвэл Риман-Шварцийн тэгш хэмийн зарчмаар аналитик үргэлжлэл зохиогдсоор <m>\mathbb{C}</m>-д мероморф, эллипслэг функц үүсэх ба үүнийг <m>w=sn (z,k)</m> гээд эллипслэг синус гэж тэмдэглэдэг.</p></section>
+</appendix>

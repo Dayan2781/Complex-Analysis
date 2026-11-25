@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI дасгал — Комплекс анализ</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']],
+           macros: { Res: '\\operatorname{Res}', Ln: '\\operatorname{Ln}', Arg: '\\operatorname{Arg}',
+                     re: '\\operatorname{Re}', im: '\\operatorname{Im}', ch: '\\operatorname{ch}', sh: '\\operatorname{sh}' } },
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea'] }
+  };
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; padding: 1rem; font-size: 14px; color: #111; background: #fff; }
+.label { font-size: 11px; color: #888; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+.topic-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.chip { font-size: 12px; padding: 4px 10px; border-radius: 20px; border: 1px solid #ccc; background: #f5f5f5; cursor: pointer; user-select: none; }
+.chip.active { background: #dbeafe; color: #1d4ed8; border-color: #93c5fd; }
+.levels { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.level { flex: 1; min-width: 150px; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; cursor: pointer; text-align: left; font-family: inherit; }
+.level b { display: block; font-size: 13px; }
+.level span { font-size: 11px; color: #666; }
+.level.active { background: #eff6ff; border-color: #93c5fd; }
+.level.active b { color: #1d4ed8; }
+.controls { display: flex; gap: 8px; align-items: center; margin-bottom: 1rem; }
+.card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 1rem; margin-bottom: 1rem; background: #fff; }
+.problem-text { font-size: 15px; line-height: 1.75; margin-bottom: 12px; }
+.choices { display: flex; flex-direction: column; gap: 8px; }
+.choice { padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; cursor: pointer; transition: all 0.15s; line-height: 1.6; }
+.choice:hover { background: #f3f4f6; }
+.choice.selected { background: #dbeafe; border-color: #93c5fd; }
+.choice.correct { background: #ecfdf5; border-color: #6ee7b7; }
+.choice.wrong { background: #fef2f2; border-color: #fca5a5; }
+.tf-row { display: flex; gap: 10px; }
+.tf-btn { flex: 1; padding: 14px; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; cursor: pointer; font-size: 15px; font-weight: 500; font-family: inherit; }
+.tf-btn.selected { background: #dbeafe; border-color: #93c5fd; }
+.btn-row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+button { font-size: 13px; padding: 7px 14px; border-radius: 6px; border: 1px solid #d1d5db; background: #fff; cursor: pointer; font-family: inherit; }
+button:hover { background: #f3f4f6; }
+button.primary { background: #eff6ff; color: #1d4ed8; border-color: #93c5fd; }
+button:disabled { opacity: 0.5; cursor: default; }
+.result { margin-top: 12px; padding: 12px; border-radius: 8px; font-size: 14px; line-height: 1.7; display: none; }
+.result.show { display: block; }
+.result.correct { background: #ecfdf5; border: 1px solid #6ee7b7; color: #065f46; }
+.result.wrong { background: #fef2f2; border: 1px solid #fca5a5; color: #991b1b; }
+.result.info { background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; }
+.result h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+.result p { margin-bottom: 6px; }
+.spinner { display: inline-block; width: 13px; height: 13px; border: 2px solid #ddd; border-top-color: #1d4ed8; border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: -2px; margin-right: 5px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.note { font-size: 12px; color: #888; margin-top: 8px; }
+textarea { width: 100%; min-height: 90px; border: 1px solid #d1d5db; border-radius: 6px; padding: 8px 10px; font-family: inherit; font-size: 14px; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="label" id="topic-label">Сэдэв</div>
+<div class="topic-bar" id="topics"></div>
+
+<div class="label">Түвшин</div>
+<div class="levels" id="levels">
+  <button class="level active" data-level="easy"><b>Хөнгөн</b><span>Зөв / Буруу — лекцийн агуулга</span></button>
+  <button class="level" data-level="medium"><b>Дунд</b><span>Тооцоолол — A / B / C / D</span></button>
+  <button class="level" data-level="hard"><b>Хүнд</b><span>Батлах, жишээ байгуулах — заавар, бодолттой</span></button>
+</div>
+
+<div class="controls">
+  <button class="primary" id="gen-btn" onclick="generate()">Бодлого үүсгэх</button>
+  <span class="note" id="status"></span>
+</div>
+
+<div class="card" id="card" style="display:none">
+  <div class="label" id="card-label">Бодлого</div>
+  <div class="problem-text" id="problem-text"></div>
+  <div id="answer-area"></div>
+  <div class="btn-row" id="btn-row"></div>
+  <div class="result" id="result"></div>
+  <div class="result info" id="hint-box"></div>
+  <div class="result info" id="solution-box"></div>
+</div>
+
+<script>
+// Math1 номтой ижил Cloudflare Worker прокси (API түлхүүр прокси дотор хадгалагдана).
+const API = 'https://math1-proxy.num-math1v.workers.dev/v1/messages';
+const MODEL = 'claude-haiku-4-5-20251001';
+
+const params = new URLSearchParams(window.location.search);
+const LECTURE = params.get('lecture') || 'Комплекс анализ';
+const topics = (params.get('topics') || 'комплекс тоо').split(',').map(t => t.trim()).filter(Boolean);
+if (params.get('label')) document.getElementById('topic-label').textContent = params.get('label');
+
+let topic = topics[0];
+let level = 'easy';
+let currentQ = null;
+let selected = null;
+const history = [];   // давталт багасгах
+
+const topicsEl = document.getElementById('topics');
+topics.forEach((t, i) => {
+  const s = document.createElement('span');
+  s.className = 'chip' + (i === 0 ? ' active' : '');
+  s.textContent = t;
+  s.onclick = () => {
+    document.querySelectorAll('#topics .chip').forEach(x => x.classList.remove('active'));
+    s.classList.add('active'); topic = t;
+  };
+  topicsEl.appendChild(s);
+});
+document.querySelectorAll('#levels .level').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#levels .level').forEach(x => x.classList.remove('active'));
+  b.classList.add('active'); level = b.dataset.level;
+});
+
+const SYSTEM = `Та Монгол Улсын Их Сургуулийн MATH311 "Комплекс анализ" (бакалавр) хичээлийн бодлого зохиогч багш.
+ДҮРЭМ:
+(1) Зөвхөн нэг JSON объект буцаа. Өөр текст, тайлбар, \`\`\` тэмдэг бүү бич.
+(2) Бүх текст монгол хэлээр. Математик томьёог LaTeX-ээр \\( ... \\) дотор бич. JSON мөр доторх backslash-ийг давхарлаж бич: жишээ нь "\\\\(e^{i\\\\pi}=-1\\\\)".
+(3) JSON утгад шинэ мөр бүү оруул.
+(4) Бодлого нь заасан лекцийн агуулгаас хэтрэхгүй, бакалаврын түвшинд, нэг утгатай байх.
+(5) Хариугаа өгөхөөсөө өмнө бодолтоо дотроо алхам алхмаар шалга; буруу эсвэл хоёрдмол утгатай бодлого бүү гарга.`;
+
+function prompt() {
+  const avoid = history.length ? ` Өмнө нь гарсан дараах бодлогуудаас ялгаатай бай: ${history.slice(-4).join(' | ')}.` : '';
+  const ctx = `Лекц: "${LECTURE}". Сэдэв: "${topic}".`;
+  if (level === 'easy') {
+    return `${ctx} Хөнгөн түвшний ЗӨВ/БУРУУ асуулт үүсгэ: лекцийн тодорхойлолт, теорем, чанарын тухай нэг өгүүлбэр. Өгүүлбэр нь ойлголтыг шалгахуйц байх (заримдаа нөхцөлийг нь өөрчилж худал болго, заримдаа үнэн үлдээ).${avoid}
+JSON: {"statement":"шалгах өгүүлбэр","answer":"зөв" эсвэл "буруу","explanation":"яагаад зөв/буруу болох 1-3 өгүүлбэр; буруу бол сөрөг жишээ эсвэл зөв хувилбарыг заа"}`;
+  }
+  if (level === 'medium') {
+    return `${ctx} Дунд түвшний ТООЦООЛОХ бодлого үүсгэ (утга, хязгаар, уламжлал, интеграл, үлдэц, цуваа, нийлэлтийн радиус гэх мэт тухайн сэдэвт тохирох). 4 сонголт (A, B, C, D), зөвхөн нэг нь зөв; бусад нь түгээмэл алдаанаас гарах хариу. Эхлээд бодолтоо бич, дараа нь хариугаа.${avoid}
+JSON: {"problem":"бодлогын текст","solution":"алхам алхмаар бодолт","choices":{"A":"...","B":"...","C":"...","D":"..."},"answer":"A|B|C|D"}`;
+  }
+  return `${ctx} Хүнд түвшний бодлого үүсгэ: БАТЛАХ (теорем, чанар, тэнцэтгэл биш) эсвэл ЖИШЭЭ/СӨРӨГ ЖИШЭЭ БАЙГУУЛАХ бодлого. Бакалаврын оюутан 15-30 минутад бодохуйц байх.${avoid}
+JSON: {"problem":"бодлогын текст","hint":"гол санааг заасан 1-3 өгүүлбэр заавар (бодолтыг бүрэн бүү хэл)","solution":"бүрэн, алхам алхмаар баталгаа эсвэл бодолт"}`;
+}
+
+async function callClaude(userText) {
+  const res = await fetch(API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model: MODEL, max_tokens: 2000, system: SYSTEM,
+                           messages: [{ role: 'user', content: userText }] })
+  });
+  if (!res.ok) throw new Error('Сервер ' + res.status + ' алдаа буцаалаа');
+  const data = await res.json();
+  return data.content[0].text;
+}
+
+// LaTeX-ийн ганц "\" тэмдгийг JSON-д тохирох "\\" болгоно (аль хэдийн давхар бол хөндөхгүй).
+function parseJSON(text) {
+  let s = (text.match(/\{[\s\S]*\}/) || [null])[0];
+  if (!s) throw new Error('JSON олдсонгүй');
+  s = s.replace(/[\r\n]+/g, ' ');
+  const fixed = s.replace(/\\\\|\\(?!")/g, m => (m === '\\\\' ? m : '\\\\'));
+  try { return JSON.parse(fixed); } catch (e) { return JSON.parse(s); }
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function typeset(el) {
+  if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([el]).catch(() => {});
+}
+function show(id, cls, html) {
+  const el = document.getElementById(id);
+  el.className = 'result show ' + cls;
+  el.innerHTML = html;
+  typeset(el);
+}
+function hide(id) { document.getElementById(id).className = 'result'; }
+
+async function generate() {
+  const btn = document.getElementById('gen-btn');
+  btn.innerHTML = '<span class="spinner"></span>Үүсгэж байна...';
+  btn.disabled = true;
+  document.getElementById('status').textContent = '';
+  ['result', 'hint-box', 'solution-box'].forEach(hide);
+  selected = null;
+  try {
+    let q = null;
+    for (let k = 0; k < 2 && !q; k++) {
+      try { q = parseJSON(await callClaude(prompt())); } catch (e) { if (k === 1) throw e; }
+    }
+    currentQ = q;
+    currentQ.level = level;
+    history.push(String(q.statement || q.problem || '').slice(0, 80));
+    render();
+  } catch (e) {
+    document.getElementById('status').textContent = 'Алдаа: ' + e.message + '. Дахин оролдоно уу.';
+  }
+  btn.innerHTML = 'Шинэ бодлого';
+  btn.disabled = false;
+}
+
+function render() {
+  const q = currentQ;
+  const card = document.getElementById('card');
+  card.style.display = 'block';
+  const labels = { easy: 'Хөнгөн · Зөв эсвэл буруу?', medium: 'Дунд · Зөв хариуг сонго', hard: 'Хүнд · Батал / байгуул' };
+  document.getElementById('card-label').textContent = labels[q.level];
+  document.getElementById('problem-text').innerHTML = esc(q.level === 'easy' ? q.statement : q.problem);
+  const area = document.getElementById('answer-area');
+  const row = document.getElementById('btn-row');
+
+  if (q.level === 'easy') {
+    area.innerHTML = `<div class="tf-row">
+      <button class="tf-btn" data-v="зөв" onclick="pick(this,'зөв')">✓ Зөв</button>
+      <button class="tf-btn" data-v="буруу" onclick="pick(this,'буруу')">✗ Буруу</button></div>`;
+    row.innerHTML = `<button class="primary" onclick="check()">Шалгах</button><button onclick="generate()">Дараагийн</button>`;
+  } else if (q.level === 'medium') {
+    area.innerHTML = '<div class="choices">' + ['A', 'B', 'C', 'D'].map(k =>
+      `<div class="choice" data-k="${k}" onclick="pick(this,'${k}')"><strong>${k}.</strong> ${esc(q.choices[k])}</div>`).join('') + '</div>';
+    row.innerHTML = `<button class="primary" onclick="check()">Шалгах</button><button onclick="generate()">Дараагийн</button>`;
+  } else {
+    area.innerHTML = `<div class="note">Бодолтоо цаасан дээр эсвэл доор ноорогло. Дараа нь заавар, бодолттой харьцуул.</div>
+      <textarea placeholder="Миний бодолт (зөвхөн өөрт чинь харагдана)..."></textarea>`;
+    row.innerHTML = `<button onclick="showHint()">💡 Заавар</button><button class="primary" onclick="showSolution()">Бодолт</button><button onclick="generate()">Дараагийн</button>`;
+  }
+  typeset(card);
+}
+
+function pick(el, v) {
+  selected = v;
+  el.parentElement.querySelectorAll('.tf-btn, .choice').forEach(x => x.classList.toggle('selected', x === el));
+}
+
+function norm(s) { return String(s).trim().toLowerCase(); }
+
+function check() {
+  const q = currentQ;
+  if (!selected) { document.getElementById('status').textContent = 'Эхлээд хариугаа сонгоно уу.'; return; }
+  document.getElementById('status').textContent = '';
+  const ok = norm(selected) === norm(q.answer);
+  if (q.level === 'easy') {
+    show('result', ok ? 'correct' : 'wrong',
+      `<h4>${ok ? '✓ Зөв байна!' : '✗ Буруу.'}</h4><p>Энэ өгүүлбэр <b>${esc(q.answer)}</b>.</p><p>${esc(q.explanation)}</p>`);
+  } else {
+    document.querySelectorAll('.choice').forEach(c => {
+      if (c.dataset.k === q.answer) c.classList.add('correct');
+      else if (c.dataset.k === selected) c.classList.add('wrong');
+    });
+    show('result', ok ? 'correct' : 'wrong',
+      `<h4>${ok ? '✓ Зөв байна!' : '✗ Буруу. Зөв хариу: ' + esc(q.answer)}</h4><p><b>Бодолт.</b> ${esc(q.solution)}</p>`);
+  }
+}
+
+function showHint() { show('hint-box', 'info', `<h4>Заавар</h4><p>${esc(currentQ.hint)}</p>`); }
+function showSolution() { show('solution-box', 'info', `<h4>Бодолт</h4><p>${esc(currentQ.solution)}</p>`); }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-04">
+  <title>Гэрийн даалгавар 4</title>
+  <exercises xml:id="exercises-homework-04">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw04-1">
+      <statement><p><m>(-1)^{\sqrt2}</m> ба <m>(1+i)^i</m>-ийн бүх утгыг ол.</p></statement>
+      <solution><p><m>(-1)^{\sqrt2}=e^{\sqrt2\Ln(-1)}=e^{i\sqrt2(\pi+2k\pi)}</m>, <m>k\in\Z</m>. <m>\sqrt2</m> иррационал тул эдгээр нь нэгж тойрог дээрх төгсгөлгүй олон ялгаатай цэг. <m>(1+i)^i=e^{i\Ln(1+i)}=e^{i(\ln\sqrt2+i(\frac\pi4+2k\pi))}=e^{-\frac\pi4-2k\pi}\bigl(\cos\ln\sqrt2+i\sin\ln\sqrt2\bigr)</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw04-2">
+      <statement><p><m>\cos z=2</m> тэгшитгэлийг бод.</p></statement>
+      <solution><p><m>w=e^{iz}</m> гэвэл <m>\frac{w+w^{-1}}2=2</m>, <m>w^2-4w+1=0</m>, <m>w=2\pm\sqrt3</m>. <m>iz=\Ln(2\pm\sqrt3)=\ln(2\pm\sqrt3)+2k\pi i</m>. <m>\ln(2-\sqrt3)=-\ln(2+\sqrt3)</m> тул <me>z=2k\pi\pm i\ln(2+\sqrt3),\quad k\in\Z.</me></p></solution>
+    </exercise>
+    <exercise xml:id="hw04-3">
+      <statement><p><m>e^{2z}+e^z-2=0</m> тэгшитгэлийг бод.</p></statement>
+      <solution><p><m>w=e^z</m>: <m>w^2+w-2=(w-1)(w+2)=0</m>. <m>e^z=1\Rightarrow z=2k\pi i</m>; <m>e^z=-2\Rightarrow z=\ln2+i(\pi+2k\pi)</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw04-4">
+      <statement><p><m>\sh(iz)=i\sin z</m>, <m>\ch(iz)=\cos z</m> гэж батлаад, <m>\ch z</m>-ийн бүх тэгийг ол.</p></statement>
+      <solution><p><m>\sh(iz)=\frac{e^{iz}-e^{-iz}}2=i\cdot\frac{e^{iz}-e^{-iz}}{2i}=i\sin z</m>; <m>\ch(iz)=\frac{e^{iz}+e^{-iz}}2=\cos z</m>. <m>\ch z=\cos(-iz)=\cos(iz)</m> тул <m>\ch z=0\iff iz=\frac\pi2+k\pi\iff z=-i(\frac\pi2+k\pi)</m>, өөрөөр хэлбэл <m>z=i(\frac\pi2+k\pi)</m>, <m>k\in\Z</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw04-5">
+      <statement><p><m>\Arctan z=\dfrac1{2i}\Ln\dfrac{1+iz}{1-iz}</m> (<m>z\ne\pm i</m>) томьёог гарга.</p></statement>
+      <solution><p><m>\tan w=z</m> гэвэл <m>\frac{e^{iw}-e^{-iw}}{i(e^{iw}+e^{-iw})}=z</m>. <m>e^{iw}</m>-ээр үржүүлбэл <m>e^{2iw}-1=iz(e^{2iw}+1)</m>, <m>e^{2iw}(1-iz)=1+iz</m>. Иймд <m>2iw=\Ln\frac{1+iz}{1-iz}</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

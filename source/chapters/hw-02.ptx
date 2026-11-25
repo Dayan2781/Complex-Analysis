@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-02">
+  <title>Гэрийн даалгавар 2</title>
+  <exercises xml:id="exercises-homework-02">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw02-1">
+      <statement><p>Хөвчийн зай <m>\rho(z_1,z_2)=\dfrac{2|z_1-z_2|}{\sqrt{(1+|z_1|^2)(1+|z_2|^2)}}</m> томьёогоор <m>\rho(0,1)</m>, <m>\rho(i,-i)</m>, <m>\rho(1,\infty)</m>-г ол.</p></statement>
+      <solution><p><m>\rho(0,1)=\frac{2}{\sqrt{1\cdot2}}=\sqrt2</m>. <m>\rho(i,-i)=\frac{2\cdot2}{\sqrt{2\cdot2}}=2</m>: эдгээр нь бөмбөлгийн диаметрийн эсрэг цэгүүд <m>(0,\pm1,0)</m>. <m>\rho(z,\infty)=\frac{2}{\sqrt{1+|z|^2}}</m> тул <m>\rho(1,\infty)=\sqrt2</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw02-2">
+      <statement><p><m>z\ne0</m> ба <m>-1/\overline z</m> цэгүүдийн Риманы бөмбөлөг дээрх дүрүүд диаметрийн эсрэг цэгүүд болохыг батал.</p></statement>
+      <solution><p><m>w=-1/\overline z=-z/|z|^2</m>, <m>|w|^2=1/|z|^2</m>. Иймд <me>\xi_w=\frac{-2x/|z|^2}{1+1/|z|^2}=-\frac{2x}{|z|^2+1}=-\xi,\quad\eta_w=-\eta,\quad\zeta_w=\frac{1/|z|^2-1}{1/|z|^2+1}=\frac{1-|z|^2}{1+|z|^2}=-\zeta.</me></p></solution>
+    </exercise>
+    <exercise xml:id="hw02-3">
+      <statement><p>Дараах олонлогуудыг зурж, муж эсэх, нэг холбоост эсэхийг тогтоо: (a) <m>\{|z-1|+|z+1|&lt;4\}</m>; (b) <m>\{\im z^2&gt;0\}</m>; (c) <m>\{|z|&lt;1\}\setminus[0,1)</m>.</p></statement>
+      <solution><p>(a) Голомт нь <m>\pm1</m>, их хагас тэнхлэг <m>2</m> эллипсийн дотор тал: зааглагдсан, нэг холбоост муж. (b) <m>\im z^2=2xy&gt;0</m>: I ба III мөч. Нээлттэй боловч холбоост биш тул муж биш. (c) Зүсэлттэй дугуй: муж бөгөөд нэг холбоост (зүсэлт хилд хүрч байгаа тул нүх үүсгэхгүй).</p></solution>
+    </exercise>
+    <exercise xml:id="hw02-4">
+      <statement><p><m>a_n\to a</m> бол <m>|a_n|\to|a|</m> ба <m>\overline{a_n}\to\overline a</m> гэж батал. Эсрэг дүгнэлт (модуль нийлэхээс дараалал нийлэх) үнэн үү?</p></statement>
+      <solution><p><m>\bigl||a_n|-|a|\bigr|\le|a_n-a|</m> ба <m>|\overline{a_n}-\overline a|=|a_n-a|</m>. Эсрэг дүгнэлт буруу: <m>a_n=i^n</m> үед <m>|a_n|=1\to1</m>, гэвч <m>a_n</m> дараалал нийлэхгүй.</p></solution>
+    </exercise>
+  </exercises>
+</section>

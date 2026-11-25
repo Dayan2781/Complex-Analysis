@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-09">
+  <title>Семинар 9</title>
+  <exercises xml:id="exercises-seminar-09">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem09-1">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{e^{z^2}}{z-3}dz</m> ба <m>\displaystyle\oint_{|z|=1}\frac{dz}{z^2+4}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Интеграл доорх функцүүд <m>|z|\le1</m> дугуйн орчинд голоморф. Кошийн теоремоор хоёулаа <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-2">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{dz}{z^2-1}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\frac1{z^2-1}=\frac12\left(\frac1{z-1}-\frac1{z+1}\right)</m> ба олон холбоост мужийн Кошийн теорем. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-3">
+      <statement><p><m>\displaystyle\int_0^iz\cos z\,dz</m>-ийг эх функцээр тооцоол.</p></statement>
+      <hint><p>Эх функц <m>z\sin z+\cos z</m>. <m>\sin i=i\sh1</m>, <m>\cos i=\ch1</m>. Хариу: <m>e^{-1}-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-4">
+      <statement><p><m>\int_\gamma\frac{dz}{z}</m>-ийг <m>1</m>-ээс <m>i</m> хүртэл (a) баруун дээд мөчөөр явах замаар; (b) <m>-i</m>, <m>-1</m> цэгүүдийг дайрч (цагийн зүүний дагуу) явах замаар тооцоол.</p></statement>
+      <hint><p>(a) <m>\C\setminus(-\infty,0]</m> дээр эх функц нь <m>\ln z</m>: <m>\ln i-\ln1=\frac{\pi i}2</m>. (b) Зам <m>1\to i\to-1\to-i\to\dots</m> гэж биш, харин <m>1\to-i\to-1\to i</m> гэж (цагийн зүүний дагуу) явбал аргумент <m>0</m>-ээс <m>-\frac{3\pi}2</m> хүртэл өөрчлөгдөнө: хариу <m>-\frac{3\pi i}{2}</m>. Ерөнхийдөө интеграл нь <m>\ln|z|</m>-ийн өөрчлөлт дээр <m>i</m> дахин аргументын өөрчлөлтийг нэмсэнтэй тэнцүү.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-5">
+      <statement><p><m>\oint_{|z|=1}\overline z\,dz=2\pi i\ne0</m> нь Кошийн теоремтой зөрчилдөх үү?</p></statement>
+      <hint><p>Үгүй: <m>\overline z</m> голоморф биш (Коши–Риманы нөхцөл биелэхгүй).</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-6">
+      <statement><p><m>f(z)=1/z</m> функц <m>\C\setminus\{0\}</m> дээр эх функцтэй юу? <m>\C\setminus(-\infty,0]</m> дээр яах вэ?</p></statement>
+      <hint><p>Эх функцтэй бол битүү муруйн интеграл <m>0</m> байх ёстой, гэтэл <m>\oint_{|z|=1}\frac{dz}z=2\pi i</m>. Хоёр дахь мужид эх функц нь <m>\ln z</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

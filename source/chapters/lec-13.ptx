@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch13" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Үлдэцийн онол</title>
+<section xml:id="lec13-s1"><title>Үлдэцийн онол</title><p><m>a</m> нь <m>f(z)</m>-ийн тусгаарлагдсан онцгой цэг, <m>L</m> нь <m>a</m> цэгийг дотроо агуулсан шулуутгагдах энгийн битүү муруй, <m>f(z)</m> нь <m>L</m> дээр ба түүний доторх <m>a</m>-аас бусад цэг дээр голоморф байх функц гэвэл
+ <me>\frac{1}{2\pi i}\oint\limits_{L} f(z)dz</me>
+ илэрхийллийг <m>f(z)</m> функцийн <m>a</m>-цэгт хамаарах үлдэц гэж нэрлэх ба <m>Res [f(z),a]</m> (Residu-үлдэгдэл гэсэн франц үг) тэмдэглэл оруулна. Иймд
+ <md><mrow>Res [f(z),a]=\frac{1}{2\pi i}\oint\limits_{L} f(z)dz</mrow></md></p><theorem><title>Үлдэцийн үндсэн теорем</title><statement><p><m>f(z)</m> функц төгсгөлөг тооны <m>a_k(k=\overline{1,n})</m> онцгой цэгээс бусад <m>D</m> муж ба <m>\partial D</m> хил дээр голоморф (Зураг 23)</p><figure><caption></caption><image source="images/23.jpg" width="31%"/></figure><p>байвал 
+<mdn><mrow xml:id="r-6resduu3a6_25">\int\limits_{\partial D}f(z)dz=2\pi i\sum_{k=1}^n Res [f(z), a_k]</mrow></mdn> байна.</p></statement><proof><p><m>a_k(k=\overline{1,n})</m> цэгүүд дээр төвтэй хүрэлцээтэй бага <m>\rho</m> радиустай сөрөг чиг барьсан <m>\gamma_k:|z-a_k|=\rho</m> тойргууд татъя. Мөн <m>|z-a_k|\leq \rho</m> дугуйнууд <m>D</m>-д агуулагдаж, <m>\gamma_k</m> тойрог бүхэн бусад тойргийнхоо гадна оршин байвал олон холбоост мужийн Кошийн теорем ёсоор
+ <me>\oint\limits_{\partial D} f(z)dz+\sum_{k=1}^n \oint\limits_{\gamma_k}f(z)dz=0</me>
+ болж эндээс 
+ <me>\oint\limits_{\partial D} f(z)dz=\sum_{k=1}^n \oint\limits_{\gamma_k}f(z)dz=2\pi i\sum_{k=1}^n Res [f(z), a_k]</me></p></proof></theorem><p>Онцгой цэг дээрх үлдэцийг олж чаддаг бол <xref ref="r-6resduu3a6_25"/> томьёо ашиглан комплекс интеграл бодох боломж нээгдэнэ.</p><theorem><statement><p><m>a\in\mathbb{C}</m> цэг <m>f(z)</m>-ийн тусгаарлагдсан онцгой цэг гэвэл
+<md><mrow>Res [f(z), a]=c_{-1}</mrow></md></p></statement><proof><p><xref ref="r-6resduu3a6_25"/> томьёонд <m>n=-1</m> гэвэл
+ <me>c_{-1}=\frac{1}{2\pi i}\int\limits_{\Gamma'}f(\zeta) d\zeta=Res [f(z),a] \quad \Gamma':|z-a|=R</me></p></proof></theorem><corollary><statement><p><m>a</m> засагдах онцгой цэг бол
+ <me>Res[f(z),a]=0</me></p></statement></corollary><theorem xml:id="r-6resduu3a6_27"><statement><p><m>f(z)</m>-функцийн хувьд <m>a</m> нь <m>n\geq 1</m> эрэмбийн туйл байг. Тэгвэл:
+ <md><mrow>Res [f(z),a]=\dfrac{1}{(n-1)!}\lim\limits_{z\rightarrow a}\frac{d^{(n-1)}}{dz^{n-1}}[(z-a)^n\cdot f(z)].</mrow></md></p></statement><proof><p><m>a</m> цэгийн цоорхойт орчинд Лораны цуваанд <m>f(z)</m> функцийг задалбал
+<me>f(z)=\frac{c_{-n}}{(z-a)^n}+\cdots +\frac{c_{-1}}{z-a}+\sum\limits_{n=0}^\infty c_n(z-a)^n</me>
+бөгөөд хоёр талыг <m>(z-a)^n</m>-ээр үржүүлж <m>(n-1)</m> удаа дифференциалчилбал
+<me>\frac{d^{(n-1)}}{dz^{n-1}}[(z-a)^n\cdot f(z)]=(n-1)!c_{-1}+n(n-1)!+2c_0(z-a)+\cdots</me>
+бөгөөд <m>z\rightarrow a</m> хязгаарт шилжвэл <xref ref="r-6resduu3a6_27" text="global"/> гарна.</p><p><m>z=a</m> нь <m>f(z)</m> функцийн энгийн туйл байхад <xref ref="r-6resduu3a6_27" text="global"/> томьёо ёсоор (<m>0!=1</m>  гэж үзэх тул)
+<me>Res [f(z),a]=\lim\limits_{z\rightarrow a}(z-a)f(z)</me>
+юм. Хэрэв <m>f(z)=\dfrac{\varphi (z)}{\psi(z)}</m>, <m>(\varphi, \psi\in H(a)</m>, <m>\varphi(a)\neq 0</m>, <m>\psi(a)=0)</m> бол 
+<me>Res[f(z),a]=\lim\limits_{z\rightarrow a}f(z)(z-a)=\lim\limits_{z\rightarrow a}\frac{\varphi (z)}{\frac{\psi(z)-\psi (a)}{z-a}}=\frac{\varphi(a)}{\psi '(a)}</me></p></proof></theorem><example><statement><p><m>\tan z</m> функцийн <m>\dfrac{\pi}{2}</m> дээрх үлдэц ол.</p></statement><solution><p><m>\tan z=\dfrac{\sin z}{\cos z}</m>, <m>\sin\dfrac{\pi}{2}=1</m>, <m>\cos\dfrac{\pi}{2}=0</m> тул <me>Res \left[\tan z, \dfrac{\pi}{2}\right] =-\sin \frac{\pi}{2}=-1</me></p></solution></example><example><statement><p><m>(z-1)\cdot \sin\dfrac{1}{z-1}</m> функцийн <m>z=1</m> дээрх үлдэц ол.</p></statement><solution><p>(?) томьёонд <m>z</m>-ийн оронд <m>\dfrac{1}{z-1}</m>тавибал
+	<me>\sin\frac{1}{z-1}=\sum\limits_{n=0}^\infty (-1)^n \frac{1}{(2n+1)!(z-1)^{2n+1}}</me> тул 
+	<me>Res\left[(z-1)\cdot \sin \frac{1}{z-1}, 1\right] =-\frac{1}{6}</me></p></solution></example><example><statement><p><m>\dfrac{\sin 2z}{(z+1)^3}</m> функцийн <m>z=-1</m> дээрх үлдэц ол.</p></statement><solution><p><m>z=-1</m> нь III эрэмбийн туйл тул 
+    <me>Res \left[\frac{\sin 2z}{(z+1)^3}, -1\right]=\lim\limits_{z\rightarrow -1}\frac{1}{2!}(\sin 2z)''=2\sin 2</me></p></solution></example><p><alert>Төгсгөлгүй алсын цэг дээр үлдэц ямар байх вэ? </alert></p><definition><statement><p><me>\frac{1}{2\pi i}\int\limits_{\gamma_R}-f(z)dz</me>
+хэмжигдэхүүнийг <m>f(z)</m> функцийн <m>\infty</m> дээрх үлдэц гэнэ. Үүнд <m>\gamma^-_R</m> нь сөрөг чиг барьсан (нар зөв тойрох) хүрэлцээтэй их радиустай <m>|z|=R</m> тойрог. <m>f(z)</m> функцийг <m>\infty</m>-ийн цоорхойт   <m>R&lt;|z|&lt;\infty</m> орчинд задалбал
+<me>f(z)=\sum\limits_{n=-\infty}^\infty c_n z^n</me>
+бөгөөд <m>\gamma^-_R</m>тойргоор гишүүнчлэн интегралчилж, зэрэгтийн ортогональ чанар ашиглавал
+<me>Res [f(z),\infty]=-c_{-1}</me></p></statement></definition><theorem><title>Үлдэцүүдийн бүтэн нийлбэр</title><statement><p><m>f(z)</m> нь <m>\mathbb{C}</m> дээр <m>a_k(k=\overline{1,n})</m> онцгой цэгтэй байвал
+<md><mrow>\sum\limits_{k=1}^nRes [f(z),a_k]+Res [f(z),\infty]=0</mrow></md> байна.</p><p>Энэ хялбар теоремыг өөрөө батална уу.</p></statement></theorem><example><statement><p><m>\dfrac{e^z}{z^2(z^2+9)}</m> функцийн бүх онцгой цэг болон төгсгөлгүй алсын цэг дээрх үлдэц ол.</p></statement></example><proof><p><m>z=0</m> II эрэмбийн туйл,<m>z=\pm 3i</m> энгийн туйлууд.
+<md><mrow>Res \left[\frac{e^z}{z^2(z^2\pm 9)}, 0\right] &amp;=\frac{1}{2!}\lim\limits_{z\rightarrow 0}\left(\frac{e^z}{z^2+9}\right)'</mrow><mrow>&amp;=\lim\limits_{z\rightarrow 0} \frac{e^z(z^2+9)-2ze^z}{(z^2+9)^2}=\frac{1}{18};</mrow></md>
+<md><mrow>&amp;Res \left[\frac{e^z}{z^2(z^2+ 9)}, 3i\right]=\lim\limits_{z\rightarrow 3i}\frac{e^z}{z^2(z+3i)}=-\frac{1}{54}(\sin 3-i\cos 3)</mrow><mrow>&amp;Res \left[\frac{e^z}{z^2(z^2+ 9)}, -3i\right]=\lim\limits_{z\rightarrow -3i}\frac{e^z}{z^2(z-3i)}=-\frac{1}{54}(\sin 3+i\cos 3)</mrow><mrow>&amp;Res \left[\frac{e^z}{z^2(z^2+ 9)}, \infty\right]=\frac{1}{27}(\sin 3-3)</mrow></md></p></proof><example><statement><p><m>\bint\limits_{|z|=1} \dfrac{e^zdz}{z^2(z^2-9)}</m> бод.</p></statement><solution><p><m>|z|=1</m> тойрог дотор <m>z=0</m> гэсэн II эрэмбийн туйл байх тул
+    <md><mrow>\bint\limits_{|z|=1} \dfrac{e^zdz}{z^2(z^2-9)}&amp;=2 \pi i Res\left[ \dfrac{e^zdz}{z^2(z^2-9)}, 0\right]</mrow><mrow>&amp;=2 \pi i \lim\limits_{z\rightarrow 0}\left(\frac{e^z}{z^2-9}\right)'=2\pi i \lim\limits_{z\rightarrow 0}
+        \frac{e^z(z^2-9)-2ze^z}{(z^2-9)^2}</mrow><mrow>&amp;=-\frac{2\pi i}{9}</mrow></md>
+    (үлдэцийн үндсэн теорем ашиглав).</p></solution></example></section>
+  <xi:include href="./ai-13.ptx" />
+  <xi:include href="./sem-13.ptx" />
+  <xi:include href="./hw-13.ptx" />
+</chapter>

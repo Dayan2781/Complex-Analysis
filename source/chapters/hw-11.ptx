@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-11">
+  <title>Гэрийн даалгавар 11</title>
+  <exercises xml:id="exercises-homework-11">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw11-1">
+      <statement><p>Нийлэлтийн радиусыг ол: <m>\sum\frac{z^n}{3^n+4^n}</m>, <m>\sum n^nz^n</m>, <m>\sum z^{n!}</m>.</p></statement>
+      <solution><p><m>\sqrt[n]{3^n+4^n}\to4</m> тул <m>R=4</m>. <m>\sqrt[n]{n^n}=n\to\infty</m> тул <m>R=0</m>. <m>\sum z^{n!}</m>-ийн коэффициентүүд <m>0</m> эсвэл <m>1</m> бөгөөд төгсгөлгүй олон <m>1</m> тул <m>\limsup\sqrt[k]{|c_k|}=1</m>, <m>R=1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw11-2">
+      <statement><p><m>\frac1{z^2-3z+2}</m>-ийг <m>z=0</m> орчимд Тейлорын цуваанд задлаж, нийлэлтийн радиусыг ол.</p></statement>
+      <solution><p><m>\frac1{(z-1)(z-2)}=\frac1{z-2}-\frac1{z-1}=\frac1{1-z}-\frac{1}{2}\cdot\frac{1}{1-z/2}=\sum_{n\ge0}\left(1-\frac1{2^{n+1}}\right)z^n</m>. <m>R=1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw11-3">
+      <statement><p>Гол салбарын <m>\ln(1+z)</m>-ийн Тейлорын цувааг ол.</p></statement>
+      <solution><p><m>(\ln(1+z))'=\frac1{1+z}=\sum(-1)^nz^n</m>, <m>|z|&lt;1</m>. Зэрэгт цувааг гишүүнчлэн интегралчилж, <m>\ln1=0</m> ашиглавал <m>\ln(1+z)=\sum_{n\ge1}\frac{(-1)^{n-1}z^n}{n}</m>, <m>R=1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw11-4">
+      <statement><p><m>\tan z</m>-ийн Тейлорын цувааны эхний гурван тэг биш гишүүнийг ол.</p></statement>
+      <solution><p><m>\tan z</m> сондгой тул <m>\tan z=a_1z+a_3z^3+a_5z^5+\dots</m>. <m>\tan z\cos z=\sin z</m>: <m>(a_1z+a_3z^3+a_5z^5)(1-\frac{z^2}2+\frac{z^4}{24})=z-\frac{z^3}6+\frac{z^5}{120}</m>. Коэффициентүүдийг тэнцүүлбэл <m>a_1=1</m>, <m>a_3-\frac12=-\frac16</m>, <m>a_5-\frac{a_3}2+\frac1{24}=\frac1{120}</m>. Иймд <m>\tan z=z+\frac{z^3}3+\frac{2z^5}{15}+\dots</m></p></solution>
+    </exercise>
+    <exercise xml:id="hw11-5">
+      <statement><p><m>f</m> нь <m>|z|&lt;1</m> дээр голоморф ба <m>f(\frac1n)=0</m> (<m>n=2,3,\dots</m>) бол <m>f\equiv0</m> гэж батал.</p></statement>
+      <solution><p>Тэгүүдийн олонлог <m>\frac1n\to0</m> гэсэн дотоод хязгаарын цэгтэй. Хэрэв <m>f\not\equiv0</m> бол <m>f(z)=z^m g(z)</m>, <m>g(0)\ne0</m> (<m>m</m> нь <m>0</m> тэгийн эрэмбэ; тасралтгүй чанараар <m>f(0)=0</m>). <m>g</m> тасралтгүй тул <m>0</m>-ийн орчимд <m>g\ne0</m>, гэтэл <m>g(\frac1n)=0</m>: зөрчил.</p></solution>
+    </exercise>
+  </exercises>
+</section>

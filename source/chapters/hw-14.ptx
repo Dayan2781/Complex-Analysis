@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-14">
+  <title>Гэрийн даалгавар 14</title>
+  <exercises xml:id="exercises-homework-14">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw14-1">
+      <statement><p><m>\displaystyle\int_0^{2\pi}\frac{dt}{5-4\sin t}</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>z=e^{it}</m>, <m>\sin t=\frac{z-z^{-1}}{2i}</m>, <m>dt=\frac{dz}{iz}</m>: <me>\oint_{|z|=1}\frac{dz}{iz\bigl(5+2i(z-z^{-1})\bigr)}=\oint_{|z|=1}\frac{dz}{-2z^2+5iz+2}=\oint_{|z|=1}\frac{dz}{-2(z-2i)(z-\frac i2)}.</me> Дотор <m>z=\frac i2</m>: <m>\Res=\frac1{-2(\frac i2-2i)}=\frac1{3i}</m>. Хариу: <m>2\pi i\cdot\frac1{3i}=\frac{2\pi}3</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw14-2">
+      <statement><p><m>\displaystyle\int_{-\infty}^\infty\frac{x^2}{x^4+1}dx</m>-ийг тооцоол.</p></statement>
+      <solution><p>Дээд хагас хавтгайн туйлууд <m>z_1=e^{i\pi/4}</m>, <m>z_2=e^{3i\pi/4}</m>; <m>\Res\frac{z^2}{z^4+1}=\frac{z^2}{4z^3}=\frac1{4z}</m>. Нийлбэр <m>\frac14(e^{-i\pi/4}+e^{-3i\pi/4})=-\frac{i\sqrt2}{4}</m>. Хариу: <m>2\pi i\cdot(-\frac{i\sqrt2}4)=\frac{\pi}{\sqrt2}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw14-3">
+      <statement><p><m>\displaystyle\int_0^\infty\frac{x\sin x}{x^2+4}dx</m>-ийг тооцоол.</p></statement>
+      <solution><p>Жорданы леммийн хэсгийн жишээгээр (<m>a=2</m>) <m>\int_{-\infty}^\infty\frac{x\sin x}{x^2+4}dx=\pi e^{-2}</m>. Интеграл доорх функц тэгш тул хариу <m>\frac{\pi}{2e^2}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw14-4">
+      <statement><p><m>0&lt;a&lt;1</m> үед <m>\displaystyle\int_0^\infty\frac{x^{a-1}}{1+x}dx=\frac{\pi}{\sin\pi a}</m> гэж <q>түлхүүрийн нүх</q> контураар батал.</p></statement>
+      <solution><p><m>f(z)=\frac{z^{a-1}}{1+z}</m>, <m>z^{a-1}=e^{(a-1)\log z}</m>, <m>0&lt;\arg z&lt;2\pi</m>. Контур: эерэг бодит тэнхлэгийн дээд эрэг (<m>r\to R</m>), <m>|z|=R</m> тойрог, доод эрэг (<m>R\to r</m>), <m>|z|=r</m> тойрог (сөрөг чиглэлд). Жижиг ба том тойргийн интегралууд <m>O(r^a)</m>, <m>O(R^{a-1})</m> тул тэг рүү тэмүүлнэ. Доод эрэг дээр <m>z^{a-1}=x^{a-1}e^{2\pi i(a-1)}</m>. Иймд <me>(1-e^{2\pi i(a-1)})I=2\pi i\Res_{z=-1}f=2\pi ie^{i\pi(a-1)}.</me> <m>I=\frac{2\pi i}{e^{-i\pi(a-1)}-e^{i\pi(a-1)}}=\frac{2\pi i}{-2i\sin(\pi a-\pi)}=\frac{\pi}{\sin\pi a}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw14-5">
+      <statement><p><m>\displaystyle\sum_{n=1}^\infty\frac1{n^2+1}</m>-ийг ол.</p></statement>
+      <solution><p>Жорданы леммийн хэсгийн жишээгээр (<m>a=1</m>) <m>\sum_{n=-\infty}^\infty\frac1{n^2+1}=\pi\coth\pi</m>. <m>n=0</m> гишүүн <m>1</m>, үлдсэн нь тэгш хэмтэй тул <m>\sum_{n\ge1}\frac1{n^2+1}=\frac{\pi\coth\pi-1}2</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

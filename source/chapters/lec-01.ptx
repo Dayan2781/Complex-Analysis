@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch01" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Комплекс тоо ба комплекс хавтгай</title>
+<section xml:id="lec01-s1"><title>Комплекс тоо, үндсэн үйлдлүүд</title><definition><statement><p>Бодит <m>x</m>, <m>y</m> тоонуудын эрэмбэлэгдсэн <m>(x,y)</m> хосыг комплекс тоо гэнэ. Комплекс тоонуудын олонлогийг <me>\mathbb{C}=\{z=(x,y)\mid x, y \in\mathbb{R}\}</me>-ээр тэмдэглэе. 
+<m>x</m>-ийг <m>z</m>-ийн бодит, <m>y</m>-ийг хуурмаг хэсэг  гэх ба
+<me>x=\re z, \qquad y=\im z</me>
+тэмдэглэл хэрэглэдэг.</p></statement></definition><p>Комплекс тоонуудын адилтгал, тэнцэл, нийлбэр, үржвэр дараах байдлаар тодорхойлогдоно:
+<ul marker=""><li><p><alert>1)</alert> <m>y=0</m> үед <m>(x,0)</m> тоо бодит <m>x</m>-тэй адилтгагдана: 
+    <me>(x,0)=x, \qquad \forall x\in\mathbb{R}</me>
+Энд <m>(0,0)=0</m>, <m>(1,0)=1</m>, <m>(0,1)=i</m> тоонуудыг харгалзан тэг, нэгж ба хуурмаг нэгж  хэмээн нэрлэнэ.</p></li><li><p><alert>2)</alert> <m>z_1=(x_1,y_1)</m>, <m>z_2=(x_2,y_2)</m> байхад <m>x_1=x_2</m> ба <m>y_1=y_2</m> байвал <m>z_1=z_2</m> гэдэг.</p></li><li><p><alert>3)</alert> Комплекс <m>(x_1+x_2, y_1+y_2)</m> тоог тэдгээрийн нийлбэр  гэнэ:
+<men xml:id="r-1complu3a1_1">z_1+z_2=(x_1+x_2,y_1+y_2)</men></p></li><li><p><alert>4)</alert> Комплекс <m>(x_1x_2-y_1y_2</m>, <m>x_1y_2+x_2y_1)</m> тоог тэдгээрийн үржвэр гэнэ:
+<men xml:id="r-1complu3a1_2">z_1\cdot z_2=(x_1x_2-y_1y_2 , x_1y_2+x_2y_1)</men></p></li></ul>
+<xref ref="r-1complu3a1_1"/>, <xref ref="r-1complu3a1_2"/> ёсоор дараах арифметик хуулиуд шууд биелэгдэх нь илэрхий: 
+<md><mrow>&amp;z_1+z_2=z_2+z_1  - \text {нэмэхийн байр солих хууль};</mrow><mrow>&amp;z_1\cdot z_2=z_2\cdot z_1 - \text {үржүүлэхийн байр солих хууль};</mrow><mrow>&amp;(z_1+z_2)+z_3=z_1+(z_2+z_3) - \text {нэмэхийн хэсэглэн нэгтгэх хууль};</mrow><mrow>&amp;(z_1\cdot z_2)z_3=z_1(z_2\cdot z_3) - \text {үржүүлэхийн хэсэглэн нэгтгэх хууль};</mrow><mrow>&amp;(z_1+z_2) z_3=z_1z_3+z_2z_3 - \text {хаалт задлах хууль}.</mrow></md>
+Мөн
+<me>z+0=z, \quad z\cdot 0 =0,\quad z\cdot 1=z, \quad i\cdot i=i^2=-1</me>
+байх нь ч мэдээж. <m>z=(x,y)\in \mathbb{C}</m> тоо <m>z=x+iy</m> гэсэн алгебр хэлбэртэй тавигдана.</p><p>Учир нь
+<me>z=(x,y)=(x,0)+(0,y)=(x,0)+(0,1)(y,0)=x+iy</me></p><definition><statement><p><m>z=(x,y)</m> тооны хувьд <m>(-x,-y)</m> тоог <m>z=(x,y)</m> тооны эсрэг тоо гэнэ.</p><p>Хасах үйлдэл нь эсрэг тоог нэмэх үйлдэл гэж тодорхойлогдоно. Өөрөөр хэлбэл <m>z_1-z_2</m> ялгавар  нь <m>z_1+(-z_2)</m>  тоо байна. Хэрэв <m>z_1=(x_1,y_1)</m>, <m>z_2=(x_2,y_2)</m> гэвэл <m>z_3=z_1-z_2=(x_1-x_2, y_1-y_2).</m></p></statement></definition><definition><statement><p><m>(x,-y)=x-iy</m> тоог <m>z=(x,y)</m> тооны хосмог гэх бөгөөд <m>\overline{z}=x-iy</m> гэж тэмдэглэнэ. Өгөгдсөн комплекс тооноос түүний хосмогт шилжихийг хосмогийн үйлдэл гэнэ. 
+<md><mrow>&amp;\overline{\overline{z}}=z, \quad \overline{z_1+z_2}=\overline{z_1}+\overline{z_2},  \quad \overline{z_1\cdot z_2}=\overline{z_1}\cdot \overline{z_2},</mrow><mrow>&amp;z+\overline{z}=2x, \quad z-\overline{z}=2iy,  \quad z\cdot \overline{z}=|z|^2=x^2+y^2\geq 0</mrow></md> байх нь мэдээж.</p></statement></definition><definition><statement><p>Тэгээс ялгаатай комплекс тоонд хуваах үйлдэл нь үржүүлэхийн урвуу үйлдэл гэж тодорхойлогдоно. Өөрөөр хэлбэл: <m>\dfrac{z_1}{z_2}</m>, <m>z_2\neq 0</m> ноогдвор нь  <m>z_2\cdot z_4=z_1</m> чанарт нийцэх
+<m>z_4=(x_4,y_4)</m> тоо байна. Иймд
+<md><mrow>z_4=\dfrac{z_1}{z_2}&amp;=\dfrac{x_1+iy_1}{x_2+iy_2}=\dfrac{(x_1+iy_1)(x_2-iy_2)}{x_2^2+y_2^2} =</mrow><mrow>&amp;=\left(\frac{x_1x_2+y_1y_2}{x_2^2+y^2_2}, \dfrac{x_2y_1-x_1y_2}{x_2^2+y_2^2}\right).</mrow></md></p></statement></definition></section><section xml:id="lec01-s2"><title>Комплекс тооны геометр дүрслэл. Модуль ба аргумент. Туйлын хэлбэр</title><p>Хавтгай дээр тэгш өнцөгт координатын <m>Oxy</m> систем өгөгдсөн байг. Тэгвэл <m>z=x+iy</m> гэсэн комплекс тоо нь уул хавтгайн <m>x</m>—абсцисстай, <m>y</m>—ординаттай  <m>(x,y)</m> цэгээр дүрслэгдэнэ.</p><figure><caption></caption><image width="50%"><latex-image>\begin{tikzpicture}[line cap=round,line join=round,line width=0.8pt,&gt;=triangle 45,x=1cm,y=1cm]
+\clip(0,0) rectangle (6,4.5);
+\coordinate (x1) at (0,1);
+\coordinate (y1) at (1,0);
+\coordinate (x2) at (5.5,1);
+\coordinate (y2) at (1,4);
+\coordinate (o) at (1,1);
+\coordinate (z) at (4,3);
+\draw[-stealth,line width=0.5pt] (x1)  -- (x2) node[right] {$x$};
+\draw[-stealth,line width=0.5pt] (y1)  -- (y2) node[right] {$y$};
+\draw[stealth-,line width=0.5pt] (z) node[above right ] {$z=(x,y)$} --(o);
+\draw (o) node[anchor=north east] {$O$};
+\draw (o)+(1.4,0.8) node[anchor=north west] {$\varphi$};
+\draw ($(o)!0.6!(z)$) node[anchor=south] {$r$};
+\draw[-stealth] (3,1) arc(0:atan(2/3):2);
+\draw[dashed] (4,1) node[below] {$x$} -- (z) -- (1,3) node[left] {$y$};
+\end{tikzpicture}</latex-image></image></figure><p>Комплекс тоо ба хавтгайн цэгийн олонлогуудын энэ харгалзаа харилцан нэгэн утгатай нь мэдээж.</p><p>Комплекс <m>z=x+iy</m> тоо авах бүрд, түүнд <m>x,y</m> координат бүхий вектор (чөлөөт) харгалзлаа ч гэж ярьж болно. Учир нь 
+<me>z=x+iy=x\cdot 1+y\cdot i =x\cdot (1,0)+y\cdot (0,1)</me>
+болж <m>z</m> нь тэнхлэгүүд дээрх нэгж <m>1=(1,0)</m> ба <m>i=(0,1)</m> векторуудаар задлагдлаа. Энэ харгалзаа мөн л харилцан нэгэн утгатай.</p><p>Иймд комплекс тоонуудын, хавтгайн цэгүүдийн, чөлөөт векторуудын олонлог өөр хоорондоо эквивалент (чацуу чанартай) бөлгөө.</p><p>Зураг 2 дээр комплекс тоонуудын нийлбэр, ялгавар</p><figure><caption></caption><image width="50%"><latex-image>\begin{tikzpicture}[line cap=round,line join=round,line width=0.8pt,&gt;=triangle 45,x=1cm,y=1cm]
+\clip(0,0) rectangle (6,4.5);
+\coordinate (x1) at (0,1);
+\coordinate (y1) at (1,0);
+\coordinate (x2) at (5.5,1);
+\coordinate (y2) at (1,4);
+\coordinate (o) at (1,1);
+\coordinate (z2) at (1.7,2.5);
+\coordinate (z1) at (2.8,1.5);
+\draw[-stealth,line width=0.5pt] (x1)  -- (x2) node[right] {$x$};
+\draw[-stealth,line width=0.5pt] (y1)  -- (y2) node[right] {$y$};
+\draw (o) node[anchor=north east] {$O$};
+\draw[-stealth,line width=0.5pt] (o)--(z1) node[below right ] {$z_1$};
+\draw[-stealth,line width=0.5pt] (o)--(z2) node[above right ] {$z_2$};
+\draw[-stealth,line width=0.5pt] (o) -- ($(z1)+(z2)-(o)$) node[above right ] {$z_1+z_2$};
+\draw[-stealth,line width=0.5pt] (o)-- ($(z1)-(z2)+(o)$) node[above right] {$z_1-z_2$};
+\end{tikzpicture}</latex-image></image></figure><p>олохыг векторуудын нэмэх, хасах дүрэм ашиглан геометр байдлаар харуулав. Эндээс</p><p><me>\tag{a}
+    |z_1+z_2|\leq |z_1|+|z_2|</me> бөгөөд энэ нь
+<me>\tag{b}
+    |z_1-z_2|\geq |z_1|-|z_2|</me> тэнцэтгэл биштэй эквивалент. Учир нь (а) үнэн гэвэл <me>|z_1|=|z_1-z_2+z_2|\leq |z_2|+|z_1-z_2|</me>
+ бөгөөд эндээс (b) гарав. Иймд <m>(a)\sim (b).</m></p><definition><statement><p><m>r=\sqrt{x^2+y^2}=\sqrt{z\cdot \overline{z}}</m> тоог комплекс <m>z</m> тооны модуль гэж нэрлэх бөгөөд <m>|z|</m>-аар тэмдэглэнэ (Зураг 1). Энэ тоо нь координатын эхээс <m>z</m> хүртлэх зай юм. Иймд <m>r=|z|\geq 0</m> байх нь ойлгомжтой. Зөвхөн <m>z=0</m> үед тэнцэл нь биелэгдэнэ.</p></statement></definition><definition><statement><p><m>Ox</m> тэнхлэгийн эерэг чиглэлтэй <m>z</m> векторын үүсгэх <m>\varphi</m> өнцгийг комплекс <m>z=x+iy</m> тооны аргумент гэж нэрлэх бөгөөд <m>\Arg  z</m>-ээр тэмдэглэнэ (Зураг 1). Ингэхдээ <m>Ox</m> тэнхлэгээс нар буруу (цагийн зүүний эсрэг) тоологдож байвал уул өнцгийн хэмжээг эерэг, харин нар зөв бол сөрөг гэж тооцдог. <m>z=0</m> тооны хувьд аргумент тодорхойлогдохгүй.</p></statement></definition><p>Комплекс тооны аргументийн
+<me>-\pi &lt;\varphi_0\leq \pi</me>
+нөхцөлд тохирох цор ганц <m>\varphi_0</m> утгыг аргументийн гол утга гэх ба <m>\varphi_0=\arg  z</m> гэж тэмдэглэнэ.
+<mdn><mrow xml:id="r-1complu3a1_3">&amp;\arg  z=\arctan \frac{y}{x}+\varepsilon \pi; \quad x&gt;0 \quad \text{үед} \quad \varepsilon=0;</mrow><mrow number="no">&amp;x&lt;0\quad y\geq 0 \quad \text{үед} \quad \varepsilon=1;</mrow><mrow number="no">&amp;x&lt;0\quad y&lt; 0 \quad \text{үед} \quad \varepsilon=-1;</mrow><mrow number="no">&amp;\arg  z=\frac{\pi}{2}, \quad x=0.</mrow></mdn>
+Комплекс тооны аргумент олон утгат бөгөөд тэр нь гол утгаасаа <m>2\pi</m> өнцөгт бүхлээр хуваагдахуйц нэмэгдэхүүнээр ялгагдах нь илэрхий.</p><example><statement><p><m>z=-\sin\dfrac{\pi}{3}-i\cos \dfrac{\pi}{3}</m> бол түүний модуль ба аргументийг ол.</p></statement><solution><p><m>x=-\sin \dfrac{\pi}{3}&lt;0</m>, <m>y=-\cos \dfrac{\pi}{3}&lt;0</m> тул <xref ref="r-1complu3a1_3"/> ёсоор 
+<me>\arg  z =-\pi +\arctan \left(\cot\frac{\pi}{3}\right) =-\pi +\arctan \left(\tan \left(\frac{\pi}{2}-\frac{\pi}{3}\right)\right)</me> тул
+<md><mrow>&amp;\Arg z=-\frac{5\pi}{6}+2k\pi , \quad k=0,\pm 1,...</mrow><mrow>&amp; |z|=\sqrt{\sin^2\frac{\pi}{3}+\cos^2\frac{\pi}{3}}=1</mrow></md></p></solution></example><example><statement><p><m>z=-1+i\sqrt{3}</m> бол <m>|z|</m>, <m>\arg  z</m>-ыг ол.</p></statement><solution><p><md><mrow>&amp; |z|=\sqrt{(-1)^2+(\sqrt{3})^2}=2</mrow><mrow>&amp; \arg  z=\arctan \frac{\sqrt{3}}{-1}+\pi \quad (x&lt;0 \quad \text{тул}) =\pi -\frac{\pi}{3}=\frac{2\pi}{3}.</mrow></md></p></solution></example></section><section xml:id="lec01-s3"><title>Комплекс тооны тригонометр дүрслэл</title><p>Зураг 1-ээс харахад <m>z</m> цэгийн декарт ба туйлын координатуудын холбоо
+<men xml:id="r-1complu3a1_5">\begin{cases}
+x=r\cos \varphi \\
+y=r\sin\varphi
+\end{cases}</men>
+байх нь ойлгомжтой. <xref ref="r-1complu3a1_5"/> ёсоор комплекс <m>z</m> тоо
+<men xml:id="r-1complu3a1_6">z=x+iy=r(\cos \varphi+i\sin \varphi)</men>
+дүрстэй тавигдана. <xref ref="r-1complu3a1_6"/> бичиглэлийг комплекс тооны тригонометр хэлбэр гэнэ. Бичиглэлийн товч байдлыг харгалзан
+<me>\tag{$*$}
+\varepsilon({i\varphi})=\cos\varphi +i\sin\varphi</me>
+тэмдэглэл орлуулбал
+<men xml:id="r-1complu3a1_7">z=r\varepsilon({i\varphi})</men>
+бөгөөд үүнийг комплекс тооны илтгэгч хэлбэр гэнэ. <xref ref="r-1complu3a1_6"/> ба <xref ref="r-1complu3a1_7"/> хэлбэрийг заримдаа туйлын хэлбэр гэж нэрлэнэ. Тэмдэглэл байдлаар оруулсан (<m>{*}</m>) тэнцлийг Эйлер (1707-1783)- ийн томьёо гэж нэрлэх бөгөөд түүнийг <me>\varepsilon({i\varphi})=\cos\varphi +i\sin\varphi =e^{i\varphi}</me> үнэн болохыг хожуу батална. Энд <m>e^{2\pi i}=1</m>, <m>e^{\pi i}=-1</m>, <m>e^{\frac{\pi}{2}i}=i</m>, <m>e^{-\frac{\pi}{2}i}=-i</m> байна.</p><p><m>(*)</m> тэнцэлд <m>\varphi</m>-ийн оронд <m>-\varphi</m> тавихад
+<me>\tag{$\overline{*}$}
+e^{-i\varphi}=\cos\varphi -i\sin\varphi</me>
+болж <m>(*)</m> ба <m>(\overline{*})</m>-ийг хооронд нь нэмэх, хасах үед 
+<me>\cos\varphi =\dfrac{e^{i\varphi}+e^{-i\varphi}}{2}</me>
+<me>\sin\varphi =\dfrac{e^{i\varphi}-e^{-i\varphi}}{2i}</me>
+болно.</p><p>Комплекс тооны илтгэгч хэлбэр ашиглаж, зэрэг  дэвшүүлэх болон язгуур  гаргах үйлдлүүд гүйцэтгэхэд тохиромжтой.</p><p><m>z_1=r_1e^{i\varphi_1}</m>, <m>z_2=r_2e^{i\varphi_2}</m> авахад
+<men xml:id="r-1complu3a1_10">z_1\cdot z_2=r_1\cdot r_2 e^{i(\varphi_1+\varphi_2)}</men>
+<men xml:id="r-1complu3a1_11">\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\cdot e^{i(\varphi_1-\varphi_2)}, \quad r_2\neq 0</men> <m>z=re^{i\varphi}</m>, <m>z\neq 0</m> гэвэл 
+<men xml:id="r-1complu3a1_12">z^n=r^ne^{in\varphi}, \quad n\in\mathbb{N}</men>
+<men xml:id="r-1complu3a1_13">\sqrt[n]{z}=\sqrt[n]{r}e^{i\frac{\varphi+2k\pi}{n}}, \quad (k=0,1,2,\ldots, n-1)</men>
+байхыг хялбархан баталж болно. Жишээ нь 
+<md><mrow>z_1\cdot z_2&amp;=r_1\cdot r_2[(\cos \varphi_1\cdot \cos \varphi_2-\sin \varphi_1\cdot \sin\varphi_2)+</mrow><mrow>&amp;+i(\cos \varphi_1\cdot\sin \varphi_2+\cos \varphi_2\cdot \sin\varphi_1)]</mrow><mrow>&amp;= r_1\cdot r_2 [\cos (\varphi_1+\varphi_2)+i(\sin \varphi_1+\varphi_2)]</mrow><mrow>&amp;=r_1r_2\cdot e^{i(\varphi_1+\varphi_2)}</mrow></md>
+болж <xref ref="r-1complu3a1_10"/> батлагдлаа. Үүнтэй төстэйгөөр <xref ref="r-1complu3a1_11"/> батлагдана.</p><p>Үржүүлэх дүрэм дээр математик индукцийн арга хэрэглэхэд <xref ref="r-1complu3a1_12"/> батлагдана.</p><p>Одоо комплекс тооноос язгуур гаргах <xref ref="r-1complu3a1_13"/> томьёог баталъя. <m>n\in N</m> байг. Өгөгдсөн комплекс <m>z</m> тооны хувьд <m>z=W^n</m> тэгшитгэл бодъё. Энэ тэгшитгэлийн шийдийн олонлогийг <m>\sqrt[n]{z}</m> гэж тэмдэглэе. <m>z</m> ба <m>W</m> тоонуудыг тригонометр хэлбэрт бичвэл 
+<me>z=r(\cos\varphi +i\sin \varphi); \qquad W=\rho (\cos v+ i\sin v)</me> 
+Эндээс <xref ref="r-1complu3a1_12"/> ёсоор
+<me>r(\cos\varphi +i\sin \varphi)=\rho^n(\cos nv+ i\sin nv)</me>
+болж хоёр комплекс тооны тэнцэх нөхцөлөөр
+<me>r=\rho^n, \qquad nv=\varphi +2k\pi</me>
+бөгөөд улмаар
+<me>W=\sqrt[n]{z}=\sqrt[n]{r} \left(\cos \frac{\varphi +2k\pi}{n}+i\sin \frac{\varphi+2k\pi}{n}\right), \quad k=0, \pm 1, \pm 2 ,...</me> болно.  
+Үүний бие биеэсээ ялгаатай язгуурын тоо нь <m>k=0,1,2,\ldots ,n-1</m> утгуудад харгалзах <m>n</m> ширхэг гэж хялбархан тогтоогдоно. Эдгээр язгуур нь координатын эх дээр төвтэй <m>\sqrt[n]{|z|}</m> радиустай дугуйд багтсан зөв <m>n</m>-өнцөгтийн оройн цэгүүд болно. Эндээс 
+<md><mrow>\eta_k&amp;=\sqrt[n]{z}=\sqrt[n]{|z|}\left(\cos \frac{\arg  z+2k\pi}{n}+i\sin \frac{\arg  z+2k\pi}{n}\right)</mrow><mrow>&amp;=\sqrt[n]{r}e^{\frac{\varphi+2k\pi}{n}},</mrow></md>
+<me>k=0,1,2,\ldots ,n-1</me>
+<xref ref="r-1complu3a1_12"/> ба <xref ref="r-1complu3a1_13"/>-ыг Муавр (1667-1754)-ын томьёо  гэнэ.</p><p><xref ref="r-1complu3a1_10"/>-аас 
+<me>|z_1\cdot z_2|=|z_1|\cdot |z_2|,</me>
+<me>\Arg  (z_1\cdot z_2)=\Arg  z_1+\Arg  z_2</me>
+<xref ref="r-1complu3a1_11"/>-ээс 
+<me>\left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|}, \quad (z_2\neq 0)</me>
+<xref ref="r-1complu3a1_12"/>-оос
+<me>|z^n|=|z|^n,</me>
+<me>\Arg  (z^n)=n\cdot \Arg  z</me>
+мөрдөлгөөнүүд гаргаж болно.</p><example><statement><p><m>z=-1-i\sqrt{3}</m> тоог тригонометр хэлбэрт бич.</p></statement><solution><p><m>|z|=2</m>, <m>\arg(-1-i\sqrt{3})=-\pi +\arctan \frac{-\sqrt{3}}{-1}=-\frac{2\pi}{3}</m> тул 
+<me>-1-i\sqrt{3}=2\left[\cos\left(-\frac{2\pi}{3}+2k\pi\right) +i\sin \left(-\frac{2\pi}{3}+2k\pi\right)\right],</me>
+<me>k=0,\pm 1, \ldots \quad .</me></p></solution></example><example><statement><p><m>z^{n-1}=\overline{z}</m> нөхцөлд тохирох бүх <m>z\quad (z\neq 0)</m> тоонуудыг ол.</p></statement><solution><p><m>z=re^{i\varphi}</m> гэвэл <m>r^{n-1}\cdot e^{i(n-1)\varphi}=re^{-i\varphi}</m> буюу   <m>r^{n-2}e^{in \varphi}=1</m>, эндээс <m>r^{n-2}=1</m>, <m>in\varphi =2k\pi i</m>, өөрөөр хэлбэл <me>r=1, \qquad \varphi=\dfrac{2k\pi}{n}, \qquad k=0,1,\ldots, n-1.</me> Иймд <m>z_k=e^{i\frac{2k\pi}{n}}</m>, <m>k=0,1,\ldots n-1.</m></p></solution></example><example><statement><p><m>(\sqrt{3}-3i)^6</m> илэрхийллийн утгыг ол.</p></statement><solution><p><m>|\sqrt{3}-3i|=\sqrt{12}</m> 
+<me>\arg  (\sqrt{3}-3i)=\arctan \frac{-3}{\sqrt{3}}=-\arctan \frac{\sqrt{3}}{1}=-\frac{\pi}{3}.</me>
+Иймд <m>(\sqrt{3}-3i)^6=(\sqrt{12})^6\cdot e^{-6\cdot \frac{\pi}{3}i}=1728.</m></p></solution></example><example><statement><p><m>\sqrt{-1}</m> утгыг ол.</p></statement><solution><p><me>\sqrt{-1}=1\cdot \left(\cos\frac{\pi+2k\pi}{2}+i\sin\frac{\pi +2k\pi}{2}\right), \qquad k=0,1</me> тул
+<me>\eta_0=\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}=i, \qquad \eta_1=\cos\frac{2\pi}{2}+i\frac{3\pi}{2}=-i</me></p></solution></example></section>
+  <xi:include href="./ai-01.ptx" />
+  <xi:include href="./sem-01.ptx" />
+  <xi:include href="./hw-01.ptx" />
+</chapter>

@@ -1,0 +1,139 @@
+\documentclass[b5paper,11pt]{book}
+% ...geometry тохиргоо...
+\hoffset=0cm
+\voffset=-1.4cm
+\textwidth=13cm
+\textheight=19cm
+
+\usepackage{polyglossia}
+\setdefaultlanguage{mongolian}
+\setotherlanguage{english}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont{Libertinus Mono}
+\setmathfont{Libertinus Math}
+\usepackage{amsthm, latexsym}
+\makeatletter
+\makeatother
+\usepackage{relsize,exscale}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{calrsfs}
+\usepackage{imakeidx}
+\usepackage{graphicx}
+\usepackage{caption}
+\counterwithout{figure}{chapter}
+\usepackage{tocloft}
+\usepackage{pstricks-add,tikz}
+\usepackage{tkz-euclide}
+\usepackage{pgfplots}
+\usepackage{multicol}
+\usepackage{enumitem}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows,math,tikzmark,calc}
+\usetikzlibrary{patterns.meta}
+\pagestyle{empty}
+\theoremstyle{plain}
+\newtheorem{thm}{Теорем}[chapter]
+\newtheorem{lem}{Лемм}[chapter]
+\newtheorem{cor}{Мөрдлөгөө}[chapter]
+\newtheorem{axm}{Аксиом}[chapter]
+\newtheorem{dfn}{Тодорхойлолт}[chapter]
+\newtheorem{sen}{Чанар}[chapter]
+\newtheorem{exm}{Жишээ}[chapter]
+\newtheorem{prop}{Өгүүлбэр}[chapter]
+\theoremstyle{remark}
+\newtheorem*{sol}{\normalfont{\textbf{Бодолт}}}
+\newtheorem*{hnt}{\normalfont{\textbf{Санамж}}}
+\newtheorem{prb}{\normalfont{\textbf{Бодлого}}}
+\newtheorem{note}{\normalfont{\textbf{Тэмдэглэл}}}
+\newtheorem*{prf}{\normalfont{\textbf{Баталгаа}}}
+\DeclareMathOperator{\Ln}{\textrm{Ln }}
+\DeclareMathOperator{\Arg}{\textrm{Arg }}
+\DeclareMathOperator{\Arctan}{\textrm{Arctan }}
+\DeclareMathOperator{\Arccot}{\textrm{Arccot }}
+\DeclareMathOperator{\Arccos}{\textrm{Arccos }}
+\DeclareMathOperator{\Arcsin}{\textrm{Arcsin }}
+\DeclareMathOperator{\re}{\textrm{\normalfont{Re }}}
+\DeclareMathOperator{\im}{\textrm{\normalfont{Im }}}
+%\DeclareMathOperator{\ch}{ch}
+%\DeclareMathOperator{\sh}{sh}
+\usepackage{fancyhdr}
+\numberwithin{equation}{chapter}
+\newcommand{\ml}[1]{\mathcal{L}\{#1\}}
+\newcommand{\ind}[1]{{\textcolor{blue}{\it{#1}}} \index{#1}}
+\newcommand{\z}{$z=x+iy$}
+\newcommand{\hz}{$\overline{z}=x-iy$}
+\newcommand{\bint}{\displaystyle\int}
+\newcommand{\undertilde}[1]{\underset{\widetilde{}}{#1}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand{\colgur}[1]
+{\begin{multicols}{3}#1\end{multicols}}
+\newcommand{\colhoy}[1]
+{\begin{multicols}{2}#1\end{multicols}}
+\newcommand{\morshilj}{\textcolor{white}{mor shiljne  oor um bhgui\newline}}
+%\usepackage{xltxtra}
+%\setmainfont[Mapping=tex-text]{Times New Roman}
+\renewcommand\qedsymbol{$\blacksquare$}
+\setcounter{chapter}{0}
+\titleformat{\chapter}
+  {\bf\Large\filcenter}{\Large{Лекц }\thechapter.}{1em}{}
+\titleformat{\section}{\bf\large\filcenter}{\thesection.}{1em}{}
+\setcounter{tocdepth}{3}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Комплекс анализ}
+\fancyhead[RE,LO]{}
+\fancyfoot[LE,RO]{\thepage}
+%\titleformat{\part}{\normalfont\HUGE\bfseries}{ ХЭСЭГ \thepart. \hfill}{}{$\star$}
+\title{\LARGE \bf  Комплекс анализ}
+\author{Д.Даянцолмон}
+\makeindex
+\begin{document}
+\frontmatter
+\begin{titlepage}
+\begin{center}
+
+%\includegraphics[width=0.15\textwidth]{muislogo.png}
+
+\textsc{\bf МОНГОЛ УЛСЫН ИХ СУРГУУЛЬ}\\[5cm]
+
+
+
+%\textsc{\Large Final year project}\\[0.5cm]
+
+% Title
+
+{ \LARGE \bfseries Комплекс анализын лекц} \\[3cm]
+
+{ \LARGE \bfseries Д.Даянцолмон}\\%[0.4cm]%
+\end{center}
+\end{titlepage}
+\newpage
+%\input{Syllabus.tex}
+\tableofcontents
+\mainmatter
+%\input{1complex numbers}
+%\input{2complex function.tex}
+\setcounter{chapter}{5}
+%\input{lec 3 by Mimi}
+%\input{3holomorphic function.tex}
+%\input{4differential.tex}
+%\input{5integral.tex}
+%\input{5series}
+\input{6resdue.tex}
+%\input{7linear and other.tex}
+%\input{8.tex}
+%\input{9.tex}
+%\printindex
+%\input{complexnumers}
+%\input{Midtermexam2026spring}
+\end{document}
+
+     %\includegraphics[width=8cm]{image/94h1.PNG}
+     

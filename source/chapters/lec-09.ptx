@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch09" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Кошийн интеграл теорем. Эх функц</title>
+<section xml:id="lec09-s1"><title>Кошийн интеграл теорем</title><theorem><title>Гурвалжин контурын Кошийн теорем</title><statement><p><m>f\in H(D)</m> ба дотоод муж нь хилийн хэрчмүүдтэйгээ <m>D</m> мужид агуулагдсан гурвалжин <m>\Delta</m> авъя <m>(\overline{\Delta}\subset D)</m>. Тэгвэл 
+<me>\int\limits_{\partial \Delta^+}f(z)dz=0</me>
+байна.</p></statement><proof><p>Эсрэгээс нь <m>\exists \Delta_0:\overline{\Delta_0}\subset D</m> боловч   <m>\left|\bint\limits_{\partial \Delta_0^+}f(z)dz\right|=M&gt;0</m> гэж үзье.</p><figure><caption></caption><image source="images/9.jpg" width="46%"/></figure><p>Гурвалжныг зурагт үзүүлсэн аргаар дундаж шугамуудаар нь хуваавал Чанар 4.3 ёсоор <m>\bint\limits_{\partial \Delta_0^+} f(z)dz</m> нь дөрвөн интегралын нийлбэр болж сална. Иймд эдгээрээс модуль нь <m>\dfrac{M}{4}</m> багагүй байх дор хаяж нэг гурвалжин сонгогдож чадна. Үүнийг нь <m>\Delta_1</m> гэе. 
+<me>\left|\int\limits_{\partial \Delta_1^+} f(z)dz\right|\geq \frac{M}{4}</me>
+Энэ алхмыг үргэлжлүүлэн <m>n</m> удаа хийсэн гэвэл <m>\exists \Delta_n:\Delta_n</m> нь <m>\Delta_0</m> гурвалжингаас <m>2^n</m> дахин төсөөтэйгөөр багассан ба 
+<men xml:id="r-5integu3au2a"> 
+    \left|\int\limits_{\partial \Delta_n^+} f(z)dz\right|\geq \frac{M}{4^n}</men>
+байна.</p><p>Багталцсан бөмбөрцгүүдийн зарчим ёсоор 
+<me>\exists z_0\in D:z_0=\bigcap\limits_{n=1}^\infty \overline{\Delta_n}</me>
+байна.
+<m>f\in H(d)</m> нөхцөл ёсоор 
+<me>\forall \varepsilon &gt;0: \exists \delta&gt;0 \forall z\in U=\{|z-_0|&lt;\delta\}\cap D</me> хувьд
+<me>\begin{cases}
+ f(z)=f(z_0)+f'(z_0)(z-z_0)+\alpha (z)(z-z_0) \\
+ |\alpha (z)|&lt;\varepsilon
+\end{cases}</me> байна. 
+<m>\Delta_0\subset U</m>  гэж үзэхэд явцуурахгүй нь ойлгомжтой. Иймд
+<me>\int\limits_{\partial \Delta_n}f(z)dz=\int\limits_{\partial \Delta_n} [f(z_0)+f'(z_0)(z-z_0)]dz+\int\limits_{\partial \Delta_n}\alpha (z)(z-z_0)dz</me>
+ба жишээ 4.4 ёсоор эхний нэмэгдэхүүн тэг болно. Харин дараагийн нэмэгдэхүүнийг үнэлбэл
+<mdn><mrow xml:id="r-5integu3au2au2a">\tag{$**$} 
+    
+    \left| \int\limits_{\partial \Delta_n}\alpha(z)(z-z_0)dz\right|&amp;\leq \max |\alpha(z)|\cdot \max_{z\in \partial \Delta_n}|z-z_0|\cdot P_{{\Delta_n}}&lt;</mrow><mrow number="no">&amp;&lt;\varepsilon \cdot P_{\Delta_n}\cdot P_{\Delta_n}=\varepsilon\cdot \frac{P^2_{\Delta_0}}{4^n}</mrow></mdn>
+байна. (Энд <m>P_{\Delta_n}</m> нь <m>\Delta_n</m> гурвалжны периметрийг авав). (<m>*</m>) <xref ref="r-5integu3au2au2a"/> тэнцэл бишүүдээс
+<me>\frac{M}{4^n}&lt;\varepsilon \frac{P^2_{\Delta_0}}{4^n}\Rightarrow \frac{M}{P^2_{\Delta_0}}&lt;\varepsilon</me>
+болж <m>\varepsilon</m> дураараа сонгож болно гэдэгтэй харшилдав. Иймээс Кошийн теорем гурвалжин контурын хувьд батлагдаж байна.</p></proof></theorem><theorem xml:id="r-5integu3au422u435u43eu440u435u43c_3"><statement><p><alert>(Тахир шугаман контурын Кошийн теорем).</alert> <m>f\in H(D)</m>, <m>\gamma</m> нь битүү жорданы тахир шугам (дотоод мужийн хамт <m>D</m> мужид оршдог) байг. Тэгвэл <m>\bint\limits_{\gamma^+}f(z)dz=0</m> байна.</p></statement><proof><p>Аливаа тахир шугамыг дотоод диагональ татсаар төгсгөлөг тооны гурвалжнуудад хувааж (триангуляци хийж) болдгийг дасгал болгон батална уу. Тэгвэл интегралын аддитив чанар ёсоор <m>\bint\limits_{\gamma^+} f(z)dz</m> нь гурвалжны хилээр авсан интегралуудын нийлбэрт задарна. Одоо Теорем 4.2 ашиглавал энэ теорем батлагдана.</p></proof></theorem><theorem xml:id="r-5integu3au422u435u43eu440u435u43c_4"><statement><p><alert>(Гөлгөр контурын Кошийн теорем).</alert>   <m>f\in H(D)</m>, <m>\gamma</m> нь битүү жорданы гөлгөр зам (дотоод мужтайгаа хамт <m>D</m> мужид оршдог) байг. Тэгвэл <m>\bint\limits_{\gamma^+}f(z)dz=0</m> байна.</p></statement><proof><p>Интеграл нийлбэр зохиох дурын <m>T</m> хуваалт нь битүү тахир шугам өгнө. Энд Теорем 4.3-г ашиглах хэрэгтэй.</p></proof></theorem><definition><statement><p><m>D</m> муж өгөгдсөн.<m>\gamma_1:[0,1]\rightarrow D</m>,  <m>\gamma_2:[0,1]\rightarrow D</m> замуудын хувьд <m>\gamma_1(0)=\gamma_2(0)</m>, <m>\gamma_1(1)=\gamma_2(1)</m>  ба 
+ <me>\exists \gamma (t,s)\in C ([0,1]^2\rightarrow D):\gamma_1(t)=\gamma (t,0); \quad \gamma_2(t)=\gamma(t,1)</me>
+ бол  <m>\gamma_1</m>, <m>\gamma_2</m> замуудыг <m>D</m> мужид нэг эхлэл төгсгөлтэй гомотоп замууд гэж нэрлээд <m>\gamma_1 \undertilde{D} \gamma_2</m> тэмдэглэдэг.</p></statement></definition><definition><statement><p><m>D</m> муж өгөгдсөн. <m>\gamma_1:[0,1]\rightarrow D</m>,  <m>\gamma_2:[0,1]\rightarrow D</m> замуудын хувьд <m>\gamma_1(0)=\gamma_1(1)</m> ба <m>\gamma_2(0)=\gamma_2(1)</m>  ба 
+ <me>\exists \gamma (t,s)\in C ([0,1]^2\rightarrow D):\gamma_1(t)=\gamma (t,0); \quad \gamma_2(t)=\gamma(t,1)</me>
+ бол  эдгээр замуудыг <m>D</m> мужид битүү замын гомотоп гэж нэрлээд <m>\gamma_1\undertilde{D} \gamma_2</m> тэмдэглэдэг.</p></statement></definition><figure><caption></caption><image source="images/10.PNG" width="62%"/></figure><corollary><statement><p>Теорем 4.4-г дараах байдлаар өөрчлөн томьёолж болно. <m>f\in H(D)</m> нь битүү гөлгөр Жорданы зам ба <m>\gamma \undertilde{D} 0</m> бол
+<m>\bint\limits _\gamma f(z)dz=0</m> байна.</p></statement></corollary><theorem xml:id="r-5integu3au422u435u43eu440u435u43c_5"><statement><p><alert>(Кошийн теоремын гомотоп хэлбэр).</alert>   <m>f\in H(D)</m>, <m>\gamma_1 \undertilde {D} \gamma_2</m> гөлгөр замууд байг. Тэгвэл <me>\int\limits_{\gamma_1} f(z)dz =\int\limits_{\gamma_2} f(z)dz</me> байна.</p></statement><proof><p>Эхлээд <m>\gamma_1\undertilde{D}\gamma_2</m> эхлэл төгсгөл давхацсан гомотоп байг. Теорем 4.4 ёсоор <m>\bint\limits_{\gamma_1\wedge \gamma_2^{-}} f(z)dz=0</m>. Улмаар 
+<me>\int\limits_{\gamma_1}f(z)dz-\int\limits _{\gamma_2} f(z)dz=0</me>
+болж теорем батлагдана.</p><p>Одоо <m>\gamma_1\undertilde{D}\gamma_2</m> битүү замын гомотоп байг.</p><figure><caption></caption><image source="images/11.PNG" width="62%"/></figure><p>Зургийг ажиглан энэ тохиолдолд Теорем 4.4-г хэрхэн хэрэглэхийг олно уу.</p></proof></theorem><theorem xml:id="r-5integu3aremoveablediscontinousfunctionint"><statement><p><m>f\in H(D)</m>, <m>\gamma</m> битүү гөлгөр жорданы зам ба түүний дотоод мужийг <m>int \gamma</m> гэж тэмдэглэе. <m>z_0\in int \gamma</m> хувьд <m>z_0\notin D</m> ба <m>(\overline{in t \gamma}\setminus \{z_0\})\subset D</m> байг. Харин <m>f</m> функцийн хувьд <m>z_0</m> засагдах тасралтын цэг (өөрөөр хэлбэл <m>\exists \lim\limits_{z\rightarrow z_0}f(z)=a\in \mathbb{C})</m> байг. Тэгвэл <m>\bint\limits_\gamma f(z)dz=0</m> байна.</p></statement><proof><p><m>C_\varepsilon (z_0)</m> нь <m>z_0</m> төвтэй <m>\varepsilon</m> радиустай тойрог байг. <m>\varepsilon</m> хангалттай бага үед <m>\gamma \undertilde{D} C_{\varepsilon} (z_0)</m> тул Теорем 4.5 ёсоор <me>\int\limits_{\gamma}f(z)dz=\int\limits_{C_\varepsilon (z_0)} f(z)dz</me>
+ба <me>\left|\int\limits_{C_\varepsilon(z_0)} f(z)dz\right|\leq 2\pi \cdot \varepsilon \cdot \max_{z\in C_{\varepsilon} (z_0)}|f(z)| =2\pi \cdot \varepsilon (|a|+\circ (1))</me>
+болно. <m>\varepsilon</m>-г хэчнээн ч багаар сонгож болох тул байна. 
+<me>\int\limits_{\gamma} f(z)dz=0</me> байна.</p></proof></theorem><theorem><title>Олон холбоост мужийн Кошийн теорем</title><statement><p><m>D</m> нь <m>n</m> холбоост зааглагдсан муж ба <m>f\in H(D)\cap C(\overline{D})</m> байг. Тэгвэл <me>\bint\limits_{\partial D^+} f(z)dz=0</me> байна.</p></statement><proof><p>Теорем 4.4-рүү хэрхэн шилжүүлж байгааг зургаас харна уу.</p><figure><caption></caption><image source="images/12.jpg" width="62%"/></figure></proof></theorem><note><statement><p>Кошийн интеграл теоремууд нь гармоник функцийн хувьд хүчинтэй байдаг.</p></statement></note><example><statement><p><m>I=\bint\limits_0^{+\infty}\cos x^2dx</m>; <m>J=\bint\limits_0^{+\infty}\sin x^2dx</m> интегралуудын утгыг тооцоол.</p></statement><solution><p>Зурагт үзүүлсэн секторын хил контурыг <m>\gamma^+</m> гэе.
+<me>\gamma^+=\gamma^+_1\vee \gamma_2^+\vee \gamma_3^+</me> 
+<m>\gamma^+</m> нь 2 хэрчим, 1 тойргийн нумаас тогтоно.</p><figure><caption></caption><image source="images/13.jpg" width="46%"/></figure><p>Кошийн теорем ёсоор
+<men xml:id="r-5integu3a7u2a"> 
+  0=\int\limits_{\gamma^+} e^{iz^2}dz=\int\limits_{\gamma_1^+} e^{iz^2}dz+\int\limits_{\gamma_2^+} e^{iz^2}dz+\int\limits_{\gamma_3^+} e^{iz^2}dz</men>
+ <m>\gamma^+_1 (x)=x(0\leq x\leq R)</m> учир 
+<me>\int\limits_{\gamma_1^+} e^{iz^2}dz=\int\limits_{0}^R(\cos x^2+i\sin x^2)dx</me>
+<m>\gamma^+_2 (t)=Re ^{it}(0\leq t\leq \dfrac{\pi}{4})</m> учир 
+<me>\int\limits_{\gamma_2^+} e^{iz^2}dz=\int\limits_{0}^{\frac{\pi}{4}}e^{-R^2\sin 2t+iR^2\cos 2t}\cdot Re^{it}\cdot idt</me>
+ба 
+<me>\left|\int\limits_{\gamma_2^+}e^{iz^2}dz\right|  \leq R\int\limits_{0}^\frac{\pi}{4} r^{-R^2\sin 2t}dt\leq R\int\limits_0^{\frac{\pi}{4}}e^{-R^2\frac{2}{\pi}2t}dt=\dfrac{\pi}{4}\cdot \frac{1-e^{-R^2}}{R}</me>
+<m>\gamma_3^+(t)=t\left(\dfrac{1}{\sqrt{2}}+i\dfrac{1}{\sqrt{2}}\right) \quad (R\geq t\geq 0)</m> учир 
+<md><mrow>\int\limits_{\gamma_3^+}e^{iz^2}dz&amp;=\int\limits_R^0 e^{-t^2}\cdot \left(\frac{1}{\sqrt{2}}+i\frac{1}{\sqrt{2}}\right) dt</mrow><mrow>&amp;=- \left(\frac{1}{\sqrt{2}}+i\frac{1}{\sqrt{2}}\right)\int\limits_0^Re^{-t^2}dt.</mrow></md>
+ Одоо <xref ref="r-5integu3a7u2a"/> тэнцэтгэлд <m>R\rightarrow +\infty</m> шилжвэл
+ <me>0=(I+iJ)+0+\left(-\frac{1}{\sqrt{2}}-i\frac{1}{\sqrt{2}}\right) \int\limits_0^{+\infty} e^{-t^2} dt.</me>
+ Иймд
+ <me>J=I=\frac{1}{\sqrt{2}}\int\limits_0^{+\infty} e^{-t^2} dt=\frac{\pi}{2\sqrt{2}}.</me></p></solution></example><p><alert>Дасгал</alert></p><p><m>f(z)=\dfrac{e^{iz}}{z}</m> ба зурагд үзүүлсэн <m>\gamma^+</m> контурыг ашиглан <m>\bint\limits_0^{+\infty} \dfrac{\sin x}{x}dx</m>	 тооцоол.</p><figure><caption></caption><image source="images/14.jpg" width="46%"/></figure></section><section xml:id="lec09-s2"><title>Эх функц. Ньютон-Лейбницийн томьёо</title><theorem><statement><p><m>D</m> гүдгэр муж ба <m>z_0\in D</m> байг. <m>f\in H(D)</m> үед <m>F(z)=\bint\limits_{z_0}^zf(z)dz</m> томьёогоор функц тодорхойлогдох ба 
+<m>F'(z)=f(z)</m> байна. (Өөрөөр хэлбэл голоморф функц гүдгэр муж дээр эх функцтэй байна).</p></statement><proof><p>Гүдгэр муж нэг холбоост байна. Иймд <m>z_0</m> цэгээс гарч <m>z</m> цэг дээр төгсгөлтэй бүх замууд гомотоп байна. Ийнхүү <m>\bint\limits_{z_0}^z f(z)dz</m> ганц утгатай, функц тодорхойлж өгнө. Энэ замуудаас <m>[z_0,z]</m> хэрчим дагуу шугаман зам авахад хангалттай (Энд гүдгэр ашиглагдана).</p><figure><caption></caption><image source="images/15.jpg" width="31%"/></figure><p><md><mrow>\frac{f(z+\Delta z)-F(z)}{\Delta z}&amp;=\frac{\int\limits_z^{z+\Delta z}f(z)dz}{\Delta z}</mrow><mrow>&amp;=\frac{\int\limits_0^1 f(z+\Delta z\cdot t)\Delta z dt}{\Delta z}=\int\limits_0^1 f(z+\Delta zt) dt;</mrow></md>
+<md><mrow>\lim\limits_{\Delta z\rightarrow 0}\frac{F(z+\Delta z)-F(z)}{\Delta z}&amp;=\int\limits_0^1 \left(\lim\limits_{\Delta z\rightarrow 0}f(z+\Delta z\cdot t)\right) dt</mrow><mrow>&amp;=\int\limits_0^1 f(z)dt= f(z)</mrow></md>
+болж батлагдав.</p></proof></theorem><corollary><statement><p><m>D</m> нэг холбоост муж <m>f\in H(D)</m> бол <m>f</m> нь <m>D</m> муж дээр эх функцтэй байна.</p></statement></corollary><note><statement><p>Голоморф биш функцүүд муж дээр эх функцтэй байж чаддаггүй. <m>(w=|z| \quad w= \re z;\quad w=x+iy^3</m> гэх мэт)</p></statement></note><note><statement><p><m>f\in H(D)</m> боловч <m>D</m> нэг холбоост бус үед эх функц олддог <m>\left( D=\mathbb{C}\setminus \{0\}, \quad f(z)=\dfrac{\sin z}{z}\right)</m> ба эс оршдог   <m>\left(D=\mathbb{C}\setminus \{0\}, \quad f(z)=\dfrac{\cos z}{z}\right)</m> жишээнүүд байдгийг анхаарах хэрэгтэй.</p></statement></note><theorem><statement><p><m>\gamma:[\alpha, \beta]\rightarrow \mathbb{C}</m> гөлгөр зам ба <m>f</m> функц <m>\gamma</m> замын дагуу <m>\Phi(z)</m> эх функцтэй байг. Тэгвэл
+<md><mrow>\int\limits_\gamma fdz=\Phi (\gamma (\beta))-\Phi (\gamma (\alpha))</mrow></md> байна.</p></statement><proof><p><me>\int\limits_\gamma f(z)dz=\int\limits_\alpha^\beta f(\gamma (t))\gamma'(t)dt =\Phi (\gamma(t))\Big|_{\alpha}^\beta</me></p></proof></theorem><p>болно.</p></section>
+  <xi:include href="./ai-09.ptx" />
+  <xi:include href="./sem-09.ptx" />
+  <xi:include href="./hw-09.ptx" />
+</chapter>

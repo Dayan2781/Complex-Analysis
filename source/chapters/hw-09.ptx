@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-09">
+  <title>Гэрийн даалгавар 9</title>
+  <exercises xml:id="exercises-homework-09">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw09-1">
+      <statement><p><m>\displaystyle\oint_{|z-i|=1}\frac{dz}{z^2+1}</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>\frac{1}{z^2+1}=\frac1{2i}\left(\frac1{z-i}-\frac1{z+i}\right)</m>. <m>|z-i|\le1</m> дугуйд <m>i</m> оршино, <m>-i</m> орохгүй (<m>|-i-i|=2</m>). Иймд <m>\frac1{2i}(2\pi i-0)=\pi</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-2">
+      <statement><p><m>\displaystyle\int_1^iz\,e^{z^2}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>e^{z^2}/2</m> нь бүхэл эх функц тул интеграл замаас үл хамаарна: <m>\frac{e^{-1}-e}{2}=-\sh1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-3">
+      <statement><p><m>\displaystyle\oint_{|z|=3}\frac{z+1}{z(z-2)}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>\frac{z+1}{z(z-2)}=\frac{A}{z}+\frac{B}{z-2}</m>, <m>A=\frac{0+1}{0-2}=-\frac12</m>, <m>B=\frac{3}{2}</m>. Хоёр цэг хоёулаа дотор тул <m>2\pi i(A+B)=2\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-4">
+      <statement><p><m>f</m> нь нэг холбоост <m>D</m> мужид голоморф бол <m>\int_\gamma f\,dz</m> нь <m>\gamma</m>-ийн төгсгөлүүдээс л хамаарна гэж батал. Хоёр холбоост мужид энэ дүгнэлт алдагдах жишээ гарга.</p></statement>
+      <solution><p><m>\gamma_1,\gamma_2</m> нь ижил төгсгөлтэй бол <m>\gamma_1-\gamma_2</m> битүү муруй бөгөөд Кошийн теоремоор <m>\oint_{\gamma_1-\gamma_2}f\,dz=0</m>. Жишээ: <m>D=\C\setminus\{0\}</m>, <m>f=\frac1z</m>, <m>1</m>-ээс <m>-1</m> хүртэл дээд ба доод хагас тойргоор интегралчилбал <m>\pi i</m> ба <m>-\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-5">
+      <statement><p><m>\int_\gamma(2z+1)dz</m>-ийг <m>0</m>-ээс <m>1+i</m> хүртэлх дурын замаар тооцоол.</p></statement>
+      <solution><p>Эх функц <m>z^2+z</m>: <m>(1+i)^2+(1+i)=2i+1+i=1+3i</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

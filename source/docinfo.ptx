@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<docinfo>
+  <macros>
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\Q}{\mathbb{Q}}
+    \newcommand{\C}{\mathbb{C}}
+    \newcommand{\re}{\operatorname{Re}}
+    \newcommand{\im}{\operatorname{Im}}
+    \newcommand{\Ln}{\operatorname{Ln}}
+    \newcommand{\Arg}{\operatorname{Arg}}
+    \newcommand{\Arctan}{\operatorname{Arctan}}
+    \newcommand{\Arccot}{\operatorname{Arccot}}
+    \newcommand{\Arccos}{\operatorname{Arccos}}
+    \newcommand{\Arcsin}{\operatorname{Arcsin}}
+    \newcommand{\Res}{\operatorname{Res}}
+    \newcommand{\ch}{\operatorname{ch}}
+    \newcommand{\sh}{\operatorname{sh}}
+    \newcommand{\th}{\operatorname{th}}
+    \newcommand{\bint}{\displaystyle\int}
+    \newcommand{\ml}[1]{\mathcal{L}\{#1\}}
+    \newcommand{\undertilde}[1]{\underset{\sim}{#1}}
+    \newcommand{\circled}[1]{\enclose{circle}{#1}}
+    \newcommand{\Aut}{\operatorname{Aut}}
+    \newcommand{\Iso}{\operatorname{Iso}}
+  </macros>
+
+  <latex-image-preamble>
+    \usepackage{tikz}
+    \usetikzlibrary{arrows,arrows.meta,calc,math,patterns.meta}
+    \usepackage{pgfplots}
+    \pgfplotsset{compat=1.18}
+  </latex-image-preamble>
+
+  <document-id edition="first">complex-analysis</document-id>
+
+  <numbering>
+    <blocks level="1"/>
+  </numbering>
+
+  <rename element="chapter">Лекц</rename>
+  <rename element="appendix">Хавсралт</rename>
+  <rename element="objectives">Зорилго</rename>
+  <rename element="definition">Тодорхойлолт</rename>
+  <rename element="theorem">Теорем</rename>
+  <rename element="example">Жишээ</rename>
+  <rename element="solution">Бодолт</rename>
+  <rename element="corollary">Мөрдлөгөө</rename>
+  <rename element="section">Хэсэг</rename>
+  <rename element="subsection">Дэд хэсэг</rename>
+  <rename element="exercises">Дасгалууд</rename>
+  <rename element="exercise">Бодлого</rename>
+  <rename element="hint">Заавар</rename>
+  <rename element="answer">Хариу</rename>
+  <rename element="proof">Баталгаа</rename>
+  <rename element="remark">Тэмдэглэл</rename>
+  <rename element="note">Санамж</rename>
+  <rename element="lemma">Лемм</rename>
+  <rename element="proposition">Өгүүлбэр</rename>
+  <rename element="fact">Чанар</rename>
+  <rename element="axiom">Аксиом</rename>
+  <rename element="figure">Зураг</rename>
+  <rename element="table">Хүснэгт</rename>
+  <rename element="frontmatter">Өмнөх хэсэг</rename>
+  <rename element="backmatter">Хавсралт</rename>
+</docinfo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-13">
+  <title>Гэрийн даалгавар 13</title>
+  <exercises xml:id="exercises-homework-13">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw13-1">
+      <statement><p><m>\frac1{z^4+1}</m>-ийн <m>z=e^{i\pi/4}</m> дахь үлдэцийг ол.</p></statement>
+      <solution><p>Энгийн туйл: <m>\Res=\frac1{4z^3}=\frac{z}{4z^4}=-\frac z4</m> (<m>z^4=-1</m>). Хариу: <m>-\frac{e^{i\pi/4}}4=-\frac{1+i}{4\sqrt2}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-2">
+      <statement><p><m>\cot z</m> ба <m>\frac1{\sin z}</m>-ийн <m>z=k\pi</m> дахь үлдэцийг ол.</p></statement>
+      <solution><p>Хоёулаа энгийн туйл. <m>\Res\cot z=\frac{\cos k\pi}{\cos k\pi}=1</m>; <m>\Res\frac1{\sin z}=\frac1{\cos k\pi}=(-1)^k</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-3">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{z^2}{(z-1)^2(z+3)}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p>Дотор зөвхөн <m>z=1</m> (<m>2</m>-р эрэмбийн туйл): <m>\Res=\frac{d}{dz}\frac{z^2}{z+3}\Big|_{z=1}=\frac{2z(z+3)-z^2}{(z+3)^2}\Big|_{z=1}=\frac{7}{16}</m>. Хариу: <m>\frac{7\pi i}{8}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-4">
+      <statement><p><m>\displaystyle\oint_{|z|=1}z^2\sin\frac1z\,dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>z^2\sin\frac1z=z^2\left(\frac1z-\frac1{6z^3}+\dots\right)=z-\frac1{6z}+\dots</m> тул <m>\Res_0=-\frac16</m>. Хариу: <m>-\frac{\pi i}{3}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-5">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{z^9}{z^{10}-1}dz</m>-ийг (a) төгсгөлөг туйлуудын үлдэцээр; (b) <m>\infty</m> дахь үлдэцээр тооцоол.</p></statement>
+      <solution><p>(a) <m>10</m> туйл бүгд <m>|z|=1</m> дээр, тус бүрт <m>\Res=\frac{z_k^9}{10z_k^9}=\frac1{10}</m>. Нийлбэр <m>1</m>, хариу <m>2\pi i</m>. (b) <m>f(z)=\frac1z\cdot\frac1{1-z^{-10}}=\frac1z+\frac1{z^{11}}+\dots</m> тул <m>\Res_\infty f=-1</m> ба <m>\oint=-2\pi i\Res_\infty f=2\pi i</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

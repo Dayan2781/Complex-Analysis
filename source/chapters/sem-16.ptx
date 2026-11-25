@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-16">
+  <title>Семинар 16</title>
+  <exercises xml:id="exercises-seminar-16">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem16-1">
+      <statement><p><m>z^7-5z^4+z^2-2=0</m> тэгшитгэл <m>|z|&lt;1</m> дугуйд хэдэн язгууртай вэ?</p></statement>
+      <hint><p>Рушегийн теорем: <m>|z|=1</m> дээр <m>|-5z^4|=5&gt;4\ge|z^7+z^2-2|</m>. Хариу: <m>4</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-2">
+      <statement><p><m>z^4+6z+3</m>-ийн бүх язгуур <m>|z|&lt;2</m> дугуйд, яг нэг нь <m>|z|&lt;1</m> дугуйд оршино гэж батал.</p></statement>
+      <hint><p><m>|z|=1</m> дээр <m>|6z|=6&gt;4</m>; <m>|z|=2</m> дээр <m>|z^4|=16&gt;15</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-3">
+      <statement><p><m>\displaystyle\frac1{2\pi i}\oint_{|z|=2}\frac{f'(z)}{f(z)}dz</m>-ийг ол, <m>f(z)=\frac{z^2+1}{(z-1)^3}</m>.</p></statement>
+      <hint><p>Аргументийн зарчим: тэгүүдийн тоо хасах туйлуудын тоо (эрэмбээр нь). Хариу: <m>2-3=-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-4">
+      <statement><p><m>f:\mathbb D\to\mathbb D</m> голоморф ба <m>f(0)=\frac12</m> бол <m>|f'(0)|</m> хамгийн ихдээ хэд байж болох вэ?</p></statement>
+      <hint><p><m>g=\varphi_{1/2}\circ f</m>, <m>\varphi_a(w)=\frac{w-a}{1-\overline aw}</m> гэж аваад Шварцын леммийг хэрэглэ. Хариу: <m>1-|f(0)|^2=\frac34</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-5">
+      <statement><p><m>|a|&lt;1</m> үед <m>\varphi_a(z)=\frac{z-a}{1-\overline az}</m> нь нэгж дугуйг өөрт нь харилцан нэг утгатай буулгана гэж батал.</p></statement>
+      <hint><p><m>|z|=1</m> үед <m>|1-\overline az|=|\overline z-\overline a|=|z-a|</m>. Урвуу нь <m>\varphi_{-a}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-6">
+      <statement><p><m>e^z=3z^n</m> тэгшитгэл <m>|z|&lt;1</m> дугуйд <m>n</m> язгууртай гэж батал.</p></statement>
+      <hint><p><m>|z|=1</m> дээр <m>|e^z|\le e&lt;3=|3z^n|</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

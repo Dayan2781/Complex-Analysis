@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-12">
+  <title>Семинар 12</title>
+  <exercises xml:id="exercises-seminar-12">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem12-1">
+      <statement><p><m>\frac1{z(z-1)}</m>-ийг (a) <m>0&lt;|z|&lt;1</m>; (b) <m>|z|&gt;1</m> мужид Лораны цуваанд задал.</p></statement>
+      <hint><p>(a) <m>-\frac1z\cdot\frac1{1-z}=-\sum_{n\ge-1}z^n</m>. (b) <m>\frac1{z^2}\cdot\frac1{1-1/z}=\sum_{n\ge2}z^{-n}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-2">
+      <statement><p><m>\frac1{(z-1)(z-2)}</m>-ийг <m>1&lt;|z|&lt;2</m> цагирагт Лораны цуваанд задал.</p></statement>
+      <hint><p><m>\frac1{z-2}-\frac1{z-1}</m>; эхнийхийг <m>z/2</m>-ийн, хоёр дахийг <m>1/z</m>-ийн зэргээр. Хариу: <m>-\sum_{n\ge0}\frac{z^n}{2^{n+1}}-\sum_{n\ge1}z^{-n}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-3">
+      <statement><p>Онцгой цэгүүдийг ангил: <m>\frac{\sin z}{z}</m>, <m>\frac{1-\cos z}{z^3}</m>, <m>e^{1/z}</m> (<m>z=0</m>); <m>\frac{1}{\sin z}</m>; <m>\frac{z}{e^z-1}</m>.</p></statement>
+      <hint><p>Лораны цувааны үндсэн хэсгийг хар. Зайлуулж болох; энгийн туйл; нэн онцгой; <m>k\pi</m> дахь энгийн туйлууд; <m>0</m> зайлуулж болох, <m>2\pi ik</m> (<m>k\ne0</m>) энгийн туйлууд.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-4">
+      <statement><p><m>z=0</m> нь <m>\frac{1}{z^2(e^z-1)}</m>-ийн хэддүгээр эрэмбийн туйл вэ?</p></statement>
+      <hint><p>Хуваарийн тэгийн эрэмбэ <m>2+1=3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-5">
+      <statement><p><m>z^2e^{1/z}</m>-ийг <m>0&lt;|z|&lt;\infty</m> мужид Лораны цуваанд задал.</p></statement>
+      <hint><p><m>\sum_{n\ge0}\frac{z^{2-n}}{n!}=z^2+z+\frac12+\frac1{6z}+\dots</m> Үндсэн хэсэг төгсгөлгүй тул <m>0</m> нэн онцгой.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-6">
+      <statement><p><m>z=\infty</m> цэгийг ангил: <m>z^3+z</m>, <m>e^z</m>, <m>\frac{z^2+1}{z-1}</m>.</p></statement>
+      <hint><p><m>w=1/z</m> орлуулж, <m>w=0</m> цэгийг судал. <m>3</m>-р эрэмбийн туйл; нэн онцгой; энгийн туйл.</p></hint>
+    </exercise>
+  </exercises>
+</section>

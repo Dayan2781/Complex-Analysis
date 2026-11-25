@@ -1,0 +1,446 @@
+\chapter{Комплекс тоо, хавтгай}
+\section{Комплекс тоо, үндсэн үйлдлүүд}
+\begin{dfn}
+Бодит $x$, $y$ тоонуудын эрэмбэлэгдсэн $(x,y)$ хосыг комплекс тоо гэнэ. Комплекс тоонуудын олонлогийг $$\mathbb{C}=\{z=(x,y)\mid x, y \in\mathbb{R}\}$$-ээр тэмдэглэе. 
+$x$-ийг $z$-ийн бодит, $y$-ийг хуурмаг хэсэг \index{Бодит (ба хуурмаг) хэсэг} гэх ба
+$$x=\re z, \qquad y=\im z$$
+тэмдэглэл хэрэглэдэг. 
+\end{dfn}
+Комплекс тоонуудын адилтгал, тэнцэл, нийлбэр, үржвэр дараах байдлаар тодорхойлогдоно:
+\begin{enumerate}
+    \item [1)] $y=0$ үед $(x,0)$ тоо бодит $x$-тэй адилтгагдана: 
+    $$(x,0)=x, \qquad \forall x\in\mathbb{R}$$
+Энд $(0,0)=0$, $(1,0)=1$, $(0,1)=i$ тоонуудыг харгалзан тэг, нэгж ба хуурмаг нэгж \index{Хуурмаг нэгж} хэмээн нэрлэнэ.
+\item [2)] $z_1=(x_1,y_1)$, $z_2=(x_2,y_2)$ байхад $x_1=x_2$ ба $y_1=y_2$ байвал $z_1=z_2$ гэдэг.
+\item [3)] Комплекс $(x_1+x_2, y_1+y_2)$ тоог тэдгээрийн нийлбэр \index{Комплекс тоонуудын нийлбэр} гэнэ:
+\begin{equation}\label{1.1}
+    z_1+z_2=(x_1+x_2,y_1+y_2)
+\end{equation} 
+\item[4)] Комплекс $(x_1x_2-y_1y_2$, $x_1y_2+x_2y_1)$ тоог тэдгээрийн үржвэр\index{Комплекс тоонуудын үржвэр} гэнэ:
+\begin{equation}\label{1.2}
+    z_1\cdot z_2=(x_1x_2-y_1y_2 , x_1y_2+x_2y_1)
+\end{equation} 
+\end{enumerate}
+(\ref{1.1}), (\ref{1.2}) ёсоор дараах арифметик хуулиуд шууд биелэгдэх нь илэрхий: 
+\begin{align*}
+&z_1+z_2=z_2+z_1  - \text {нэмэхийн байр солих хууль};\\
+&z_1\cdot z_2=z_2\cdot z_1 - \text {үржүүлэхийн байр солих хууль}; \\
+&(z_1+z_2)+z_3=z_1+(z_2+z_3) - \text {нэмэхийн хэсэглэн нэгтгэх хууль}; \\
+&(z_1\cdot z_2)z_3=z_1(z_2\cdot z_3) - \text {үржүүлэхийн хэсэглэн нэгтгэх хууль}; \\ 
+&(z_1+z_2) z_3=z_1z_3+z_2z_3 - \text {хаалт задлах хууль}.
+\end{align*}
+Мөн
+$$z+0=z, \quad z\cdot 0 =0,\quad z\cdot 1=z, \quad i\cdot i=i^2=-1$$
+байх нь ч мэдээж. $z=(x,y)\in \mathbb{C}$ тоо $z=x+iy$ гэсэн алгебр хэлбэртэй тавигдана.
+
+Учир нь
+$$z=(x,y)=(x,0)+(0,y)=(x,0)+(0,1)(y,0)=x+iy$$
+\begin{dfn} $z=(x,y)$ тооны хувьд $(-x,-y)$ тоог $z=(x,y)$ тооны эсрэг тоо гэнэ.
+
+Хасах үйлдэл нь эсрэг тоог нэмэх үйлдэл гэж тодорхойлогдоно. Өөрөөр хэлбэл $z_1-z_2$ ялгавар \index{Комплекс тоонуудын ялгавар} нь $z_1+(-z_2)$  тоо байна. Хэрэв $z_1=(x_1,y_1)$, $z_2=(x_2,y_2)$ гэвэл $z_3=z_1-z_2=(x_1-x_2, y_1-y_2).$   
+\end{dfn}
+\begin{dfn}
+    $(x,-y)=x-iy$ тоог $z=(x,y)$ тооны хосмог гэх бөгөөд $\overline{z}=x-iy$ гэж тэмдэглэнэ. Өгөгдсөн комплекс тооноос түүний хосмогт шилжихийг хосмогийн үйлдэл гэнэ. 
+\begin{align*}
+&\overline{\overline{z}}=z, \quad \overline{z_1+z_2}=\overline{z_1}+\overline{z_2},  \quad \overline{z_1\cdot z_2}=\overline{z_1}\cdot \overline{z_2}, \\ &z+\overline{z}=2x, \quad z-\overline{z}=2iy,  \quad z\cdot \overline{z}=|z|^2=x^2+y^2\geq 0 
+\end{align*} байх нь мэдээж.
+\end{dfn}
+\begin{dfn}
+    Тэгээс ялгаатай комплекс тоонд хуваах үйлдэл нь үржүүлэхийн урвуу үйлдэл гэж тодорхойлогдоно. Өөрөөр хэлбэл: $\dfrac{z_1}{z_2}$, $z_2\neq 0$ ноогдвор\index{Комплекс тооны ноогдвор} нь  $z_2\cdot z_4=z_1$ чанарт нийцэх
+$z_4=(x_4,y_4)$ тоо байна. Иймд
+\begin{align*}
+z_4=\dfrac{z_1}{z_2}&=\dfrac{x_1+iy_1}{x_2+iy_2}=\dfrac{(x_1+iy_1)(x_2-iy_2)}{x_2^2+y_2^2} =\\
+&=\left(\frac{x_1x_2+y_1y_2}{x_2^2+y^2_2}, \dfrac{x_2y_1-x_1y_2}{x_2^2+y_2^2}\right).
+\end{align*}
+\end{dfn}
+\section{Комплекс тооны геометр дүрслэл. \\
+Модуль ба аргумент. Туйлын хэлбэр}
+Хавтгай дээр тэгш өнцөгт координатын $Oxy$ систем өгөгдсөн байг. Тэгвэл $z=x+iy$ гэсэн комплекс тоо нь уул хавтгайн $x$—абсцисстай, $y$—ординаттай  $(x,y)$ цэгээр дүрслэгдэнэ. 
+\begin{figure}[h]
+    \centering
+\begin{tikzpicture}[line cap=round,line join=round,line width=0.8pt,>=triangle 45,x=1cm,y=1cm]
+\clip(0,0) rectangle (6,4.5);
+\coordinate (x1) at (0,1);
+\coordinate (y1) at (1,0);
+\coordinate (x2) at (5.5,1);
+\coordinate (y2) at (1,4);
+\coordinate (o) at (1,1);
+\coordinate (z) at (4,3);
+\draw[-stealth,line width=0.5pt] (x1)  -- (x2) node[right] {$x$};
+\draw[-stealth,line width=0.5pt] (y1)  -- (y2) node[right] {$y$};
+\draw[stealth-,line width=0.5pt] (z) node[above right ] {$z=(x,y)$} --(o);
+\draw (o) node[anchor=north east] {$O$};
+\draw (o)+(1.4,0.8) node[anchor=north west] {$\varphi$};
+\draw ($(o)!0.6!(z)$) node[anchor=south] {$r$};
+\draw[-stealth] (3,1) arc(0:atan(2/3):2);
+\draw[dashed] (4,1) node[below] {$x$} -- (z) -- (1,3) node[left] {$y$};
+\end{tikzpicture}
+  \captionof{figure}{}
+    \label{z1}
+\end{figure}
+Комплекс тоо ба хавтгайн цэгийн олонлогуудын энэ харгалзаа харилцан нэгэн утгатай нь мэдээж.
+
+Комплекс $z=x+iy$ тоо авах бүрд, түүнд $x,y$ координат бүхий вектор (чөлөөт) харгалзлаа ч гэж ярьж болно. Учир нь 
+$$z=x+iy=x\cdot 1+y\cdot i =x\cdot (1,0)+y\cdot (0,1)$$
+болж $z$ нь тэнхлэгүүд дээрх нэгж $1=(1,0)$ ба $i=(0,1)$ векторуудаар задлагдлаа. Энэ харгалзаа мөн л харилцан нэгэн утгатай.
+
+Иймд комплекс тоонуудын, хавтгайн цэгүүдийн, чөлөөт векторуудын олонлог өөр хоорондоо эквивалент (чацуу чанартай) бөлгөө.
+
+Зураг 2 дээр комплекс тоонуудын нийлбэр, ялгавар
+\begin{figure}[h]
+    \centering
+\begin{tikzpicture}[line cap=round,line join=round,line width=0.8pt,>=triangle 45,x=1cm,y=1cm]
+\clip(0,0) rectangle (6,4.5);
+\coordinate (x1) at (0,1);
+\coordinate (y1) at (1,0);
+\coordinate (x2) at (5.5,1);
+\coordinate (y2) at (1,4);
+\coordinate (o) at (1,1);
+\coordinate (z2) at (1.7,2.5);
+\coordinate (z1) at (2.8,1.5);
+\draw[-stealth,line width=0.5pt] (x1)  -- (x2) node[right] {$x$};
+\draw[-stealth,line width=0.5pt] (y1)  -- (y2) node[right] {$y$};
+\draw (o) node[anchor=north east] {$O$};
+\draw[-stealth,line width=0.5pt] (o)--(z1) node[below right ] {$z_1$};
+\draw[-stealth,line width=0.5pt] (o)--(z2) node[above right ] {$z_2$};
+\draw[-stealth,line width=0.5pt] (o) -- ($(z1)+(z2)-(o)$) node[above right ] {$z_1+z_2$};
+\draw[-stealth,line width=0.5pt] (o)-- ($(z1)-(z2)+(o)$) node[above right] {$z_1-z_2$};
+\end{tikzpicture}
+  \captionof{figure}{}
+    \label{z2}
+\end{figure}
+олохыг векторуудын нэмэх, хасах дүрэм ашиглан геометр байдлаар харуулав. Эндээс
+
+\begin{equation}
+\tag{a}
+    |z_1+z_2|\leq |z_1|+|z_2|
+\end{equation} бөгөөд энэ нь
+\begin{equation}
+\tag{b}
+    |z_1-z_2|\geq |z_1|-|z_2|
+\end{equation} тэнцэтгэл биштэй эквивалент. Учир нь (а) үнэн гэвэл $$|z_1|=|z_1-z_2+z_2|\leq |z_2|+|z_1-z_2|$$
+ бөгөөд эндээс (b) гарав. Иймд $(a)\sim (b).$
+\begin{dfn}
+$r=\sqrt{x^2+y^2}=\sqrt{z\cdot \overline{z}}$ тоог комплекс $z$ тооны модуль гэж нэрлэх бөгөөд $|z|$-аар тэмдэглэнэ (Зураг 1). Энэ тоо нь координатын эхээс $z$ хүртлэх зай юм. Иймд $r=|z|\geq 0$ байх нь ойлгомжтой. Зөвхөн $z=0$ үед тэнцэл нь биелэгдэнэ.    
+\end{dfn}
+\begin{dfn}
+$Ox$ тэнхлэгийн эерэг чиглэлтэй $z$ векторын үүсгэх $\varphi$ өнцгийг комплекс $z=x+iy$ тооны аргумент гэж нэрлэх бөгөөд $\Arg  z$-ээр тэмдэглэнэ (Зураг 1). Ингэхдээ $Ox$ тэнхлэгээс нар буруу (цагийн зүүний эсрэг) тоологдож байвал уул өнцгийн хэмжээг эерэг, харин нар зөв бол сөрөг гэж тооцдог. $z=0$ тооны хувьд аргумент тодорхойлогдохгүй.
+\end{dfn}
+Комплекс тооны аргументийн
+$$-\pi <\varphi_0\leq \pi$$
+нөхцөлд тохирох цор ганц $\varphi_0$ утгыг аргументийн гол утга гэх ба $\varphi_0=\arg  z$ гэж тэмдэглэнэ.
+\begin{equation} \label{1.3}
+\begin{split}
+    &\arg  z=\arctan \frac{y}{x}+\varepsilon \pi; \quad x>0 \quad \text{үед} \quad \varepsilon=0;\\
+    &x<0\quad y\geq 0 \quad \text{үед} \quad \varepsilon=1; \\
+    &x<0\quad y< 0 \quad \text{үед} \quad \varepsilon=-1; \\
+    &\arg  z=\frac{\pi}{2}, \quad x=0.
+\end{split}
+\end{equation}
+Комплекс тооны аргумент олон утгат бөгөөд тэр нь гол утгаасаа $2\pi$ өнцөгт бүхлээр хуваагдахуйц нэмэгдэхүүнээр ялгагдах нь илэрхий. 
+\begin{exm}
+$z=-\sin\dfrac{\pi}{3}-i\cos \dfrac{\pi}{3}$ бол түүний модуль ба аргументийг ол.
+\end{exm}
+\begin{sol}
+$x=-\sin \dfrac{\pi}{3}<0$, $y=-\cos \dfrac{\pi}{3}<0$ тул (\ref{1.3}) ёсоор 
+$$\arg  z =-\pi +\arctan \left(\cot\frac{\pi}{3}\right) =-\pi +\arctan \left(\tan \left(\frac{\pi}{2}-\frac{\pi}{3}\right)\right)$$ тул
+\begin{align*}
+    &\Arg z=-\frac{5\pi}{6}+2k\pi , \quad k=0,\pm 1,... \\
+    & |z|=\sqrt{\sin^2\frac{\pi}{3}+\cos^2\frac{\pi}{3}}=1
+\end{align*}
+\end{sol}
+
+\begin{exm}
+$z=-1+i\sqrt{3}$ бол $|z|$, $\arg  z$-ыг ол. 
+\end{exm}
+\begin{sol}
+\begin{align*}
+    & |z|=\sqrt{(-1)^2+(\sqrt{3})^2}=2\\
+    & \arg  z=\arctan \frac{\sqrt{3}}{-1}+\pi \quad (x<0 \quad \text{тул}) =\pi -\frac{\pi}{3}=\frac{2\pi}{3}.
+\end{align*}
+\end{sol}
+\begin{center}
+    \textbf{Дасгал}
+\end{center}
+1. Дараах комплекс тоонуудын модуль ба аргументын гол утгыг ол.
+\begin{enumerate}
+\colgur{
+    \item [a.] $z=3+4i$;
+    \item [б.] $z=-2+2\sqrt{3}i$;
+    \item [в.] $-5-i$;}
+\colhoy{    \item [г.] $z=-\cos \frac{\pi}{5}+i\sin \frac{\pi}{5}$;
+    \item[д.] $z=-3i$;}
+    \colgur{
+    \item [е.] $z=-4$;
+    \item [ж.] $z=3$;
+    \item [з.] $z=\frac{3}{2}i.$}
+\end{enumerate}
+\section{Комплекс тооны тригонометр дүрслэл}
+Зураг 1-ээс харахад $z$ цэгийн декарт ба туйлын координатуудын холбоо
+\begin{equation} \label{1.5}
+\begin{cases}
+x=r\cos \varphi \\
+y=r\sin\varphi
+\end{cases}
+\end{equation}
+байх нь ойлгомжтой. (\ref{1.5}) ёсоор комплекс $z$ тоо
+\begin{equation} \label{1.6}
+z=x+iy=r(\cos \varphi+i\sin \varphi)
+\end{equation}
+дүрстэй тавигдана. (\ref{1.6}) бичиглэлийг комплекс тооны тригонометр хэлбэр гэнэ. Бичиглэлийн товч байдлыг харгалзан
+\begin{equation}\tag{$*$}
+\varepsilon({i\varphi})=\cos\varphi +i\sin\varphi 
+\end{equation}
+тэмдэглэл орлуулбал
+\begin{equation} \label{1.7}
+z=r\varepsilon({i\varphi})
+\end{equation}
+бөгөөд үүнийг комплекс тооны илтгэгч хэлбэр гэнэ. (\ref{1.6}) ба (\ref{1.7}) хэлбэрийг заримдаа туйлын хэлбэр гэж нэрлэнэ. Тэмдэглэл байдлаар оруулсан (${*}$) тэнцлийг Эйлер (1707-1783)- ийн томьёо гэж нэрлэх бөгөөд түүнийг $$\varepsilon({i\varphi})=\cos\varphi +i\sin\varphi =e^{i\varphi}$$ үнэн болохыг хожуу батална. Энд $e^{2\pi i}=1$, $e^{\pi i}=-1$, $e^{\frac{\pi}{2}i}=i$, $e^{-\frac{\pi}{2}i}=-i$ байна. 
+
+$(*)$ тэнцэлд $\varphi$-ийн оронд $-\varphi$ тавихад
+\begin{equation}
+\tag{$\overline{*}$}
+e^{-i\varphi}=\cos\varphi -i\sin\varphi 
+\end{equation}
+болж $(*)$ ба $(\overline{*})$-ийг хооронд нь нэмэх, хасах үед 
+\begin{equation} 
+\cos\varphi =\dfrac{e^{i\varphi}+e^{-i\varphi}}{2}
+\end{equation}
+\begin{equation}
+\sin\varphi =\dfrac{e^{i\varphi}-e^{-i\varphi}}{2i}
+\end{equation}
+болно.
+
+Комплекс тооны илтгэгч хэлбэр ашиглаж, зэрэг \index{Комплекс тоонуудын зэрэг} дэвшүүлэх болон язгуур \index{Комплекс тоонуудын язгуур} гаргах үйлдлүүд гүйцэтгэхэд тохиромжтой.
+
+$z_1=r_1e^{i\varphi_1}$, $z_2=r_2e^{i\varphi_2}$ авахад
+\begin{equation} \label{1.10}
+z_1\cdot z_2=r_1\cdot r_2 e^{i(\varphi_1+\varphi_2)}
+\end{equation}
+\begin{equation} \label{1.11}
+\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\cdot e^{i(\varphi_1-\varphi_2)}, \quad r_2\neq 0
+\end{equation} $z=re^{i\varphi}$, $z\neq 0$ гэвэл 
+\begin{equation} \label{1.12}
+z^n=r^ne^{in\varphi}, \quad n\in\mathbb{N}
+\end{equation}
+\begin{equation} \label{1.13}
+\sqrt[n]{z}=\sqrt[n]{r}e^{i\frac{\varphi+2k\pi}{n}}, \quad (k=0,1,2,\ldots, n-1)
+\end{equation}
+байхыг хялбархан баталж болно. Жишээ нь 
+\begin{align*}
+    z_1\cdot z_2&=r_1\cdot r_2[(\cos \varphi_1\cdot \cos \varphi_2-\sin \varphi_1\cdot \sin\varphi_2)+ \\ &+i(\cos \varphi_1\cdot\sin \varphi_2+\cos \varphi_2\cdot \sin\varphi_1)] \\
+    &= r_1\cdot r_2 [\cos (\varphi_1+\varphi_2)+i(\sin \varphi_1+\varphi_2)]\\
+    &=r_1r_2\cdot e^{i(\varphi_1+\varphi_2)}
+\end{align*}
+болж (\ref{1.10}) батлагдлаа. Үүнтэй төстэйгөөр (\ref{1.11}) батлагдана.
+
+Үржүүлэх дүрэм дээр математик индукцийн арга хэрэглэхэд (\ref{1.12}) батлагдана.
+
+Одоо комплекс тооноос язгуур гаргах (\ref{1.13}) томьёог баталъя. $n\in N$ байг. Өгөгдсөн комплекс $z$ тооны хувьд $z=W^n$ тэгшитгэл бодъё. Энэ тэгшитгэлийн шийдийн олонлогийг $\sqrt[n]{z}$ гэж тэмдэглэе. $z$ ба $W$ тоонуудыг тригонометр хэлбэрт бичвэл 
+$$z=r(\cos\varphi +i\sin \varphi); \qquad W=\rho (\cos v+ i\sin v)$$ 
+Эндээс (\ref{1.12}) ёсоор
+$$r(\cos\varphi +i\sin \varphi)=\rho^n(\cos nv+ i\sin nv)$$
+болж хоёр комплекс тооны тэнцэх нөхцөлөөр
+$$r=\rho^n, \qquad nv=\varphi +2k\pi $$
+бөгөөд улмаар
+$$W=\sqrt[n]{z}=\sqrt[n]{r} \left(\cos \frac{\varphi +2k\pi}{n}+i\sin \frac{\varphi+2k\pi}{n}\right), \quad k=0, \pm 1, \pm 2 ,...$$ болно. \\
+Үүний бие биеэсээ ялгаатай язгуурын тоо нь $k=0,1,2,\ldots ,n-1$ утгуудад харгалзах $n$ ширхэг гэж хялбархан тогтоогдоно. Эдгээр язгуур нь координатын эх дээр төвтэй $\sqrt[n]{|z|}$ радиустай дугуйд багтсан зөв $n$-өнцөгтийн оройн цэгүүд болно. Эндээс 
+\begin{align*}
+    \eta_k&=\sqrt[n]{z}=\sqrt[n]{|z|}\left(\cos \frac{\arg  z+2k\pi}{n}+i\sin \frac{\arg  z+2k\pi}{n}\right) \\
+    &=\sqrt[n]{r}e^{\frac{\varphi+2k\pi}{n}},
+\end{align*}
+$$k=0,1,2,\ldots ,n-1$$
+(\ref{1.12}) ба (\ref{1.13})-ыг Муавр (1667-1754)-ын томьёо \index{Муаврын томьёо} гэнэ. 
+
+(\ref{1.10})-аас 
+$$|z_1\cdot z_2|=|z_1|\cdot |z_2|,$$
+$$\Arg  (z_1\cdot z_2)=\Arg  z_1+\Arg  z_2$$
+(\ref{1.11})-ээс 
+$$\left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|}, \quad (z_2\neq 0)$$
+(\ref{1.12})-оос
+$$|z^n|=|z|^n,$$
+$$\Arg  (z^n)=n\cdot \Arg  z$$
+мөрдөлгөөнүүд гаргаж болно.
+\begin{exm}
+$z=-1-i\sqrt{3}$ тоог тригонометр хэлбэрт бич.
+\end{exm}
+\begin{sol}
+$|z|=2$, $\arg(-1-i\sqrt{3})=-\pi +\arctan \frac{-\sqrt{3}}{-1}=-\frac{2\pi}{3}$ тул 
+$$-1-i\sqrt{3}=2\left[\cos\left(-\frac{2\pi}{3}+2k\pi\right) +i\sin \left(-\frac{2\pi}{3}+2k\pi\right)\right],  $$
+$$k=0,\pm 1, \ldots \quad .$$
+\end{sol}
+\begin{exm}
+$z^{n-1}=\overline{z}$ нөхцөлд тохирох бүх $z\quad (z\neq 0)$ тоонуудыг ол.
+\end{exm}
+\begin{sol}
+$z=re^{i\varphi}$ гэвэл $r^{n-1}\cdot e^{i(n-1)\varphi}=re^{-i\varphi}$ буюу \\ $r^{n-2}e^{in \varphi}=1$, эндээс $r^{n-2}=1$, $in\varphi =2k\pi i$, өөрөөр хэлбэл $$r=1, \qquad \varphi=\dfrac{2k\pi}{n}, \qquad k=0,1,\ldots, n-1.$$ Иймд $z_k=e^{i\frac{2k\pi}{n}}$, $k=0,1,\ldots n-1.$
+\end{sol}
+\begin{exm}
+$(\sqrt{3}-3i)^6$ илэрхийллийн утгыг ол.
+\end{exm}
+\begin{sol}
+$|\sqrt{3}-3i|=\sqrt{12}$ 
+$$\arg  (\sqrt{3}-3i)=\arctan \frac{-3}{\sqrt{3}}=-\arctan \frac{\sqrt{3}}{1}=-\frac{\pi}{3}.$$
+Иймд $(\sqrt{3}-3i)^6=(\sqrt{12})^6\cdot e^{-6\cdot \frac{\pi}{3}i}=1728. $
+\end{sol}
+\begin{exm}
+$\sqrt{-1}$ утгыг ол.
+\end{exm}
+\begin{sol}
+$$\sqrt{-1}=1\cdot \left(\cos\frac{\pi+2k\pi}{2}+i\sin\frac{\pi +2k\pi}{2}\right), \qquad k=0,1$$ тул
+$$\eta_0=\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}=i, \qquad \eta_1=\cos\frac{2\pi}{2}+i\frac{3\pi}{2}=-i$$
+\end{sol}
+\newpage
+\section*{Семинар I} 
+\begin{enumerate}
+\item Дараах комплекс тоонуудыг тригонометр, илтгэгч хэлбэрт бич.
+\begin{enumerate}
+\begin{multicols}{2}
+        \item $-2$
+        \item $2i$
+        \item  $2$
+        \item $-i$
+        \item $-\sqrt{2}+i\sqrt{2}$
+        \item $-1+i\sqrt{3}$
+        \item $(1-\sqrt{3}i)^{30}$
+        \item $(2-2i)^7$
+        \item $\left(\dfrac{1+3i}{1-i}\right)^4$
+        \item $\sqrt{-2-2\sqrt{3}i}$
+\end{multicols}
+    \end{enumerate}
+    \item Үйлдлийг гүйцэтгэн бодит ба хуурмаг хэсэг, модуль, аргументийн гол утгыг олж тригонометр хэлбэрт бич.
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\displaystyle \frac{2+i}{3-2i}-\frac{2-i}{3+2i}$
+\item $\displaystyle \frac{12+i}{3-i}-\frac{2+3i}{3+i}$
+\item $\displaystyle \frac{2+3i}{3-2i}+\frac{3-i}{3+2i}$
+\item $\displaystyle \frac{4+3i}{1-2i}+\frac{5-3i}{2-i}$
+\item $\displaystyle \frac{7-i}{3i+4}-\frac{4-3i}{1+2i}$
+\item $\displaystyle \frac{7+i}{3-4i}+\frac{3-5i}{3+2i}$
+\item $\displaystyle \frac{-7+i}{3-4i}+\frac{2+3i}{3+2i}$
+\item $\displaystyle \frac{12-5i}{3+4i}-\frac{3-i}{3-2i}$
+\item $\displaystyle \frac{-12-5i}{4-3i}-\frac{5-4i}{2+3i}$
+\item $\displaystyle \frac{-12+5i}{3-4i}+\frac{2-3i}{3+2i}$
+\end{multicols}
+\end{enumerate}
+\item Үйлдлийг гүйцэтгэж илтгэгч хэлбэрт бич. (Комплекс язгуур ол.)
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\sqrt[4]{-1}$
+\item $\sqrt[3]{i}$
+\item $\sqrt[4]{16i}$
+\item $\sqrt[3]{\dfrac{-1+i\sqrt{3}}{2}}$
+\item $\sqrt[4]{16}$
+\item $\sqrt[4]{-\dfrac{1}{16}}$
+\item $\sqrt[3]{\dfrac{i}{8}}$
+\item $\sqrt[3]{-\dfrac{1}{8}}$
+\item $\sqrt[3]{27i}$
+\item $\sqrt[3]{\dfrac{i}{27}}$
+\end{multicols}
+\end{enumerate}
+\item Өгөгдсөн тэнцэтгэл бишүүдээр тодорхойлогдох олонлогийг дүрсэл.
+\begin{enumerate}
+\item $|z-1|\le 1,\quad |z+1|>2$
+\item $|z+1|\ge 1,\quad |z+i|<1$
+\item $|z-1-i|\le 1,\quad \mathrm{Im}\,z>1,\ \mathrm{Re}\,z\ge 1$
+\item $|z-1-i|\ge 1,\quad 0\le \mathrm{Re}\,z<2,\ 0<\mathrm{Im}\,z\le 2$
+\item $|z-1-i|<1,\quad |\arg z|\le \dfrac{\pi}{4}$
+\item $|z|\ge 2,\quad |\arg z|\le \dfrac{\pi}{3}$
+\item $|z+1-i|<1,\quad |\arg z|<\dfrac{\pi}{4}$
+\item $\mathrm{Re}\,z<\mathrm{Im}\,z,\quad \dfrac{\pi}{4}<\arg z<\pi$
+\item $|z-1|-|z-1|<3$
+\item $|z-a|<r,\quad |z-b|<r;\quad a<b<a+r$
+\end{enumerate}
+\item Муруйн дүрс тодорхойлж, зураг зур.
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\mathrm{Im}\,z^2=3$
+\item $\mathrm{Im}(z^2-z)=2-\mathrm{Im}\,z$
+\item $|z-i|+|z+i|=3$
+\item $|z|-3\,\mathrm{Im}\,z=3$
+\item $|z-2i|=|z+i|$
+\item $z\bar z+i(z-\bar z)-2=0$
+\item $|z-1|=|\mathrm{Re}\,z|$
+\item $|z-1|-|z-2+i|=6$
+\item $\arg\left(\dfrac{z-1}{z-2i}\right)=\dfrac{\pi}{3}$
+\item $\mathrm{Re}\,z+\mathrm{Im}\,z=3$
+\end{multicols}
+\end{enumerate}
+\end{enumerate}
+\newpage
+\section*{Гэрийн даалгавар I} 
+\begin{enumerate}
+\item Дараах комплекс тоонуудыг тригонометр, илтгэгч хэлбэрт бич.
+\begin{enumerate}
+\begin{multicols}{2}
+        \item $-0.5$
+        \item $2i+2\sqrt{3}$
+        \item  $e$
+        \item $1-i$
+        \item $-\sqrt{2}+i\sqrt{2}$
+        \item $-1+i\sqrt{3}$
+        \item $(1+\sqrt{3}i)^{30}$
+        \item $(2+2i)^7$
+        \item $\left(\dfrac{1-3i}{1-i}\right)^4$
+        \item $\sqrt{2-2\sqrt{3}i}$
+\end{multicols}
+    \end{enumerate}
+    \item Үйлдлийг гүйцэтгэн бодит ба хуурмаг хэсэг, модуль, аргументийн гол утгыг олж тригонометр хэлбэрт бич.
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\displaystyle \frac{2+3i}{3-2i}-\frac{3-i}{3+2i}$
+\item $\displaystyle \frac{4+3i}{1-2i}-\frac{5-3i}{2-i}$
+\item $\displaystyle \frac{2+2i}{3+4i}+\frac{2-i}{1+2i}$
+\item $\displaystyle \frac{7+i}{3-4i}-\frac{3-5i}{3+2i}$
+\item $\displaystyle \frac{-7+i}{3-4i}-\frac{2+3i}{3+2i}$
+\item $\displaystyle \frac{1+7i}{3+4i}+\frac{3-i}{3+2i}$
+\item $\displaystyle \frac{-7-i}{4-3i}+\frac{5-3i}{2+3i}$
+\item $\displaystyle \frac{5-12i}{3i+4}-\frac{4+3i}{1+2i}$
+\item $\displaystyle \frac{12-5i}{3+4i}+\frac{3-i}{3-2i}$
+\item $\displaystyle \frac{-12-5i}{4-3i}+\frac{5-4i}{2+3i}$
+\end{multicols}
+\end{enumerate}
+\item Үйлдлийг гүйцэтгэж илтгэгч хэлбэрт бич. (Комплекс язгуур ол.)
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\sqrt[4]{\dfrac{-1+i\sqrt{8}}{2}}$
+\item $\sqrt[4]{1}$
+\item $\sqrt[3]{-i}$
+\item $\sqrt[3]{8}$
+\item $\sqrt[3]{-8}$
+\item $\sqrt[4]{-8+8\sqrt{3}\,i}$
+\item $\sqrt[4]{\dfrac{1}{16}}$
+\item $\sqrt[3]{-\dfrac{i}{8}}$
+\item $\sqrt[3]{-\dfrac{1}{27}}$
+\item $\sqrt[3]{-\dfrac{i}{27}}$
+\end{multicols}
+\end{enumerate}
+\item Өгөгдсөн тэнцэтгэл бишүүдээр тодорхойлогдох олонлогийг дүрсэл.
+\begin{enumerate}
+\item $|z+i|\ge 1,\quad |z|>2$
+\item $|z+1|<1,\quad |z-i|\le 1$
+\item $|z-1+i|\ge 1,\quad \mathrm{Re}\,z<1,\ \mathrm{Im}\,z\ge -1$
+\item $|z+i|<2,\quad 0<\mathrm{Re}\,z\le 1$
+\item $|z+i|>1,\quad -\dfrac{\pi}{4}\le \arg z<0$
+\item $|z-2|<2,\quad -\pi<\arg z\le -\dfrac{\pi}{3}$
+\item $|z|<1,\quad \mathrm{Re}\,z<0,\quad \mathrm{Im}\,z<0$
+\item $\mathrm{Re}\,z+\mathrm{Im}\,z>1,\quad \arg z<\dfrac{\pi}{4}$
+\item $|z+i|+|z-i|>3,\quad \mathrm{Re}\,z>0$
+\item $z\bar z<1,\quad |z-1|<1,\quad \mathrm{Im}\,z<0$
+\end{enumerate}
+\item Муруйн дүрс тодорхойлж, зураг зур.
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\mathrm{Im}\,\dfrac{1}{z}=\dfrac{1}{2}$
+\item $z^2+\bar z^{\,2}=1$
+\item $|z-i|-|z+i|=2$
+\item $|z-1+i|=|z-1-i|$
+\item $\mathrm{Re}(z^2-\bar z)=0$
+\item $\mathrm{Re}\,\dfrac{z-1}{z+1}=0$
+\item $|z-1|=|z-2|$
+\item $6=|z-3|$
+\item $\mathrm{Re}(z^2-4)=0$
+\item $|z|=\mathrm{Re}\,z+1$
+\end{multicols}
+\end{enumerate}
+\end{enumerate}

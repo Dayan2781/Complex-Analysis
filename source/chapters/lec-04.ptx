@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch04" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Элементар функцүүд ба олон утгат функц</title>
+<section xml:id="lec04-s1"><title>Комплекс экспонент ба Эйлерийн томьёо</title><definition><statement><p><m>z=x+iy</m> тооны хувьд <em>комплекс экспонентыг</em>
+<me>e^{z}=e^{x}(\cos y+i\sin y)</me>
+гэж тодорхойлно. Бодит <m>z=x</m> үед энэ нь ердийн <m>e^x</m> болно, мөн <m>e^{z_1+z_2}=e^{z_1}e^{z_2}</m> (тригонометрийн нэмэх томьёогоор шалгана).</p></statement></definition><theorem xml:id="r-eulereq1"><title>Эйлерийн томьёо</title><statement><p>Аливаа бодит <m>\varphi</m>-ийн хувьд
+<me>\cos\varphi+i\sin\varphi=e^{i\varphi}.</me></p></statement><proof><p>Тодорхойлолтод <m>x=0</m>, <m>y=\varphi</m> гэж орлуулахад шууд гарна. (Хожим 11-р лекцэд <m>e^z=\sum z^n/n!</m> цувааг ашиглан мөн адил дүгнэлтэд хүрнэ.)</p></proof></theorem><p>(?)-г Эйлерийн томъёо гэдэг. Бид энэ томъёог ашиглан комплекс тооноос логарифм авах, зэрэгт дэвшүүлэх үйлдэл хийж болно.</p><p><m>z=(x,y)=re^{i\varphi} , -\pi&lt;\varphi\leq \pi</m> байг.  Тэгвэл <m>z=e^{\ln r+i\varphi}</m> гэж бичиж болох тул <me>z^{a+ib}=(e^{\ln r+i\varphi})^{a+ib}=e^{(a\ln r-b\varphi)+i(a\varphi+b\ln r)}</me>
+ болно. Мөн <me>\ln z=\ln r+i\varphi</me> гэж тодорхойлоё.</p><example><statement><p><m>(1+i)^{i}</m>-г тооцоолоё. 
+<m>(1+i)^{i} = e^{i \ln(1+i)}</m></p><p>Одоо, <m>\ln(1+i)</m>-г тооцъё. Үүний тулд <m>1+i</m>-г экспоненциал хэлбэрт шилжүүлье:</p><p><m>1+i = \sqrt{2} (\cos \frac{\pi}{4} + i \sin \frac{\pi}{4}) = \sqrt{2} e^{i \frac{\pi}{4}}</m></p><p>Ингээд натурал логарифм авбал:</p><p><m>\ln(1+i) = \ln(\sqrt{2}) + i \frac{\pi}{4} = \frac{1}{2} \ln 2 + i \frac{\pi}{4}</m></p><p>Энд <m>\ln(\sqrt{2}) = \frac{1}{2} \ln 2</m> болохыг ашигласан.</p><p>Ингээд үр дүнг эхний томъёонд орлуулбал:</p><p><m>(1+i)^{i} = e^{i (\frac{1}{2} \ln 2 + i \frac{\pi}{4})} = e^{-\frac{\pi}{4}} e^{i \frac{1}{2} \ln 2}</m></p><p>Эйлерийн томъёог ашиглан задалбал:</p><p><m>e^{i \frac{1}{2} \ln 2} = \cos (\frac{1}{2} \ln 2) + i \sin (\frac{1}{2} \ln 2)</m></p><p>Тэгвэл,</p><p><m>(1+i)^{i} = e^{-\frac{\pi}{4}} [\cos (\frac{1}{2} \ln 2) + i \sin (\frac{1}{2} \ln 2)]</m></p><p><m>= e^{-\frac{\pi}{4}} \cos (\frac{1}{2} \ln 2) + i e^{-\frac{\pi}{4}} \sin (\frac{1}{2} \ln 2)</m></p><p>Ийнхүү <m>(1+i)^{i} \approx 0.7688 + 0.3592i</m> болно.</p></statement></example></section><section xml:id="lec04-s2"><title>Үндсэн элементар функцүүд</title><p>Нэг утгат хялбар функцүүдийн нэг нь <m>w=z^n</m>, <m>n\in \mathbb{N}</m> гэсэн зэрэгт функц. Зэрэгт функцийн тусламжтайгаар комплекс <m>z</m> хувьсагчийн олон гишүүнт функц үүсгэнэ:
+<me>P_n(z)=a_0z^n+a_1z^{n-1}+\cdots +a_n, \qquad a_0\neq 0</me>
+<m>a_0, \ldots , a_n</m> коэффициентууд нь тогтмол комплекс тоонууд. Олон гишүүнт нь <m>\overline{\mathbb{C}}</m> дээр тодорхойлогдоно. Энд <m>P_n(\infty)=\infty</m> гэж үзнэ. Хялбар олон гишүүнт нь шугаман функц:
+<me>w=az+b, \quad a\neq 0.</me></p><p>Олон гишүүнтийг өөрөөр бүхэл рациональ функц гэнэ. Хоёр олон гишүүнтийн ноогдвороор бутархай рациональ <m>R(z)</m> функц дүрслэгдэнэ:
+<me>R(z)=\dfrac{P_m(z)}{P_n(z)}=\dfrac{b_0z^m+b_1z^{m-1}+\cdots +b_m}{a_0z^n+a_1z^{n-1}+\cdots +a_n}, \quad a_0\neq 0</me>
+Бутархай рационал хялбар
+<me>L(z)=\dfrac{az+b}{cz+d}, \quad
+\begin{vmatrix}
+a&amp;b\\
+c&amp;d
+\end{vmatrix}\neq 0</me>
+функцийг бутархай шугаман буулгалт гэнэ.   <m>w=e^z</m>  <m>(z=x+iy)</m>-ийг комплекс экспонент буюу илтгэгч функц гэнэ. Энэ функц бодит илтгэгчийн бүхий л дүрэмд захирагдана. Харин комплекс хувьсагчийн илтгэгч функц үет функц байна. Учир нь
+<md><mrow>e^{z+2n\pi i}&amp;= e^{x+i(y+2n\pi)}=e^x[\cos (y+2n\pi)+i\sin (y+2n\pi)]</mrow><mrow>&amp;=e^x(\cos y+i\sin y)=e^{x+iy}=e^z</mrow></md>
+болж <m>e^z</m> нь <m>T=2n\pi i</m> үет функц болох нь нотлогдов.</p><p>Эйлерийн томьёо ашиглаж тригонометр
+<me>\cos z=\dfrac{e^{iz}+e^{-iz}}{2}, \quad \sin z= \dfrac{e^{iz}-e^{-iz}}{2i}</me>
+функцүүд <m>z\in\mathbb{C}</m> дээр тодорхойлогдох бөгөөд
+<me>\tan z=\dfrac{\sin z}{\cos z}, \quad \cot z= \dfrac{\cos z}{\sin z}</me>
+гэж тодорхойлогдох нь <m>\tan z</m> нь <m>z_n=(2n+1)\dfrac{\pi}{2}</m>, <m>n=0, \pm 1, ...</m> ба харин <m>\cot z</m> нь <m>z_n=n\pi</m> <m>(n=0, \pm 1,...)</m> цэг дээр тодорхойлогдохгүй.</p><p>Гиперболлог синус, косинус функцүүд  <m>\mathbb{C}</m> хавтгайд
+<me>\sh z=\dfrac{e^z-e^{-z}}{2}, \quad \ch z= \dfrac{e^z+e^{-z}}{2}</me>
+гэж тодорхойлогдох бөгөөд <m>\ch z =\cos iz</m>, <m>\sh z=-i\sin z</m> байна. Комплекс аргументийн тригонометр мөн гиперболлог функцүүдийн хувьд бодит аргументийн эдгээр функцийн бүхий л чанар хадгалагдана.
+<me>\cos (z_1\pm z_2)=\cos z_1\cos z_2 \mp \sin z_1 \sin z_2</me>
+<me>\sin (z_1\pm z_2)=\sin z_1\cos z_2 \pm \sin z_2 \cos z_1</me>
+томьёонууд ашиглаж тригонометр функцийн бодит ба хуурмаг хэсгийг олдог.</p><example><statement><p><md><mrow>\cos z&amp;=\cos(x+iy)=\cos x\cos (iy)-\sin x \sin (iy)</mrow><mrow>&amp;= \cos x ch y -i\sin x \sh y =\cos x ch y -i\sin x \sh y</mrow></md>
+байх тул  <me>\re (\cos z)= \cos x \ch y, \quad \im (\cos z)=-\sin x \sh y</me> болно.</p></statement></example><p>Комплекс мужид илтгэгч функцийн урвуу функцийг логарифм функц  гэдэг. Өөрөөр хэлбэл хэрэв <m>w= ln z</m> бол <m>z=e^w</m> тэгшитгэлийг хангах <m>w</m> олдоно: <m>w=u+iv</m>, <m>z=re^{i\varphi}=re^{i \Arg  z}</m>
+гэж авбал 
+<me>z=re^{i \Arg  z}= e^{w}=e^u\cdot e^{iv}</me>
+бөгөөд эндээс <m>r=e^u</m>, <m>e^{i \Arg  z}=e^{iv}</m> эхний тэгшитгэлээс <m>z\neq 0</m> авбал <m>u=\ln r</m> гэж нэг утгатай олдох ба харин дараах тэгшитгэлээс <m>u=\Arg  z</m> гарна.</p><p>Иймд <m>z\neq 0</m>, <m>z\neq \infty</m> байхад <m>w=\Ln z</m> гэсэн олон утгат логарифм функц тодорхойлогдоно.
+<men xml:id="r-3holomu3a2_13">w=\Ln z= \ln |z|+i (\arg  z+2n \pi), \quad n=0, \pm 1, ...</men>
+<xref ref="r-3holomu3a2_13"/>-аас <m>n=0</m> тохиолдолд логарифмын гол утга гэж нэрлэгдэх
+<me>\ln z= \ln |z|+i \arg  z</me>
+функц <m>\mathbb{C} \setminus \{ -\infty &lt; x \leq 0, \quad y=0 \}</m> өөрөөр хэлбэл <m>Ox</m>-ийн сөрөг чиглэлд хагалбартай бүх хавтгай муж дээр тасралтгүй, нэг утгатай байхаар оршин байна.</p><p>Тригонометр <m>\cos  z</m>, <m>\sin z</m>, <m>\tan z</m>-г функцүүдийн  хувьд тэдгээрийн урвуу болох <m>\Arccos z</m>, <m>\Arcsin z</m>, <m>\Arctan z</m> зэрэг олон утгат функцүүд тодорхойлогдоно.
+<me>\Arccos z= -i \Ln (z+\sqrt{z^2-1})</me>
+<me>\Arcsin z= -i \Ln (iz-\sqrt{1-z^2})</me>
+<me>\Arctan z= -\dfrac{i}{2}\Ln \dfrac{1+iz}{1-iz}</me>
+Мөн ерөнхий зэрэгт <m>z^a</m>, <m>a=\alpha +i\beta</m>  функц экспонентоор
+<me>z^a=e^{a\Ln z}</me>
+ба гол утга нь
+<me>z^a=e^{a\ln z}</me>
+гэж тодорхойлогдоно. Мөн ерөнхий илтгэгч <m>a^z</m>, <m>a\neq 0</m> экспонентоор
+<me>a^z=e^{z\Ln a}</me>
+ба гол утга нь
+<me>a^z=e^{z\ln a}</me></p><example><statement><p><m>\cos (2+i)</m> тооны бодит ба хуурмаг хэсгийг олъё.</p></statement><solution><p><m>\cos (2+i)=\cos 2\cdot \ch 1-i \sin 2\cdot \sh1</m> тул <me>\re \cos (2+i)=\cos 2 \sh1, \quad \im \cos (2+i)=-\sin 2\cdot \sh1</me></p></solution></example><example><statement><p>Дараах утгуудыг бодож гарга.</p><p><p><m>\Ln (-1)</m>
+     <m>\Arccos \dfrac{1}{2}</m>
+     <m>2^i</m></p></p></statement><solution><p><ol><li><p><md><mrow>\Ln(-1)&amp;=\ln|-1|+i \arg  (-1)+2 k\pi i</mrow><mrow>&amp;= 0+\pi i +2 k \pi i= (2k+1)\pi i, \qquad k=0,\pm 1, ...</mrow></md></p></li><li><p><md><mrow>\Arccos\dfrac{1}{2}&amp;= -i \Ln \left(\dfrac{1}{2}+\dfrac{\sqrt{3}}{2}i\right)</mrow><mrow>&amp;=-i \left(\ln\left|\dfrac{1}{2}+i\dfrac{\sqrt{3}}{2}\right|=\pm i\cdot \dfrac{\pi}{3}+2k\pi i\right)</mrow><mrow>&amp;=2 k\pi \pm \dfrac{\pi}{3}</mrow></md></p></li><li><p><md><mrow>2^i&amp;=e^{i \Ln 2} =e^{i(\ln|2|+0+2k\pi i)}=e^{i(\ln2+2k\pi i)}</mrow><mrow>&amp;=e^{-2k \pi} (\cos \ln 2+ i\sin \ln 2).</mrow></md></p></li></ol></p></solution></example></section><section xml:id="lec04-s3"><title>Олон утгат функц</title><definition><statement><p>Хэрэв комплекс тоо <m>z</m> бүрт нэгээс илүү <m>w</m> утга харгалзаж байвал
+түүнийг <em>олон утгат комплекс функц</em> гэнэ.</p></statement></definition><example><statement><p>Комплекс тооны аргумент.</p></statement></example><p>Комплекс тоо <m>z\neq 0</m>-г
+<me>z=re^{i\varphi}</me>
+гэж бичвэл
+<me>\arg z=\varphi+2k\pi,\qquad k\in\mathbb{Z}.</me></p><p>Иймээс <m>\arg z</m> нь төгсгөлгүй олон утгатай функц.</p><example><statement><p>Комплекс логарифм.</p></statement></example><p><m>z\neq 0</m> үед
+<me>\Ln z=\ln|z|+i(\arg z+2k\pi),\qquad k\in\mathbb{Z}.</me></p><p>Иймээс <m>\Ln z</m> нь олон утгат функц.</p><example><statement><p>Комплекс язгуур.</p></statement></example><p><m>z=re^{i\varphi}</m> гэж бичвэл
+<me>\sqrt[n]{z}
+=
+r^{1/n}
+e^{\,i\frac{\varphi+2k\pi}{n}},
+\qquad k=0,1,\dots,n-1.</me></p><p>Иймээс <m>n</m>-зэрэгт язгуур нь <m>n</m> утгатай функц.</p><definition><statement><p>Олон утгат функцийн утгуудын дундаас нэгийг нь
+сонгон авснаар үүсэх нэг утгат функцийг
+<em>салбар</em> гэнэ.</p></statement></definition><definition><statement><p>Хэрэв
+<me>-\pi&lt;\Arg z\le \pi</me>
+гэж сонговол үүсэх логарифмыг
+<em>логарифмын гол утга</em> гэнэ:
+<me>\ln z=\ln|z|+i\Arg z.</me></p></statement></definition></section>
+  <xi:include href="./ai-04.ptx" />
+  <xi:include href="./sem-04.ptx" />
+  <xi:include href="./hw-04.ptx" />
+</chapter>

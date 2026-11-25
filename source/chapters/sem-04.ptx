@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-04">
+  <title>Семинар 4</title>
+  <exercises xml:id="exercises-seminar-04">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem04-1">
+      <statement><p><m>e^{1+i\pi/2}</m>, <m>e^{i\pi}+1</m>, <m>|e^{3-4i}|</m>-г тооцоол. <m>e^z\ne0</m> ба <m>e^z</m> нь <m>2\pi i</m> үетэй гэж батал.</p></statement>
+      <hint><p><m>e^z=e^x(\cos y+i\sin y)</m>. Хариу: <m>ie</m>, <m>0</m>, <m>e^3</m>. <m>|e^z|=e^x&gt;0</m>; <m>e^{z+2\pi i}=e^z</m> нь <m>\cos,\sin</m>-ийн үечлэлээс гарна.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-2">
+      <statement><p>Тэгшитгэлийг бод: (a) <m>e^z=-2</m>; (b) <m>\sin z=3</m>.</p></statement>
+      <hint><p>(a) <m>z=\ln2+i(\pi+2k\pi)</m>. (b) <m>w=e^{iz}</m> гэвэл <m>w^2-6iw-1=0</m>, <m>w=i(3\pm2\sqrt2)</m>. <m>iz=\Ln w</m>-ээс <m>z=\frac\pi2+2k\pi\pm i\ln(3+2\sqrt2)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-3">
+      <statement><p><m>\Ln(-i)</m>, <m>\Ln(1+i)</m>, <m>i^i</m>-ийн бүх утга ба гол утгыг ол.</p></statement>
+      <hint><p><m>\Ln z=\ln|z|+i(\arg z+2k\pi)</m>, <m>a^b=e^{b\Ln a}</m>. Хариу: <m>-\frac{\pi i}2+2k\pi i</m>; <m>\ln\sqrt2+i(\frac\pi4+2k\pi)</m>; <m>i^i=e^{-\pi/2-2k\pi}</m> (бүгд бодит!).</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-4">
+      <statement><p><m>\cos^2z+\sin^2z=1</m> ба <m>|\sin z|^2=\sin^2x+\sh^2y</m> гэж батал. <m>\sin z</m> нь <m>\C</m> дээр зааглагдсан уу?</p></statement>
+      <hint><p>Эйлерийн томьёогоор тодорхойлолтоос шалга. <m>\sin z=\sin x\ch y+i\cos x\sh y</m>. <m>|\sin(iy)|=|\sh y|\to\infty</m> тул зааглагдаагүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-5">
+      <statement><p><m>\cos z</m> функцийн бодит ба хуурмаг хэсгийг ол. <m>\cos z</m>-ийн бүх тэгийг ол.</p></statement>
+      <hint><p><m>\cos z=\cos x\ch y-i\sin x\sh y</m>. Тэг болох нь <m>\cos x\ch y=0</m> ба <m>\sin x\sh y=0</m>: <m>\ch y\ge1</m> тул <m>\cos x=0</m>, тэгвэл <m>\sin x=\pm1</m> тул <m>y=0</m>. Хариу: <m>z=\frac\pi2+k\pi</m> (зөвхөн бодит).</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-6">
+      <statement><p>Олонлогийн утгаар <m>\Ln(z_1z_2)=\Ln z_1+\Ln z_2</m> гэж батал. Гэтэл гол утгын хувьд <m>\ln(z_1z_2)=\ln z_1+\ln z_2</m> үргэлж биелэх үү?</p></statement>
+      <hint><p>Модуль үржигдэж, аргумент нэмэгдэнэ. Гол утгын хувьд <m>z_1=z_2=-1</m>: <m>\ln1=0</m>, харин <m>\ln(-1)+\ln(-1)=2\pi i</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

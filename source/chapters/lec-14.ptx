@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch14" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Үлдэцийн теоремын хэрэглээ</title>
+<section xml:id="lec14-s1"><title>Интеграл бодоход үлдэц ашиглах нь</title><p><ul marker=""><li><p><alert><alert>I.</alert></alert> <m>\bint\limits_0^{2\pi} R(\cos t,\sin t)dt</m>, <m>R(u,v)</m> нь бодит <m>u,v</m> гэсэн хоёр хувьсагчийн рациональ функц.</p><p><m>R(\cos t, \sin t)</m> нь <m>0\leq t\leq 2\pi</m> завсар дээр тасралтгүй функц.
+Эйлерийн томьёо ёсоор
+<me>\cos t=\frac{e^{it}+e^{-it}}{2}, \sin t=\frac{e^{it}-e^{-it}}{2i}</me>
+бөгөөд <m>z=e^{it}</m> гэвэл <m>|z|=1</m>, <m>t\in[0,2\pi]</m> үед <m>z=e^{it}</m> цэг <m>z=1</m> цэгээс нар буруу (цагийн зүүний эсрэг) чиглэлээр нэгж тойргийг нэг удаа тойрно. <m>\cos t=\dfrac{z+z^{-1}}{2}</m>, <m>\sin t=\dfrac{z-z^{-1}}{2i}</m>, <m>dt=\dfrac{dz}{iz}</m> байх тул 
+<md><mrow>\int\limits_0^{2\pi}R(\cos t,\sin t)dt&amp;=\oint\limits_{|z|=1}R\left(\frac{1}{2}\left[z+\frac{1}{z}\right], \frac{1}{2i}\left[z-\frac{1}{z}\right]\right)\frac{dz}{iz}</mrow><mrow>&amp;=\oint\limits_{|z|=1} \tilde{R}(z)dz,</mrow></md>
+<m>\tilde{R}(z)</m> нь рациональ функцүүдийн композиц тул рациональ функц байна. Энэ л функц нь <m>|z|=1</m> дээр голоморф, түүний дотор төгсгөлтэй тооны онцгой цэгтэй учир үлдэцийн онолоор бодогдоно.</p><example><statement><p><m>\bint\limits_{0}^{2\pi} \dfrac{dt}{\cos t-2}</m> бодож гарга.</p></statement></example><remark><title>Бодолт</title><p><me>\int\limits_{0}^{2\pi} \dfrac{dt}{\cos t-2} =\int\limits_{|z|=1} \dfrac{dz}{iz\left(\frac{z+z^{-1}}{2}-2\right)}=\frac{2}{i}\oint\limits_{|z|=1}\frac{dz}{z^2-4z+1}</me> болж <m>\dfrac{2}{i}\dfrac{1}{z^2-4z+1}</m> функцийн зөвхөн <m>z_1=2-\sqrt{3}</m> цэг нь <m>|z|&lt;1</m>-д орших тул 
+<md><mrow>\int\limits_{0}^{2\pi} \dfrac{dt}{\cos t-2}&amp; =2\pi i Res\left[ \dfrac{1}{z^2-4z+1}, 2-\sqrt{3}\right]</mrow><mrow>&amp;=4 \pi \frac{1}{2(2-\sqrt{3})-4}</mrow><mrow>&amp;=-\frac{2\pi}{\sqrt{3}}</mrow></md></p></remark></li><li><p><alert><alert>II.</alert></alert> <m>\bint \limits_{-\infty}^\infty R(x)dx</m>, <m>R(x)</m> нь бодит тэнхлэг дээр туйл үгүй рациональ функц, <m>R(x)=\dfrac{P_m(x)}{Q_n(x)}</m> гэвэл <m>P_m(x)</m>, <m>Q_n(x)</m> олон гишүүнтүүд ба <m>m+2\leq n</m>. Өөрөөр хэлбэл <m>z=\infty</m> нь уул <m>R(x)</m> функцийн 2-оос доошгүй эрэмбийн тэг байг.</p><p>Бодит тэнхлэгийн <m>[-R;R]</m> хэрчим <m>|z|=R</m>, <m>\im z&gt;0</m> хагас тойргоор битүүрэхдээ <m>R(z)</m> функц комплекс хавтгайд орших бүх туйлыг хамран авахаар радиус <m>R</m>-ыг сонгон авна.</p><figure><caption></caption><image source="images/24.jpg" width="31%"/></figure><p><m>\infty</m>-ийн орчинд <m>R(x)</m> функцийн Лораны цуваанд задалбал 
+<m>R(z)=\dfrac{c_{-2}}{z^2}+\dfrac{c_{-3}}{z^3}+\cdots</m>. Иймд <m>\lim\limits_{z\rightarrow \infty} R(z)\cdot z^2=c_{-2} \ \text{ба} \ \lim\limits_{z\rightarrow \infty}|R(z)|=0,</m>
+<m>|z|\rightarrow \infty</m> үед <m>|R(z)|\cdot |z|=0(|z|).</m> Эндээс аливаа <m>\varepsilon &gt;0</m> тооны хувьд хүрэлцээт их <m>R</m>-утганд <m>\left|\bint\limits_{|z|=R}R(z)dz\right|\leq \varepsilon</m>. Иймд <m>R\rightarrow \infty</m> үед <m>\lim\limits_{R\rightarrow \infty}\bint\limits_{|z|=R}R(z)dz=0</m> болж улмаар
+<mdn><mrow xml:id="r-6resduu3a6_30">\int\limits_{-\infty}^\infty R(x)dx&amp;= \lim\limits_{R\rightarrow \infty} \int\limits_{-R}^R R(x)dx</mrow><mrow number="no">&amp;=2\pi i\sum\limits_{k=1}^n Res [R(z), a_k]</mrow></mdn></p><example><statement><p><m>f(z)=\dfrac{1}{(z^2+1)^2}</m> функц дээд хагас хавтгайд цор ганц <m>z=i</m> гэсэн II эрэмбийн туйлтай, бодит тэнхлэг дээр туйлгүй бөгөөд <m>\infty</m> нь IV эрэмбийн тэг байх тул <xref ref="r-6resduu3a6_30"/> ёсоор 
+<me>\int\limits_{-\infty}^\infty \frac{dz}{(z^2+1)^2}=2\pi i Res \left[\frac{1}{(z^2+1)^2}, i\right]</me>
+гэж бодогдоно.</p><p>Харин
+<me>Res \left[\frac{1}{(z^2+1)^2}, i\right]=\lim\limits_{z\rightarrow i} \left[\frac{(z-i)^2}{(z-i)^2(z+i)^2}\right]'=\frac{1}{4i}</me>
+тул 
+<me>\int\limits_{-\infty}^\infty \frac{dx}{(x^2+1)^2}=\frac{\pi}{2}.</me></p></statement></example></li><li><p><alert>III.</alert> <alert>Жорданы леммийн мөрдлөгөө.</alert> (Лемм нь &lt;&lt;Жорданы лемм&gt;&gt; хэсэгт.)   
+<m>F(z)=e^{\lambda iz}\cdot f(z)</m>, <m>\lambda&gt;0</m>, <m>f(z)</m> функц дараах 3 нөхцөлийг хангадаг байг.
+<ol><li><p>Дээд хагас хавтгайд төгсгөлтэй <m>n</m>-тооны онцгой   <m>a_k(k=\overline{1,n})</m> цэгтэй,</p></li><li><p><m>Ox</m> тэнхлэг дээр төгсгөлтэй <m>m</m>-тооны зөвхөн энгийн <m>x_j(j=\overline{ 1,m})</m> туйлтай,</p></li><li><p><m>\im z \geq 0</m> байхаар <m>z\rightarrow \infty</m> үед <m>f(z)\rightarrow 0</m> байвал
+<md><mrow>\int\limits_{-\infty}^\infty e^{\lambda ix}f(x)dx&amp;= 2\pi i\left\{\sum\limits_{k=1}^n Res[F(z),a_k]+\right.</mrow><mrow>&amp;\left.+\frac{1}{2}\sum\limits_{j=1}^m Res[F(z), x_j]\right\}</mrow></md></p></li></ol></p><figure><caption></caption><image source="images/25.PNG" width="46%"/></figure></li></ul></p><proof><p>Бүх <m>a_k(k=\overline{1,n})</m> ба <m>x_j(j=\overline{1,m})</m> онцгой цэгүүдийг хүрээндээ хамрахуйц <m>C_R:|z|=R</m>, <m>\im z&gt;0</m> гэсэн хагас тойрог татъя.</p><p>Мөн <m>x_j(j=\overline{1,m})</m> цэгүүдэд төвтэй дээд хагас хавтгайд орших, зэргэлдээ хоёр нь ерөнхий цэггүй байхаар <m>\gamma^-_\rho: |z-x_j|=\rho</m>, <m>\im z&gt;0(j=\overline{1,m})</m> гэсэн сөрөг тойролттой хагас тойрог авбал үлдэцийн үндсэн теорем ёсоор 
+<mdn><mrow xml:id="r-6resduu3au2a">\tag{$*$} 
+    
+        &amp;\int\limits_{-R}^{x_1-\rho}F(z)dz+\int\limits_{x_1+\rho}^{x_2-\rho}F(z)dz+\cdots +</mrow><mrow number="no">&amp;+\int\limits_{x_m+\rho}^RF(z)dz+\sum\limits_{j=1}^m \int\limits_{\gamma_\rho^-}e^{\lambda i z}f(z)dz+\int\limits_{C_R}e^{\lambda iz}f(z)dz =</mrow><mrow number="no">&amp;=2\pi i\sum\limits_{k=1}^n Res[e^{\lambda iz} f(z), a_k]</mrow></mdn> бөгөөд 
+<md><mrow>&amp;\lim\limits_{\tiny{\begin{array}{c}
+R\to\infty</mrow><mrow>\rho\to 0 
+\end{array}}}  \left(\int\limits_{-R}^{x_1-\rho} F(z)dz+\cdots +\int\limits_{x_m+\rho}^R F(z)dz\right)=\int\limits_{-\infty}^\infty F(x)dx,</mrow><mrow>&amp;\lim\limits_{\tiny{\begin{array}{c}
+R\to\infty</mrow><mrow>\rho\to 0 
+\end{array}}}\sum\limits_{j=1}\int\limits_{\gamma^-_\rho}F(z)dz=-\pi i\sum\limits_{j=1}^m Res[F(z), x_j]</mrow></md>
+байхыг тооцож хязгаарт шилжсэний дараа <xref ref="r-6resduu3au2a"/> нь 
+<md><mrow>&amp;\int\limits_{-\infty}^\infty e^{\lambda ix}f(x)dx+\lim\limits_{\tiny{\begin{array}{c}
+R\to\infty</mrow><mrow>\rho\to 0 
+\end{array}}} \int\limits_{C_R} e^{\lambda iz}f(z)dz=</mrow><mrow>&amp;=2\pi i\left\{\sum\limits_{k=1}^n Res[F(z), a_k]+\frac{1}{2}\sum\limits_{j=1}^m Res [F(z), x_j]\right\}</mrow></md>
+болно. <m>C_R:z=R(\cos \varphi +i\sin\varphi)</m>, <m>0\leq \varphi \leq \pi</m> байх тул 
+<md><mrow>|I_R|&amp;=\left|\int\limits_{C_R}e^{\lambda iz}f(z)dz\right|</mrow><mrow>&amp;=\left|\int\limits_0^\pi e^{\lambda i R\cos \varphi}\cdot e^{-\lambda R\sin \varphi}\cdot f(Re^{i\varphi})\cdot Rid\varphi\right|.</mrow></md>
+Гуравдугаар нөхцөл ёсоор <m>\max\limits_{0\leq \varphi \leq \pi}|f(\re^{i\varphi})|=\sigma(R)\rightarrow 0 (R\rightarrow \infty)</m> ба  <m>|e^{\lambda iR\cos \varphi}|=1</m> учир 
+<me>|I_R|\leq \sigma (R)\int\limits_0 e^{-\lambda R\sin \varphi}d\varphi</me>
+улмаар хялбар <m>\sin \varphi &gt;\dfrac{2\varphi}{\pi} \left(\forall \varphi \in\left[0;\dfrac{\pi}{2}\right]\right)</m> тэнцэл биш ашиглавал 
+<me>|I_R|\leq \sigma (R)\int\limits_0^{\frac{\pi}{2}}Re^{-\lambda R\cdot\frac{2\varphi}{\pi}}d\varphi=\frac{\pi \sigma(R)}{\lambda}(1-e^{-\lambda R})\rightarrow 0 (R\rightarrow \infty)</me> 
+болж <xref ref="r-6resduu3au2a"/> тэнцэл:
+<mdn><mrow xml:id="r-6resduu3a6_31">\int\limits_{-\infty}^\infty e^{\lambda ix}f(x)dx&amp; =2\pi i \left\{\sum\limits_{k=1}^nRes[e^{\lambda iz}f(z),a_k]+\right.</mrow><mrow number="no">&amp;\left.+\frac{1}{2}\sum\limits_{j=1}^m Res[e^{\lambda iz}f(z), x_j]\right\}</mrow></mdn></p><example><statement><p><m>\int\limits_{0}^\infty \dfrac{\sin ax}{x(x^2+b^2)}dx, \quad (a,b</m>-эерэг тоонууд) интегралыг бод.</p></statement></example></proof><remark><title>Бодолт</title><p>Интеграл доорх функц тэгш, нөгөө талаар   <m>\sin ax=\im e^{iax}</m> тул <xref ref="r-6resduu3a6_31"/> ёсоор 
+<md><mrow>\int\limits_0^\infty \frac{\sin ax}{x(x^2+b^2)}dx&amp;=\im \left\{\frac{1}{2}\int\limits_{-\infty}^\infty \frac{e^{iax}}{x(x^2+b^2)}dx\right\}</mrow><mrow>&amp;=\im \left\{\pi i\left(Res\left[\frac{e^{iaz}}{z(z^2+b^2)}, bi\right]\right.\right.+</mrow><mrow>&amp;\left.\left.+\frac{1}{2}Res \left[\frac{e^{iaz}}{z(z^2+b^2)},0\right]\right)\right\}</mrow></md> бөгөөд үлдэцүүдийг жич олбол:
+<me>Res\left[\frac{e^{iaz}}{z(z^2+b^2)}, bi\right] =\lim\limits_{z\rightarrow bi}\frac{e^{iaz}}{z(z+bi)}=-\frac{e^{-ab}}{2b^2}</me>
+<me>Res\left[\frac{e^{iaz}}{z(z^2+b^2)}, 0\right] =\lim\limits_{z\rightarrow 0}\frac{e^{iaz}}{z^2+b^2}=\frac{1}{b^2}</me> болж 
+<me>\int\limits_0^\infty \frac{\sin ax dx}{x(x^2+b^2)}=\im\left\{\left(\frac{-e^{-ab}}{2b^2}+\frac{1}{2}\frac{1}{b^2}\right)\cdot \pi i\right\}=\frac{\pi}{2b^2}(1-e^{-ab})</me></p></remark></section>
+  <xi:include href="./extra-14-jordan.ptx" />
+  <xi:include href="./ai-14.ptx" />
+  <xi:include href="./sem-14.ptx" />
+  <xi:include href="./hw-14.ptx" />
+</chapter>

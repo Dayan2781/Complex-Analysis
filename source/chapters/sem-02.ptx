@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-02">
+  <title>Семинар 2</title>
+  <exercises xml:id="exercises-seminar-02">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem02-1">
+      <statement><p>Дараах олонлог бүр нээлттэй, битүү, зааглагдсан, муж (холбоост нээлттэй) эсэхийг тогтоо:<ol marker="(a)"><li><m>\{1&lt;|z-i|&lt;2\}</m>;</li><li><m>\{\re z\ge0\}</m>;</li><li><m>\{|z|\ne1\}</m>;</li><li><m>\{|z|&lt;1,\ 0&lt;\arg z&lt;\frac\pi4\}</m>.</li></ol></p></statement>
+      <hint><p>Зураг зур. (a) муж, зааглагдсан (цагираг); (b) битүү, муж биш; (c) нээлттэй боловч холбоост биш тул муж биш; (d) зааглагдсан муж (дугуйн сектор).</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-2">
+      <statement><p><m>z_1=2</m>, <m>z_2=-i</m>, <m>z_3=-1+2i</m> цэгүүдийн Риманы бөмбөлөг дээрх дүрийг ол.</p></statement>
+      <hint><p><m>\xi=\frac{2x}{1+|z|^2}</m>, <m>\eta=\frac{2y}{1+|z|^2}</m>, <m>\zeta=\frac{|z|^2-1}{1+|z|^2}</m> томьёо. Хариу: <m>(\frac45,0,\frac35)</m>, <m>(0,-1,0)</m>, <m>(-\frac13,\frac23,\frac23)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-3">
+      <statement><p>Риманы бөмбөлөг дээрх <m>(0,\frac45,\frac35)</m> ба <m>(0,0,-1)</m> цэгүүдийн эх дүр болох <m>z</m>-ийг ол.</p></statement>
+      <hint><p><m>x=\frac{\xi}{1-\zeta}</m>, <m>y=\frac{\eta}{1-\zeta}</m>. Хариу: <m>z=2i</m> ба <m>z=0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-4">
+      <statement><p><m>|z|=r</m> тойрог ба <m>y=x</m> шулууны Риманы бөмбөлөг дээрх дүр юу болох вэ?</p></statement>
+      <hint><p><m>|z|=r</m> үед <m>\zeta=\frac{r^2-1}{r^2+1}</m> тогтмол: өргөргийн тойрог. <m>y=x</m> үед <m>\xi=\eta</m>: <m>N</m> туйлыг дайрах <m>\xi=\eta</m> хавтгай ба бөмбөлгийн огтлол болох их тойрог.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-5">
+      <statement><p>Дарааллын хязгаар (эсвэл хязгаарын цэгүүдийг) ол:<ol marker="(a)"><li><m>a_n=\left(\dfrac{1+i}{2}\right)^n</m>;</li><li><m>a_n=\dfrac{n(1+i)}{n+i}</m>;</li><li><m>a_n=\left(\dfrac{1+i}{\sqrt2}\right)^n</m>.</li></ol></p></statement>
+      <hint><p>(a) <m>|a_n|=2^{-n/2}\to0</m>. (b) <m>1+i</m>. (c) <m>\frac{1+i}{\sqrt2}=e^{i\pi/4}</m> тул дараалал үечилсэн; хязгаар байхгүй, хязгаарын цэгүүд нь <m>1</m>-ийн <m>8</m>-р зэргийн бүх язгуур.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-6">
+      <statement><p><m>a_n\to\infty</m> (<m>\overline\C</m> дотор) байх зайлшгүй ба хүрэлцээтэй нөхцөл нь Риманы бөмбөлөг дээрх дүрүүд нь <m>N</m> туйл руу нийлэх явдал гэж батал.</p></statement>
+      <hint><p><m>1-\zeta=\frac{2}{1+|z|^2}</m> ба <m>\xi^2+\eta^2=1-\zeta^2</m> томьёог ашигла: <m>|a_n|\to\infty\iff\zeta_n\to1</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

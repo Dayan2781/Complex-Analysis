@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-03">
+  <title>Гэрийн даалгавар 3</title>
+  <exercises xml:id="exercises-homework-03">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw03-1">
+      <statement><p><m>f(z)=z^2+i\overline z</m> функцийн бодит ба хуурмаг хэсгийг ол.</p></statement>
+      <solution><p><m>z^2=x^2-y^2+2ixy</m>, <m>i\overline z=i(x-iy)=y+ix</m>. Иймд <m>u=x^2-y^2+y</m>, <m>v=2xy+x</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-2">
+      <statement><p><m>w=1/z</m> буулгалтаар <m>|z|=2</m> тойрог, <m>w=z^2</m> буулгалтаар <m>y=x</m> шулуун юунд буухыг ол.</p></statement>
+      <solution><p><m>|w|=1/|z|=\frac12</m> тул <m>|w|=\frac12</m> тойрог. <m>z=t(1+i)</m> үед <m>z^2=t^2(1+i)^2=2it^2</m>, <m>t\in\R</m>: хуурмаг тэнхлэгийн сөрөг биш хагас <m>\{iv:v\ge0\}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-3">
+      <statement><p><m>f</m> функц <m>z_0</m> цэгт тасралтгүй байх зайлшгүй ба хүрэлцээтэй нөхцөл нь <m>u=\re f</m>, <m>v=\im f</m> хоёулаа <m>(x_0,y_0)</m> цэгт тасралтгүй байх гэж батал. Мөн <m>|f|</m> тасралтгүй гэж харуул.</p></statement>
+      <solution><p><m>|u-u_0|,|v-v_0|\le|f-f_0|\le|u-u_0|+|v-v_0|</m> тэнцэтгэл бишүүдээс шууд гарна. <m>\bigl||f(z)|-|f(z_0)|\bigr|\le|f(z)-f(z_0)|</m> тул <m>|f|</m> тасралтгүй.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-4">
+      <statement><p><m>f(z)=z^2</m> функц <m>|z|&lt;1</m> дээр жигд тасралтгүй, харин <m>\C</m> дээр жигд тасралтгүй биш гэж батал.</p></statement>
+      <solution><p><m>|z|,|w|&lt;1</m> үед <m>|z^2-w^2|=|z+w||z-w|&lt;2|z-w|</m>, иймд <m>\delta=\varepsilon/2</m> тохирно. <m>\C</m> дээр <m>z_n=n+\frac1n</m>, <m>w_n=n</m> гэвэл <m>|z_n-w_n|\to0</m>, харин <m>|z_n^2-w_n^2|=2+\frac1{n^2}&gt;2</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-5">
+      <statement><p><m>\displaystyle\lim_{z\to0}\frac{\sin|z|}{|z|}\cdot\frac{z^2}{|z|^2}</m> хязгаар оршин байх уу?</p></statement>
+      <solution><p>Эхний үржигдэхүүн <m>1</m> рүү тэмүүлнэ. <m>z=re^{i\theta}</m> үед хоёр дахь нь <m>e^{2i\theta}</m> бөгөөд чиглэлээс хамаарна (<m>\theta=0</m> үед <m>1</m>, <m>\theta=\frac\pi4</m> үед <m>i</m>). Иймд хязгаар байхгүй.</p></solution>
+    </exercise>
+  </exercises>
+</section>

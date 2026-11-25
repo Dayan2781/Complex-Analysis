@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-05">
+  <title>Гэрийн даалгавар 5</title>
+  <exercises xml:id="exercises-homework-05">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw05-1">
+      <statement><p><m>f(z)=z|z|^2</m> функц хаана дифференциалчлагдах вэ?</p></statement>
+      <solution><p><m>u=x^3+xy^2</m>, <m>v=x^2y+y^3</m>. <m>u_x=3x^2+y^2</m>, <m>v_y=x^2+3y^2</m> тул <m>x^2=y^2</m>. <m>u_y=2xy</m>, <m>v_x=2xy</m> тул <m>2xy=-2xy</m>, <m>xy=0</m>. Хоёулаа зөвхөн <m>x=y=0</m> үед биелнэ, иймд зөвхөн <m>z=0</m> цэгт дифференциалчлагдана (<m>f'(0)=0</m>).</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-2">
+      <statement><p><m>f</m> нь <m>D</m> мужид голоморф ба <m>\re f</m> тогтмол бол <m>f</m> тогтмол гэж батал.</p></statement>
+      <solution><p><m>u_x=u_y=0</m> тул Коши–Риманаар <m>v_x=v_y=0</m>. Иймд <m>f'=u_x+iv_x=0</m> бөгөөд муж холбоост тул <m>f</m> тогтмол.</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-3">
+      <statement><p><m>f(z)=\sqrt{|xy|}</m> функц <m>z=0</m> цэгт Коши–Риманы нөхцөлийг хангадаг боловч дифференциалчлагдахгүй гэж батал.</p></statement>
+      <solution><p><m>u=\sqrt{|xy|}</m>, <m>v=0</m>. Тэнхлэгүүд дээр <m>u=0</m> тул <m>u_x(0,0)=u_y(0,0)=0=v_x=v_y</m>: нөхцөл биелнэ. <m>z=t(1+i)</m>, <m>t\in\R</m> чиглэлд <m>\frac{f(z)-f(0)}{z}=\frac{|t|}{t(1+i)}</m>, энэ нь <m>t&gt;0</m> үед <m>\frac1{1+i}</m>, <m>t&lt;0</m> үед <m>-\frac1{1+i}</m>. Хязгаар байхгүй.</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-4">
+      <statement><p><m>f</m> нь <m>D</m>-д голоморф бол <m>g(z)=\overline{f(\overline z)}</m> функц <m>D^*=\{\overline z:z\in D\}</m> мужид голоморф гэж батал.</p></statement>
+      <solution><p><m>g=U+iV</m>, <m>U(x,y)=u(x,-y)</m>, <m>V(x,y)=-v(x,-y)</m>. Тэгвэл <m>U_x=u_x</m>, <m>V_y=v_y</m> тул <m>U_x=V_y</m>; <m>U_y=-u_y</m>, <m>V_x=-v_x</m> тул <m>U_y=-u_y=v_x=-V_x</m>. Хэсгийн уламжлалууд тасралтгүй тул <m>g</m> голоморф.</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-5">
+      <statement><p><m>f'(z)=\dfrac{\partial f}{\partial x}=-i\dfrac{\partial f}{\partial y}</m> гэж харуулаад, <m>f(z)=e^{z^2}</m>-ийн уламжлалыг Коши–Риманы нөхцөлөөр биш, гинжин дүрмээр ол.</p></statement>
+      <solution><p><m>f'(z)</m>-ийг <m>h\to0</m> бодит ба <m>h=it\to0</m> хуурмаг чиглэлээр хязгаар авбал <m>f'=f_x</m> ба <m>f'=\frac{f_y}{i}=-if_y</m>. Гинжин дүрмээр <m>(e^{z^2})'=2ze^{z^2}</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

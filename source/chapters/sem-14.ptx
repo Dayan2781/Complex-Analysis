@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-14">
+  <title>Семинар 14</title>
+  <exercises xml:id="exercises-seminar-14">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem14-1">
+      <statement><p><m>\displaystyle\int_0^{2\pi}\frac{dt}{2+\cos t}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>z=e^{it}</m>, <m>\cos t=\frac{z+z^{-1}}2</m>, <m>dt=\frac{dz}{iz}</m>. Дотор <m>z=-2+\sqrt3</m> туйл. Хариу: <m>\frac{2\pi}{\sqrt3}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-2">
+      <statement><p><m>\displaystyle\int_{-\infty}^\infty\frac{dx}{(x^2+1)^2}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Дээд хагас хавтгайд <m>z=i</m> (<m>2</m>-р эрэмбийн туйл). Хариу: <m>\frac\pi2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-3">
+      <statement><p><m>\displaystyle\int_{-\infty}^\infty\frac{dx}{x^4+1}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Туйлууд <m>e^{i\pi/4}</m>, <m>e^{3i\pi/4}</m>. <m>\Res=-\frac z4</m>. Хариу: <m>\frac\pi{\sqrt2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-4">
+      <statement><p><m>\displaystyle\int_0^\infty\frac{\cos x}{x^2+1}dx</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\frac{e^{iz}}{z^2+1}</m> ба Жорданы лемм. Тэгш функц тул бүтэн шулууны интегралын хагас. Хариу: <m>\frac{\pi}{2e}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-5">
+      <statement><p><m>\displaystyle\int_{-\infty}^{\infty}\frac{dx}{x^2+2x+2}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Дээд хагас хавтгайд <m>-1+i</m> туйл, <m>\Res=\frac1{2i}</m>. Хариу: <m>\pi</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-6">
+      <statement><p><m>\displaystyle\sum_{n=1}^\infty\frac1{n^4}=\frac{\pi^4}{90}</m> гэж батал.</p></statement>
+      <hint><p><m>\frac{\pi\cot\pi z}{z^4}</m> ба <m>\pi\cot\pi z=\frac1z-\frac{\pi^2z}3-\frac{\pi^4z^3}{45}-\dots</m> Жорданы леммийн хэсгийн <m>\zeta(2)</m>-ын жишээг давт.</p></hint>
+    </exercise>
+  </exercises>
+</section>

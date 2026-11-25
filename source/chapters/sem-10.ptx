@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-10">
+  <title>Семинар 10</title>
+  <exercises xml:id="exercises-seminar-10">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem10-1">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{e^z}{z-1}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p>Кошийн интеграл томьёо <m>f(a)=\frac1{2\pi i}\oint\frac{f(z)}{z-a}dz</m>. Хариу: <m>2\pi ie</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-2">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{\cos z}{(z-i)^3}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>f^{(n)}(a)=\frac{n!}{2\pi i}\oint\frac{f(z)}{(z-a)^{n+1}}dz</m>, <m>n=2</m>. Хариу: <m>-\pi i\ch1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-3">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{\sin z}{z^4}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>n=3</m>, <m>(\sin z)'''=-\cos z</m>. Хариу: <m>-\frac{\pi i}3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-4">
+      <statement><p><m>\displaystyle\oint_{|z|=3}\frac{dz}{z^2(z-1)}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>0</m> ба <m>1</m>-ийг жижиг тойргуудаар тусгаарла. <m>0</m>-д <m>f=\frac1{z-1}</m>, <m>f'(0)=-1</m>; <m>1</m>-д <m>f=\frac1{z^2}</m>, <m>f(1)=1</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-5">
+      <statement><p><m>f</m> бүхэл функц ба <m>\re f(z)\le M</m> бол <m>f</m> тогтмол гэж батал.</p></statement>
+      <hint><p><m>g=e^{f}</m> авч үз: <m>|g|=e^{\re f}\le e^M</m>. Лиувиллийн теорем.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-6">
+      <statement><p><m>f</m> бүхэл ба <m>|f(z)|\le A|z|^n</m> (<m>|z|\ge1</m>) бол <m>f</m> нь хамгийн ихдээ <m>n</m>-р зэргийн олон гишүүнт гэж батал.</p></statement>
+      <hint><p>Кошийн тэнцэтгэл биш <m>|f^{(k)}(0)|\le\frac{k!\max_{|z|=R}|f|}{R^k}</m>-ийг <m>k&gt;n</m> үед <m>R\to\infty</m>-д хэрэглэ.</p></hint>
+    </exercise>
+  </exercises>
+</section>

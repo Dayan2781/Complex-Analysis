@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="app-laplace" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Үйлдлийн тооллын үндэс (Лапласын хувиргалт)</title>
+<section xml:id="app-laplace-s1"><title>Лапласын хувиргалт. Уг эх ба дүрслэл</title><theorem><statement><p><m>f:\mathbb{R}\rightarrow \mathbb{C}</m> функцийн хувьд
+ <ol><li><p><m>t&lt;0</m> үед <m>f(t)\equiv 0,</m></p></li><li><p><m>t\geq 0</m> үед <m>f(t)</m> функц нь хэсэгчилсэн тасралтгүй ба дурын битүү интервал дээр төгсгөлөг ширхэг 1-р төрлийн тасралттай.</p></li><li><p><m>\exists M&gt;0</m>, <m>\tilde{a}&gt;0</m> ба <m>\forall t&gt;0</m> хувьд <m>|f(t)|\leq Me^{\tilde{a}t} (inf \tilde{a}=a)</m> тоог <m>f</m>-н өсөлтийн зэрэг гэдэг) нөхцөлүүд биелж байг.</p><p>Тэгвэл
+     <mdn><mrow xml:id="r-9u3a10_1">F(z)=\int\limits_0^{+\infty} e^{-zt}f(t)</mrow></mdn>
+     функцийн хувьд
+     <ul marker=""><li><p><alert>a)</alert> <m>\re z&lt;0</m> мужид утгагүй (интервал сарнина)</p></li><li><p><alert>б)</alert> <m>F(z)\in H (\{\re z&gt;a)\}</m> байна.</p></li><li><p><alert>В)</alert> <m>\forall a_0&gt;a</m> хувьд <m>\re z\geq a_0</m> мужид уг интервал жигд нийлнэ.</p></li></ul></p></li></ol></p></statement></theorem><definition><statement><p><m>f(t)</m> функцийг уг эх, <m>F(z)</m> функцийг дүрслэл гээд энэ харгалзааг Лапласын хувиргалт  гэж нэрлэгдэх ба <m>\ml{f(t)}=F(z)</m> тэмдэглэл хэрэглэдэг.</p></statement></definition></section><section xml:id="app-laplace-s2"><title>Лапласын хувиргалтын чанарууд</title><p>Хэрэв <m>\ml{f(t)}=F(z)</m> байвал 
+<ol><li><p><m>\ml{\sum\limits_{k=1}^n a_k f_k(t)}=\sum\limits_{k=1}^n a_kF_k (z)</m> (шугаман чанар).</p></li><li><p><m>\ml{f(at)}=\dfrac{1}{a}F\left(\dfrac{z}{a}\right).</m></p></li><li><p><m>f_\tau (t) = <me>\begin{cases}
+     0, \qquad \tau &gt;t \\
+     f(t-\tau), \qquad \tau \leq t
+    \end{cases}</me></m> бол <m>\ml{f_\tau}=e^{-\tau z}F(z.)</m></p></li><li><p><m>\ml{f'(t)}=zF(z)-f(0)</m></p></li><li><p><m>\ml{f^{(n)}(t)}=z^n\left(F(z)-\dfrac{f(0)}{z}-\dfrac{f'(0)}{z^2}-\cdots -\dfrac{f^{(n-1)}(z)}{z^n}\right).</m></p></li><li><p><m>\ml{\int\limits_0^t f(\tau)d\tau}=\dfrac{1}{z}F(z)</m></p></li><li><p><m>\ml{\int\limits_{0}^t f_1(\tau) \cdot f_2(t-\tau)d\tau}= F_1(z)\cdot F_2(z)</m></p></li><li><p><m>\ml{(-1)^nt^n\cdot f(t)} = F^{(n)}(z)</m></p></li><li><p><m>\ml{\int\limits_{z}^\infty F(z)dz}=\dfrac{f(t)}{t}</m></p></li><li><p><m>\ml{e^{-\lambda t}f(t)}=F(z+\lambda)</m></p></li></ol>
+чанарууд биелдэг.</p><p>Эдгээр чанарууд нь <xref ref="r-9u3a10_1"/> томьёоноос параметр агуулсан интегралыг хувиргах замаар гаргаж ирдэг. Жишээ болгож 7-р чанарыг баталъя.
+<md><mrow>F'(z)&amp;=\left(\int\limits_0^{+\infty} e^{-zt}f(t)dt\right)'=\int\limits_0^{+\infty} (e^{-zr})'_zf(t)dt=</mrow><mrow>&amp;=\int\limits_{0}^{+\infty} \ml{e^{-zt}(-tf(t))dt}= -tf(t)</mrow></md>
+Лапласын хувиргалт нь ердийн дифференциал ба интеграл тэгшитгэлүүдийг ердийн тэгшитгэлд шилжүүлэх тухайн уламжлалт дифференциал тэгшитгэлийг ердийн дифференциал тэгшитгэлд шилжүүлэх зэргээр ашигладаг.</p><example><statement><p><m><me>\begin{cases}
+ y'+y=1 \\
+ y(0)=0
+\end{cases}</me></m> байг. <m>\ml{y(x)}=F(z)</m> гэвэл 4-р чанар ёсоор</p></statement></example><proof><p><m>\ml{y'}=zF(z)-0</m> ба томьёо 10.1 ёсоор <m>\ml{1}=\dfrac{1}{z}</m> тул <m>zF(z)+F(z)=\dfrac{1}{z}</m> болно. 
+<men xml:id="r-9u3a10u2a"> 
+ F(z)=\ml{\frac{1}{z(z+1)}}=1-e^{-z}</men> энэ томьёог <xref ref="r-9u3a10_1"/>-ээр шалгана уу.</p><p>Иймд <m>y(x)=1-e^{-x}</m>. Үүнээс харвал дүрслэлээр нь уг эхийг олох аргачлал шаардагдаж байна. Энд дээрх чанарууд ба нэгэнт бодогдсон Лапласын хувиргалтын хүснэгтийг ашиглаж болно.</p><p>Лапласын хувиргалтын хүснэгт 
+<ol><li><p><m>\ml{1}=\dfrac{1}{z}</m></p></li><li><p><m>\ml{t^n}=\dfrac{\Gamma (n+1)}{z^{n+1}}, \qquad (n&gt;-1)</m></p></li><li><p><m>\ml{e^{at}}=\dfrac{1}{z-a}</m></p></li><li><p><m>\ml{\sin at}=\dfrac{a}{z^2+a^2}</m></p></li><li><p><m>\ml{\cos at}=\dfrac{z}{z^2+a^2}</m></p></li><li><p><m>\ml{\sh at}=\dfrac{a}{z^2-a^2}</m></p></li><li><p><m>\ml{\ch at}=\dfrac{z}{z^2+a^2}</m></p></li><li><p><m>\ml{t^ne^{at}}=\dfrac{n!}{(z-a)^{n+1}}, \quad (n\in\mathbb{N})</m></p></li></ol>
+Одоо энэ хүснэгтийг хэрхэн ашиглаж <xref ref="r-9u3a10u2a"/> томьёог гарган авч байгааг харъя.
+<me>\frac{1}{z(z+1)}=\ml{\frac{1}{z}-\frac{1}{z+1}}=1-e^{-t}</me>
+(энд 1 ба 3 томьёо ба чанар 1 ашиглагдсан болно). Дүрслэлээр уг эхийг олох ерөнхий томьёо нь голоморф функцийн интеграл ашигладаг ба энэ талаар 10.3-д үзнэ.</p></proof></section><section xml:id="app-laplace-s3"><title>Меллиний томьёо</title><theorem><statement><p><m>f(t)</m> нь хэсэгчилсэн гөлгөр, <m>a</m> өсөлтийн зэрэгтэй уг эх байг. <m>F(z)</m> нь түүний дүрслэл гэвэл <m>\forall t&gt;a</m> бол 
+ <me>f(t)\doteq \frac{1}{2\pi i}\int\limits_{x-i\infty}^{x+i\infty} e^{zt}F(z)dz</me>
+ (энд <m>x:x&gt;a</m> байх дурын бодит тоо) (энд <m>\doteq</m> Фурьеийн тэнцэтгэл, тасралтгүй цэгүүд дээр тэнцэнэ).</p></statement><proof><p><m>x&gt;a</m> байг.
+<men xml:id="r-9u3a11u2a"> 
+    \varphi (t)=e^{-xt} f(t)</men>
+функц хэсэгчилсэн гөлгөр ба <m>x\rightarrow +\infty</m> үед экспонент хурдаар тэг рүү тэмүүлэх ёстой. Иймд Фурьегийн интеграл ашиглавал
+<me>\varphi (t)\doteq \frac{1}{2\pi} \int\limits_{\infty}^{+\infty} d\xi \int\limits_{-\infty}^{+\infty} \varphi (\eta) e^{i\xi (t-\eta)} d\eta</me>
+байна. Энд <xref ref="r-9u3a11u2a"/> томьёог тавивал 
+<me>e^{-xt}f(t)\doteq \frac{1}{2\pi} \int\limits_{-\infty}^{+\infty} e^{i\xi}d\xi \int\limits_{0}^{+\infty}  e^{-(x+i\xi)\eta } f(\eta)f(\eta)d\eta</me>
+байна. 
+<me>x+i\xi =z \quad \text{гэвэл} \quad \int\limits_0^{+\infty} e^{-(x+i\xi)\eta}f(\eta) d\eta =F(z) \quad \text{учир}</me>
+<me>f(t)\doteq \frac{1}{2\pi}\int\limits_{-\infty}^{+\infty} e^{(x+i\xi)t} F(z)d\xi =\frac{1}{2\pi i}\int\limits_{x-i\infty}^{x+i\infty} e^{zt}F(t)F(z)dz</me>
+Иймд Меллиний хувиргалт нь Фурьегийн утгаар Лапласын хувиргалтын урвуу болж болно.</p></proof></theorem><theorem><statement><p><m>F(z)\in H(\{\re z&gt;a\})</m> хувьд 
+ <ul marker=""><li><p><alert>a)</alert> <m>|z|\rightarrow \infty</m> үед <m>F(z)</m>  утга жигд тэг рүү тэмүүлж байг.</p></li><li><p><alert>б)</alert> <m>\forall x&gt;a</m> хувьд <m>\bint\limits_{x-i\infty}^{x+i\infty} |F(z)|dy</m>
+жигд нийлдэг байг.</p><p>Тэгвэл <m>F(z)</m> нь  <m>f(t)=\dfrac{1}{2\pi i}\bint\limits_{x-i\infty}^{x+i\infty} e^{zt}F(z)dz(z&gt;a)</m> функцийн дүр байна.</p></li></ul></p></statement></theorem></section><section xml:id="app-laplace-s4"><title>Меллиний томьёог хэрэглэх нь</title><example><statement><p><m>\ml{f_1(t)}=F_1(z)</m>; <m>\ml{f_2(t)}=F_2(z)</m> бол 
+<me>\ml{f_1(t)\cdot f_2(t)}=\frac{1}{2\pi i}\int\limits_{x-i\infty}^{x+i\infty} F_1(\zeta)\cdot F_2(z-\zeta)d\zeta</me></p></statement><solution><p><md><mrow>\ml{f_1(t) \cdot f_2(t)}&amp;=\int\limits_0^\infty e^{-zt}f_1(t)f_2(t)dt</mrow><mrow>&amp;=\int\limits_0^\infty e^{-zt}\left(\frac{1}{2\pi i} \int\limits_{x-i\infty}^{x+i\infty} e^{\zeta t}F_1(\zeta)d\zeta \right) \cdot f_2(t)dt</mrow><mrow>&amp;=\frac{1}{2\pi i}\int\limits_0^\infty \int\limits_{x-i\infty}^{x+i\infty} e^{(\zeta-z)t}F_1(\zeta)f_2(t)d\zeta dt</mrow><mrow>&amp;=\frac{1}{2\pi i} \int\limits_{x-i\infty}^{x+i\infty} F_1(\zeta)\left(\int\limits_0^\infty e^{(\zeta -z)t}f_2(t)dt\right) d\zeta</mrow><mrow>&amp;=\frac{1}{2\pi i} \int\limits_{x-i\infty}^{x+i\infty} F_1(\zeta)F_2(\zeta-z)d\zeta.</mrow></md></p></solution></example><example><statement><p><m>f_1(t)=\cos at</m>, <m>f_2(t)=t</m> бол <m>f(t)=t\cos at</m> дүрийг ол.</p></statement><solution><p><m>\ml{\cos at}=\dfrac{z}{z^2+a^2}</m> <m>\ml{t}=\dfrac{1}{z^2}</m> тул Жишээ 10.2 ёсоор 
+<me>F(z)=\frac{1}{2\pi i}\int\limits_{x-i\infty}^{x+i\infty} \frac{\zeta}{\zeta^2+a^2}\cdot \frac{1}{(\zeta -z)^2}d\zeta</me>
+ Зурагт үзүүлсэн контураар интегралчилбал хагас тойргийн дагуух интегралын утга радиус өсөхөд тэг болохыг харуулж болно.</p><figure><caption></caption><image source="images/43.jpg" width="38%"/></figure><p>Иймд
+<md><mrow>(z)&amp;=\frac{1}{2\pi i}\left(-2\pi i 
+    {\tiny{\begin{array}{c}
+Res</mrow><mrow>\zeta =z
+\end{array}}}
+    \frac{\zeta}{(\zeta^2+a^2)(\zeta -z)^2}\right)</mrow><mrow>&amp;=-\frac{d}{d\zeta}\left(\frac{\zeta}{\zeta^2+a^2}\right)\Big |_ {\zeta =z}=\frac{z^2-a^2}{(z^2+a^2)^2}</mrow></md> Иймд <m>\ml{t\cdot \cos at}=\dfrac{z^2-a^2}{(z^2+a^2)^2}</m></p></solution></example><example><statement><p><m>F(z)=\dfrac{e^{a\sqrt{z}}}{z}</m>-функцийн эхийг ол.</p></statement><solution><p><m>\mathbb{C}</m> хавтгайг <m>(-\infty, 0]</m> дагуу огтлол хийсэн гээд энэ муж дээр <m>z&gt;0</m> үед <m>\sqrt{z}&gt;0</m> байх мөчрийн аналатик үргэлжлэлийг авч үзье.</p><figure><caption></caption><image source="images/44.jpg" width="38%"/></figure><p>Зурагт үзүүлсэн хэрчим ба тойргийн нумуудаар (радиус нь <m>R</m>, <m>r</m> байх) хүрээлэгдсэн контур авч үзье. Кошийн теорем ёсоор
+<me>\left(\int\limits_{\Gamma}+\int\limits_{\Gamma'_R\wedge \Gamma''_R}+\int\limits_{\Gamma_1\wedge \Gamma_2}+\int\limits_{\Gamma_\tau}\right) \left(e^{zt}\frac{e^{-z\sqrt{z}}}{z}\right)dz=0</me> байна.</p><p>Одоо <m>R\rightarrow \infty</m>, <m>r\rightarrow 0</m> гэвэл 
+<md><mrow>&amp;\int\limits_{\Gamma} e^{zt}\dfrac{e^{-a\sqrt{z}}}{z}dz\rightarrow 2\pi i f(t) \qquad \text{(Меллиний хувиргалт)}</mrow><mrow>&amp;\int\limits_{\Gamma'_R\wedge \Gamma''_{R}} e^{zt}\dfrac{e^{-a\sqrt{z}}}{z}dz\rightarrow 0 \qquad \text{(Жорданы лемм)}</mrow></md>
+<me>\int\limits_{\Gamma_\tau} e^{zt}\frac{e^{-a\sqrt{z}}}{z}dz=\lim\limits_{\varepsilon \rightarrow 0}\int\limits_{-\pi +\varepsilon}^{\pi -\varepsilon} e^{rte^{i\varphi}}\frac{e^{-a\sqrt{r}e^{i\frac{\varphi}{2}}}}{re^{i\varphi}}\cdot ure^{i\varphi} d\varphi \xrightarrow[r\rightarrow 0]{}\int\limits_{-\pi}^\pi id\varphi=2\pi i</me>
+байна. 
+<md><mrow>\int\limits_{\Gamma_1\wedge \Gamma_2}e^{zt}\frac{e^{-a\sqrt{z}}}{z}dz &amp;\xrightarrow[]{} -\int\limits_0^\infty \frac{e^{-yt}e^{-ia\sqrt{y}}}{y}dy+\int\limits_0^\infty \frac{e^{-yt}e^{ia\sqrt{y}}}{y}dy</mrow><mrow>&amp;=2\pi i \int\limits_0^\infty \frac{e^{-yt}}{y}\sin a\sqrt{y}dy</mrow></md>
+ байна.</p><p>Иймд <m>f(t)=1-\dfrac{1}{\pi}\int\limits_0^\infty e^{-yt}\frac{\sin a\sqrt{y}}{y}dy</m> гэсэн дүрсээр эхийг олно. Френелийн интеграл ашиглан
+<me>f(t)=1-\Phi \left(\frac{a}{2\sqrt{t}}\right) \qquad \left(\text{энд} \quad \Phi(t)=\frac{2}{\sqrt{\pi}}\int\limits_0^t e^{-y^2}dy\right)</me>
+болохыг харуулж болно.
+<me>\ml{\frac{e^{-a\sqrt{z}}}{z}}=1-\Phi \left(\frac{a}{2\sqrt{t}}\right)</me></p></solution></example><example><statement><p><m>F(z)=\sum\limits_{n=1}^\infty \dfrac{a_n}{z^n}</m> бол 
+<me>\ml{F(z)}=f(t)=
+\begin{cases}
+ 0, \qquad t&lt;0 \\
+ \sum\limits_{n=0}^\infty C_{n+1}\frac{t^n}{n!}, \qquad t&gt;0
+\end{cases}</me></p></statement><solution><p><m>\ml{\dfrac{t^n}{n!}}=\dfrac{1}{z^{n+1}}</m> тул шугаман чанар ёсоор 
+<me>\ml{\sum\limits_{n=0}^\infty C_{n+1}\frac{t^n}{n!}}=\sum\limits_{n=0}^\infty C_{n+1}\frac{1}{z^{n+1}}=F(z)</me> батлагдав.</p></solution></example><example><statement><p><me>\frac{e^{-\frac{1}{z}}}{z}=\mathcal{L}\left\{\sum\limits_{n=1}^\infty \frac{(-1)^{n-1}}{(n-1)!\cdot z^n}\right\}=\sum\limits_{k=0}^\infty (-1)^k \frac{\left(\frac{2\sqrt{t}}{2}\right)^{2k}}{(k!)^2}=J_0(2\sqrt{t})</me>
+(Энд <m>J_0</m> Бесселийн тэг эрэмбийн функц).</p></statement></example><example><statement><p><me>y^{IV}+2y''+y=0</me>
+<me>y(0)=y'(0)=y''(0)=0</me>
+<me>y'''(0)=1 \quad \text{бод}.</me></p></statement><solution><p>Хэрэв <m>\ml{y}=F(z)</m> гэвэл   
+<m>\ml{y^{IV}}=z^4\left(F(z)\dfrac{1}{z^4}\right) =z^4F(z)-1</m> 
+<m>\ml{y''}=z^2F(z)</m> тул <m>z^4F(z)-1+2z^2F(z)+F(z)=0\Rightarrow</m> 
+<m>F(z)=\dfrac{1}{z^4+2z^2+1}</m> байна. Иймд Меллиний томьёо ёсоор 
+<me>y(x)=\frac{1}{2\pi i}\int\limits_{t-i\infty}^{t+i\infty} e^{zx}\frac{dz}{z^4+2z^2+1}</me>
+Зурагт үзүүлсэн контурыг ашиглавал <m>\Gamma_R</m> хувьд жорданий лемма хүчинтэй тул
+<me>y(z)= {\tiny{\begin{array}{c}
+Res  \\
+ \zeta =z
+\end{array}}} \frac{e^{zx}}{(z+i)^2}+ {\tiny{\begin{array}{c}
+ Res  \\
+ \zeta =z
+\end{array}}}\frac{e^{zx}}{(z-i)^2}=\frac{1}{2}(\sin x-x\cos x)</me></p></solution></example><example><statement><p><m><me>\begin{cases}
+ y''\neq y=\sin t \\
+ y(0)=0 \\
+ y'(0)=0
+\end{cases}</me></m> бод.</p></statement><solution><p><m>z^2F(z)+F(z)=\dfrac{1}{z^2+1} \Rightarrow F(z)=\dfrac{1}{(z^2+1)^2}.</m>  Иймд
+<m>y(x)=\dfrac{1}{2\pi i}\bint\limits_{t-i\infty}^{t+i\infty} e^{zx}\cdot \dfrac{1}{(z^2+1)^2}dz=\dfrac{1}{2}(\sin x-x\cos x).</m></p></solution></example><example><statement><p><m><me>\begin{cases}
+ u_t=a^2u_{xx}\\
+ u(x,0)=0\\
+ u(0,y)=q(t)
+\end{cases}</me></m>  
+тухайн уламжлалт дифференциал тэгшитгэлийг бод. <m>x</m> бэхлээд <m>t</m> хувьд Лапласын хувиргалт хийвэл
+<md><mrow>\ml{u(x,t)}=U(x,z)</mrow><mrow>\ml{u_t(x,t)}=zU(x,z)</mrow><mrow>\ml{u_{xx}(x,t)}=U_{xx}(x,z)</mrow></md> тул 
+<me>\begin{cases}
+ U_{xx}(x,z)+\dfrac{z}{a^2}U(x,z)=0\\
+ U(0,z)=Q(z)
+\end{cases}</me> болж энгийн дифференциал тэгшитгэл үүсэх рүү шилжинэ.
+<me>U(x,z)=Q(z)\cdot e^{-\frac{\sqrt{z}}{a}x}</me> тул 
+<me>u(x,t)=\frac{1}{2\pi i}\int\limits_{t-i\infty}^{ti\infty} e^{zx}Q(z)e^{-\frac{\sqrt{z}}{a}x}dz</me> байна.</p></statement></example></section>
+</appendix>

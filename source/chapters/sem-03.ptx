@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-03">
+  <title>Семинар 3</title>
+  <exercises xml:id="exercises-seminar-03">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem03-1">
+      <statement><p><m>f(z)=z^3</m> ба <m>f(z)=\dfrac1z</m> функцүүдийн бодит ба хуурмаг хэсгийг ол.</p></statement>
+      <hint><p><m>z=x+iy</m> орлуул. <m>z^3</m>: <m>u=x^3-3xy^2</m>, <m>v=3x^2y-y^3</m>. <m>\frac1z=\frac{\overline z}{|z|^2}</m>: <m>u=\frac{x}{x^2+y^2}</m>, <m>v=-\frac{y}{x^2+y^2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-2">
+      <statement><p>(a) <m>w=z^2</m> буулгалтаар <m>\{x&gt;0,\ y&gt;0\}</m> мөч ба <m>x^2-y^2=1</m> гипербол юунд буух вэ? (b) <m>w=1/z</m> буулгалтаар <m>x=1</m> шулуун юунд буух вэ?</p></statement>
+      <hint><p>(a) Туйлын координатаар <m>\arg w=2\arg z</m>: дээд хагас хавтгай; <m>\re z^2=x^2-y^2=1</m> тул <m>u=1</m> шулуун. (b) <m>w=\frac{1-iy}{1+y^2}</m>-ээс <m>u^2+v^2=u</m>: <m>|w-\frac12|=\frac12</m> тойрог (<m>w=0</m>-ээс бусад).</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-3">
+      <statement><p>Хязгаар оршин байгаа эсэхийг шалга: <m>\displaystyle\lim_{z\to0}\frac{\overline z}{z}</m>, <m>\displaystyle\lim_{z\to0}\frac{z\re z}{|z|}</m>.</p></statement>
+      <hint><p>Эхнийх нь бодит тэнхлэгийн дагуу <m>1</m>, хуурмаг тэнхлэгийн дагуу <m>-1</m> тул байхгүй. Хоёр дахь нь <m>\bigl|\frac{z\re z}{|z|}\bigr|\le|z|</m> тул <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-4">
+      <statement><p><m>\displaystyle\lim_{z\to i}\frac{z^2+1}{z-i}</m> ба <m>\displaystyle\lim_{z\to\infty}\frac{2z^2+i}{z^2-1}</m>-г ол.</p></statement>
+      <hint><p><m>z^2+1=(z-i)(z+i)</m> тул эхний хязгаар <m>2i</m>. Хоёрт хүртвэр, хуваарийг <m>z^2</m>-д хуваа: <m>2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-5">
+      <statement><p><m>f(z)=\dfrac{\re z\cdot\im z}{|z|^2}</m> (<m>z\ne0</m>) функцийг <m>z=0</m> цэгт тасралтгүй болгож тодорхойлж болох уу?</p></statement>
+      <hint><p><m>y=kx</m> шулууны дагуу <m>f=\frac{k}{1+k^2}</m> нь <m>k</m>-аас хамаарна. Иймд <m>z\to0</m> үед хязгаар байхгүй, болохгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-6">
+      <statement><p><m>f(z)=\dfrac1z</m> функц <m>0&lt;|z|&lt;1</m> дээр жигд тасралтгүй юу? <m>|z|&gt;1</m> дээр яах вэ?</p></statement>
+      <hint><p><m>z_n=\frac1n</m>, <m>w_n=\frac1{n+1}</m> үед <m>|z_n-w_n|\to0</m> боловч <m>|f(z_n)-f(w_n)|=1</m>: жигд тасралтгүй биш. <m>|z|,|w|&gt;1</m> үед <m>\bigl|\frac1z-\frac1w\bigr|=\frac{|z-w|}{|z||w|}\le|z-w|</m>: жигд тасралтгүй.</p></hint>
+    </exercise>
+  </exercises>
+</section>

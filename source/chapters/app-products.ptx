@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="app-products" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Төгсгөлгүй үржвэр ба мероморф функц</title>
+  <introduction><p>Голоморф функц ба төгсгөлгүй үржвэр</p></introduction>
+<section xml:id="app-products-s1"><title>Үндсэн ойлголтууд</title><definition xml:id="r-7lineau3a8_1"><statement><p><m>u_k\in\mathbb{C}(k=1,2,3,\ldots)</m> байг. 
+<me>P_n=(1+u_1)(1+u_2)(1+u_3)\cdot \ldots \cdot (1+u_n)</me> гэж тодорхойлъё.
+<ul marker=""><li><p><alert>a)</alert> Хэрэв <m>\exists \lim\limits_{n\rightarrow \infty} P_n=P\in \mathbb{C}</m> ба <m>P\neq 0</m> бол 
+    <md><mrow>P=\prod\limits_{k=1}^\infty (1+u_k)</mrow></md>  төгсгөлгүй үржвэр  нийллээ гэж үздэг.</p></li><li><p><alert>б)</alert> Хэрэв дээрх хязгаар оршдоггүй эсвэл <m>0</m> байвал сарниж байна гэж үздэг.</p></li><li><p><alert>в)</alert> Хэрэв <m>\exists \tilde{P}=\prod\limits_{k=1}^\infty (1+|u_k|)\in\mathbb{R}\setminus \{0\}</m> байвал абсолют нийлдэг төгсгөлгүй үржвэр гэж үздэг.</p></li><li><p><alert>г)</alert> Төгсгөлгүй үржвэр нийлдэг боловч абсолют нийлэхгүй
+  <me>\left( \text{жишээ нь} \left(1+\frac{1}{2}\right)\left(1-\frac{1}{2}\right) \left(1+\frac{1}{3}\right) \left(1-\frac{1}{4}\right)\cdots \right)</me>
+  бол нөхцөлт нийлдэг үржвэр гэдэг.</p></li></ul></p></statement></definition><p><alert>Дасгал 1</alert>. Дараах үржвэр ба цуваануудын нийлэлт сарнилт нь ижил байна. 
+<md><mrow>\prod\limits_{k=1}^\infty (1+|u_k|)</mrow></md>
+<md><mrow>\sum\limits_{k=1}^\infty \ln (1+|u_k|)</mrow></md>
+ба 
+<mdn><mrow xml:id="r-7lineau3a8_4">\sum\limits_{k=1}^\infty |u_k|</mrow></mdn></p><corollary><statement><p><xref ref="r-7lineau3a8_1" text="global"/>-ийн абсолют нийлэлтийг шинжихдээ <xref ref="r-7lineau3a8_4"/> цувааг судалж болно.</p><p>Тоон цуваанаас функцэн цуваанд шилжих алхмыг үржвэрт бас хэрэглэж болно. Тухайлбал:</p></statement></corollary><theorem><statement><p><m>u_k(z)\in H(D)(k=1,2,3,\ldots)</m> байг. <m>\forall k\in\mathbb{N}:|u_k(z)|\leq a_k</m> байдаг ба <m>a_1+a_2+\cdots +a_k+\cdots</m> цуваа нийлдэг байг. Тэгвэл  
+<me>\exists P(z)=\prod\limits_{k=1}^\infty (1+u_k(z))\in H(D)</me> байна.</p></statement><proof><p><m>a_1+a_2+\cdots +a_n+\cdots</m> эерэг тоон цуваа нийлэх тул <m>\forall z\in D</m> хувьд жиших шинжүүр ёсоор <me>|u_1(z)|+|u_2(z)|+\cdots +|u_k(z)|+\cdots</me>
+цуваа нийлнэ. Иймд <m>P(z)</m> утга оршино.</p><p>Одоо <me>P(z,n)=(1+u_1(z))(1+u_2(z)\cdot \ldots \cdot(1+u_n(z))</me>
+<m>\tilde{P}=\prod\limits_{k=1}^\infty (1+a_k)</m> ба <m>\tilde{P}(n)=\prod\limits_{k=1}^n (1+a_k)</m> гэж тэмдэглэе.
+<mdn><mrow xml:id="r-7lineau3a8u2a">\tag{$*$} 
+    
+        &amp;|P(z,n)|=|1+u_1(z)|\cdot |1+u_2(z)|\cdot \ldots \cdot |1+u_n(z)|\leq</mrow><mrow number="no">&amp;\leq (1+|u_1(z)|)(1+|u_2(z)|)\cdot \ldots \cdot (1+|u_n(z)|)\leq \tilde{P}(n)</mrow></mdn>
+<mdn><mrow xml:id="r-7lineau3a8u2au2a">\tag{$**$} 
+    
+    &amp;\left|\frac{P(z)}{P(z,n)}-1\right|=\lim\limits_{k\rightarrow\infty}\left|\frac{P(z,n+k)}{P(z,n)}-1\right|=</mrow><mrow number="no">&amp;\leq\lim\limits_{k\rightarrow\infty}(|u_{n+1}(z)|+ |u_{n+2}(z)|+ \cdots + |u_{n+k}(z)|+\cdots</mrow><mrow number="no">&amp;\cdots +|u_{n+1}(z)\cdot u_{n+2}(z)\cdot \ldots \cdot u_{n+k}(z)|)\leq</mrow><mrow number="no">&amp;\leq \lim\limits_{k\rightarrow \infty} (a_{n+1}+a_{n+2}+\cdots +a_{n+k}+a_{n+1}\cdot a_{n+2}+\cdots</mrow><mrow number="no">&amp;\cdots +a_{n+1}\cdot a_{n+2}\cdot \ldots \cdot a_{n+k})=</mrow><mrow number="no">&amp;=\lim\limits_{k\rightarrow \infty}\left(\frac{\tilde{P}(n+k)}{\tilde{P}(n)}-1\right) =\frac{\tilde{P}}{\tilde{P}(n)}-1\Rightarrow</mrow><mrow number="no">&amp;\Rightarrow \left|\frac{P(z)}{P(z,n)}-1\right|\leq \frac{\tilde{P}}{\tilde{P}(n)}-1</mrow></mdn>
+болно. <xref ref="r-7lineau3a8u2a"/>, <xref ref="r-7lineau3a8u2au2a"/> ашиглавал
+<md><mrow>|P(z)-P(z,n)|&amp;=|P(z,n)|\cdot \left|\frac{P(z)}{P(z,n)}-1\right| \leq</mrow><mrow>&amp;\leq \tilde{P}(n)\cdot \left(\frac{\tilde{P}}{\tilde{P}(n)}-1\right) =\tilde{P}-\tilde{P}(n)\xrightarrow[n\rightarrow\infty]{} 0</mrow></md>
+учир <m>P(z,n)</m> функцэн дараалал <m>P(z)</m>-рүү жигд нийлж байна. Иймд Вейерштрассын теорем ёсоор <m>P(z)\in H(D)</m> болж батлагдав.</p></proof></theorem></section><section xml:id="app-products-s2"><title>Төгсгөлгүй үржвэр ба бүхэл функц</title><p><m>a_1,a_2,\ldots ,a_n,\ldots</m> тэгээс ялгаатай гишүүдтэй комплекс тоон дарааллын хувьд 
+<mdn><mrow xml:id="r-7lineau3a8_5">|a_k|\leq |a_{k+1}| \quad \text{ба} \quad |a_k|\rightarrow +\infty</mrow></mdn> байг.</p><theorem xml:id="r-7lineau3a8_6"><title>Вейерштрасс</title><statement><p>Тэгвэл <m>p\in\mathbb{N}</m> үед
+<md><mrow>G(z)=z^{p-1}\cdot \prod\limits_{k=1}^\infty \left(1-\frac{z}{a_k}\right)\cdot e^{\frac{z}{a_k}+\frac{1}{2}\left(\frac{z}{a_k}\right)^2+\cdots +\frac{1}{k-1}\cdot \left(\frac{z}{a_k}\right)^{k-1}}</mrow></md>
+функц
+<ul marker=""><li><p><alert>a)</alert> Бүхэл функц байна (өөрөөр хэлбэл <m>G(z)\in H(G))</m></p></li><li><p><alert>б)</alert> <m>G(a_k)=0 \quad (\forall k).</m></p></li><li><p><alert>в)</alert> <m>p-1</m> нь <m>z=0</m> цэг <m>G(z)=0</m> тэгшитгэлийн шийд болох эрэмбэ нь байна.</p></li><li><p><alert>г)</alert> Өөр тэглэгч цэг <m>G(z)</m> функцэд байхгүй.</p></li></ul></p></statement></theorem><p>Энэ теоремын баталгааг орхив. 
+Харин <m>exp</m> үржигдэхүүн нь төгсгөлгүй үржвэрийн нийлэлтийг хангахад шаарддагийг тэмдэглэе. Теоремын урвуу нь дараах хэлбэрээр батлагдсан байдаг.</p><theorem><statement><p><m>\forall f(z)\in H(\mathbb{C})</m> бүхэл функц авч үзье. Түүний тэглэгч цэгийн тоо төгсгөлгүй <m>a_1,a_2, \ldots, a_k,\ldots</m>  дараалал үүсгэдэг бол
+<me>f(z)=e^{H(z)}\cdot z^{p-1}\prod\limits_{k=1}^\infty \left(1-\frac{z}{a_k}\right) e^{\frac{z}{a_k}+\frac{1}{2}\left(\frac{z}{a_k}\right)^2+\cdots +\frac{1}{n-1}\cdot \left(\frac{z}{a_kk}\right)^{n-1}}</me> байна. Үүнийг Вейерштрассын томьёо  гэнэ. Энд <m>p\in\mathbb{N}</m> ба <m>H(z)</m> ямар нэг бүхэл функц байна.</p></statement></theorem><example><statement><p><m>f(z)=\sin z</m> гэж авъя. Тэглэгч цэгүүд нь <m>z=k\pi</m> учир
+<md><mrow>\sin z&amp;=e^{H(z)}\cdot z\cdot \prod\limits_{k=-\infty}^{+\infty} \left(1-\frac{z}{k\pi}\right) e^{\frac{z}{k\pi}+\frac{1}{2}\left(\frac{z}{k\pi}\right)^2+\cdots +\frac{1}{n-1}\cdot \left(\frac{z}{k\pi}\right)^{n-1}}=</mrow><mrow>&amp;=e^{\tilde{H}(z)}\cdot z\cdot \prod\limits_{k=1}^{\infty} \left(1-\frac{z}{k\pi}\right)\left(1-\frac{z}{-k\pi}\right)=</mrow><mrow>&amp;=e^{\tilde{H}(z)}\cdot z\cdot \prod\limits_{k=1}^{\infty} \left(1-\frac{z^2}{k^2\pi^2}\right)</mrow></md>
+(энд <m>k</m> ба <m>-k</m> гишүүдээр нь бүлэглэснээр абсолют нийлдэг үржвэр үүссэн тул ехр үржигдэхүүнүүдийн илтгэгчийг <m>H(z)</m> дээр нэмж <m>\tilde{H}(z)</m>-р тэмдэглэв).</p><p><m>\tilde{H}(z)</m>  функцийг олж тогтооход дээрх теорем тус болохгүй. Тухайн тохиолдолд
+<me>\cot (z)=\frac{1}{z}+\sum\limits_{k=1}^\infty \frac{2z}{z^2-k^2\pi^2}</me>
+гэж байдгийг шууд ашиглаж <m>(\ln\sin z)'</m> уламжлалыг судалснаар <m>H(z)=1</m> болохыг тогтоож болно. Үүнийг дасгал болгон ажиллаарай. Ийнхүү
+<me>\sin z=z\cdot \prod\limits_{k=1}^\infty\left(1-\frac{z^2}{k^2\pi^2}\right)</me></p></statement></example></section><section xml:id="app-products-s3"><title>Мерорморф функц</title><p><m>\mathbb{C}</m> хавтгайд туйлын цэгүүдээс өөр онцгой цэггүй функцийг мероморф функц гэж тодорхойлдог.  
+<alert>Дасгал.</alert> Мероморф функцийн туйлын цэгүүд нь төгсгөлтэй хязгаарын цэгтэй байж болохгүй. 
+<alert>Заавар.</alert> Тийм хязгаарын цэг оршдог гэвэл тэр нь онцгойрлын цэг болно. Гэтэл мероморф функцийн тодорхойлолт ёсоор уг цэг туйлын онцгой цэг байна. Энэ цэг дээрх Лораны цувааг ерөнхий хуваарьт оруулж харвал ямар зөрчил үүсэхийг ол.</p><corollary><statement><p>Мероморф функц нь төгсгөлтэй эсвэл <xref ref="r-7lineau3a8_5"/> нөхцөлийг хангасан төгсгөлгүй олон туйлын цэгүүдтэй байна.</p></statement></corollary><p><m>f(z)</m> нь мероморф функц бол <m>G(z)</m> бүхэл функцийг эсвэл олон гишүүнт <xref ref="r-7lineau3a8_6" text="global"/> томьёогоор байгуулахдаа <m>f(z)</m>-н туйлын цэг бүр нь яг тэр эрэмбээрээр <m>G(z)</m>-н тэглэгч цэг байхаар байгуулж болно. Энэ үед
+<md><mrow>G_1(z)=f(z)\cdot G(z)</mrow></md>
+бүхэл функц болно. Ийнхүү:</p><theorem><statement><p>Аливаа мероморф функц нь хоёр бүхэл функцийн ноогдвор хэлбэрт тавигдана.</p></statement></theorem></section>
+</appendix>

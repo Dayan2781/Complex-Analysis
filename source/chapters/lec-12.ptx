@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch12" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Лораны цуваа ба тусгаарлагдсан онцгой цэг</title>
+<section xml:id="lec12-s1"><title>Лораны цуваа</title><p><m>|z-a|&lt;R</m> дугуй дээр голоморф функцийг <m>z-a</m>-ийн сөрөг биш зэрэгтээр бичигдэх Тейлорын цуваатай өмнөх бүлэгт танилцсан. <m>z-a</m>-ийн эерэг ба сөрөг зэрэгтээр бичигдсэн
+<me>\sum\limits_{n=-\infty}^\infty c_n(z-a)^n</me>
+(энд <m>a</m>-бэхэлсэн комплекс тоо, <m>c_n</m>-тогтмол комплекс коэффициентууд) цувааг Лораны цуваа гэдэг.</p><theorem xml:id="r-6resduu3a6_1"><title>Лоран</title><statement><p>Цагириг хэлбэрийн 
+<me>V=\{z:r&lt;|z-a|&lt;R\}, \quad r\geq 0, \quad R\leq \infty</me>
+муж дээр голоморф аливаа <m>f(z)</m> функц нийлэх
+<md><mrow>f(z)=\sum\limits_{n=-\infty}^\infty c_n(z-a)^n</mrow></md>
+цувааны нийлбэр дүрстэй тавигдана. Коэффициентууд нь дараах томьёогоор олдоно:
+<mdn><mrow xml:id="r-6resduu3a6_2">c_n=\frac{1}{2\pi i}\int\limits_{|z-a|=\rho} \frac{f(\zeta)d\zeta}{(\zeta -a)^{n+1}}, \quad n=0,\pm 1, \pm 2, \ldots</mrow></mdn>
+үүнд <m>r&lt;\rho &lt; R</m> байна.</p><figure><caption></caption><image source="images/20.jpg" width="31%"/></figure></statement><proof><p>Бэхлэн авсан <m>z</m> цэг дотор нь байхаар <m>V'\Subset V</m> гэсэн шинэ цагираг муж байгуулъя: <m>V'=\{\zeta :r'&lt;|\zeta-a|&lt;R'\}</m> энд <m>r&lt;r'</m>, <m>R'&lt;R</m>. Кошийн интеграл томьёо ёсоор
+<mdn><mrow xml:id="r-6resduu3a6_3">f(z)=\frac{1}{2\pi i} \int\limits_{\partial V'} \frac{f(\zeta)d\zeta}{(\zeta -z)}= \frac{1}{2\pi i} \int\limits_{\Gamma'} \frac{f(\zeta)d\zeta}{(\zeta -a)}-\frac{1}{2\pi i} \int\limits_{\gamma'} \frac{f(\zeta)d\zeta}{(\zeta -a)}</mrow></mdn>
+энд <m>\Gamma '=\{|\zeta -a|=R'\}</m> ба <m>\gamma '=\{|\zeta -a|=r'\}, \quad \zeta\in \Gamma '</m> байх үед <m>\left|\dfrac{z-a}{\zeta -z}\right|=q&lt;1</m> тул 
+<me>\frac{1}{\zeta-z}=\frac{1}{(\zeta -z)\left(1-\frac{z-a}{\zeta -a}\right)}=\sum\limits_{n=0}^\infty \frac{(z-a)^n}{(\zeta -a)^{n+1}}</me>
+<m>\zeta \in \Gamma'</m>-ээрээ абсолют бөгөөд жигд нийлнэ. Үүнийг зааглагдсан <m>\dfrac{1}{2\pi i}f(\zeta)</m> функцээр үржүүлж (жигд нийлэлт алдагдахгүй тул) дараа нь <m>\Gamma '</m> тойргоор гишүүнчлэн интегралчлавал
+<mdn><mrow xml:id="r-6resduu3a6_4">\frac{1}{2\pi i}\int\limits_{\Gamma'} \frac{f(\zeta)d\zeta}{(\zeta -z)}= \sum\limits_{n=-\infty}^\infty c_n(z-a)^n</mrow></mdn>
+<mdn><mrow xml:id="r-6resduu3a6_5">c_n=\frac{1}{2\pi i}\int\limits_{\Gamma'} \frac{f(\zeta)d\zeta}{(\zeta -a)^{n+1}}, \quad (n=0,1,\ldots)</mrow></mdn>
+<xref ref="r-6resduu3a6_3"/> томьёоны хоёрдох интеграл арай өөрөөр задлагдана. <m>\zeta \in \gamma'</m> байх үед <m>\left|\dfrac{z-a}{\zeta -z}\right| =q&lt;1</m> тул бид <m>\gamma'</m> дээр абсолют бөгөөд жигд нийлэх геометр прогрессыг 
+<me>-\frac{1}{\zeta -z}=\frac{1}{(\zeta -a)\left(1-\frac{\zeta -a}{z-a}\right)}=\sum\limits_{n=1}^\infty \frac{(\zeta-a)^{n-1}}{(z -a)^{n}}</me>
+байдалтай гарган авна. Үүнийг мөн л зааглагдсан <m>\dfrac{1}{2\pi i}f(\zeta)</m>
+функцээр үржүүлж <m>\gamma '</m>-ээр гишүүнчлэн интегралчилбал
+<mdn><mrow xml:id="r-6resduu3a6_6">-\frac{1}{2\pi i}\int\limits_{\gamma'} \frac{f(\zeta) d\zeta}{\zeta -z}=\sum\limits_{n=1}^\infty \frac{d_n}{(z-a)^n},</mrow></mdn>
+энд 
+<mdn><mrow xml:id="r-6resduu3a6_7">d_n= \frac{1}{2\pi i}\int\limits_{\gamma'} f(\zeta)(\zeta -z)^{n-1}d\zeta, \quad (n=1,2,\ldots)</mrow></mdn>
+<xref ref="r-6resduu3a6_7"/> ба <xref ref="r-6resduu3a6_5"/> томьёонуудаас
+<md><mrow>c_n=d_{-n}= \frac{1}{2\pi i}\int\limits_{\gamma'} f(\zeta)(\zeta -z)^{-n-1}d\zeta, \quad (n=-1,-2, \ldots)</mrow></md>
+болж <xref ref="r-6resduu3a6_6"/>
+<men xml:id="r-6resduu3a6_6u27"> 
+    -\frac{1}{2\pi i}\int\limits_{\gamma'} \frac{f(\zeta)d\zeta}{(\zeta -a)}=\sum\limits_{n=-1}^{-\infty} c_n(z-a)^n</men>
+<xref ref="r-6resduu3a6_4"/> ба <xref ref="r-6resduu3a6_6u27"/>-ийг <xref ref="r-6resduu3a6_3"/> тавибал <xref ref="r-6resduu3a6_1" text="global"/> задаргаа гарна. Кошийн интеграл томьёо ёсоор <m>\Gamma'</m> ба <m>\gamma '</m> тойргуудыг тэдэнтэй гомотоп дурын тойргоор (тухайлбал <m>|\zeta -a|=\rho, \quad r&lt;\rho &lt;R</m>.) сольж болох тул <xref ref="r-6resduu3a6_2"/> томьёо гарна.</p></proof></theorem><definition><statement><p>Коэффициентууд нь <xref ref="r-6resduu3a6_2"/> томьёонуудаар тодорхойлогдох <xref ref="r-6resduu3a6_1" text="global"/> цувааг цагираг <m>V</m> муж дахь <m>f(z)</m> функцийн Лораны цуваа гэнэ. Энэ цувааны сөрөг биш зэрэгтээр тавигдсан хэсгийг зөв хэсэг, сөрөг зэрэгтээр тавигдсан хэсгийг гол хэсэг  гэж нэрлэнэ. Иймд
+<md><mrow>\sum\limits_{n=-\infty}^\infty c_n(z-a)^ n</mrow></md>
+цуваа
+<md><mrow>S_1=\sum\limits_{0}^\infty c_n(z-a)^n \quad \text{ба} \quad S_2=\sum\limits_{n=-1}^{-\infty} c_n(z-a)^ n</mrow></md>
+цуваануудын нийлбэр байдлаар тодорхойлогдоно.  
+<m>S_1</m> цуваа нь ердийн зэрэгт цуваа тул түүний нийлэлтийн радиус <m>R</m>
+<md><mrow>\frac{1}{R}=\overline{\lim\limits_{n\rightarrow \infty}} \sqrt[n]{|c_n|}</mrow></md>
+томьёогоор <m>S_2</m> цувааны нийлэлтийн радиус <m>r</m>
+<md><mrow>r=\overline{\lim\limits_{n\rightarrow \infty}} \sqrt[n]{|c_{-n}|}</mrow></md>
+томьёогоор тус тус тогтоогдохыг төвөггүй харуулж болно. <m>R&gt;r</m> байж болохгүй. Учир нь тийм байвал цувааны нийлэх муж хоосон олонлог байхад хүрнэ.</p><p>Абелийн теорем ёсоор <m>V</m> цагираг мужид компактаар орших аливаа дэд олонлог дээр жигд нийлэх тул Вейерштрассын теорем ёсоор түүний нийлбэр <m>V</m> дээр голоморф байна. Эдгээр тэмдэглэл дээр тулгуурлан Лораны цувааны задаргааны цор ганц байхыг тогтоож болно.</p></statement></definition><theorem xml:id="r-6resduu3au422u435u43eu440u435u43c_6_2"><statement><p>Функцийн Лораны задаргаа цор ганц , өөрөөр хэлбэл <m>f(z)</m> функц <m>0\leq r&lt;|z-a|&lt;R</m> цагираг дээр 
+<mdn><mrow xml:id="r-6resduu3a6_13">f(z)=\sum\limits_{k=-\infty}^\infty a_n(z-a)^ k</mrow></mdn>
+дүрстэй цуваанд задарсан бол <m>a_k</m> коэффициентууд <xref ref="r-6resduu3a6_5"/> томьёогоор илэрхийлэгдэнэ.</p></statement><proof><p><m>\gamma =|z-a|=\rho</m> тойрог авъя. <xref ref="r-6resduu3a6_13"/>-ын хоёр талыг 
+<m>\dfrac{1}{2\pi i}(z-a)^{-n-1}, \quad (n=-1,-2,\ldots)</m>-ээр үржүүлж <m>\gamma</m> тойргоор гишүүнчлэн интегралчилбал 
+<me>\sum\limits_{n=-\infty}^\infty a_n \int\limits_\gamma (z-a)^{k-n-1}dz= \int\limits_\gamma \frac{f(z)dz}{(z-a)^{n+1}}</me>
+бөгөөд зэргийн ортогональ чанараар <m>k\neq n</m> байх бүх интеграл тэг болж <m>k=n</m> тохиолдолд <m>2\pi i</m> болох тул
+<me>2\pi i a_n=\int\limits_\gamma  \frac{f(z)dz}{(z-a)^{n+1}}, \quad (n=0, \pm 1, \ldots)</me> эндээс <m>c_n\equiv a_n</m> болов.</p></proof></theorem><p>Теорем 6.2-ыг өөрөөр томьёолбол <m>z-a</m>-ийн эерэг, сөрөг зэрэгтээр задарсан нийлэх аливаа цуваа нь өөрийн нийлбэрийнхээ Лораны цуваа байна.</p><p>Лораны цувааны коэффициентуудыг <xref ref="r-6resduu3a6_2"/> томьёогоор бодох нь нэн ховор. Учир нь интегралчлах ажиллагаа шаардагдана. Задаргаа цор ганц байх теоремын үндсэн дээр хуулийн хүчинтэй аливаа арга хэрэглэнэ. Ийм арга бүхэн хүсэн хүлээсэн ганц л үр дүнд хүргэнэ.</p><example><statement><p><m>f(z)=\dfrac{1}{(z-1)(z-2)}</m> функцийг <m>z</m>-ийн зэрэгтээр Лораны цуваанд задал.</p></statement><solution><p>Энэ функц <m>z=1</m>, <m>z=2</m> цэгүүд дээр голоморф чанараа алдана. Иймд 
+<me>D_1:|z|&lt;1, \quad D_2:1&lt;|z|&lt;2, \quad D_3:2&lt;|z|&lt;\infty</me> цагирагууд дээр голоморф функц юм. <m>f(z)=\dfrac{1}{z-2}-\dfrac{1}{z-1}</m> дүрстэй тавигдах тул 
+<me>\frac{1}{z-2}=-\frac{1}{2}\cdot \frac{1}{1-\frac{z}{2}}=-\frac{1}{2}\sum\limits_{n=0}^\infty \left(\frac{z}{2}\right)^n \quad (|z|&lt;2)</me>
+<m>-\dfrac{1}{z-1}=\sum\limits_{n=0}^\infty z^n \qquad (|z|&lt;1).</m> Иймд <m>|z|&lt;1</m> байхад 
+<me>f(z)=\sum\limits_{n=0}^\infty \left(1-\frac{1}{2^{n+1}}\right) z^n \qquad \text{(Энэ нь Тейлорын цуваа)}</me>
+Одоо <m>D_2</m> цагирагт
+<me>-\frac{1}{z-1}=-\frac{1}{z}\frac{1}{1-\frac{1}{z}}=-\frac{1}{z}\sum\limits_{n=0}^\infty \frac{1}{z-n}=-\sum\limits_{n=0}^\infty \frac{1}{z^n+1}\quad (1&lt;|z|)</me>
+Иймд <m>1&lt;|z|&lt;2</m> байхад 
+<me>f(z)=-\sum\limits_{n=-1}^{-\infty} z_n-\sum\limits_{n=0}^\infty \frac{z^n}{2^{n+1}}.</me>
+Одоо <m>D_3</m> цагирагт
+<me>\frac{1}{z-2}=\frac{1}{z}\frac{1}{1-\frac{2}{z}}=\frac{1}{z}\sum\limits_{n=0}^\infty \left(\frac{2}{z}\right)^n=\sum\limits_{n=1}^\infty \frac{2^{n-1}}{z^n}\quad (2&lt;|z|).</me>
+Иймд <m>2&lt;|z|&lt;\infty</m> байхад 
+<me>f(z)=\sum\limits_{n=2}^\infty (2^{n-1}-1)z^{-n}.</me></p></solution></example><example><statement><p><m>f(z)=\dfrac{1}{z(1-z)}</m> функцийг <m>z=0</m>, <m>z=1</m>, <m>z=\infty</m> цэгийн орчинд Лораны цуваанд задал.</p><figure><caption></caption><image source="images/21.jpg" width="31%"/></figure></statement><solution><p><m>z=0</m> ба <m>z=1</m> нь <m>\dfrac{1}{z(1-z)}=\dfrac{1}{z}+\dfrac{1}{1-z}</m> функцийн голоморф алдагдах цэгүүд.  
+<m>D_1:z=0</m> цэгийн цоорхойт орчин тул <m>0&lt;|z|&lt;1</m> бөгөөд 
+<me>\frac{1}{z(1-z)}=\frac{1}{z}+\frac{1}{1-z}=\frac{1}{z}+\sum\limits_{n=0}^\infty z^n</me> болж задаргаа гол хэсэгтээ ганц гишүүнтэй байна.  
+<m>D_3:z=\infty</m> цэгийн орчин <m>1&lt;|z|</m></p><figure><caption></caption><image source="images/22.jpg" width="23%"/></figure><p><me>\frac{1}{z(1-z)}=-\frac{1}{z^2}\frac{1}{1-\frac{1}{z}}=-\sum\limits_{n=2}^\infty \frac{1}{z^n} \quad \left(\left|\frac{1}{z}\right|&lt;1 \ \ \text{тул} \right)</me> 
+<m>D_2:z=1</m> цэгийн орчин <m>|z-1|&lt;1</m> 
+<me>\frac{1}{z(1-z)}=-\frac{1}{z-1}+\frac{1}{z-1+1}=-\frac{1}{z-1}+\sum\limits_{n=0}^\infty (-1)^n (z-1)^n.</me></p></solution></example><p>Лораны цувааны коэффициентын <xref ref="r-6resduu3a6_2"/> томьёо <m>n\geq 0</m> үед Тейлорын цувааны коэффициент олох интеграл томьёотой тохирно.</p><p><m>f(z)</m> функц <m>V=\{r&lt;|z-a|&lt;R\}</m> цагираг дээр голоморф, <m>\gamma =\{|z-a|=\rho\}, \quad r&lt;\rho &lt;R</m> тойрог дээр <m>|f(z)|&lt;M</m> байвал задаргаа коэффициент
+<mdn><mrow xml:id="r-6resduu3a6_14">|c_n|&lt;\frac{M}{\rho^n},\quad n=0, \pm 1,\ldots</mrow></mdn>
+<xref ref="r-6resduu3a6_14"/>-ийг Лораны цувааны Кошийн тэнцэл биш  гэнэ.</p><p>Одоо Лораны цуваа, Фурьегийн цуваатай хэрхэн холбогдохыг  авч үзье. <m>[0,2\pi]\subset \mathbb{R}</m> дээр интегралчилагдах <m>\varphi (z)</m> функц Фурьегийн цуваагаар 
+<md><mrow>\varphi(t)=\frac{a_0}{2}+\sum\limits_{n=1}^\infty (a_n\cos nt +b\sin nt),</mrow></md>
+гэж тодорхойлогдоно. Энд
+<md><mrow>&amp;a_n=\frac{1}{\pi} \int\limits_0^{2\pi} \varphi(t)\cos nt dt \quad n=0,1,\ldots</mrow><mrow>&amp;b_n= \frac{1}{\pi} \int\limits_0^{2\pi} \varphi(t)\sin nt dt, \quad n=0,1,\ldots</mrow></md>
+Энэ цувааг Эйлерийн <m>\cos nt =\dfrac{e^{int}+e^{-int}}{2}</m>, <m>\sin nt =\dfrac{e^{int}-e^{-int}}{2}</m> томьёо ашиглах замаар комплекс хэлбэртэй бичиж болно:
+<me>\frac{a_0}{2}+\sum\limits_{n=1}^\infty \left(\frac{a_n-ib_n}{2} e^{int}+\frac{a_n+ib_n}{2}e^{-int}\right) =\sum\limits_{n=-\infty}^\infty c_ne^{int}</me>
+энд <me>c_n=\frac{a_n-ib_n}{2}=\dfrac{1}{2\pi }\int\limits_{0}^{2 \pi}\varphi (t)e^{-int}dt, \quad n=0,1,\ldots</me>
+<me>c_n=\frac{a_{-n}+ib_n}{2}=\dfrac{1}{2\pi }\int\limits_{0}^{2 \pi}\varphi (t)e^{-int}dt, \quad n=-1,-2,\ldots</me>
+байна.</p><p>Коэффициентууд нь
+<md><mrow>c_n=\dfrac{1}{2\pi }\int\limits_{0}^{2 \pi}\varphi (t)e^{int}dt</mrow></md>
+томьёонуудаар олдох
+<mdn><mrow xml:id="r-6resduu3a6_18">\sum\limits_{n=-\infty}^\infty c_ne^{int}</mrow></mdn>
+цуваа <m>\varphi</m> функцийн комплекс хэлбэртэй тавигдсан Фурьегийн цуваа байна.</p><p><m>e^{int}=z</m> ба <m>\varphi (t)=f(e^{it})=f(z)</m> гэж авбал <xref ref="r-6resduu3a6_18"/> цуваа 
+<md><mrow>\sum\limits_{n=-\infty}^\infty c_n z^n</mrow></md>
+болж коэффициентууд нь 
+<md><mrow>c_n=\dfrac{1}{2\pi }\int\limits_{0}^{2 \pi} f (e^{it})e^{-int}dt= \dfrac{1}{2\pi i}\int\limits_{|z|=1} f(z)\frac{dz}{z^{n+1}}</mrow></md>
+Иймд <m>\varphi (t)</m>, <m>t\in [0, 2\pi]</m> функцийн комплекс хэлбэртэй бичигдсэн Фурьегийн цуваа нь <m>f(z)=\varphi (t)</m>, <m>z=e^{it}</m> функцийн нэгж тойрог <m>(|z|=1)</m> дээр тавигдсан Лораны цуваа юм.</p><p>Фурьегийн цуваа <m>[0,2\pi]</m> хэрчмийн цэг бүр дээр <m>\varphi (t)</m>-рүү нийлэх тохиолдолд ч харгалзах Лораны цувааны хувьд <m>R=r=1</m> болж нийлэлтийн муж нь хоосон олонлог болно.</p><p><m>\varphi (t)</m> функц нэлээд хатуу шаардлага хангах нөхцөлд харгалзах Лораны цуваа нийлэлтийн хоосон биш мужтай байдаг.</p></section><section xml:id="lec12-s2"><title>Тусгаарлагдсан онцгой цэгүүд, тэдгээрийг ангилах нь</title><definition><statement><p><m>a\in\overline{\mathbb{C}}</m> цэг <m>f(z)</m> функцийн онцгой цэг, харин түүний цоорхойт (<m>a</m>-төгсгөлтэй бол <m>0&lt;|z-a|&lt;r</m>, <m>a=\infty</m> бол <m>R&lt;|z|&lt;\infty)</m> орчинд уул функц голоморф байвал <m>a</m>-цэгийг тусгаарлагдсан онцгой цэг  гэнэ.</p><p>Тийм цэг рүү дөхөхөд <m>f(z)</m> функцийн төрх ямар байхаас хамаарч тусгаарлагдсан онцгой цэгийг гурав ангилна.</p></statement></definition><definition><statement><p>Тусгаарлагдсан онцгой <m>a</m> цэгийн хувьд
+<ul marker=""><li><p><alert>I.</alert> <m>\lim\limits_{z\rightarrow a} f(z)=A</m>-төгсгөлтэй байвал <m>a</m>-засагдах онцгой цэг.</p></li><li><p><alert>II.</alert> <m>\lim\limits_{z\rightarrow a} f(z)=\infty</m> байвал <m>a</m>-туйл.</p></li><li><p><alert>III.</alert> <m>\exists f(z)</m> нь <m>z\rightarrow a</m> үед төгсгөлтэй ч, төгсгөлгүй ч хязгаар байхгүй байвал <m>a</m>-гоц онцгой цэг гэж нэрлэнэ.</p></li></ul></p><p>Тусгаарлагдсан онцгой а цэгийн төрх нь түүний цоорхойт орчинд задалсан Лораны цуваатай нягт холбоотой байдаг. Төгсгөлтэй а цэгийн хувьд энэ холбоог харуулсан дараах гурван теоремтой танилцъя:</p></statement></definition><theorem><statement><p>Тусгаарлагдсан онцгой <m>a\in\mathbb{C}</m> цэг засагдах онцгой цэг байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь түүний орчин дахь Лораны задаргаа гол хэсэг агуулахгүй байх явдал мөн. Өөрөөр хэлбэл
+<mdn><mrow xml:id="r-6resduu3a6_21">f(z)=\sum\limits_{n=0}^\infty c_n(z-a)^n</mrow></mdn></p></statement><proof><p><alert>Зайлшгүй нь- </alert> <m>a</m> засагдах онцгой цэг байг. Тэгвэл төгсгөлтэй <m>\lim\limits_{z\rightarrow a}=A</m> хязгаар оршин байж эндээс <m>a\in\mathbb{C}</m>-ийн цоорхойт <m>(0&lt;|z-a|&lt;R)</m> орчинд зааглагдсан <m>(|f(z)|&lt;M)</m> байна. <m>0&lt;\rho &lt;R</m> байх аливаа <m>\rho</m> авч Кошийн тэнцэл биш бичвэл
+<me>|c_n|\leq \frac{M}{\rho^n}, n=0, \pm 1, \ldots</me>
+бөгөөд <m>n&lt;0</m> тохиолдолд <m>\rho\rightarrow 0</m> үед баруун гар тал нь тэг рүү тэмүүлэх тул <m>c_{-n}=0</m>, <m>n=1,2,\ldots</m> болж гол хэсэггүй Лораны цуваа үүснэ. 
+<alert>Хүрэлцээтэй нь</alert>. <m>a</m> цэгийн цоорхойт орчинд Лораны <xref ref="r-6resduu3a6_21"/> цуваа гол хэсэггүй задарсан байг. Иймд <m>\lim\limits_{z\rightarrow a}f(z)=c_0</m> болж <m>a</m> нь засагдах онцгой цэг байх болов.</p></proof></theorem><theorem xml:id="r-6resduu3au422u435u43eu440u435u43c_6_2_2"><statement><p>Тусгаарлагдсан онцгой <m>a\in\mathbb{C}</m> цэг туйл байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь түүний орчин дахь Лораны задаргааны гол хэсэг нь <m>0</m>-ээс ялгаатай төгсгөлтэй бөгөөд эерэг тооны гишүүн агуулах явдал мөн:
+<mdn><mrow xml:id="r-6resduu3a6_22">f(z)=\sum\limits_{n=-N}^\infty c_n(z-a)^n, \quad N&gt;0</mrow></mdn></p></statement><proof><p><alert>Зайлшгүй нь</alert>. <m>a\in\mathbb{C}</m> цэг туйл байг. <m>\lim\limits_{z\rightarrow a}f(z)=\infty</m> тул <m>\varphi(z)=\dfrac{1}{f(z)}</m> функц <m>a</m> цэгийн орчинд голоморф бөгөөд <m>\lim\limits_{z\rightarrow a}\varphi(z)=0</m> байна. Иймд <m>z=a</m> нь <m>\varphi(z)</m>-ийн засагдах онцгой цэг учир
+<me>\varphi(z)=b_N (z-a)^N+b_{N+1}(z-a)^{N+1}+\cdots \quad (b_N\neq 0)</me>
+болно. Эндээс
+<mdn><mrow xml:id="r-6resduu3a6_23">f(z)=\frac{1}{\varphi(z)}=\frac{1}{(z-a)^N}\cdot \frac{1}{b_N+b_{N+1}(z-a)+\cdots}</mrow></mdn>
+болж хоёрдугаар үржигдэхүүн нь <m>z=a</m> дээр голоморф байх тул тэр нь <m>z=a</m> дээр тейлороор
+<me>\frac{1}{b_N+b_{N+1}(z-a)+\cdots}=c_{-N}+c_{-N+1}(z-a)+\cdots</me>
+гэж задрах бөгөөд <m>C_{-N}=\dfrac{1}{b_N}\neq 0</m> болох ба үүнийг <xref ref="r-6resduu3a6_23"/>-т тавибал 
+<me>f(z)=\frac{c_{-N}}{(z-a)^N}+\frac{v_{-N+1}}{(z-a)^{N-1}}+\cdots \sum\limits_{n=0}^\infty c_n(z-a)^n.</me>
+<alert>Хүрэлцээтэй нь.</alert> <m>a\in\mathbb{C}</m> цэгийн цоорхойт орчинд  функц <xref ref="r-6resduu3a6_22"/> байдлаар гол хэсэгтээ төгсгөлтэй гишүүн агуулж задарсан байг. Мөн <m>c_{-N}\neq 0</m> байг. Тэгвэл <m>\varphi(z)=(z-a)^N\cdot f(z)</m> функц <m>a</m>-ийн орчинд голоморф
+<me>\lim\limits_{z\rightarrow a}\varphi(z) =c_{-N}\neq 0</me>
+байна. Нөгөөтээгүүр <m>\lim\limits_{z\rightarrow a}f(z) =\lim\limits_{z\rightarrow a}\dfrac{\varphi (z)}{(z-a)^N}=\infty</m>  болж <m>a</m> нь <m>f(z)</m>-ийн туйл ажээ.</p></proof></theorem><p>Функцийн туйл ба тэгийн хоорондох холбооны тухай авч үзье.</p><theorem><statement><p><m>a</m> цэг <m>f(z)</m>-ийн туйл байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь
+ <m>\varphi(z)=\dfrac{1}{f(z)}</m>, <m>\varphi(z) \not \equiv  0</m> функц <m>a</m> цэгийн орчинд голоморф бөгөөд <m>\varphi(a)=0</m> байх явдал мөн.</p></statement><proof><p>Энэ өгүүлбэрийн зайлшгүйг өмнөх теоремд баталсан. Харин хүрэлцээтэй нь: <m>\varphi (z)\not\equiv 0</m> функц <m>a</m> цэг дээр голоморф бөгөөд <m>\varphi(a)=0</m> байвал цор ганц байх чанарын теорем ёсоор <m>\varphi(z)\neq 0</m> байхуйц <m>a</m> цэгийн цоорхойт орчин олдоно. Энэ орчинд <m>f(z)=\frac{1}{\varphi(z)}</m> функц голоморф байх тул <m>a</m> нь <m>f(z)</m> функцийн тусгаарлагдсан онцгой цэг юм. Гэтэл <m>\lim\limits_{z\rightarrow a}f(z)=\infty</m> учир <m>a</m> нь <m>f(z)</m>-ийн туйл.</p></proof></theorem><definition><statement><p><m>f(z)</m> функцийн туйлын эрэмбэ  нь <m>\varphi(z)=\dfrac{1}{f(z)}</m> функцийн тэгийн эрэмбэ байна.</p><p>Өмнөх Теорем 6.4-ын баталгаанаас харахад туйлын эрэмбэ нь энэхүү туйлын цоорхойг орчин дахь Лораны задаргааны гол хэсгийн ахлах гишүүний дугаар болох <m>N</m> тоотой тэнцэх нь ил байна.</p></statement></definition><theorem><statement><p>Тусгаарлагдсан онцгой <m>a</m> цэг <m>f(z)</m> функцийн гоц онцгой цэг байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь түүний орчин дахь Лораны задаргаа төсгөлгүй тооны гишүүн бүхий гол хэсэг агуулна.</p></statement><proof><p>Энэ теорем өмнөх 6.3 ба 6.4 теоремд агуулагдана. Гоц онцгой цэгийн орчин дахь функцийн төрх байдлыг харуулах дараах теоремтой танилцъя.</p></proof></theorem><theorem><title>Вейерштрасс-Сохоцкий</title><statement><p><m>a</m> нь <m>f(z)</m>-ийн функцийн гоц онцгой цэг байвал аливаа <m>A\in\overline{\mathbb{C}}</m> тооны хувьд <m>a</m>-руу нийлэх <m>\{z_n\}</m> дараалал 
+ <me>\lim\limits_{n\rightarrow \infty} f(z_n)=A</me> байхаар олдоно.</p></statement><proof><p><m>A=\infty</m> байхад теорем үнэн. Учир нь 
+  <me>\overline{\lim\limits_{n\rightarrow a}} |f(z_n)|=\infty</me>
+  <m>A\neq \infty</m> байг. Баталгааг эсрэгээс нь хийе. <m>a</m>-цэгийн аливаа орчинд өөр дээр нь <m>f(z)</m> функцийн авч чадах утга <m>A</m> тоонд аль болох ойр байх цэгүүд олдохгүй байвал <m>U(a,\delta)</m> орчин болон <m>a\neq z\in U(a,\delta)</m> үед <m>|f(z)-A|&gt;\alpha</m> байхуйц <m>\alpha&gt;0</m> тоо тус тус оршин байна. Тэхэд цоорхойт <m>0&lt;|z-a|&lt;\delta</m> орчинд <m>\varphi(z)=\dfrac{1}{f(z)-A}</m> функц голоморф ба зааглагдсан: 
+  <me>|\varphi(z)|&lt;\frac{1}{\alpha}</me>
+  Иймд <m>\lim\limits_{z\rightarrow a}\varphi(z)</m> төгсгөлтэй бөгөөд харин <m>f(z)</m> функцийн <m>a</m> цэгийн аливаа орчинд үл зааглагдах явдлаас үүдэж энэ хязгаар зөвхөн тэг:
+  <me>\lim\limits_{z\rightarrow a}\varphi(z)=\lim\limits_{z\rightarrow a}\frac{1}{f(z)-A}=0</me>
+  <m>f(z)-a</m> функц Теорем 6.4 ёсоор <m>a</m> гэсэн туйлтай болов. Гэтэл энэ нь теоремын нөхцөлд харшлах тул теорем батлагдав.</p></proof></theorem><p><m>a</m> руу нийлэх янз бүрийн <m>\{z_n\}</m> дарааллуудаар <m>f(z)</m> функцийн хязгаарын утгуудын бөөгнөрлийг энэ функцийн <m>a</m> цэг дээрх тодорхойгүй байдлын олонлог гэж нэрлэнэ. Хэрэв <m>a</m> цэг нь <m>f(z)</m> функцийн засагдах онцгой цэг буюу туйл байвал энэ цэг дээрх тодорхойгүй байдлын олонлог зөвхөн ганц (төгсгөлтэй буюу төгсгөлгүй) цэгээс тогтоно. Вейерштрасс-Сохоцкийн теорем гоц онцгой цэгийн хувьд нөгөө захын тохиолдол: энэ цэг дээрх тодорхойгүй байдлын олонлог нь бүхий л битүү комплекс хавтгай <m>\overline{\mathbb{C}}</m>-ийг дүүргэнэ гэж баталж байна.</p><p>Одоо төгсгөлгүй алсын цэг тусгаарлагдсан онцгой байх тухай цөөн зүйл тэмдэглэе. Төгсгөлгүй алсын <m>(a=\infty)</m> цэг дээрх Лораны задаргааны эерэг биш зэрэгт нь зөв, эерэг зэрэгт нь гол хэсгүүдийг бүрдүүлнэ.Энэ нь <m>z=\dfrac{1}{w}</m> оруулгаар <m>f(z)=f\left(\dfrac{1}{w}\right)=\varphi(w)</m> болж <m>\lim\limits_{z\rightarrow \infty}f(z)=\lim\limits_{w\rightarrow 0}\varphi (w)</m> байдгаас шууд илэрхий. 
+ Жишээ нь <m>\varphi(w)</m> функцийн туйлын хувьд <m>0&lt;|w|&lt;\rho</m> байхад 
+ <me>\varphi (w)=\frac{b_{-N}}{w^N}+\cdots +\frac{b_{-1}}{w}+\sum\limits_{n=0}^\infty b_nw^n, \quad b_{-N}\neq 0</me>
+ бөгөөд одоо <m>w=\dfrac{1}{z}</m> гэвэл <m>f(z)</m> функц <m>\left(R&lt;|z|&lt;\infty, \quad R=\dfrac{1}{2}\right)</m> үед
+ <me>f(z)=\sum\limits_{n=-1}^{-\infty} c_nz^n+c_0+c_1z+\cdots +c_Nz^N,</me>
+ үүнд, <m>c_n=b_{-N}</m>, <m>c_N\neq 0</m> болох гол хэсэг нь төгсгөлтэй тооны гишүүн агуулна. Энэчлэн засагдах ба гоц онцгой цэгийн хувьд задална.</p><p>Одоо онцгой цэгийн төрхөөр нь голоморф функцийг ангилахтай танилцъя.</p><definition><statement><p><m>f(z)\in H(\mathbb{C})</m> байх, өөрөөр хэлбэл <alert>төгсгөлтэй</alert> онцгой цэггүй функцийг бүхэл функц  гэнэ. Иймд <m>a=\infty</m> нь бүхэл функцийн тусгаарлагдсан онцгой цэг байна. Хэрэв энэ нь засагдах онцгой цэг байвал <m>f\equiv \infty</m> (Лиувиллийн теорем ёсоор) хэрэв энэ нь туйл байвал <m>f(z)</m>-ийн орчин дахь Лораны задаргааны гол хэсэг <m>g(z)=c_1 z+\cdots c_N z^N</m> гэсэн олон
+гишүүнт байна. Энэ гол хэсгийг <m>f(z)</m> функцээс хасвал бас л бүхэл <m>f(z)-g(z)</m> функц гарах ба харин <m>\infty</m> нь засагдах онцгой байна. Энэ нь тогтмол тоо болов. Иймд бүхэл функц <m>\infty</m> цэг дээр туйлтай байвал тэр нь ямагт олон гишүүнт байна.</p><p>Төгсгөлгүй алсын цэг дээр гоц онцгой цэгтэй бүхэл функцүүдийг бүхэл трансцендент функцүүд (жишээ нь <m>e^z</m>, <m>\sin z</m>, <m>\cos z</m> ) гэнэ.</p></statement></definition><definition><statement><p>Задгай <m>\mathbb{C}</m> хавтгайд туйлаас өөр онцгой цэг үгүй функцийг мероморф функц гэнэ.</p></statement></definition></section>
+  <xi:include href="./ai-12.ptx" />
+  <xi:include href="./sem-12.ptx" />
+  <xi:include href="./hw-12.ptx" />
+</chapter>

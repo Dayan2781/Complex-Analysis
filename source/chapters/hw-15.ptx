@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-15">
+  <title>Гэрийн даалгавар 15</title>
+  <exercises xml:id="exercises-homework-15">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw15-1">
+      <statement><p><m>\eta(s)=\sum_{n\ge1}\frac{(-1)^{n-1}}{n^s}</m> цуваа <m>\re s&gt;0</m> хагас хавтгайд голоморф функц тодорхойлдог гэж батал.</p></statement>
+      <solution><p>Хос гишүүдийг бүлэглэ: <m>\eta(s)=\sum_{k\ge1}a_k(s)</m>, <m>a_k(s)=(2k-1)^{-s}-(2k)^{-s}=s\int_{2k-1}^{2k}x^{-s-1}dx</m>. Иймд <m>|a_k(s)|\le|s|(2k-1)^{-\sigma-1}</m>. Компакт олонлог дээр <m>|s|\le R</m>, <m>\sigma\ge\delta&gt;0</m> тул <m>\sum a_k</m> жигд нийлж, нийлбэр нь голоморф. Бүлэглээгүй цувааны хэсэгчилсэн нийлбэр нь бүлэглэсэн цувааныхаас ганц гишүүнээр ялгаатай бөгөөд тэр гишүүн <m>|n^{-s}|=n^{-\sigma}\to0</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-2">
+      <statement><p><m>\re s&gt;1</m> үед <m>\displaystyle\zeta(s)=\frac{s}{s-1}-s\int_1^\infty\frac{\{x\}}{x^{s+1}}dx</m> гэж батал (<m>\{x\}=x-\lfloor x\rfloor</m> бутархай хэсэг). Үүнээс <m>\zeta</m> нь <m>\re s&gt;0</m> руу үргэлжилж, <m>\Res_{s=1}\zeta=1</m> гэж гарга.</p></statement>
+      <solution><p><m>\int_1^\infty\lfloor x\rfloor x^{-s-1}dx=\sum_{n\ge1}n\int_n^{n+1}x^{-s-1}dx=\frac1s\sum_{n\ge1}n\bigl(n^{-s}-(n+1)^{-s}\bigr)</m>. Абелийн хувиргалтаар <m>\sum_{n=1}^Nn(n^{-s}-(n+1)^{-s})=\sum_{n=1}^Nn^{-s}-N(N+1)^{-s}\to\zeta(s)</m>. Иймд <m>\int_1^\infty\lfloor x\rfloor x^{-s-1}dx=\frac{\zeta(s)}{s}</m>. Нөгөө талаас <m>\int_1^\infty x\cdot x^{-s-1}dx=\frac1{s-1}</m>. Хасвал томьёо гарна. <m>0\le\{x\}&lt;1</m> тул <m>\int_1^\infty\{x\}x^{-s-1}dx</m> нь <m>\re s&gt;0</m> дээр жигд нийлж, голоморф функц. Иймд баруун тал нь <m>\re s&gt;0</m> дээр <m>s=1</m>-ээс бусад газар голоморф бөгөөд <m>\frac{s}{s-1}=1+\frac1{s-1}</m> тул <m>\Res_{s=1}\zeta=1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-3">
+      <statement><p>Өмнөх бодлогын томьёогоор <m>\displaystyle\lim_{s\to1}\Bigl(\zeta(s)-\frac1{s-1}\Bigr)=\gamma</m> гэж батал, энд <m>\gamma=\lim_{N\to\infty}\bigl(1+\frac12+\dots+\frac1N-\ln N\bigr)</m> Эйлерийн тогтмол.</p></statement>
+      <solution><p><m>\zeta(s)-\frac1{s-1}=1-s\int_1^\infty\{x\}x^{-s-1}dx\to1-\int_1^\infty\frac{\{x\}}{x^2}dx</m>. Тэгвэл <me>\int_1^N\frac{\{x\}}{x^2}dx=\int_1^N\frac{dx}{x}-\sum_{n=1}^{N-1}n\int_n^{n+1}\frac{dx}{x^2}=\ln N-\sum_{n=1}^{N-1}\frac{1}{n+1}=\ln N-(H_N-1).</me> <m>N\to\infty</m> үед <m>1-\gamma</m>. Иймд хязгаар <m>1-(1-\gamma)=\gamma</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-4">
+      <statement><p>Риманы томьёо <m>\zeta(s)=-\frac{\Gamma(1-s)}{2\pi i}\oint_C\frac{(-z)^{s-1}}{e^z-1}dz</m>-ээс <m>\Res_{s=1}\zeta(s)=1</m> гэж шалга.</p></statement>
+      <solution><p><m>s\to1</m> үед <m>\Gamma(1-s)=\frac{\Gamma(2-s)}{1-s}\sim-\frac{1}{s-1}</m>. <m>s=1</m> үед интеграл доорх функц <m>\frac1{e^z-1}</m> нэг утгат тул <m>\oint_C=2\pi i\Res_{z=0}\frac{1}{e^z-1}=2\pi i</m>. Иймд <m>\zeta(s)\sim-\left(-\frac1{s-1}\right)\frac{2\pi i}{2\pi i}=\frac{1}{s-1}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-5">
+      <statement><p><m>f(z)=\sum_{n\ge1}z^{n!}</m> нь <m>|z|=1</m> тойргоос цааш аналитик үргэлжлэлгүй гэж батал.</p></statement>
+      <solution><p><m>\zeta=e^{2\pi ip/q}</m> ба <m>z=r\zeta</m>, <m>0&lt;r&lt;1</m> гэе. <m>n\ge q</m> үед <m>n!</m> нь <m>q</m>-д хуваагдах тул <m>\zeta^{n!}=1</m>. Иймд <m>f(r\zeta)=\sum_{n&lt;q}(r\zeta)^{n!}+\sum_{n\ge q}r^{n!}</m>; эхний нийлбэр зааглагдсан, хоёр дахь нь <m>r\to1-</m> үед <m>\infty</m> руу тэмүүлнэ. Ийм <m>\zeta</m> цэгүүд тойрог дээр нягт тул тойргийн ямар ч нум дээр <m>f</m> голоморфоор үргэлжлэхгүй.</p></solution>
+    </exercise>
+  </exercises>
+</section>

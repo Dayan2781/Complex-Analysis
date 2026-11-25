@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-01">
+  <title>Семинар 1</title>
+  <exercises xml:id="exercises-seminar-01">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem01-1">
+      <statement><p>Тооцоол:<ol marker="(a)"><li><m>(2+3i)(1-i)</m>;</li><li><m>\dfrac{1+2i}{3-4i}</m>;</li><li><m>i^{2026}</m>.</li></ol></p></statement>
+      <hint><p>(b)-д хүртвэр, хуваарийг <m>3+4i</m>-ээр үржүүл. (c)-д <m>i^4=1</m> тул <m>2026</m>-г <m>4</m>-т хуваасан үлдэгдлийг ол. Хариу: <m>5+i</m>, <m>-\frac15+\frac25i</m>, <m>-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-2">
+      <statement><p>Дараах тоонуудын модуль, аргументын гол утга ба тригонометр хэлбэрийг ол: <m>-1+i\sqrt3</m>, <m>-2-2i</m>, <m>-3i</m>.</p></statement>
+      <hint><p>Цэгийг хавтгайд зурж, аль мөчид байгааг тодорхойл. <m>-1+i\sqrt3=2\bigl(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\bigr)</m>, <m>-2-2i=2\sqrt2\bigl(\cos(-\frac{3\pi}{4})+i\sin(-\frac{3\pi}{4})\bigr)</m>, <m>-3i=3\bigl(\cos(-\frac{\pi}{2})+i\sin(-\frac{\pi}{2})\bigr)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-3">
+      <statement><p>Муаврын томьёогоор <m>(1+i)^{20}</m> ба <m>(\sqrt3-i)^{6}</m>-г тооцоол.</p></statement>
+      <hint><p><m>1+i=\sqrt2\bigl(\cos\frac\pi4+i\sin\frac\pi4\bigr)</m>, <m>\sqrt3-i=2\bigl(\cos(-\frac\pi6)+i\sin(-\frac\pi6)\bigr)</m>. Хариу: <m>-1024</m> ба <m>-64</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-4">
+      <statement><p><m>\sqrt[3]{-8}</m> ба <m>\sqrt[4]{-16}</m>-ийн бүх утгыг олж, хавтгайд дүрсэл.</p></statement>
+      <hint><p><m>\sqrt[n]{r e^{i\varphi}}=\sqrt[n]{r}\,e^{i(\varphi+2k\pi)/n}</m>, <m>k=0,\dots,n-1</m>. Утгууд нь төв нь <m>0</m> байх зөв олон өнцөгтийн оройнууд: <m>1\pm i\sqrt3,\,-2</m> ба <m>\sqrt2(\pm1\pm i)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-5">
+      <statement><p>Дараах нөхцөлийг хангах <m>z</m> цэгүүдийн олонлогийг тодорхойлж зур:<ol marker="(a)"><li><m>|z-1|=|z+i|</m>;</li><li><m>\re\dfrac1z=\dfrac12</m>;</li><li><m>|z-2|+|z+2|=6</m>.</li></ol></p></statement>
+      <hint><p>(a) <m>1</m> ба <m>-i</m> цэгүүдээс тэнцүү зайтай цэгүүд: <m>y=-x</m> шулуун. (b) <m>\frac{x}{x^2+y^2}=\frac12</m> нь <m>(x-1)^2+y^2=1</m> тойрог (<m>z=0</m>-ийг хасна). (c) Голомт нь <m>\pm2</m>, их хагас тэнхлэг <m>3</m> байх эллипс <m>\frac{x^2}{9}+\frac{y^2}{5}=1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-6">
+      <statement><p><m>|z_1+z_2|^2+|z_1-z_2|^2=2\bigl(|z_1|^2+|z_2|^2\bigr)</m> гэж баталж, геометр утгыг тайлбарла.</p></statement>
+      <hint><p><m>|w|^2=w\overline w</m> гэж бичээд задал. Энэ нь параллелограммын диагоналиудын квадратуудын нийлбэр нь талуудын квадратуудын нийлбэртэй тэнцүү гэсэн үг.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-7">
+      <statement><p><m>z^2-(3+i)z+4+3i=0</m> тэгшитгэлийг бод.</p></statement>
+      <hint><p>Дискриминант <m>D=(3+i)^2-4(4+3i)=-8-6i</m>. <m>\sqrt{D}=a+bi</m> гэж <m>a^2-b^2=-8</m>, <m>ab=-3</m> системийг бод: <m>\sqrt D=\pm(1-3i)</m>. Хариу: <m>z_1=2-i</m>, <m>z_2=1+2i</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

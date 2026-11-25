@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-06">
+  <title>Семинар 6</title>
+  <exercises xml:id="exercises-seminar-06">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem06-1">
+      <statement><p><m>u=x^2-y^2+2x</m> гармоник гэж шалгаад, хосмог <m>v</m> ба <m>f=u+iv</m>-г ол.</p></statement>
+      <hint><p><m>v_y=u_x</m>-ээс <m>v</m>-г <m>y</m>-ээр интегралчилж, <m>v_x=-u_y</m>-ээс тогтмолыг ол. Хариу: <m>f=z^2+2z+iC</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-2">
+      <statement><p><m>u=e^x(x\cos y-y\sin y)</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <hint><p><m>f'=u_x-iu_y</m> ба <m>y=0</m> дээр <m>f'(x)</m>-ийг олж, <m>x\to z</m> (Милн–Томсоны арга). Хариу: <m>f=ze^z+iC</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-3">
+      <statement><p><m>v=\dfrac{x}{x^2+y^2}</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <hint><p><m>\frac{i}{z}=\frac{i\overline z}{|z|^2}=\frac{y+ix}{|z|^2}</m>. Хариу: <m>f=\frac iz+C</m>, <m>C\in\R</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-4">
+      <statement><p><m>u=x^2+y^2</m> нь ямар нэг голоморф функцийн бодит хэсэг болж чадах уу?</p></statement>
+      <hint><p><m>\Delta u=4\ne0</m>: гармоник биш тул үгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-5">
+      <statement><p><m>w=z^2</m> буулгалтын <m>z_0=1+i</m> цэг дэх сунгалтын коэффициент ба эргэлтийн өнцгийг ол. <m>z_0=0</m> цэгт конформ уу?</p></statement>
+      <hint><p><m>f'(1+i)=2+2i</m>: сунгалт <m>2\sqrt2</m>, эргэлт <m>\frac\pi4</m>. <m>f'(0)=0</m> тул конформ биш: өнцгийг хоёр дахин томруулна.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-6">
+      <statement><p><m>u</m> нь <m>D</m>-д гармоник бол <m>g=u_x-iu_y</m> голоморф гэж батал.</p></statement>
+      <hint><p><m>g</m>-ийн бодит ба хуурмаг хэсэг <m>U=u_x</m>, <m>V=-u_y</m> дээр Коши–Римааныг шалга: <m>U_x=u_{xx}=-u_{yy}=V_y</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

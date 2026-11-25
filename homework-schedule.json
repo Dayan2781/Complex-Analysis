@@ -1,0 +1,93 @@
+{
+  "_тайлбар": [
+    "Гэрийн даалгавар бүрийн ӨГСӨН өдрийг (YYYY-MM-DD) энд бичнэ.",
+    "Бодолт нь өгсөн өдрөөс delay_days хоногийн дараа сайт дээр гарна.",
+    "Сайт өдөр бүр Улаанбаатарын цагаар 00:10-д дахин бүтээгдэнэ (.github/workflows/deploy.yml).",
+    "Огноо хоосон (\"\") бол бодолт хэзээ ч гарахгүй, нуугдмал хэвээр байна.",
+    "ОДООГИЙН ОГНООНУУД ТҮР ЗУУРЫН: 2027-02-01-ээс долоо хоног бүр нэг лекц, 9-р долоо хоногт явцын шалгалт гэж тооцсон. Жинхэнэ огноогоор солино уу."
+  ],
+  "delay_days": 14,
+  "timezone_offset_hours": 8,
+  "homework": [
+    {
+      "lecture": 1,
+      "section": "sec-homework-01",
+      "released": "2027-02-01"
+    },
+    {
+      "lecture": 2,
+      "section": "sec-homework-02",
+      "released": "2027-02-08"
+    },
+    {
+      "lecture": 3,
+      "section": "sec-homework-03",
+      "released": "2027-02-15"
+    },
+    {
+      "lecture": 4,
+      "section": "sec-homework-04",
+      "released": "2027-02-22"
+    },
+    {
+      "lecture": 5,
+      "section": "sec-homework-05",
+      "released": "2027-03-01"
+    },
+    {
+      "lecture": 6,
+      "section": "sec-homework-06",
+      "released": "2027-03-08"
+    },
+    {
+      "lecture": 7,
+      "section": "sec-homework-07",
+      "released": "2027-03-15"
+    },
+    {
+      "lecture": 8,
+      "section": "sec-homework-08",
+      "released": "2027-03-29"
+    },
+    {
+      "lecture": 9,
+      "section": "sec-homework-09",
+      "released": "2027-04-05"
+    },
+    {
+      "lecture": 10,
+      "section": "sec-homework-10",
+      "released": "2027-04-12"
+    },
+    {
+      "lecture": 11,
+      "section": "sec-homework-11",
+      "released": "2027-04-19"
+    },
+    {
+      "lecture": 12,
+      "section": "sec-homework-12",
+      "released": "2027-04-26"
+    },
+    {
+      "lecture": 13,
+      "section": "sec-homework-13",
+      "released": "2027-05-03"
+    },
+    {
+      "lecture": 14,
+      "section": "sec-homework-14",
+      "released": "2027-05-10"
+    },
+    {
+      "lecture": 15,
+      "section": "sec-homework-15",
+      "released": "2027-05-17"
+    },
+    {
+      "lecture": 16,
+      "section": "sec-homework-16",
+      "released": "2027-05-24"
+    }
+  ]
+}

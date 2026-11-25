@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-01">
+  <title>Гэрийн даалгавар 1</title>
+  <exercises xml:id="exercises-homework-01">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw01-1">
+      <statement><p><m>\left(\dfrac{1+i\sqrt3}{1-i}\right)^{12}</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>1+i\sqrt3=2e^{i\pi/3}</m>, <m>1-i=\sqrt2e^{-i\pi/4}</m> тул бутархай <m>\sqrt2\,e^{i7\pi/12}</m>. Иймд <me>\left(\sqrt2\,e^{i7\pi/12}\right)^{12}=2^6e^{i7\pi}=-64.</me></p></solution>
+    </exercise>
+    <exercise xml:id="hw01-2">
+      <statement><p>Муаврын томьёо ашиглан <m>\cos3\varphi</m> ба <m>\sin3\varphi</m>-г <m>\cos\varphi</m>, <m>\sin\varphi</m>-ээр илэрхийл.</p></statement>
+      <solution><p><m>(\cos\varphi+i\sin\varphi)^3=\cos3\varphi+i\sin3\varphi</m>. Зүүн талыг Ньютоны биномоор задалж, <m>c=\cos\varphi</m>, <m>s=\sin\varphi</m> гэвэл <m>c^3+3ic^2s-3cs^2-is^3</m>. Бодит ба хуурмаг хэсгийг тэнцүүлж, <m>s^2=1-c^2</m> ашиглавал <me>\cos3\varphi=4\cos^3\varphi-3\cos\varphi,\qquad\sin3\varphi=3\sin\varphi-4\sin^3\varphi.</me></p></solution>
+    </exercise>
+    <exercise xml:id="hw01-3">
+      <statement><p><m>z^4+16=0</m> тэгшитгэлийг бодоод, үржигдэхүүнд задал: <m>z^4+16</m>-г бодит коэффициенттэй хоёр квадрат гурван гишүүнтийн үржвэрт задал.</p></statement>
+      <solution><p><m>z^4=-16=16e^{i\pi}</m> тул <m>z_k=2e^{i(\pi+2k\pi)/4}</m>, өөрөөр хэлбэл <m>\sqrt2(1+i)</m>, <m>\sqrt2(-1+i)</m>, <m>\sqrt2(-1-i)</m>, <m>\sqrt2(1-i)</m>. Хосмог язгууруудыг нэгтгэвэл <me>z^4+16=(z^2-2\sqrt2z+4)(z^2+2\sqrt2z+4).</me></p></solution>
+    </exercise>
+    <exercise xml:id="hw01-4">
+      <statement><p><m>|z|=1</m>, <m>z\ne1</m> бол <m>\dfrac{1+z}{1-z}</m> нь цэвэр хуурмаг тоо гэж батал.</p></statement>
+      <solution><p>Хүртвэр, хуваарийг <m>\overline{1-z}=1-\overline z</m>-ээр үржүүлбэл <me>\frac{1+z}{1-z}=\frac{(1+z)(1-\overline z)}{|1-z|^2}=\frac{1-\overline z+z-|z|^2}{|1-z|^2}=\frac{z-\overline z}{|1-z|^2}=\frac{2i\im z}{|1-z|^2},</me> учир нь <m>|z|=1</m>. Энэ нь цэвэр хуурмаг.</p></solution>
+    </exercise>
+    <exercise xml:id="hw01-5">
+      <statement><p><m>\varphi\ne2k\pi</m> үед <m>\displaystyle 1+\cos\varphi+\cos2\varphi+\dots+\cos n\varphi=\frac12+\frac{\sin\bigl(n+\frac12\bigr)\varphi}{2\sin\frac\varphi2}</m> гэж батал.</p></statement>
+      <solution><p>Зүүн тал нь <m>\sum_{k=0}^ne^{ik\varphi}</m>-ийн бодит хэсэг. Геометр прогрессийн томьёогоор <me>\sum_{k=0}^ne^{ik\varphi}=\frac{e^{i(n+1)\varphi}-1}{e^{i\varphi}-1}=\frac{e^{i(n+\frac12)\varphi}-e^{-i\varphi/2}}{e^{i\varphi/2}-e^{-i\varphi/2}}=\frac{e^{i(n+\frac12)\varphi}-e^{-i\varphi/2}}{2i\sin\frac\varphi2}.</me> Бодит хэсэг нь <m>\dfrac{\sin(n+\frac12)\varphi+\sin\frac\varphi2}{2\sin\frac\varphi2}=\dfrac12+\dfrac{\sin(n+\frac12)\varphi}{2\sin\frac\varphi2}</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

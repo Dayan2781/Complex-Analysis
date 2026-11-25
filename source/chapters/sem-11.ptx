@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-11">
+  <title>Семинар 11</title>
+  <exercises xml:id="exercises-seminar-11">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem11-1">
+      <statement><p>Нийлэлтийн радиусыг ол: <m>\sum\frac{z^n}{n^2}</m>, <m>\sum n!z^n</m>, <m>\sum\frac{z^n}{n!}</m>, <m>\sum(1+i)^nz^n</m>, <m>\sum\frac{z^{2n}}{4^n}</m>.</p></statement>
+      <hint><p>Коши–Адамар эсвэл Даламбер. Хариу: <m>1</m>, <m>0</m>, <m>\infty</m>, <m>\frac1{\sqrt2}</m>, <m>2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-2">
+      <statement><p><m>\frac1{(1-z)^2}</m> ба <m>\frac1{z-2}</m> функцийг <m>z=0</m> цэгийн орчимд Тейлорын цуваанд задал.</p></statement>
+      <hint><p>Геометр цувааг дифференциалчил. Хариу: <m>\sum(n+1)z^n</m> (<m>|z|&lt;1</m>); <m>-\sum\frac{z^n}{2^{n+1}}</m> (<m>|z|&lt;2</m>).</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-3">
+      <statement><p><m>\frac1z</m>-ийг <m>z_0=1</m> цэгийн орчимд Тейлорын цуваанд задлаж, нийлэлтийн радиусыг ол.</p></statement>
+      <hint><p><m>\frac1z=\frac1{1+(z-1)}</m>. Хариу: <m>\sum(-1)^n(z-1)^n</m>, <m>R=1</m> (хамгийн ойрын онцгой цэг <m>0</m>).</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-4">
+      <statement><p><m>\cos^2z</m>-ийн Тейлорын цувааг ол.</p></statement>
+      <hint><p><m>\cos^2z=\frac{1+\cos2z}2</m>. Хариу: <m>1+\sum_{n\ge1}\frac{(-1)^n2^{2n-1}z^{2n}}{(2n)!}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-5">
+      <statement><p><m>z=0</m> тэгийн эрэмбийг ол: <m>z-\sin z</m>, <m>e^z-1-z</m>, <m>(1-\cos z)^2</m>. Мөн <m>\sin z</m>-ийн <m>z=\pi</m> тэгийн эрэмбэ.</p></statement>
+      <hint><p>Тейлорын цувааны эхний тэг биш гишүүн. Хариу: <m>3</m>, <m>2</m>, <m>4</m>, <m>1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-6">
+      <statement><p><m>|z|&lt;1</m> дээр голоморф ба (a) <m>f(\frac1n)=f(-\frac1n)=\frac1n</m>; (b) <m>f(\frac1n)=f(-\frac1n)=\frac1{n^2}</m> байх <m>f</m> оршин байх уу?</p></statement>
+      <hint><p>Ялгамжгүйн теорем. (a) Эерэг цэгүүдээс <m>f(z)=z</m>, сөрөг цэгүүдээс <m>f(z)=-z</m> гарах ёстой: зөрчил, байхгүй. (b) <m>f(z)=z^2</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

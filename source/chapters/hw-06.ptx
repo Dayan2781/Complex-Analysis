@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-06">
+  <title>Гэрийн даалгавар 6</title>
+  <exercises xml:id="exercises-homework-06">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw06-1">
+      <statement><p><m>u=x^3-3xy^2+x</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <solution><p><m>\Delta u=6x-6x=0</m>. <m>v_y=u_x=3x^2-3y^2+1</m> тул <m>v=3x^2y-y^3+y+\varphi(x)</m>. <m>v_x=6xy+\varphi'(x)=-u_y=6xy</m> тул <m>\varphi=C</m>. <m>f=z^3+z+iC</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-2">
+      <statement><p><m>v=e^x\sin y+2xy</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <solution><p><m>v</m> гармоник. <m>f'=v_y+iv_x=e^x\cos y+2x+i(e^x\sin y+2y)</m>. <m>y=0</m> үед <m>f'(x)=e^x+2x</m> тул <m>f'(z)=e^z+2z</m>, <m>f=e^z+z^2+C</m>, <m>C\in\R</m>. Шалгалт: <m>\im(e^z+z^2)=e^x\sin y+2xy</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-3">
+      <statement><p><m>u</m> гармоник бол <m>u^2</m> гармоник байх нь зөвхөн <m>u</m> тогтмол үед гэж батал (<m>D</m> муж).</p></statement>
+      <solution><p><m>\Delta(u^2)=2(u_x^2+u_y^2)+2u\Delta u=2|\nabla u|^2</m>. Энэ нь тэг <m>\iff\nabla u\equiv0\iff u</m> тогтмол (муж холбоост).</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-4">
+      <statement><p><m>w=1/z</m> буулгалтын <m>z_0=i</m> цэг дэх сунгалт, эргэлтийг ол. Хавтгайн аль хэсэг агшдаг вэ?</p></statement>
+      <solution><p><m>f'(z)=-\frac1{z^2}</m>, <m>f'(i)=1</m>: сунгалт <m>1</m>, эргэлт <m>0</m>. <m>|f'(z)|=\frac1{|z|^2}&lt;1\iff|z|&gt;1</m>: нэгж дугуйн гадна тал агшина.</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-5">
+      <statement><p><m>u=r^n\cos n\theta</m> функц гармоник гэж туйлын координатад шалгаад, хосмог гармоник функцийг ол.</p></statement>
+      <solution><p>Туйлын Лапласиан <m>\Delta u=u_{rr}+\frac1ru_r+\frac1{r^2}u_{\theta\theta}=r^{n-2}\cos n\theta\,(n(n-1)+n-n^2)=0</m>. <m>u_r=\frac1rv_\theta</m>-ээс <m>v=r^n\sin n\theta</m>; <m>f=z^n</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

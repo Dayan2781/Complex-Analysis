@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-07">
+  <title>Семинар 7</title>
+  <exercises xml:id="exercises-seminar-07">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem07-1">
+      <statement><p><m>0,1,\infty</m> цэгүүдийг харгалзан <m>-1,-i,1</m> цэгүүдэд буулгах бутархай шугаман буулгалтыг ол.</p></statement>
+      <hint><p><m>w=\frac{az+b}{cz+d}</m>; <m>\infty\mapsto1</m>-ээс <m>a=c</m>, <m>0\mapsto-1</m>-ээс <m>b=-d</m>. Хариу: <m>w=\frac{z-i}{z+i}</m> (Кэйлийн буулгалт).</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-2">
+      <statement><p><m>w=\dfrac{z-i}{z+i}</m> буулгалтаар дээд хагас хавтгай ба баруун хагас хавтгай юунд буух вэ?</p></statement>
+      <hint><p><m>|z-i|&lt;|z+i|\iff\im z&gt;0</m> тул дээд хагас хавтгай нэгж дугуйд буух. Хуурмаг тэнхлэг <m>z=it</m> бодит тэнхлэгт буух; <m>1\mapsto-i</m> тул баруун хагас хавтгай доод хагас хавтгайд буух.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-3">
+      <statement><p>Дээд хагас хавтгайг нэгж дугуйд буулгаж, <m>i</m>-г <m>0</m>-д шилжүүлэх бүх бутархай шугаман буулгалтыг ол.</p></statement>
+      <hint><p>Тэгш хэмийн зарчим: <m>i</m> ба <m>-i</m> нь бодит тэнхлэгийн хувьд тэгш хэмтэй тул <m>0</m> ба <m>\infty</m>-д буух. <m>w=e^{i\theta}\frac{z-i}{z+i}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-4">
+      <statement><p>Нэгж дугуйг өөрт нь буулгаж, <m>\frac12</m>-г <m>0</m>-д шилжүүлэх буулгалтыг ол.</p></statement>
+      <hint><p><m>\frac12</m>-ийн нэгж тойргийн хувьд тэгш хэмтэй цэг нь <m>2</m>. <m>w=e^{i\theta}\frac{z-1/2}{1-z/2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-5">
+      <statement><p><m>0&lt;\im z&lt;\pi</m> зурвас <m>w=e^z</m> буулгалтаар, <m>0&lt;\arg z&lt;\frac\pi4</m> өнцөг <m>w=z^4</m> буулгалтаар юунд буух вэ?</p></statement>
+      <hint><p><m>e^{x+iy}</m>-ийн аргумент нь <m>y</m>. <m>z^4</m> нь аргументыг <m>4</m> дахин томруулна. Хоёулаа дээд хагас хавтгай.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-6">
+      <statement><p><m>|z-1|=1</m> тойрог <m>w=1/z</m> буулгалтаар юунд буух вэ?</p></statement>
+      <hint><p>Тойрог <m>0</m>-ийг дайрч байгаа тул шулуунд буух. <m>2\mapsto\frac12</m>, <m>1+i\mapsto\frac{1-i}{2}</m>. Хариу: <m>\re w=\frac12</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

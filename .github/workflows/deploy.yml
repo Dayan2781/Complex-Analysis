@@ -1,0 +1,51 @@
+name: Deploy PreTeXt to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # Гэрийн даалгаврын бодолт хугацаандаа нээгдэхийн тулд өдөр бүр дахин бүтээнэ
+  # (16:10 UTC = Улаанбаатарын 00:10). Огноонууд: homework-schedule.json
+  schedule:
+    - cron: "10 16 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install LaTeX (tikz зургуудад)
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-extra texlive-pictures texlive-fonts-recommended texlive-lang-cyrillic
+
+      - name: Install PreTeXt
+        run: pip install -r requirements.txt
+
+      - name: Hide homework solutions until 14 days after release
+        run: python3 scripts/gate_homework_solutions.py
+
+      - name: Build HTML
+        run: pretext build html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: output/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

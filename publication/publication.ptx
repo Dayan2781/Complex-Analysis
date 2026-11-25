@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publication>
+  <common>
+    <tableofcontents level="2" />
+    <exercise-inline     statement="yes" hint="yes" answer="no" solution="no" />
+    <exercise-divisional statement="yes" hint="yes" answer="no" solution="yes" />
+  </common>
+
+  <source>
+    <directories external="../source/external" generated="../generated-assets" />
+  </source>
+
+  <numbering>
+    <divisions level="2" />
+    <blocks level="1" />
+    <projects level="1" />
+  </numbering>
+
+  <latex print="no" sides="one" font-size="11">
+  </latex>
+
+  <html>
+    <!-- Active Calculus-тай төстэй Denver theme -->
+    <css theme="denver" />
+
+    <!-- Knowl: theorem, proof, example нь товшиход нээгддэг -->
+    <knowl
+      theorem="no"
+      proof="yes"
+      definition="no"
+      example="yes"
+      example-solution="yes"
+      exercise-inline="yes"
+      exercise-divisional="no"
+    />
+
+    <!-- TOC: focused mode — Active Calculus-тай адил -->
+    <toc focused="yes" preexpanded-levels="1" />
+
+    <!-- Navigation -->
+    <navigation logic="tree" upbutton="yes" />
+
+    <!-- GeoGebra тооцоолуур -->
+    <calculator model="geogebra-graphing" />
+
+    <!-- Хайлт -->
+    <search variant="default" />
+  </html>
+
+</publication>

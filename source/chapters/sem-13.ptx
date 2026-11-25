@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seminar-13">
+  <title>Семинар 13</title>
+  <exercises xml:id="exercises-seminar-13">
+    <introduction><p>Семинарын хичээл дээр бодох бодлогууд. Бодлого бүр заавартай боловч эхлээд зааваргүй бодож үзээрэй. Багш бодлогыг сонгож, нэмж болно.</p></introduction>
+    <exercise xml:id="sem13-1">
+      <statement><p>Үлдэцийг ол: <m>\frac{e^z}{z^2+1}</m> (<m>z=i</m>); <m>\frac{z}{(z-1)^2(z+2)}</m> (<m>z=1</m> ба <m>z=-2</m>).</p></statement>
+      <hint><p>Энгийн туйлд <m>\Res=\frac{\varphi(a)}{\psi'(a)}</m>, <m>2</m>-р эрэмбийн туйлд <m>\Res=\lim\frac{d}{dz}[(z-a)^2f]</m>. Хариу: <m>\frac{e^i}{2i}</m>; <m>\frac29</m> ба <m>-\frac29</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-2">
+      <statement><p><m>z\cos\frac1z</m>-ийн <m>z=0</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p>Лораны цуваа <m>z-\frac1{2z}+\dots</m> Хариу: <m>-\frac12</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-3">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{dz}{z^3(z+4)}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Дотор зөвхөн <m>0</m> (<m>3</m>-р эрэмбийн туйл). <m>\frac1{z+4}</m>-ийн <m>z^2</m>-ын коэффициент <m>\frac1{64}</m>. Хариу: <m>\frac{\pi i}{32}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-4">
+      <statement><p><m>\frac{z^3}{z^4-1}</m>-ийн <m>\infty</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p>Бүх үлдэцийн нийлбэр <m>0</m>. Төгсгөлөг туйл бүрт <m>\Res=\frac{z_k^3}{4z_k^3}=\frac14</m>. Хариу: <m>-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-5">
+      <statement><p><m>\displaystyle\oint_{|z|=3}\tan z\,dz</m>-ийг тооцоол.</p></statement>
+      <hint><p>Дотор <m>\pm\frac\pi2</m> туйлууд, тус бүрт <m>\Res=\frac{\sin z}{(\cos z)'}=-1</m>. Хариу: <m>-4\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-6">
+      <statement><p><m>\displaystyle\oint_{|z|=1}e^{1/z}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>e^{1/z}=1+\frac1z+\dots</m> Хариу: <m>2\pi i</m>.</p></hint>
+    </exercise>
+  </exercises>
+</section>

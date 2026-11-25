@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-10">
+  <title>Гэрийн даалгавар 10</title>
+  <exercises xml:id="exercises-homework-10">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw10-1">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{e^z}{z^2+1}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>\pm i</m> хоёулаа дотор. Тус бүрийг жижиг тойргоор тусгаарлаж Кошийн томьёог хэрэглэвэл <me>2\pi i\left(\frac{e^i}{2i}+\frac{e^{-i}}{-2i}\right)=\pi(e^i-e^{-i})=2\pi i\sin1.</me></p></solution>
+    </exercise>
+    <exercise xml:id="hw10-2">
+      <statement><p><m>\displaystyle\oint_{|z-1|=1}\frac{z^2}{(z-1)^3}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>f=z^2</m>, <m>f''=2</m>. <m>\oint\frac{f}{(z-1)^3}dz=\frac{2\pi i}{2!}f''(1)=2\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw10-3">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{e^{2z}}{z^{n+1}}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>f=e^{2z}</m>, <m>f^{(n)}(0)=2^n</m>. Хариу: <m>\frac{2\pi i\,2^n}{n!}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw10-4">
+      <statement><p>Лиувиллийн теорем ашиглан алгебрийн үндсэн теоремыг батал.</p></statement>
+      <solution><p><m>P</m> нь <m>n\ge1</m> зэргийн олон гишүүнт бөгөөд тэггүй гэж үзье. Тэгвэл <m>g=1/P</m> бүхэл функц. <m>|z|\to\infty</m> үед <m>|P(z)|\to\infty</m> тул <m>g\to0</m>, иймд <m>g</m> зааглагдсан. Лиувиллийн теоремоор <m>g</m> тогтмол, тэгэхээр <m>P</m> тогтмол: зөрчил.</p></solution>
+    </exercise>
+    <exercise xml:id="hw10-5">
+      <statement><p>Максимум модулийн зарчмаар <m>|z^2+z|</m> ба <m>|e^z|</m>-ийн <m>|z|\le1</m> дугуй дээрх хамгийн их утгыг ол.</p></statement>
+      <solution><p>Хамгийн их утга хил дээр. <m>|z^2+z|=|z||z+1|\le2</m>, тэнцэл <m>z=1</m> үед: max <m>=2</m>. <m>|e^z|=e^{\re z}\le e</m>, тэнцэл <m>z=1</m> үед: max <m>=e</m>.</p></solution>
+    </exercise>
+  </exercises>
+</section>

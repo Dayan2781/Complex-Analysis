@@ -1,0 +1,586 @@
+\chapter{Комплекс функцийн хязгаар ба тасралтгүй чанар}
+
+\section{Комплекс хувьсагчийн функц}
+
+\begin{dfn}
+$D\subset\mathbb{C}$ олонлог дээр $f$ дүрэм өгөгдөж, $z\in D$ бүрт комплекс тоо $w$-г
+$w=f(z)$ гэж харгалзуулж байвал $f$-г \emph{комплекс хувьсагчийн функц} гэнэ:
+\[
+f: D\to \mathbb{C},\qquad z\mapsto w=f(z).
+\]
+$D$-г \emph{тодорхойлогдох муж} гэнэ.
+\end{dfn}
+
+Хэрэв $z=x+iy$, $w=u+iv$ ($x,y,u,v\in\mathbb{R}$) гэвэл
+\[
+f(z)=u(x,y)+iv(x,y),
+\]
+өөрөөр хэлбэл комплекс функц нь хоёр хувьсагчийн бодит утгат $u(x,y)$, $v(x,y)$ функцүүдээр тодорхойлогдоно:
+\[
+u(x,y)=\Re f(z),\qquad v(x,y)=\Im f(z).
+\]
+
+\begin{exm}
+$w=z^2$ функцийн бодит ба хуурмаг хэсгийг ол.
+\end{exm}
+
+\begin{sol}
+$z=x+iy$ гэвэл
+\[
+z^2=(x+iy)^2=x^2-y^2+2xy\,i.
+\]
+Иймээс
+\[
+u(x,y)=x^2-y^2,\qquad v(x,y)=2xy.
+\]
+\end{sol}
+
+%---------------------------------------------------
+
+\section{Функцийн хязгаар}
+
+\begin{dfn}
+$z_0\in D$ байг. Хэрэв $A\in\mathbb{C}$ тоо олдож
+\[
+\forall \varepsilon>0\ \exists \delta>0:\ 
+0<|z-z_0|<\delta \Rightarrow |f(z)-A|<\varepsilon
+\]
+нөхцөл биелбэл $A$-г $f(z)$-ийн $z\to z_0$ үед авах \emph{хязгаар} гэнэ.
+Тэмдэглэгээ:
+\[
+\lim_{z\to z_0} f(z)=A.
+\]
+\end{dfn}
+
+\begin{thm}[Хязгаарын бодит ба хуурмаг хэсэг]
+$f(z)=u(x,y)+iv(x,y)$, $z_0=x_0+iy_0$, $A=\alpha+i\beta$ гэе.
+Тэгвэл
+\[
+\lim_{z\to z_0} f(z)=A
+\]
+байх нь
+\[
+\lim_{(x,y)\to(x_0,y_0)}u(x,y)=\alpha,\qquad
+\lim_{(x,y)\to(x_0,y_0)}v(x,y)=\beta
+\]
+байхтай эквивалент.
+\end{thm}
+
+\begin{proof}
+$(\Rightarrow)$ гэж үзье. 
+\[
+\lim_{z\to z_0} f(z)=A
+\]
+гэж авъя. Тэгвэл $\forall \varepsilon>0$ тоо бүрт $\exists \delta>0$ олдож
+\[
+0<|z-z_0|<\delta \ \Rightarrow\ |f(z)-A|<\varepsilon
+\]
+биелнэ.
+
+Энд
+\[
+f(z)-A=(u(x,y)-\alpha)+i(v(x,y)-\beta)
+\]
+учир
+\[
+|u(x,y)-\alpha|\le |f(z)-A|,\qquad |v(x,y)-\beta|\le |f(z)-A|
+\]
+гэж үнэлж болно. Иймээс дээрх нөхцлөөс
+\[
+0<|z-z_0|<\delta \ \Rightarrow\ |u(x,y)-\alpha|<\varepsilon
+\]
+мөн
+\[
+0<|z-z_0|<\delta \ \Rightarrow\ |v(x,y)-\beta|<\varepsilon
+\]
+гарна. Харин $|z-z_0|=\sqrt{(x-x_0)^2+(y-y_0)^2}$ тул энэ нь яг
+\[
+\lim_{(x,y)\to(x_0,y_0)}u(x,y)=\alpha,\qquad
+\lim_{(x,y)\to(x_0,y_0)}v(x,y)=\beta
+\]
+гэдгийг илэрхийлнэ.
+
+$(\Leftarrow)$ Одоо эсрэгээр нь
+\[
+\lim_{(x,y)\to(x_0,y_0)}u(x,y)=\alpha,\qquad
+\lim_{(x,y)\to(x_0,y_0)}v(x,y)=\beta
+\]
+гэж үзье. Тэгвэл $\forall \varepsilon>0$ тоо бүрт $\exists \delta_1>0$, $\exists \delta_2>0$ олдож
+\[
+0<\sqrt{(x-x_0)^2+(y-y_0)^2}<\delta_1 \Rightarrow |u(x,y)-\alpha|<\frac{\varepsilon}{\sqrt2},
+\]
+\[
+0<\sqrt{(x-x_0)^2+(y-y_0)^2}<\delta_2 \Rightarrow |v(x,y)-\beta|<\frac{\varepsilon}{\sqrt2}
+\]
+биелнэ. $\delta=\min\{\delta_1,\delta_2\}$ гэж авбал
+\[
+0<|z-z_0|<\delta \Rightarrow 
+|u(x,y)-\alpha|<\frac{\varepsilon}{\sqrt2},\quad
+|v(x,y)-\beta|<\frac{\varepsilon}{\sqrt2}.
+\]
+
+Тэгвэл
+\[
+|f(z)-A|^2
+=
+|(u-\alpha)+i(v-\beta)|^2
+=
+(u-\alpha)^2+(v-\beta)^2
+<
+\frac{\varepsilon^2}{2}+\frac{\varepsilon^2}{2}
+=\varepsilon^2.
+\]
+Иймээс
+\[
+0<|z-z_0|<\delta \Rightarrow |f(z)-A|<\varepsilon.
+\]
+Энэ нь
+\[
+\lim_{z\to z_0} f(z)=A
+\]
+гэдгийг баталж байна.
+\end{proof}
+
+
+\begin{sen}
+Хэрэв $f(z)$-ийн хязгаар орших бол $z_0$ руу ямар ч замаар ойртсон
+утга ижил байна.
+\end{sen}
+
+\begin{exm}
+\[
+\lim_{z\to 0} \frac{z}{\overline{z}}
+\]
+орших уу?
+\end{exm}
+
+\begin{sol}
+$z=re^{i\theta}$ гэж бичвэл
+\[
+\frac{z}{\overline{z}}=e^{2i\theta}.
+\]
+$z\to 0$ гэдэг нь $r\to 0$ гэсэн үг. Гэтэл $\dfrac{z}{\overline{z}}=e^{2i\theta}$
+нь $\theta$-оос хамаарна. Иймээс хязгаар $r\to 0$ үед $\theta$ хамаарсан тул хязгаар оршихгүй.
+\end{sol}
+
+\begin{exm}
+\[
+\lim_{(x,y)\to(0,0)} \frac{x^2}{x^2+y^2}
+\]
+орших уу?
+\end{exm}
+
+\begin{sol}
+$y=0$ үед утга $1$,
+$x=0$ үед утга $0$.
+Хоёр өөр утга гарч байна.
+Иймээс хязгаар оршихгүй.
+\end{sol}
+
+\begin{sen}[Шахах зарчим]
+Хэрэв
+\[
+|f(z)|\le g(z)
+\]
+мөн
+\[
+\lim_{z\to z_0} g(z)=0
+\]
+бол
+\[
+\lim_{z\to z_0} f(z)=0.
+\]
+\end{sen}
+
+\begin{exm}
+\[
+\lim_{z\to 0} z^2 \sin \frac{1}{z}
+\]
+утгыг ол.
+\end{exm}
+
+\begin{sol}
+\[
+|z^2\sin \tfrac{1}{z}| \le |z|^2.
+\]
+\[
+\lim_{z\to 0} |z|^2=0.
+\]
+Иймээс
+\[
+\lim_{z\to 0} z^2 \sin \frac{1}{z}=0.
+\]
+\end{sol}
+\subsection*{Хязгаар $z\to\infty$ үед}
+
+\begin{dfn}
+Хэрэв
+\[
+\forall \varepsilon>0\ \exists R>0:\ |z|>R \Rightarrow |f(z)-A|<\varepsilon
+\]
+бол
+\[
+\lim_{z\to\infty} f(z)=A.
+\]
+\end{dfn}
+
+\begin{exm}
+\[
+\lim_{z\to\infty} \frac{1}{z}
+\]
+утгыг ол.
+\end{exm}
+
+\begin{sol}
+\[
+\left|\frac{1}{z}\right|=\frac{1}{|z|}\to 0.
+\]
+Иймээс
+\[
+\lim_{z\to\infty} \frac{1}{z}=0.
+\]
+\end{sol}
+\begin{thm}[Хязгаарын арифметик үйлдлүүд]
+Хэрэв
+\[
+\lim_{z\to z_0} f(z)=A,\qquad
+\lim_{z\to z_0} g(z)=B
+\]
+бол дараах тэнцэтгэлүүд биелнэ:
+\begin{enumerate}
+    \item ямар ч тогтмол $c\in\mathbb{C}$-ийн хувьд.
+$\lim\limits_{z\to z_0} c\,f(z)=cA$
+
+\item $\lim\limits_{z\to z_0} (f(z)+g(z))=A+B$
+\item $\lim\limits_{z\to z_0} (f(z)-g(z))=A-B$
+\item$\lim\limits_{z\to z_0} (f(z)g(z))=AB$
+\item $\lim\limits_{z\to z_0} \dfrac{f(z)}{g(z)}=\dfrac{A}{B} \qquad B\neq 0.$
+\end{enumerate}
+\end{thm}
+\begin{exm}
+Дараах хязгаарыг батал:
+\[
+\lim_{z\to z_0}\sin z=\sin z_0.
+\]
+\end{exm}
+
+\begin{sol}
+$z=x+iy$, $z_0=x_0+iy_0$ гэж бичье.
+Дараах томьёог ашиглая:
+\[
+\sin(x+iy)=\sin x\,\ch y+i\cos x\,\sh y.
+\]
+
+Тэгвэл
+\[
+\sin z-\sin z_0
+=
+(\sin x\,\ch y-\sin x_0\,\ch y_0)
++i(\cos x\,\sh y-\cos x_0\,\sh y_0).
+\]
+
+Бодит хэсгийг задлавал
+\[
+\sin x\,\ch y-\sin x_0\,\ch y_0
+=
+(\sin x-\sin x_0)\ch y
++
+\sin x_0(\ch y-\ch y_0).
+\]
+
+$x\to x_0$, $y\to y_0$ үед
+\[
+\sin x-\sin x_0\to 0,\qquad
+\ch y-\ch y_0\to 0.
+\]
+Иймээс бодит хэсэг 0 рүү тэмүүлнэ.
+
+Хуурмаг хэсгийг мөн адил задлахад
+\[
+\cos x\,\sh y-\cos x_0\,\sh y_0
+=
+(\cos x-\cos x_0)\sh y
++
+\cos x_0(\sh y-\sh y_0),
+\]
+эндээс мөн 0 гарна.
+
+Иймээс
+\[
+\lim_{z\to z_0}\sin z=\sin z_0.
+\]
+\end{sol}
+\begin{thm}[Давхар функцийн хязгаар]
+Хэрэв
+\[
+\lim_{z\to z_0} f(z)=w_0,
+\qquad
+\lim_{w\to w_0} g(w)=L,
+\]
+бол
+\[
+\lim_{z\to z_0} g(f(z)) = L.
+\]
+\end{thm}
+\begin{exm}
+\[
+\lim_{z\to 1} \sin(z^2)
+\]
+утгыг ол.
+\end{exm}
+
+\begin{sol}
+\[
+\lim_{z\to 1} z^2 = 1.
+\]
+Синус функц бүх цэгт тасралтгүй тул
+\[
+\lim_{z\to 1} \sin(z^2)=\sin(1).
+\]
+\end{sol}
+
+%---------------------------------------------------
+
+\section{Тасралтгүй чанар}
+
+\begin{dfn}
+Хэрэв
+\[
+\lim_{z\to z_0} f(z)=f(z_0)
+\]
+бол $f$-г $z_0$ дээр тасралтгүй гэнэ.
+\end{dfn}
+
+\begin{thm}
+$f(z)=u(x,y)+iv(x,y)$ бол $f$ нь $z_0$ дээр тасралтгүй байх нь
+\[
+u(x,y)\ \text{ба}\ v(x,y)
+\]
+нь $(x_0,y_0)$ дээр тасралтгүй байхтай эквивалент.
+\end{thm}
+
+\begin{thm}
+Хэрэв $f$ ба $g$ нь $z_0$ дээр тасралтгүй бол
+\[
+f+g,\quad fg,\quad \frac{f}{g}\ (g(z_0)\neq 0)
+\]
+нь мөн $z_0$ дээр тасралтгүй.
+\end{thm}
+
+\begin{thm}
+
+$P(z)$ олон гишүүнт нь $\mathbb{C}$ дээр бүх цэгт тасралтгүй.
+Рациональ функц
+\[
+R(z)=\frac{P(z)}{Q(z)}
+\]
+нь
+\[
+Q(z)\neq 0
+\]
+байх бүх цэгт тасралтгүй.
+\end{thm}
+\begin{thm}
+Комплекс экспонент функц
+\[
+f(z)=e^z
+\]
+нь $\mathbb{C}$ хавтгай дээр бүх цэгт тасралтгүй.
+\end{thm}
+
+\begin{proof}
+$z=x+iy$ гэж бичвэл
+\[
+e^z=e^{x+iy}=e^x(\cos y+i\sin y).
+\]
+
+Иймээс
+\[
+u(x,y)=e^x\cos y,\qquad v(x,y)=e^x\sin y.
+\]
+
+Бодит функцууд $e^x,\cos y,\sin y$ нь $\mathbb{R}$ дээр тасралтгүй.
+Үржвэр нь мөн тасралтгүй тул $u(x,y)$ ба $v(x,y)$ нь
+$(x_0,y_0)$ дээр тасралтгүй.
+
+Тэгвэл “$u,v$ тасралтгүй $\Rightarrow$ $f$ тасралтгүй” шалгуураар
+$e^z$ нь бүх $z_0\in\mathbb{C}$ дээр тасралтгүй.
+\end{proof}
+
+\begin{thm}
+Логарифм
+\[
+\ln z=\ln|z|+i\arg z
+\]
+нь
+\[
+\Omega=\mathbb{C}\setminus\{x\le 0,\ y=0\}
+\]
+муж дээр тасралтгүй.
+\end{thm}
+
+\begin{proof}
+$z=x+iy$ гэж бичье.
+
+Тэгвэл
+\[
+\ln z=\frac12\ln(x^2+y^2)
++i\,\arg(z).
+\]
+
+1) $\ln(x^2+y^2)$ нь $(0,0)$-оос бусад бүх цэг дээр тасралтгүй.
+
+2) $\Arg(z)$ нь сөрөг бодит тэнхлэгийг хассан муж дээр тасралтгүй.
+
+Иймээс бодит ба хуурмаг хэсгүүд нь $\Omega$ муж дээр тасралтгүй.
+
+“$u,v$ тасралтгүй $\Rightarrow$ $f$ тасралтгүй” шалгуураар
+$\Ln z$ нь $\Omega$ муж дээр тасралтгүй.
+\end{proof}
+\section{Олон утгат функц}
+
+\begin{dfn}
+Хэрэв комплекс тоо $z$ бүрт нэгээс илүү $w$ утга харгалзаж байвал
+түүнийг \emph{олон утгат комплекс функц} гэнэ.
+\end{dfn}
+\begin{exm}
+Комплекс тооны аргумент.
+\end{exm}
+
+Комплекс тоо $z\neq 0$-г
+\[
+z=re^{i\varphi}
+\]
+гэж бичвэл
+\[
+\arg z=\varphi+2k\pi,\qquad k\in\mathbb{Z}.
+\]
+
+Иймээс $\arg z$ нь төгсгөлгүй олон утгатай функц.
+\begin{exm}
+Комплекс логарифм.
+\end{exm}
+
+$z\neq 0$ үед
+\[
+\Ln z=\ln|z|+i(\arg z+2k\pi),\qquad k\in\mathbb{Z}.
+\]
+
+Иймээс $\Ln z$ нь олон утгат функц.
+\begin{exm}
+Комплекс язгуур.
+\end{exm}
+
+$z=re^{i\varphi}$ гэж бичвэл
+\[
+\sqrt[n]{z}
+=
+r^{1/n}
+e^{\,i\frac{\varphi+2k\pi}{n}},
+\qquad k=0,1,\dots,n-1.
+\]
+
+Иймээс $n$-зэрэгт язгуур нь $n$ утгатай функц.
+\begin{dfn}
+Олон утгат функцийн утгуудын дундаас нэгийг нь
+сонгон авснаар үүсэх нэг утгат функцийг
+\emph{салбар} гэнэ.
+\end{dfn}
+\begin{dfn}
+Хэрэв
+\[
+-\pi<\Arg z\le \pi
+\]
+гэж сонговол үүсэх логарифмыг
+\emph{логарифмын гол утга} гэнэ:
+\[
+\ln z=\ln|z|+i\Arg z.
+\]
+\end{dfn}
+\section{Семинар}
+\begin{enumerate}
+
+\item $f(z)=z^3$ функцийн бодит ба хуурмаг хэсгийг ол.
+
+\item $f(z)=e^z$ функцийн бодит ба хуурмаг хэсгийг ол.
+
+\item $\displaystyle \lim_{z\to 2} (3z^2-1)$ утгыг ол.
+
+\item $\displaystyle \lim_{z\to 1+i} z^2$ утгыг ол.
+
+\item $\displaystyle \lim_{z\to 0} \frac{z}{z+1}$ утгыг ол.
+
+\item $\displaystyle \lim_{z\to 0} \frac{z^2+2z}{z}$ утгыг ол.
+
+\item $\displaystyle \lim_{z\to z_0} \cos z$ утгыг ол.
+
+\item $\displaystyle \lim_{z\to z_0} e^z$ утгыг ол.
+
+\item $\displaystyle \lim_{z\to \infty} \frac{1}{z}$ утгыг ол.
+
+\item $\displaystyle \lim_{z\to \infty} \frac{2z+1}{z}$ утгыг ол.
+
+\item Дараах хязгаар орших эсэхийг шалга:
+\[
+\lim_{z\to 0} \frac{|z|}{z}.
+\]
+
+\item Дараах хязгаар орших эсэхийг шалга:
+\[
+\lim_{(x,y)\to(0,0)} \frac{x^2-y^2}{x^2+y^2}.
+\]
+
+\item $\displaystyle \lim_{z\to 0}z^{-2}(1-\cos z))$ утгыг ол.
+
+\item $f(z)=\frac{z^2}{|z|}$, $z\neq 0$, $f(0)=0$ гэж тодорхойлов.
+$f$ функц 0 дээр тасралтгүй юу?
+
+\item $\Ln z$ функц сөрөг бодит тэнхлэг дээр яагаад тасралтгүй биш вэ?
+Тайлбарла.
+
+\item Дараах хязгаар орших эсэхийг шалга:
+\[
+\lim_{z\to 0} \frac{xy}{x^2+y^2}.
+\]
+
+\item $f(z)=|z|$ функц $z_0=0$ дээр тасралтгүй эсэхийг $\varepsilon -\delta$ тодорхойлолтоор батал.
+
+\item $\displaystyle \lim_{z\to 0} \frac{\sin z}{z}$ утгыг ол.
+(Синусын тодорхойлолтыг ашиглаж бод.)
+
+\item $\sqrt{z}$ функцийн бүх утгыг ол:
+\[
+z=-4.
+\]
+Мөн гол утгыг тодорхойл.
+
+\end{enumerate}
+\section*{Даалгаврын бодлого}
+
+\begin{enumerate}
+
+\item $\displaystyle \lim_{z\to 0} f(z)=L$ байх $\Longleftrightarrow $ нь $\forall t\in [0;2\pi[$ хувьд $\displaystyle \lim_{r\to 0} f(re^{it})=L$ байхыг батал. Үүнийг ерөнхий тохиолдолд  
+$$\exists\displaystyle \lim_{z\to a} f(z) \Longleftrightarrow \displaystyle \lim_{r\to 0} f(re^{it})$$ хязгаар $t$-с үл хамааран оршин байх гэж бичиж болно. Энд $z-a=re^{it}.$ $\displaystyle\lim_{r\to 0} f(re^{it})=\lim_{r\to 0} u(r\cos t, r\sin t)+i\lim_{r\to 0} v(r\cos t, r\sin t)$ гэсэн нэг хувьсагчийн бодит функцийн хязгаар юм. 
+
+\item 
+\begin{equation}
+\Arccos z= -i \Ln (z+\sqrt{z^2-1}) 
+\end{equation} функцийн бодит ба хуурмаг хэсгийг ол. 
+
+\item $\forall z\in\mathbb{C}$ хувьд $\cos(\Arccos(z))=z$ байхыг батал. Өөрөөр хэлбэл $\cos z$ урвуу функц олон утгат функц байна.
+
+\item $-1\leq x\leq 1$ үед $\Arccos(x)$ нь бодит хувьсагчийн $\arccos(x)$ функц болохыг харуул.
+
+\item $\sin z$ урвуу функц $\Arcsin(z)$ ол.
+
+\item $\cos z, \sin z$ функцүүд $\mathbb{C}$ дээр тасралтгүй байхыг батал.
+
+\item  $\tan z, \cot z$ функцүүд тасралтгүй байх олонлогийг ол.
+
+\item $|z|\geq |Re(z)|$ батал.
+
+\item $|z_1|+|z_2|\geq |z_1+z_2|\geq ||z_1|-|z_2||$ батал.
+
+\item $|z|^2\geq 2Re(z)Im(z)$ батал.
+
+\end{enumerate}

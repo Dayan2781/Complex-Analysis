@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch08" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Комплекс интеграл</title>
+<section xml:id="lec08-s1"><title>Интегралын тодорхойлолт</title><p><m>\gamma :[\alpha,\beta]\rightarrow \mathbb{C}</m> (Ийм буулгалтыг зам гэж нэрлэдэг) ба <m>f\in C(D)</m> функц авч үзье. <m>\gamma ([\alpha, \beta])\subset D</m> байг. <m>T</m> нь <m>[\alpha, \beta]</m> интервалийн хуваалт байг.
+<me>T=\{t_k:k\in\overline{0,n} \quad \text{ба} \quad \alpha =t_0&lt;t_1&lt;\ldots &lt;t_n=\beta\}</me>
+<m>z_k=\gamma(t_k)</m> ба <m>\textrm{{diam} }T=\max\limits_{k\in \overline{1,n}} (t_k-t_{k-1})</m> тэмдэглээнүүд оруулъя. Мөн <m>k\in\overline{1,n}</m> бүрийн хувьд <m>\tau _k \in [t_{k-1}, t_k]</m> сонгосноор <m>\zeta =\{ \zeta_k:\zeta_k=\gamma(\tau_k)\}</m> олонлог байгуулъя (Үүнийг сонголт гэж нэрлэдэг).
+<md><mrow>S(f,\gamma ,T,\zeta)=\sum\limits_{k=1}^n f(\zeta_k)\cdot (z_k-z_{k-1})</mrow></md>
+хэмжигдэхүүнийг <m>f</m> функцийн хувьд <m>\gamma</m> замын <m>T</m> хуваалт ба <m>\zeta</m> сонголтоор зохиогдсон интеграл нийлбэр гэнэ.</p><definition><title>Комплекс интеграл</title><statement><p>Хэрэв <m>T</m> ба <m>\zeta</m> сонголтыг хэрхэн байгуулснаас үл хамаарч
+ <md><mrow>\exists \lim\limits_{\textrm{{diam} }T\rightarrow 0}S(f,\gamma, T,\zeta)=I\in\mathbb{C}</mrow></md>
+ бол I комплекс тоон утгыг <m>f</m> функцээс <m>\gamma</m> замаар авсан интеграл гэж нэрийдээд  <me>I=\int\limits_\gamma f(z)dz</me> гэж тэмдэглэдэг.</p></statement></definition><theorem xml:id="r-5integu3a4_3"><title>Интеграл орших хүрэлцээтэй нөхцөл</title><statement><p><m>\gamma</m> нь гөлгөр зам ба <m>f</m> нь уг замын муруй дээр тасралтгүй бол
+ <md><mrow>\exists \int\limits_{\gamma} f(z)dz=\int\limits_\alpha^\beta f(\gamma(t))\cdot \gamma '(t)dt</mrow></md>
+ байна. <xref ref="r-5integu3a4_3" text="global"/> томьёог интеграл бодох параметрчилэлийн томьёо гэдэг.</p></statement><proof><p><m>\gamma (t)=a(t)+ib(t)</m> ба <m>\gamma</m> гөлгөр гэдгээс <m>a(t)</m>, <m>b(t)\in C^{(1)}[\alpha,\beta]</m> болж Лагранжийн томьёог ашиглах боломжтой.
+<me>\begin{cases}
+a(t_k)-a(t_{k-1})=a'(\xi_k)(t_k-t_{k-1}) \\
+b(t_k)-b(t_{k-1})=b'(\xi_k')(t_k-t_{k-1}), \quad (\xi_k,\xi_k'\in[t_{k-1},t_k]) 
+\end{cases}</me></p><p>болно.</p><p><m>a'</m>, <m>b'\in C[\alpha,\beta]</m> учир Канторын теоремоор жигд тасралтгүй байх ёстой. <m>\forall \varepsilon &gt;0 \exists \delta &gt;0 \quad \forall t_1,</m> <m>t_2\in [\alpha, \beta]</m> хувьд <m>|t_1-t_2|&lt;\delta</m> бол <m>|a'(t_1)-a'(t_2)|&lt;\varepsilon</m>; <m>|b'(t_1)-b'(t_2)|&lt;\varepsilon</m> болно. Хуваалтын диаметрийг <m>\delta</m>-с багаар авбал 
+<md><mrow>&amp;\left|\sum\limits_{k=1}^n f(\zeta_k)(\gamma(t_k)-\gamma(t_{k-1}))-\sum\limits_{k=1}^nf(\zeta_k)\gamma'(\tau_k)(t_k-t_{k-1})\right|=</mrow><mrow>&amp;=\left| \sum\limits_{k=1}^n f(\zeta_k)(a'(\xi_k)-a'(\tau_{k}))+i\sum\limits_{k=1}^nf(\tau_k)(b'(\xi'_k)-b(\tau_{k}))\right|\leq</mrow><mrow>&amp;\leq 2\varepsilon \max\limits_{z\in \gamma [\alpha,\beta]}|f(z)|\cdot (\beta-\alpha)</mrow></md>
+болно.</p><p><m>\varepsilon</m>-г дураар сонгож болох учир
+<me>\left|\int\limits_\gamma f(z)dz-\int\limits_\alpha^\beta f(\gamma(t))\gamma '(t)dt\right|=0</me>
+болж теорем батлагдав.</p></proof></theorem><corollary><statement><p><me>\int\limits_\gamma f(z)dz=\int\limits_\gamma udx-vdy+i\int\limits_\gamma vdx+udy.</me></p></statement></corollary><corollary><statement><p><m>\gamma</m> нь хэсэгчилсэн гөлгөр зам үед дээрх теорем хүчинтэй.</p></statement></corollary><example xml:id="r-5integu3aExample_zu5en_int"><statement><p><m>\gamma</m> нь <m>a\in\mathbb{C}</m> төвтэй <m>R</m> радиустай тойргийг цагийн зүүний эсрэг 1 эргэсэн <m>\gamma(t)=a+R\cdot e^{it}(t\in[0;2\pi])</m> зам байг.
+<md><mrow>\int\limits_\gamma (z-a)^n dz&amp;=\int\limits_{0}^{2\pi} ((a+Re^{it})-a)^n\cdot(a+Re^{it})'_tdt</mrow><mrow>&amp;=R^{n+1}\cdot i\int\limits_0^{2\pi} [\cos (n+1)t+i\sin (n+1)t]dt</mrow><mrow>&amp;=
+    \begin{cases}
+    0, \quad n\neq -1,</mrow><mrow>2\pi i, \quad n=-1
+    \end{cases}</mrow></md></p></statement></example><example><statement><p><m>\gamma(t)=t+it^2(t\in [0;1])</m> параболын нумаар 
+<md><mrow>\int\limits_\gamma \re (z^2)dz&amp;=\int\limits_0^1 \re (t+it)^2\cdot (t+it^2)_t'dt</mrow><mrow>&amp;=\int\limits_0^1 (t^2-t^4)(1+2itdt)</mrow><mrow>&amp;=\dfrac{2}{15}+\dfrac{1}{6}\cdot i</mrow></md></p></statement></example><example><statement><p><m>\gamma</m> нь <m>z_0</m> цэгээс <m>z_1</m> хүрсэн хэрчим зам   <m>\gamma(t)=z_0+(z-1-z_0)t</m>  <m>(t\in[0,1])</m> байг.
+<md><mrow>\int\limits_{\gamma^+}(az+b)dz&amp;= \int\limits_0^1 [a(z_0+(z_1-z_0)t)+b]\cdot (z_0+(z_1-z_0)t)'_tdt</mrow><mrow>&amp;=a\dfrac{z_1^2-z_0^2}{2}+b(z_1-z_0).</mrow></md></p></statement></example><example xml:id="r-5integu3au416u438u448u44du44d_4"><statement><p>Гурвалжны хилээр тойрсон зам контур <m>\partial \Delta^+</m> (битүү замыг контур гэж нэрлэх нь байдаг) бол <me>\bint\limits_{\partial\Delta^+} (az+b)dz=0</me> байхыг жишээ 4.3-аас гаргана уу.</p></statement></example></section><section xml:id="lec08-s2"><title>Комплекс интегралын чанарууд</title><p>Энд <m>\gamma</m> нь хэсэгчилсэн гөлгөр зам ба <m>f</m>, <m>g\in C(\gamma [\alpha, \beta])</m> (замын муруй дээр тасралтгүй) функцүүд байг.</p><fact><statement><p>(Шугаман чанар) <m>\forall a,b\in\mathbb{C}</m> хувьд
+<me>\int\limits_{\gamma} [af(z)+bg(z)]dz=a\int\limits_\gamma f(z)dz+b\int\limits _\gamma g(z)dz</me>
+байна.</p></statement></fact><fact><statement><p>(Аддитив чанар) <m>\gamma =\gamma_1 \wedge \gamma_2</m> бол 
+<me>\int\limits_{\gamma} f(z)dz=\int\limits_{\gamma_1} f(z)dz+\int\limits _{\gamma_2} f(z)dz</me>
+байна.</p></statement></fact><fact xml:id="r-5integu3au427u430u43du430u440_3"><statement><p><m>\gamma^{-}</m> эсрэг замын хувьд
+<me>\int\limits_{\gamma^-}f(z)dz =-\int\limits_\gamma f(z)dz</me></p></statement></fact><note><statement><p>Битүү замын (контур) хувьд зүүн гарын дүрмээр ориентацлаж чиглэл тогтоовол <m>\gamma^+</m> гэж тэмдэглэдэг.</p></statement></note><figure><caption></caption><image source="images/8.jpg" width="46%"/></figure><proof><p>Комплекс интеграл нь муруй шугаман 2-р төрлийн интегралаар илэрхийлэгддэг нь теорем 1-ийн мөрдлөгөө болсон. Мөн дээрх чанарууд түүнийх нь хувьд биелдгийг Математик анализын хичээл дээр үзсэнээ санавал чанарууд батлагдаж байна.</p></proof><fact><statement><p>(Интегралыг үнэлэх).
+<me>\left|\int\limits_\gamma f(z)dz\right|\leq \int\limits_\gamma |f|dl\leq |\gamma|\cdot \max\limits_{z\in\gamma [\alpha,\beta]}|f|.</me></p></statement><proof><p><m>|dz|=\sqrt{(dx)^2+(dy)^2}=dl</m> (Уртын дифференциал) байна.</p><p>Иймд гурвалжны тэнцэл биш ашиглавал
+<me>\left|\int\limits_\gamma f(z)dz\right|\leq \int\limits_\gamma \left|f(z)dz\right|=\int\limits_l |f(z)|dl</me> болж эхний тэнцэл биш
+батлагдав.</p><p>Эерэг функцээс уртын дифференциалаар авч байгаа учир
+<me>\int\limits_\gamma \left(\max\limits_{z\in \gamma[\alpha, \beta]}|f|-|f(z)|\right)dl\leq 0\Rightarrow</me>
+<me>\int\limits_\gamma|f(z)|dl\leq \int\limits_\gamma \max_{z\in \gamma [\alpha,\beta]}|f|dl=\max\limits_{z\in \gamma[\alpha,\beta]}|f|\int\limits_\gamma dl=\left(\max\limits_{z\in\gamma [\alpha,\beta]}|f|\right) \cdot |\gamma|</me>
+болж дараагийн тэнцэл биш батлагдав.</p></proof></fact></section>
+  <xi:include href="./ai-08.ptx" />
+  <xi:include href="./sem-08.ptx" />
+  <xi:include href="./hw-08.ptx" />
+</chapter>

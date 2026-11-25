@@ -1,0 +1,392 @@
+\begin{center}
+    \Large{\textbf{Лекц 2: Комплекс тооны зэрэг, Комплекс хавтгай дээрх топологи}}
+\end{center}
+\begin{center}
+    \textbf{Комплекс тооны комплекс зэрэг, логарифм}
+\end{center}
+\begin{thm}
+\begin{equation}\label{eulereq1}
+    \cos\varphi+i\sin\varphi=e^{i\varphi}
+\end{equation}
+    байна.
+\end{thm}
+\begin{prf}
+   $ \varepsilon(\varphi)=\cos\varphi+i\sin\varphi$ функцийн уламжлалыг авч үзье. 
+   $$\dfrac{d \varepsilon(\varphi)}{d\varphi}=\dfrac{d (\cos\varphi+i\sin\varphi)}{d\varphi}=-\sin\varphi+i\cos\varphi=i(\cos\varphi+i\sin\varphi)$$ болно. Иймд $\varepsilon(\varphi)$ функц 
+   \begin{equation}\label{difeq1}
+      y^{\prime}=iy, \quad y(0)=1    
+   \end{equation}
+  дифферинциал тэгшитгэлийн шийд болж байна. (\ref{difeq1}) тэгшитгэл $y=e^{i\varphi}$ цор ганц шийдтэй.
+\end{prf}
+(\ref{eulereq1})-г Эйлерийн томъёо гэдэг. Бид энэ томъёог ашиглан комплекс тооноос логарифм авах, зэрэгт дэвшүүлэх үйлдэл хийж болно.
+
+$z=(x,y)=re^{i\varphi} , -\pi<\varphi\leq \pi$ байг.  Тэгвэл $z=e^{\ln r+i\varphi}$ гэж бичиж болох тул $$z^{a+ib}=(e^{\ln r+i\varphi})^{a+ib}=e^{(a\ln r-b\varphi)+i(a\varphi+b\ln r)}$$
+ болно. Мөн $$\ln z=\ln r+i\varphi$$ гэж тодорхойлоё.
+ \begin{exm}
+     $(1+i)^{i}$-г тооцоолоё. 
+$(1+i)^{i} = e^{i \ln(1+i)}$
+
+Одоо, $\ln(1+i)$-г тооцъё. Үүний тулд $1+i$-г экспоненциал хэлбэрт шилжүүлье:
+
+$1+i = \sqrt{2} (\cos \frac{\pi}{4} + i \sin \frac{\pi}{4}) = \sqrt{2} e^{i \frac{\pi}{4}}$
+
+Ингээд натурал логарифм авбал:
+
+$\ln(1+i) = \ln(\sqrt{2}) + i \frac{\pi}{4} = \frac{1}{2} \ln 2 + i \frac{\pi}{4}$
+
+Энд $\ln(\sqrt{2}) = \frac{1}{2} \ln 2$ болохыг ашигласан.
+
+Ингээд үр дүнг эхний томъёонд орлуулбал:
+
+$(1+i)^{i} = e^{i (\frac{1}{2} \ln 2 + i \frac{\pi}{4})} = e^{-\frac{\pi}{4}} e^{i \frac{1}{2} \ln 2}$
+
+Эйлерийн томъёог ашиглан задалбал:
+
+$e^{i \frac{1}{2} \ln 2} = \cos (\frac{1}{2} \ln 2) + i \sin (\frac{1}{2} \ln 2)$
+
+Тэгвэл,
+
+$(1+i)^{i} = e^{-\frac{\pi}{4}} [\cos (\frac{1}{2} \ln 2) + i \sin (\frac{1}{2} \ln 2)]$
+
+$= e^{-\frac{\pi}{4}} \cos (\frac{1}{2} \ln 2) + i e^{-\frac{\pi}{4}} \sin (\frac{1}{2} \ln 2)$
+
+Ийнхүү $(1+i)^{i} \approx 0.7688 + 0.3592i$ болно.
+ \end{exm}
+\section{Битүү комплекс хавтгай \index{Битүү комплекс хавтгай} \\ Риманий бөмбөлөг}
+
+Ойлгоцыг гүнзгийрүүлэхийн үүднээс комплекс тоон $\mathbb{C}$ хавтгайг компактчилах шаардлага гардаг. Энэ нь төгсгөлгүй алсын цэг \index{Төгсгөлгүй алсын цэг} гэж нэрлэгдэх $z=\infty$ гэсэн тэмдэгэн элементээр түүнийг өргөтгөх явдал юм. Компактчилагдсан\index{ Компактчлал} хавтгайг битүү комплекс хавтгай гэх бөгөөд үүнийг $\overline{\mathbb{C}}$-ээр тэмдэглэнэ. Харин $\mathbb{C}$-ийг цаашид задгай хавтгай гэе. Иймд $\mathbb{C}\cup \{\infty\}=\overline{\mathbb{C}}.$ $z=\infty$ дээр алгебр үйлдэл гүйцэтгэх дүрэм өвөрмөц.
+
+$a$ ба $b (b\neq 0)$ төгсгөлөг комплекс тоонууд бол 
+$$\infty \pm a=a\pm \infty =\infty , $$ 
+$$a \cdot \infty =\infty \cdot a = \infty \cdot \infty=\infty, $$ 
+$$\dfrac{a}{\infty}=0 , \dfrac{\infty}{a}=\infty , \dfrac{b}{0}=\infty$$ бөгөөд $\infty \pm \infty$, $0\cdot \infty$, $\dfrac{0}{0}$, $\dfrac{\infty}{\infty}$ нь утгагүйд тооцогдоно.
+
+$\infty$ тооны геометр дүрслэлийг гарган авахын тулд комплекс тоог бөмбөлгийн цэг болгон тавих хэрэгтэй юм.
+
+Энэ зорилгоор $\mathbb{C}$-хавтгайн $O$ цэгт төвтэй, нэгж радиусгай $S$ бөмбөлөг авч улмаар огторгуйн тэгш өнцөгт декарт  $O\xi \eta \zeta$ системийн $O\xi$, $O\eta$ тэнхлэгүүд харгалзан $Ox$, $Oy$-тэй давхцаж, $O\zeta$ нь хойд туйл $N$ цэгийг дайрахаар байгуулалт хийе (Зураг 3). 
+\begin{figure}[h]
+    \centering
+   \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(0,0) rectangle (8,6.5);
+\coordinate (o) at (3,3);
+\coordinate (x1) at (1,1);
+\coordinate (y1) at (6.5,3);
+\coordinate (z1) at (3,5.9);
+\coordinate (z) at (6,1);
+\coordinate (n) at (3,4.6);
+\coordinate (Z) at (5,3);
+\coordinate (m) at (5,3);
+\draw[-stealth,line width=1pt] (o)  -- (x1) node[left] {$x,\xi$};
+\draw[-stealth,line width=1pt] (o)  -- (y1) node[right] {$y,\eta$};
+\draw[-stealth,line width=1pt] (o)  -- (z1) node[right] {$\zeta$};
+\draw (o) node[anchor=south east] {$O$};
+\fill(n) circle (0.05);
+\fill(z) circle (0.05);
+\draw (n) node[anchor=south west] {$N$};
+\draw[black](3,3) ellipse (2cm and 1.6cm);
+\draw[dashed] (5,3) arc (0:180:2cm and 0.6cm);
+\draw (1,3) arc (-180:0:2cm and 0.6cm);
+\draw ($(z)!-0.1!(n)$) -- ($(z)!0.75!(n)$);
+\draw[dashed] ($(z)!0.75!(n)$) -- (n);
+\draw ($(n)!-0.1!(z)$) -- (n);
+\draw ($(z)!0.75!(n)$) node[right] {$Z(\xi,\eta,\zeta)$};
+\draw (z) node[right] {$z(x,y,0)$};
+\fill ($(z)!0.75!(n)$) circle (0.05);
+\end{tikzpicture}
+     \captionof{figure}{}
+    \label{fig:my_label}
+\end{figure}
+Иймд 
+\begin{equation} \label{1.14}
+S:\xi ^2+\eta^2+\zeta^2=1
+\end{equation}
+бөгөөд $\forall z\in\mathbb{C}$ цэгийг $N$-тэй холбоход $Z$ цэгээр $S$-ийг цоолно. $N(0,0,1)$,$Z(\xi, \eta, \zeta)$, $z(x,y,0)$ цэгүүд  шулуун дээр орших учир $$\dfrac{\xi-0}{x-0}=\dfrac{\eta -0}{y-0}=\dfrac{\zeta-1}{0-1}=t$$ болж, $Nz$ шулууны параметрт тэгшитгэл:
+\begin{equation} \label{1.15}
+\xi=xt, \qquad \eta =yt,\qquad \zeta =1-t
+\end{equation}
+(\ref{1.15})-ыг (\ref{1.14})-т тавибал $t=\dfrac{2}{1+|z|^2}$ бөгөөд улмаар
+\begin{equation} \label{1.16}
+\xi=\dfrac{2x}{1+|z|^2}, \quad \eta= \dfrac{2y}{1+|z|^2}, \quad \zeta=\dfrac{|z|^2-1}{1+|z|^2}
+\end{equation}
+болно. (\ref{1.16})-ийн сүүлчийн тэнцлээс $1-\zeta =\dfrac{2}{1+|z|^2}$ тул 
+\begin{equation} \label{1.17}
+x=\dfrac{\xi}{1-\zeta}, \qquad y=\dfrac{\eta}{1-\zeta}
+\end{equation}
+(\ref{1.16}), (\ref{1.17}) томьёонуудаас харахад $z\rightarrow Z$ харгалзаа $\mathbb{C}$ олонлогийг $S\setminus N$ олонлогт харилцан нэгэн утгатай буулгах нь илэрхий. $N$ цэгт $z=\infty$ цэг харгалзсан гэж үзвэл  $\overline{\mathbb{C}}$ олонлог $S$-тэй харилцан нэгэн утгатай. $S$-ийг Риманий бөмбөлөг \index{Риманий бөмбөлөг} гэнэ.
+
+Комплекс тоог геометрт дүрслэх хоёр аргатай уялдаж, $\mathbb{C}$ олонлогт хоёр янзын зай оруулна. Нэг нь ердийн евклид зай:\index{Евклид зай} $z_1=(x_1,y_1)$ ба $z_2=(x_2,y_2)$ цэгүүдийн хоорондох зайг
+\begin{eqnarray} \label{1.18}
+ |z_2-z_1|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+\end{eqnarray}
+гэж, нөгөө нь бөмбөлгийн зай \index{Бөмбөлгийн зай}: тэдгээр цэгүүдийн $S$ бөмбөлөг дээрх $Z_1$ ба $Z_2$ дүрүүдийн хоорондын евклид зайг
+\begin{equation} \label{1.19}
+\rho(z_1,z_2)=\dfrac{2|z_2-z_1|}{\sqrt{1+|z_1|^2}\cdot \sqrt{1+|z_2|^2}}
+\end{equation}
+гэж авна. (\ref{1.19}) нь (\ref{1.16}) томьёонууд ашиглан жижигхэн гаргалгаа хийсний дараах бичиглэл.
+
+$\mathbb{C}$ олонлог дээр бичигдсэн (\ref{1.19}) томьёог $z$ ба $\infty$-ийн хувьд
+\begin{equation}
+\rho(z,\infty)=\dfrac{2}{\sqrt{1+|z|^2}} \label{1.20} \footnote{(\ref{1.20}) томьёо нь (\ref{1.19}) дээр $z_1=z$ гэж аваад хүртвэр хуваарийг $z_2$-т хувааж $z_2\rightarrow \infty$-ээр тооцож гаргасан.}
+\end{equation}
+гэж аваад $\overline{\mathbb{C}}$ олонлогт дэлгэрүүлж болно.
+
+$\forall z_1,z_2\in \overline{\mathbb{C}}$ авахад $\rho (z_1,z_2)\leq 2$ байх нь мэдээж. (\ref{1.18}), (\ref{1.19}) зайн алийг нь ч авсан $\mathbb{C}$ олонлог метрик огторгуй үүсгэнэ. Өөрөөр хэлбэл зайн ердийн аксиомууд биелэгдэнэ. Тухайлбал (\ref{1.18}) зайн хувьд гурвалжны аксиом нь
+$$|z_1+z_2|\leq |z_1|+|z_2|. \qquad (2(a)- \text{г \ үз})$$
+
+Бэхлэн авсан $\{|z|<R\}$, $R<\infty$ дугуйд орших зааглагдсан $M\subset \mathbb{C}$ олонлогт Евклид ба бөмбөлөг зайнууд чацуу чанартай байна. Учир нь хэрэв $M\subset \{|z|\leq R\}$ гэвэл $\forall z_1$, $z_2\in M$-ийн хувьд (\ref{1.19}) томьёо ёсоор
+\begin{equation}
+\dfrac{2|z_2-z_1|}{1+R^2}\leq \rho (z_1,z_2) \leq 2|z_2-z_1|
+\end{equation}
+байх хоёрлосон тэнцэл биш биелэгдэнэ. Иймд бөмбөлгийн зай нь зааглагдаагүй олонлогт ердийн байдлаар хэрэглэгдэнэ.
+
+$\mathbb{C}$ дахь олонлогт евклид, харин $\overline{\mathbb{C}}$ дахид бөмбөлөг зай авдаг.
+
+Комплекс тоон $\mathbb{C}$ ба $\overline{\mathbb{C}}$ олонлогт зай оруулах замаар метрик огторгуй үүсгэхтэй танилцлаа. Одоо эдгээр олонлогт топологи тодорхойлоё.
+
+$\varepsilon >0$ дурын тоо байг. $z_0\in\mathbb{C}$ цэгийн $\varepsilon$-орчин \index{$\varepsilon$-орчин} $U(z_0,\varepsilon)$ гэж евклид зайн тохиолдолд энэ $z_0$ цэгт төвтэй $\varepsilon$ радиустай дугуйг, өөрөөр хэлбэл
+\begin{equation}
+|z-z_0|<\varepsilon
+\end{equation}
+тэнцэтгэл биш хангах  $z\in \mathbb{C}$ цэгүүдийн олонлогийг ойлгоно. Харин $z_0\in\overline{\mathbb{C}}$ цэгийн $\varepsilon$-орчин гэж
+\begin{equation}
+\rho (z,z_0)<\varepsilon
+\end{equation}
+нөхцөлд тохирох $z\in \overline{\mathbb{C}}$ цэгүүдийн олонлогийг хэлнэ. 
+
+(\ref{1.20}) ёсоор $\rho (z,\infty)<\varepsilon$ нь $|z|>\sqrt{\dfrac{4}{\varepsilon^2}-1}$-тэй адил тул хавтгайн төгсгөлгүй алсын цэгийн $\varepsilon$-орчин гэдэг нь координатын эхэд төвтэй дугуйн гаднах цэгүүдийн олонлог ($z=\infty$ цэгийг агуулсан) юм.
+
+Хэрэв $\forall z_0\in E\subset \mathbb{C}$ (буюу $\overline{\mathbb{C}}$) цэг авахад $U(z_0,\varepsilon)\subset E$ байх $\varepsilon$-орчин олдож байвал $E$-г задгай олонлог гэнэ. Ингэж задгайн тухай ойлголт оруулснаар $\mathbb{C}$ ба $\overline{\mathbb{C}}$ олонлог топологи огторгуй үүсгэхийг хялбархан харуулж болно. $\mathbb{C}$ ба $\overline{\mathbb{C}}$ олонлогт 
+\begin{equation}
+0<|z-z_0|<\varepsilon , \quad 0<\rho (z,z_0)<\varepsilon
+\end{equation}
+байх $z$-ийн олонлогийг $z_0$ цэгийн цоорхойт орчин \index{Цоорхойт орчин} гэнэ.
+\begin{dfn}
+$z_0\in\mathbb{C}$  (тэрчлэн $\overline{\mathbb{C}}$) цэгийн цоорхойт аливаа орчинд $\mathbb{C}$  (тэрчлэн $\overline{\mathbb{C}}$)-ийн топологи утгаар $M\subset \mathbb{C}$ (тэрчлэн $\overline{\mathbb{C}}$) олонлогоос ядаж нэг цэг олдож байвал $z_0$ цэгийг $M$ олонлогийн хязгаарын цэг гэнэ. Өөрийнхөө хязгаарын бүх цэгээ агуулсан $M$ олонлогийг битүү олонлог \index{Битүү олонлог} гэнэ. $M$ олонлогт өөрийн нь хязгаарын бүх цэгийг нэгтгэн гаргасан олонлогийг $M$-ийн битүүрэлт\index{Олонлог битүүрэл} гэх ба түүнийг $\overline{M}$ гэж тэмдэглэнэ. 
+\end{dfn}
+\begin{exm}
+$M=\{0,\pm 1,\pm 2,\ldots \}$ нь $\mathbb{C}$-д хязгаарын цэг байхгүй (тул битүү олонлог), харин $\overline{\mathbb{C}}$-д өөртөө үл агуулагдах хязгаарын ганц $z=\infty$ цэгтэй (иймд битүү биш олонлог).
+
+$\overline{\mathbb{C}}$ дэх төгсгөлгүй аливаа олонлог ядаж нэг хязгаарын цэгтэй байна (Компактын зарчим) \index{Компактын зарчим}. $\mathbb{C}$-д компактын зарчим биелэгдэхгүй (Энэ нь өмнөх жишээнээс илэрхий). Харин зааглагдсан, төгсгөлгүй, өөрөөр хэлбэл, ямар нэг $\{|z|\leq R\}$, $R<\infty$ орших олонлогийн хувьд энэ зарчим биелэгдэнэ. Ийм олонлогийг компакт олонлог \index{Компакт олонлог}гэнэ.
+\end{exm}
+\begin{exm}
+Риманы $S$ бөмбөлөг дээр $z_0=1-\sqrt{3}i$ цэгийн дүрийг ол.
+\end{exm}
+\begin{sol}
+(\ref{1.16}) томьёог ашиглая. $|z_0|=|1-\sqrt{3}i|=2$, \\ $\xi =\dfrac{2\cdot 1}{1+4}=\dfrac{2}{5}$, $\eta =\dfrac{-2\sqrt{3}}{5}$, $\zeta =\dfrac{3}{5}$. Иймд $z_0$ цэг $\left(\dfrac{2}{5}, \dfrac{-2\sqrt{3}}{5}, \dfrac{3}{5}\right)$ цэгт буулгана.
+\end{sol}
+\begin{exm}
+$z$ цэг $S$ бөмбөрцөг дээр $(\xi, \eta,\zeta)$ цэгт буух бол $\overline{z}$, $-z$ цэгүүд юунд буух вэ?
+\end{exm}
+\begin{sol}
+$\overline{z}=x-iy$ үед түүний $S$ дээрх дүр нь:
+$$\left(\frac{2x}{1+|z|^2}, \frac{-2y}{1+|z|^2}, \frac{|z|^2-1}{1+|z|^2}\right)=(\xi, -\eta, \zeta)$$
+$$-z=-(x+iy) \ \text{үед} \ \left(-\frac{2x}{1+|z|^2}, \frac{-2y}{1+|z|^2}, \frac{|z|^2-1}{1+|z|^2}\right)=(-\xi, -\eta, \zeta).$$
+\end{sol}
+\begin{center}
+   \textbf{ Дасгал}
+\end{center}
+\begin{enumerate}
+    \item [7.] $z_1=2$, $z_2=-i$, $z_3=-1+2i$ цэгүүдийн $S$ дээрх дүрийг ол.
+    \item [8.] $S$ бөмбөрцөг дээрх $(-2,2,-1)$ ба $(1,1,1)$ цэгүүдийн эх дүр болох цэгүүдийг ол.
+    \item [9.] $|z|=r$ ба $y=x$ шугамуудын $S$-дээрх дүрийг ол.
+\end{enumerate}
+\section{Семинар 2}
+\begin{enumerate}
+    \item Тооцоол.
+    \begin{enumerate}
+        \item $\ln(3+4i)$
+        \item $(3+4i)^{3+2i}$
+        \item $(5+12i)^i$
+    \end{enumerate}
+     \item $z=x+iy , -\pi<y\leq \pi$ бол $e^z:=e^x\cos y+ie^x\sin y$ гэж тодорхойлоё. $$\ln(e^z)=z$$ батал.
+   \item  $w^z=e^{z\cdot\ln w}$ гэе. Дараах тэнцэтгэлүүдийг батал.
+   \begin{enumerate}
+        \item $w^{z_1}\cdot w^{z_2}=w^{z_1+z_2}$
+        \item $w^{z_1}: w^{z_2}=w^{z_1-z_2}$
+        \item $(w^{z_1})^{z_2}=w^{z_1\cdot z_2}$
+    \end{enumerate}
+     \item $z\in\mathbb{C}$ үед $$\cos z:=\dfrac{e^{iz}+e^{-iz}}{2}$$
+     $$\sin z:=\dfrac{e^{iz}-e^{-iz}}{2i}$$ гэе.
+    \begin{enumerate}
+        \item $\cos^z+\sin^2 z=1$ батал.
+        \item $\cos 2z=\cos^2 z-\sin^2 z$ батал.
+        \item $\sin 2z=2\sin z\cos z$ батал.
+        \item $|\cos z|=10$  тэгшитгэл шийдтэй юу?
+    \end{enumerate}
+     \item 
+    \begin{enumerate}
+        \item $\mathbb{N}\subset\mathbb{C}$ хувьд $\mathbb{N}$ олонлог битүү, задгай, компакт эсэхийг тодорхойл. $\mathbb{N}^{o}, \overline{\mathbb{N}} , Lim(\mathbb{N})$ ол.
+        \item $U(z,\varepsilon)$ задгай олонлог байхыг батал.
+        \item $A$ задгай байх $\longleftrightarrow$ түүний бүх цэг дотоод цэг байх .
+         \item $A$ битүү байх $\longleftrightarrow$ түүний бүх хязгаарын цэг нь $A$ д агуулагдах.
+         \item $\partial A:=\overline{A}\cap\overline{A^c}$ гэе. $\partial U(0,1)$ ол.
+    \end{enumerate}
+\end{enumerate}
+
+Гэрийн даалгавар:
+
+
+\begin{enumerate}
+    \item Тооцоол.
+
+a) $\ln(2-3i)$\\
+b) $(1+2i)^{2-i}$\\
+c) $(4-3i)^{3i}$
+\item
+$z=x+iy$ бол $\cos(-z)=\cos z$  болохыг батал. $Re(\sin z) , Im(\sin z)$ ол.
+\item
+$w^z=e^{z\cdot\ln w}$ гэе. Дараах тэнцэтгэлүүдийг батал.
+a) $(w_1\cdot w_2)^z=w_1^z\cdot w_2^z$\\
+b) $(w_1:w_2)^z=w_1^z:w_2^z$\\
+c) $(\sqrt[n]{w})^z=\sqrt[n]{w^z}$
+\item
+$z\in\mathbb{C}$ үед
+$$\tan z:=\frac{\sin z}{\cos z}$$
+$$\cot z:=\frac{\cos z}{\sin z}$$ гэе.
+a) $\tan^2 z+1=\sec^2 z$ батал.\\
+b) $\cot^2 z+1=\csc^2 z$ батал.\\
+c) $\tan(z_1+z_2)=\frac{\tan z_1+\tan z_2}{1-\tan z_1\tan z_2}$ батал.\\
+d) $|\sin z|=2$ тэгшитгэл шийдтэй юу?
+\item
+a) $\mathbb{Z}\subset\mathbb{C}$ хувьд $\mathbb{Z}$ олонлог битүү, задгай, компакт эсэхийг тодорхойл. $\mathbb{Z}^{o}, \overline{\mathbb{Z}} , Lim(\mathbb{Z})$ ол.\\
+b) $B(z_0,r)=\{z\in\mathbb{C}| |z-z_0|\leq r\}$ битүү олонлог байхыг батал.\\
+c) $A$ компакт байх $\longleftrightarrow$ $A$ битүү ба хязгаарлагдсан байх.\\
+d) $A$ компакт байх $\longleftrightarrow$ $A$-ын бүх дэд дараалал нь $A$ дотроо хуримтлагдах дэд дараалалтай байх.\\
+e) $\partial B(0,1)$ ол.
+\end{enumerate}
+\section{Дараалал, түүний хязгаар. \index{Дарааллын хязгаар} \\
+Муруй. Муж}
+
+Комплекс тоон $\{a_n\}$ дараалал нь сөрөг биш бүхэл тоон олонлогийг $\mathbb{C}$ (буюу $\overline{\mathbb{C}}$) хавтгай руу буулгадаг өвөрмөц функц юм. 
+\begin{dfn}
+$a\in\mathbb{C}$ (буюу $\overline{\mathbb{C}}$) цэгийн аливаа орчинд $\mathbb{C}$ (буюу  $\overline{\mathbb{C}}$)-ийн топологи утгаар $\{a_n\}$ дарааллын төгсгөлгүй олон элемент оршиж байвал уул дарааллыг $a$-хязгаартай гэж нэрлэнэ. $\{a_n\}$ дараалал $\mathbb{C}$-д цор ганц хязгаарын $a$ цэгтэй байвал $a$-руу нийллээ гэх бөгөөд
+\begin{equation} \label{1.25}
+\lim_{n\rightarrow \infty} a_n=a 
+\end{equation}
+гэж бичдэг.
+
+Комплекс (\ref{1.25}) тэнцэл хоёр бодит тоон тэнцэлтэй чацуу чанартай. $a\neq \infty$ гэвэл $a_n\neq \infty$ байх тул
+$$\lim_{n\rightarrow \infty} \re a_n=\re a, \qquad \lim_{n\rightarrow \infty} \im a_n=\im a$$
+\end{dfn}
+гэж хялбархан батлагдана.
+
+Ямар нэгэн тасралтгүй $z=\gamma (t)$ буулгалтын $[\alpha, \beta]$ хэрчмийн дүр болох цэгүүдийн $\gamma\subset \overline{\mathbb{C}}$ олонлогийг муруй\index{Муруй} гэж ойлгоно. Өөрөөр хэлбэл муруй нь бодит $t\in [\alpha, \beta]$ аргументийн комплекс утгат тасралтгүй $z=\gamma (t)=x(t)+iy (t)$ функц.
+
+$\gamma (\alpha)$ муруйн эхэн, $\gamma (\beta)$-төгсгөл гэнэ. Эхэн ба төгсгөл давхацвал уул муруйг битүү муруй\index{Битүү муруй} гэнэ. Параметрийн өсөлтөөр муруйн эерэг чиглэл тогтоогдоно. $[\alpha,\beta]$ хэрчмийн дотор орших ялгаатай хоёр буюу түүнээс дээш утгуудад муруйн ганц цэг харгалзаж байвал энэ цэгийг давхардлын цэг \index{Давхардлын цэг} гэнэ. Давхардлын цэггүй муруйг энгийн буюу Жорданы муруй \index{Жорданы муруй}гэнэ.
+
+$\gamma: [\alpha, \beta]\rightarrow \mathbb{C}$ муруй $t\in [\alpha,\beta]$ бүр дээр тасралтгүй $\gamma '(t)= x' (t)+iy '(t)$ уламжлал оршин байвал түүнийг тасралтгүй дифференциалчлагдах муруй гэнэ. Харин $t\in [\alpha,\beta]$ бүхэн дээр
+$\gamma ' (t)\neq 0$ нөхцөл (өөрөөр хэлбэл, онцгой цэггүй) биелэгдэж байвал гөлгөр муруй \index{Гөлгөр муруй} гэнэ. Бараг бүх $[\alpha, \beta]$ дээр $\gamma '(t)$ оршин байхын зэрэгцээ Лебегийн утгаар абсолют интегралчлагдаж \index{Лебегийн утгаар абсолют интегралчлагдах муруй} (өөрөөр хэлбэл 
+$$\int\limits_{\alpha}^\beta |\gamma ' (t)|dt= \int\limits_\alpha ^\beta \sqrt{ [x'(t)]^2+[y'(t)]^2}dt$$
+муруйн урт оршин байх) байвал уул муруйг шулуутгагдах муруй \index{Шулуутгагдах муруй} гэнэ.
+
+Функцийн (муруйн) гөлгөр байхыг тодорхойлоход нийтлэг хэллэгийн нэр томьёо ашиглаж тасралтгүй функцийг $C^0$ анги, тасралтгүй дифференциалчлагдах функцийг \index{Тасралтгүй дифференциалчлагдах муруй} $C^1$ ба $n$-эрэмбийн уламжлалын хамтаар тасралтгүй функцийг $C^n$ ангийн функцүүд \index{$C^n$ ангийн функцүүд} гэх мэт цаашид нэрлэе.
+\begin{dfn}
+$\mathbb{C}$ (буюу $\overline{\mathbb{C}}$) цэгүүдийн дараах хоёр чанартай олонлог $D$-г муж \index{Муж} гэнэ.
+\begin{enumerate}
+    \item [a)] Аливаа $a\in D$ цэгийн хувьд энэ цэгийн $D$-д орших орчин олдох (задгай байх чанар)
+    \item [б)] Аливаа $a,b\in D$ цэгүүдийн хувьд тэдгээрт төгсгөлүүдтэй зам $D$-д олдох (холбоост байх чанар).
+\end{enumerate}
+
+$D$-д үл орших атлаа $D$-ийн цэгүүдийн хязгаарын цэг (өөрөөр хэлбэл тэдгээрийн аливаа орчинд $D$-д орших цэгүүдээс гадна $D$-д үл орших ядаж нэг цэг олдож байх) болох $\overline{\mathbb{C}}$-ийн цэгийг $D$-ийн хилийн цэг \index{Хилийн цэг} гэнэ. $D$-ийн хилийн бүх цэгүүдийн цогцыг $D$-олонлогийн хил гэх бөгөөд үүнийг $\partial D$ гэж тэмдэглэнэ. \qquad $D\cup \partial D=\overline{D}$ байна.
+\end{dfn}
+\begin{thm}
+Аливаа $D$ мужийн $\partial D$ хил битүү олонлог байна. 
+\end{thm}
+\begin{prf}
+$\zeta _0$ нь $\partial D$ олонлогийн хязгаарын аль нэг цэг байг. $\zeta _0\in \partial D$ гэж батлах ёстой. $U(\zeta, \zeta_0)>0$ байх орчин авъя. Энэ орчинд $\zeta \in\partial D$ цэг оршино. Иймд $\zeta$ цэгт $V\subset U(\zeta, \zeta_0)$ байх орчин олдоно. $V$-д тэгэхлээр $U(\zeta, \zeta_0)$-д $D$-ийн ч, бас $D$-ийн биш ч цэгүүд олдоно. Иймд, $\zeta _0$ нь $D$-ийн хилийн цэг болох нь нотлогдов.
+\hfill $\blacksquare$\end{prf}
+Холбоост чанарын тухай өмнө оруулсан ойлголтыг өргөтгөе.
+\begin{dfn}
+Хэрэв $M$ олонлогийг хоосон биш  $M_1$, $M_2$ гэж $\overline{M}\cap M_2$ ба $M_1\cap \overline{M_2}$ огтлол бүр хоёулаа хоосон байхаар задлан тавьж болохгүй байвал $M$-ийг холбоост олонлог\index{Холбоост олонлог} гэнэ. Тухайлбал, битүү олонлогийг үл огтлолцсон битүү (бас хоосон биш) хоёр дэд олонлог болгон задлан тавьж болохгүй байвал түүнийг холбоост гэнэ. Битүү холбоост олонлогийг континум \index{Континум} гэж нэрлэнэ.
+Хэрэв $\partial D$ хил холбоост олонлог байвал $D\subset \overline{\mathbb{C}}$ мужийг нэг холбоост \index{Олонлог нэг холбоост}гэнэ. Эсрэг тохиолдолд олон холбоост \index{Олонлог олон холбоост} гэнэ. Холбоосын тоо төгсгөлөг байвал энэ тоог $D$ мужийн холбоосын эрэмбэ \index{Холбоосын эрэмбэ} гэнэ.
+
+$D$ мужийг агуулж байх $|z|<R$, $R<\infty$ дугуй оршин байвал түүнийг компакт муж \index{Компакт муж} гэнэ. $\overline{M}$ олонлог $D$-д агуулагдаж байвал $M$ нь $D$-д компактаар оршиж байна гэж ярьдаг. Компакт оршихыг $\subset$ гэж тэмдэглэдэг. Тэгэхлээр $\overline{M}\subset D$ гэвэл $M\subset D$ юм. $D$ нь компакт олонлог гэдгээс $D\subset \mathbb{C}$ байна.
+
+Цаашид нэг биш удаа хэрэглэх дараах теорем авч үзье. 
+\end{dfn}
+\begin{thm}
+$M\subset \overline{\mathbb{C}}$ нь холбоост олонлог, $N$ нь түүний хоосон биш дэд олонлог байг. Хэрэв $M$-ийн харьцангуй топологит \footnote{$\overline{\mathbb{C}}$-ийн топологи дахь цэгүүдийн орчны $M$-тай үүсгэх огтлол нь мөнхүү цэгүүдийн орчин байх топологийг $M\subset \overline{\mathbb{C}}$ олонлогийн харьцангуй топологи гэнэ.}  $N$ нь нэгэн зэрэг битүү, бас задгай байвал $M=N$ байна.
+\end{thm}
+\begin{prf}
+Эсрэгээс нь, тухайлбал, $N'=M\setminus N$ олонлог хоосон биш гэе. $\overline{\mathbb{C}}$-ийн топологи дахь $\overline{N}$ битүүрэл нь $M$-ийн топологи дахь түүний $(\overline{N})_M$ битүүрлийн цэгүүдээс тогтох нь мэдээж юм.
+
+Иймд $\overline{N}\cap N'=(\overline{N})_M\cap N'$, харин $N$ нь $M$-ийн топологит битүү тул $(\overline{N})_M=N$ бөгөөд эндээс $\overline{N}\cap N'=N\cap N'=\emptyset$.
+
+$N$ нь $M$-ийн тэрхүү топологит битүү байна. ($N'$-ийн хязгаарын цэгүүд $N$-ийн задгай чанараар $N$-д агуулагдахгүй. Эндээс тэдгээр нь $N'$-т оршино). Иймд $\overline{N}\cap N'$ огтлолд хэрэглэж байсны адилаар сэтгэж $\overline{N}'\cap N$ огтлолд хандвал $\overline{N}'\cap N$ нь хоосон болов. Энэ нь $M$-ийн холбоостын тодорхойлолтод харшилна.
+\hfill $\blacksquare$\end{prf}
+\begin{exm}
+Дараах параметрт тэгшитгэлүүдээр ямар шугам дүрслэгдэх вэ? 
+\begin{enumerate}
+    \item $z=a+(b-a)t$, \qquad $t\in [0,1];$
+    \item $z=t+it^2$, \qquad $t\in (-\infty, 0);$
+    \item $z=ae^{it}+\dfrac{1}{a}e^{-it}$, \quad $t\in (0, 2\pi]$, $a>1$;
+\end{enumerate}
+\end{exm}
+\begin{sol}
+\begin{enumerate}
+    \item $\left.\begin{array} {c}
+x(t)=a+(b-a)t, \\
+y(t)=0
+\end{array}\right\}$, $t\in [0,1]$ тул \\
+$z=a(t=0),$ $z=b(t=1)$ байх учир $z(t):[a,b].$
+\item 
+Өгөгдсөнөөс харахад $ \left.
+\begin{array}{c}
+x(t)=t \\
+y(t)=t^2
+\end{array} \right\},$ $t\in (-\infty, 0)$ бөгөөд \\
+$y=x^2$, $x<0$, өөрөөр хэлбэл $y=x^2$ параболын зүүн хагас; зурагдах чиглэл нь $z=\infty$ цэгээс $z=0$ рүү. 
+\item 
+\begin{align*}
+    z&=a(\cos t +i\sin t)+\dfrac{1}{a}(\cos t-i\sin t) \\
+    &=\left( a+\dfrac{1}{a}\right)\cos t+i\left(a-\dfrac{1}{a}\right)\sin t
+\end{align*}
+ тул 
+ $$\left.\begin{array}{c}
+x=x(t)=\left(a+\dfrac{1}{a}\right)\cos t, \\
+y=y(t)=\left(a-\dfrac{1}{a}\right) \sin t
+\end{array} \right\}, \quad t\in [0,2\pi], \quad a>1.$$
+
+Эндээс нар буруу тойролттой 
+$$\frac{x^2}{\left(a+\frac{1}{a}\right)^2}+\frac{y^2}{\left(a-\frac{1}{a}\right)^2}=1, \quad a>1$$  эллипс болой. 
+\end{enumerate} 
+\end{sol}
+\begin{exm}
+Дараах параметрт тэгшитгэлүүдээр $\partial D$ хил нь тодорхойлогдох $D$ муж дүрсэл.
+\begin{enumerate}
+    \item $z=a+Re^{i\varphi}, \quad 0\leq \varphi \leq 2\pi.$
+    \item $z=-it$, \quad $-\infty <t<\infty$
+    \item $z=t^2$, \quad $-\infty <t<\infty.$
+\end{enumerate}
+\end{exm}
+\begin{sol}
+\begin{enumerate}
+    \item $|z-a|=R$ тул $D$ нь $a$ цэгт төвтэй, $R$ радиустай дугуй: $|z-a|<R.$
+    \item $\left.\begin{array}{c}
+x=0, \\
+y=-t
+\end{array}\right\}$, $t\in (-\infty, \infty)$ болж $OY$ тэнхлэгийн сөрөг чиглэл дүрслэгдэх тул $D$ нь баруун хагас хавтгай.\\
+Учир нь: Сөрөг чиглэлтэй $OY$ шулуун нь $\infty$-цэгийг дайрсан $\partial D$ тойрог. $D$ муж $\partial D$-ийн тойрох чиглэлийн зүүн гарт үлдэх ёстойг тооцов. 
+\item $z=t^2$, $t\in (-\infty, \infty)$ гэдгээс 
+$\left.\begin{array}{c}
+x=x(t)=t^2\geq 0, \\
+y= y(t)=0
+\end{array}\right\}$, $t\in (-\infty, \infty)$ бөгөөд эндээс $z=x\geq 0$ болж $t\in (-\infty, 0)$ ба $t\in (0,\infty)$ тохиолдолд бодит тэнхлэгийн эерэг чиглэлд давхацсан хоёр цацраг үүснэ. Эдгээр цацраг параметрийн өсөх дарааллаар $z=\infty$ цэгээс $z=0$ цэгийг дайран $z=\infty$ цэгт дахин хүрэх аж. Иймд $D$ муж: $0<\arg  z<2\pi $ байна. Өөрөөр хэлбэл $OX$ тэнхлэгийн эерэг чиглэлд хагалбар бүхий бүх хавтгай болой
+\end{enumerate}
+\end{sol}
+\begin{center}
+   \textbf{ Дасгал}
+\end{center}
+\begin{enumerate}
+    \item [10.]Дараах тэгшитгэлүүдээр өгөгдсөн шугамыг тодорхойл.
+    \begin{enumerate}
+        \item [a)] $z=a(\cos t+i\sin t)$, \quad $\dfrac{\pi}{2}\leq t\leq \dfrac{3\pi}{2}$, $a>0.$
+        \item [б)] $z=t+i\sqrt{ 1-t^2}$, \quad $-1\leq t\leq 1.$
+    \end{enumerate}
+    \item [11. ] Дараах тэгшитгэлүүдээр $\partial D$ хил нь тодорхойлогдох $D$ муж дүрсэл.
+    \begin{enumerate}
+        \item [а)] $z=a+\rho e^{-it}$
+        \item [b)] $z=t+it^2$, \quad $-\infty<t<\infty$
+        \item [c)] $z=\dfrac{3t}{1+t^3}+i\dfrac{3t^2}{1+t^3}$, \quad $-1\leq t\leq 0.$
+    \end{enumerate}
+\end{enumerate}

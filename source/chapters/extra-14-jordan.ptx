@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-jordan">
+  <title>Жорданы лемм. Гол утга. Цувааны нийлбэр</title>
+<introduction>
+<p>Үлдэцийн теоремыг бодит интеграл бодоход хэрэглэх үед муруйн нэг хэсэг дээрх интеграл тэг рүү тэмүүлэхийг харуулах шаардлага байнга гардаг. Энэ хэсэгт үүнд зориулсан гол хэрэгсэл болох Жорданы леммийг баталж, гол утгын интеграл ба цувааны нийлбэр олоход хэрэглэнэ.</p>
+</introduction>
+<subsection xml:id="sec-jordan-ss1"><title>Жорданы лемм</title>
+
+<lemma xml:id="sec-jordan-b2"><title>Жорданы тэнцэтгэл биш</title><statement><p><m>0\le\theta\le\frac{\pi}{2}</m> үед <m>\sin\theta\ge\dfrac{2\theta}{\pi}</m>.</p></statement><proof><p><m>\sin</m> нь <m>[0,\frac\pi2]</m> дээр хотгор тул түүний график <m>(0,0)</m> ба <m>(\frac\pi2,1)</m> цэгүүдийг холбосон хөвчөөс доош орохгүй.</p></proof></lemma>
+
+<lemma xml:id="sec-jordan-b3"><title>Жорданы лемм</title><statement><p><m>f</m> функц <m>\{|z|\ge R_0,\ \im z\ge0\}</m> олонлог дээр тасралтгүй ба <me>M(R)=\max_{|z|=R,\ \im z\ge0}|f(z)|\xrightarrow[R\to\infty]{}0</me> байг. Тэгвэл аливаа <m>\lambda&gt;0</m>-ийн хувьд <me>\lim_{R\to\infty}\int_{C_R}f(z)e^{i\lambda z}dz=0,</me> энд <m>C_R=\{Re^{i\theta}:0\le\theta\le\pi\}</m> дээд хагас тойрог.</p></statement><proof><p><m>z=Re^{i\theta}</m> үед <m>|e^{i\lambda z}|=e^{-\lambda R\sin\theta}</m>. Иймд тэгш хэмийг ба Жорданы тэнцэтгэл бишийг ашиглавал <me>\Bigl|\int_{C_R}f(z)e^{i\lambda z}dz\Bigr|\le M(R)R\int_0^{\pi}e^{-\lambda R\sin\theta}d\theta=2M(R)R\int_0^{\pi/2}e^{-\lambda R\sin\theta}d\theta\le2M(R)R\int_0^{\pi/2}e^{-2\lambda R\theta/\pi}d\theta.</me> Сүүлийн интеграл <m>\frac{\pi}{2\lambda R}(1-e^{-\lambda R})</m>-тэй тэнцүү тул нийт үнэлгээ <m>\frac{\pi}{\lambda}M(R)\to0</m>.</p></proof></lemma>
+
+<remark xml:id="sec-jordan-b4"><p>ML-тэнцэтгэл бишээр зөвхөн <m>RM(R)\to0</m> үед интеграл тэг рүү тэмүүлдэг гэж гарна. Жорданы лемм <m>M(R)\to0</m> гэсэн илүү сул нөхцөлөөр хангалттай гэж хэлдэг. Жишээ нь <m>f(z)=\frac{1}{z}</m> үед <m>RM(R)=1</m> боловч Жорданы лемм хэрэглэгдэнэ. <m>\lambda&lt;0</m> үед доод хагас тойрог авна.</p></remark>
+
+<example xml:id="sec-jordan-b5"><statement><p><m>a&gt;0</m> үед <m>\displaystyle\int_{-\infty}^{\infty}\frac{x\sin x}{x^2+a^2}dx=\pi e^{-a}</m> гэж харуул.</p></statement><solution><p><m>f(z)=\frac{z}{z^2+a^2}</m>, <m>\lambda=1</m> гэж авъя. <m>M(R)\le\frac{R}{R^2-a^2}\to0</m>. <m>[-R,R]</m> хэрчим ба <m>C_R</m>-аас тогтох хаалттай контурын дотор <m>z=ia</m> гэсэн ганц энгийн туйл бий: <me>\Res_{z=ia}\frac{ze^{iz}}{z^2+a^2}=\frac{ia\,e^{-a}}{2ia}=\frac{e^{-a}}{2}.</me> Үлдэцийн теорем ба Жорданы леммээр <m>\int_{-\infty}^{\infty}\frac{xe^{ix}}{x^2+a^2}dx=2\pi i\cdot\frac{e^{-a}}{2}=\pi ie^{-a}</m>. Хуурмаг хэсгийг авбал хариу гарна.</p></solution></example>
+
+</subsection>
+<subsection xml:id="sec-jordan-ss6"><title>Гол утга ба бодит тэнхлэг дээрх туйл</title>
+
+<definition xml:id="sec-jordan-b7"><statement><p><m>f</m> нь <m>[a,b]</m> дээр <m>c\in(a,b)</m> цэгээс бусад газар тасралтгүй байг. Хэрэв <me>\mathrm{v.p.}\int_a^bf(x)dx=\lim_{r\to0+}\Bigl(\int_a^{c-r}+\int_{c+r}^{b}\Bigr)f(x)dx</me> хязгаар оршин байвал түүнийг <term>Кошийн гол утга</term> гэнэ. Үүнтэй адилаар <m>\mathrm{v.p.}\int_{-\infty}^\infty f=\lim_{R\to\infty}\int_{-R}^Rf</m>.</p></statement></definition>
+
+<lemma xml:id="sec-jordan-b8"><title>Жижиг нумын лемм</title><statement><p><m>z_0</m> нь <m>f</m>-ийн энгийн туйл ба <m>\gamma_r=\{z_0+re^{i\theta}:\theta_1\le\theta\le\theta_1+\alpha\}</m> эерэг чиглэлтэй нум байг. Тэгвэл <me>\lim_{r\to0}\int_{\gamma_r}f(z)dz=i\alpha\Res_{z=z_0}f.</me></p></statement><proof><p><m>f(z)=\frac{c_{-1}}{z-z_0}+g(z)</m>, энд <m>g</m> нь <m>z_0</m> орчимд голоморф тул зааглагдсан. <m>\int_{\gamma_r}\frac{dz}{z-z_0}=\int_{\theta_1}^{\theta_1+\alpha}i\,d\theta=i\alpha</m>, харин <m>|\int_{\gamma_r}g|\le\alpha r\max|g|\to0</m>.</p></proof></lemma>
+
+<example xml:id="sec-jordan-b9"><title>Дирихлегийн интеграл</title><statement><p><m>\displaystyle\int_0^\infty\frac{\sin x}{x}dx=\frac{\pi}{2}</m>.</p></statement><solution><p><m>f(z)=\frac{e^{iz}}{z}</m> функцийг <m>[-R,-r]</m>, <m>0</m> цэгийг дээгүүр нь тойрох хагас тойрог <m>\gamma_r</m> (сөрөг чиглэлд), <m>[r,R]</m> ба <m>C_R</m>-аас тогтох контураар интегралчилъя. Дотор нь туйл байхгүй тул нийт интеграл <m>0</m>. Жорданы леммээр <m>\int_{C_R}\to0</m>. Жижиг нумын леммээр (чиглэл сөрөг, <m>\alpha=\pi</m>) <m>\int_{\gamma_r}\to-\pi i\cdot\Res_0f=-\pi i</m>. Иймд <me>\lim\Bigl(\int_{-R}^{-r}+\int_r^R\Bigr)\frac{e^{ix}}{x}dx=\pi i.</me> Зүүн талд <m>x\mapsto-x</m> орлуулбал <m>\int_r^R\frac{e^{ix}-e^{-ix}}{x}dx=2i\int_r^R\frac{\sin x}{x}dx</m> тул <m>\int_0^\infty\frac{\sin x}{x}dx=\frac{\pi}{2}</m>.</p></solution></example>
+
+</subsection>
+<subsection xml:id="sec-jordan-ss10"><title>Цувааны нийлбэрийг үлдэцээр олох</title>
+<p><m>g(z)=\pi\cot\pi z</m> функц <m>z=n\in\Z</m> цэгүүдэд үлдэц нь <m>1</m> байх энгийн туйлтай: <m>\Res_{z=n}\pi\cot\pi z=\frac{\pi\cos\pi n}{\pi\cos\pi n}=1</m>. Мөн <m>Q_N</m> нь оройнууд нь <m>(N+\frac12)(\pm1\pm i)</m> байх квадратын хүрээ бол <m>|\cot\pi z|</m> нь <m>Q_N</m> дээр <m>N</m>-ээс үл хамаарах тогтмолоор зааглагдана (босоо талууд дээр <m>|\cot\pi z|=|\tanh\pi y|\le1</m>, хэвтээ талууд дээр <m>|\cot\pi z|\le\coth\frac{\pi}{2}</m>).</p>
+<theorem xml:id="sec-jordan-b11"><statement><p><m>f=P/Q</m> рационал функц, <m>\deg Q\ge\deg P+2</m> ба <m>f</m>-ийн туйлууд <m>z_1,\dots,z_m</m> бүхэл тоо биш байг. Тэгвэл <me>\sum_{n=-\infty}^{\infty}f(n)=-\sum_{k=1}^{m}\Res_{z=z_k}\bigl[\pi\cot(\pi z)f(z)\bigr].</me></p></statement><proof><p><m>N</m> хангалттай их үед <m>Q_N</m>-ийн дотор <m>-N,\dots,N</m> ба бүх <m>z_k</m> оршино. Үлдэцийн теоремоор <me>\frac{1}{2\pi i}\oint_{Q_N}\pi\cot(\pi z)f(z)dz=\sum_{n=-N}^{N}f(n)+\sum_k\Res_{z_k}[\pi\cot(\pi z)f(z)].</me> <m>Q_N</m> дээр <m>|\pi\cot\pi z|\le C</m>, <m>|f(z)|\le\frac{A}{|z|^2}\le\frac{A}{N^2}</m> ба <m>Q_N</m>-ийн урт <m>8N+4</m> тул зүүн тал <m>O(1/N)\to0</m>.</p></proof></theorem>
+
+<example xml:id="sec-jordan-b12"><statement><p><m>a&gt;0</m> үед <m>\displaystyle\sum_{n=-\infty}^{\infty}\frac{1}{n^2+a^2}=\frac{\pi}{a}\coth\pi a</m>.</p></statement><solution><p><m>f(z)=\frac1{z^2+a^2}</m>-ийн туйлууд <m>\pm ia</m>. <m>\cot(i y)=-i\coth y</m> тул <me>\Res_{z=ia}\frac{\pi\cot\pi z}{z^2+a^2}=\frac{\pi\cot(\pi ia)}{2ia}=-\frac{\pi\coth\pi a}{2a},</me> <m>z=-ia</m> дээр ч мөн адил. Теоремоор нийлбэр нь <m>\frac{\pi}{a}\coth\pi a</m>.</p></solution></example>
+
+<example xml:id="sec-jordan-b13"><title><m>\zeta(2)=\frac{\pi^2}{6}</m></title><p><m>h(z)=\frac{\pi\cot\pi z}{z^2}</m> функцийн хувьд дээрх баталгааны үнэлгээ хэвээр тул <m>\sum_{\text{бүх туйл}}\Res h=0</m>. <m>n\ne0</m> үед <m>\Res_{z=n}h=\frac1{n^2}</m>. <m>\pi\cot\pi z=\frac1z-\frac{\pi^2z}{3}-\cdots</m> тул <m>\Res_{z=0}h=-\frac{\pi^2}{3}</m>. Иймд <m>2\sum_{n\ge1}\frac1{n^2}-\frac{\pi^2}{3}=0</m>, өөрөөр хэлбэл <m>\zeta(2)=\frac{\pi^2}{6}</m>.</p></example>
+</subsection>
+</section>

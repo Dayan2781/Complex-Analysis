@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-12">
+  <title>Гэрийн даалгавар 12</title>
+  <exercises xml:id="exercises-homework-12">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw12-1">
+      <statement><p><m>\frac{e^z}{z-1}</m>-ийг <m>0&lt;|z-1|&lt;\infty</m> мужид Лораны цуваанд задал.</p></statement>
+      <solution><p><m>e^z=e\cdot e^{z-1}=e\sum\frac{(z-1)^n}{n!}</m> тул <m>\frac{e^z}{z-1}=e\sum_{n\ge0}\frac{(z-1)^{n-1}}{n!}=\frac{e}{z-1}+e+\frac{e(z-1)}2+\dots</m></p></solution>
+    </exercise>
+    <exercise xml:id="hw12-2">
+      <statement><p><m>\frac1{z^2+1}</m>-ийг <m>0&lt;|z-i|&lt;2</m> мужид Лораны цуваанд задал.</p></statement>
+      <solution><p><m>\frac1{z^2+1}=\frac1{z-i}\cdot\frac{1}{2i+(z-i)}=\frac1{z-i}\cdot\frac1{2i}\cdot\frac1{1+\frac{z-i}{2i}}</m>. <m>|z-i|&lt;2</m> тул <me>\frac1{z^2+1}=\sum_{n\ge0}\frac{(-1)^n(z-i)^{n-1}}{(2i)^{n+1}}.</me></p></solution>
+    </exercise>
+    <exercise xml:id="hw12-3">
+      <statement><p><m>f(z)=\dfrac{z-\pi}{\sin^2z}</m>-ийн бүх онцгой цэгийг ангил.</p></statement>
+      <solution><p><m>\sin^2z</m>-ийн тэгүүд <m>z=k\pi</m>, бүгд <m>2</m>-р эрэмбийн. <m>z=\pi</m> дээр хүртвэр <m>1</m>-р эрэмбийн тэгтэй тул <m>1</m>-р эрэмбийн туйл. <m>k\ne1</m> үед <m>2</m>-р эрэмбийн туйл. <m>z=\infty</m> нь туйлуудын хязгаарын цэг тул тусгаарлагдсан онцгой цэг биш.</p></solution>
+    </exercise>
+    <exercise xml:id="hw12-4">
+      <statement><p><m>z_0</m> цэг <m>f</m>-ийн зайлуулж болох онцгой цэг байх зайлшгүй ба хүрэлцээтэй нөхцөл нь <m>f</m> нь <m>z_0</m>-ийн цоорхойт орчинд зааглагдсан байх гэж батал.</p></statement>
+      <solution><p>Зайлшгүй: <m>f</m>-ийн хязгаар оршин байвал орчинд зааглагдсан. Хүрэлцээтэй: <m>|f|\le M</m> бол Лораны коэффициент <m>c_{-n}=\frac1{2\pi i}\oint_{|z-z_0|=\rho}f(z)(z-z_0)^{n-1}dz</m>, <m>n\ge1</m>. ML-ээр <m>|c_{-n}|\le M\rho^n\to0</m> (<m>\rho\to0</m>). Үндсэн хэсэг тэг.</p></solution>
+    </exercise>
+    <exercise xml:id="hw12-5">
+      <statement><p><m>e^{1/z}</m> функц <m>z=0</m>-ийн дурын цоорхойт орчинд тэгээс бусад аливаа <m>w</m> утгыг (төгсгөлгүй олон удаа) авдаг гэж батал.</p></statement>
+      <solution><p><m>e^{1/z}=w</m> <m>\iff\frac1z=\ln|w|+i(\arg w+2k\pi)</m>. Иймд <m>z_k=\frac{1}{\ln|w|+i(\arg w+2k\pi)}</m> бөгөөд <m>k\to\infty</m> үед <m>z_k\to0</m>. Аливаа орчинд эдгээрийн төгсгөлгүй олон нь орно.</p></solution>
+    </exercise>
+  </exercises>
+</section>

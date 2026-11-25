@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-homework-08">
+  <title>Гэрийн даалгавар 8</title>
+  <exercises xml:id="exercises-homework-08">
+    <introduction><p>Гэрийн даалгаврыг дараагийн семинарын өмнө гүйцэтгэнэ. Бодолт нь даалгавар өгснөөс 14 хоногийн дараа энэ хуудсанд автоматаар нээгдэнэ.</p></introduction>
+    <exercise xml:id="hw08-1">
+      <statement><p><m>\int_\gamma|z|\,\overline z\,dz</m>, <m>\gamma</m>: <m>|z|=1</m> тойргийн дээд хагас, <m>1</m>-ээс <m>-1</m> хүртэл.</p></statement>
+      <solution><p><m>z=e^{it}</m>, <m>0\le t\le\pi</m>: <m>|z|=1</m>, <m>\overline z=e^{-it}</m>, <m>dz=ie^{it}dt</m>. <m>\int_0^\pi i\,dt=\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-2">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\left(z+\frac1z\right)^3dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>(z+\frac1z)^3=z^3+3z+\frac3z+\frac1{z^3}</m>. Өмнөх семинарын үр дүнгээр зөвхөн <m>\frac3z</m> гишүүн тэг биш хувь нэмэр өгнө: <m>3\cdot2\pi i=6\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-3">
+      <statement><p><m>\oint_\gamma\im z\,dz</m>, <m>\gamma</m>: <m>0\to1\to i\to0</m> гурвалжин.</p></statement>
+      <solution><p><m>0\to1</m>: <m>\im z=0</m> тул <m>0</m>. <m>1\to i</m>: <m>z=1+t(i-1)</m>, <m>\im z=t</m>, <m>\int_0^1t(i-1)dt=\frac{i-1}2</m>. <m>i\to0</m>: <m>z=i(1-t)</m>, <m>dz=-i\,dt</m>, <m>\int_0^1(1-t)(-i)dt=-\frac i2</m>. Нийт <m>-\frac12</m>. (Грийний томьёогоор <m>\oint f\,dz=2i\iint\frac{\partial f}{\partial\overline z}dA=-\text{талбай}</m> гэж шалгаж болно.)</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-4">
+      <statement><p><m>C_R</m>: <m>|z|=R</m>, <m>\im z\ge0</m> хагас тойрог бол <m>\displaystyle\lim_{R\to\infty}\int_{C_R}\frac{dz}{z^2+4}=0</m> гэж батал.</p></statement>
+      <solution><p><m>R&gt;2</m> үед <m>|z^2+4|\ge R^2-4</m>, <m>L=\pi R</m> тул <m>\bigl|\int\bigr|\le\frac{\pi R}{R^2-4}\to0</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-5">
+      <statement><p><m>\int_\gamma\frac{dz}{z}</m>-ийг <m>1</m>-ээс <m>-1</m> хүртэл (a) нэгж тойргийн дээд хагасаар; (b) доод хагасаар тооцоол. Үр дүнгээс юу дүгнэх вэ?</p></statement>
+      <solution><p>(a) <m>z=e^{it}</m>, <m>t:0\to\pi</m>: <m>\int_0^\pi i\,dt=\pi i</m>. (b) <m>t:0\to-\pi</m>: <m>-\pi i</m>. Ялгаа <m>2\pi i=\oint_{|z|=1}\frac{dz}z</m>. <m>\frac1z</m> нь <m>\C\setminus\{0\}</m> дээр эх функцгүй гэдгийн шинж.</p></solution>
+    </exercise>
+  </exercises>
+</section>
