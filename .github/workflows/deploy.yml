@@ -36,6 +36,10 @@ jobs:
       - name: Build HTML
         run: pretext build html
 
+      - name: Show build log on failure
+        if: failure()
+        run: grep -h -B2 -A40 "transcript of the LaTeX run" logs/*.log | head -300 || true
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: output/html
