@@ -27,5 +27,41 @@
       <statement><p><m>e^z=3z^n</m> тэгшитгэл <m>|z|&lt;1</m> дугуйд <m>n</m> язгууртай гэж батал.</p></statement>
       <hint><p><m>|z|=1</m> дээр <m>|e^z|\le e&lt;3=|3z^n|</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem16-7">
+      <statement><p><m>z^5+z^3+5z^2+2</m> нь <m>|z|&lt;1</m> дугуйд хэдэн тэгтэй вэ?</p></statement>
+      <hint><p><m>|5z^2|=5&gt;4</m>. Хариу: <m>2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-8">
+      <statement><p><m>z^4-5z+1</m> нь <m>|z|&lt;1</m> ба <m>|z|&lt;2</m> дугуйд хэдэн тэгтэй вэ?</p></statement>
+      <hint><p><m>|5z|=5&gt;2</m>; <m>|z^4|=16&gt;11</m>. Хариу: <m>1</m> ба <m>4</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-9">
+      <statement><p><m>\displaystyle\frac1{2\pi i}\oint_{|z|=1}\frac{f'}{f}dz</m>, <m>f=z^3e^z</m>.</p></statement>
+      <hint><p><m>\frac{f'}f=\frac3z+1</m>. Хариу: <m>3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-10">
+      <statement><p><m>n</m>-р зэргийн олон гишүүнт <m>n</m> тэгтэй гэж Рушегийн теоремоор батал.</p></statement>
+      <hint><p>Хангалттай том <m>R</m>-д <m>|a_nz^n|&gt;|\text{бусад}|</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-11">
+      <statement><p><m>0</m>-ийг хөдөлгөхгүй нэгж дугуйн бүх автоморфизмыг ол.</p></statement>
+      <hint><p><m>f</m> ба <m>f^{-1}</m>-д Шварцын лемм: <m>|f'(0)|=1</m>. Хариу: <m>e^{i\theta}z</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-12">
+      <statement><p><m>f:\mathbb D\to\mathbb D</m>, <m>f(0)=0</m> бол <m>|f(\frac12)|\le\frac12</m> гэж батал.</p></statement>
+      <hint><p>Шварцын лемм.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-13">
+      <statement><p>Тогтмол биш голоморф функц нэгж дугуйг шулуун дээр буулгаж чадах уу?</p></statement>
+      <hint><p>Нээлттэй буулгалтын теорем: дүр нээлттэй байх ёстой. Үгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-14">
+      <statement><p>Аль нь нэгж дугуйтай конформ эквивалент вэ: <m>\C</m>, дээд хагас хавтгай, <m>\C\setminus(-\infty,0]</m>?</p></statement>
+      <hint><p><m>\C</m> үгүй (Лиувилл). Бусад нь тийм (Кэйлийн буулгалт, <m>\sqrt z</m>).</p></hint>
+    </exercise>
+    <exercise xml:id="sem16-15">
+      <statement><p><m>z^6-6z+10</m> нь <m>|z|&lt;1</m> дугуйд хэдэн тэгтэй вэ?</p></statement>
+      <hint><p><m>|10|&gt;1+6</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

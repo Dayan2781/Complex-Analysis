@@ -27,5 +27,41 @@
       <statement><p><m>f(z)=1/z</m> функц <m>\C\setminus\{0\}</m> дээр эх функцтэй юу? <m>\C\setminus(-\infty,0]</m> дээр яах вэ?</p></statement>
       <hint><p>Эх функцтэй бол битүү муруйн интеграл <m>0</m> байх ёстой, гэтэл <m>\oint_{|z|=1}\frac{dz}z=2\pi i</m>. Хоёр дахь мужид эх функц нь <m>\ln z</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem09-7">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{dz}{z-\frac12}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Олон холбоост мужийн Кошийн теоремоор жижиг тойрог руу шилжүүл. Хариу: <m>2\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-8">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{dz}{z(z-1)}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\frac1{z(z-1)}=\frac1{z-1}-\frac1z</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-9">
+      <statement><p><m>\displaystyle\oint_{|z|=1/2}\frac{dz}{z(z-1)}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Дотор зөвхөн <m>0</m>. Хариу: <m>-2\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-10">
+      <statement><p><m>\displaystyle\int_0^{1+i}z^2dz</m>-ийг тооцоол.</p></statement>
+      <hint><p>Эх функц <m>\frac{z^3}3</m>. Хариу: <m>\frac{-2+2i}{3}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-11">
+      <statement><p><m>\int_\gamma\frac{dz}{z}</m>, <m>\gamma</m>: <m>|z|=1</m>-ийн баруун хагас, <m>-i</m>-ээс <m>i</m> хүртэл.</p></statement>
+      <hint><p><m>\ln z</m> эх функц (<m>\re z&gt;0</m> орчимд). Хариу: <m>\frac{i\pi}2-(-\frac{i\pi}2)=i\pi</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-12">
+      <statement><p><m>\displaystyle\int_0^{\pi i}e^{2z}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p>Хариу: <m>\frac{e^{2\pi i}-1}2=0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-13">
+      <statement><p><m>ze^z</m>-ийн эх функцийг ол.</p></statement>
+      <hint><p>Хэсэгчлэн интегралчил: <m>(z-1)e^z</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-14">
+      <statement><p><m>\oint_{|z|=1}|z|^2dz=0</m> боловч <m>|z|^2</m> голоморф биш. Энэ нь Мореагийн теоремтой зөрчилдөх үү?</p></statement>
+      <hint><p>Үгүй: Мореагийн теорем бүх битүү муруй (эсвэл гурвалжин) дээр интеграл тэг байхыг шаарддаг. Жишээ нь <m>|z|=\frac12</m> дээр ч <m>0</m> гарна, гэхдээ <m>|z-1|=\frac12</m> гэх мэт тойргууд дээр тэг биш.</p></hint>
+    </exercise>
+    <exercise xml:id="sem09-15">
+      <statement><p><m>\displaystyle\oint_{|z-2|=1}\ln z\,dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\ln z</m> нь <m>\re z&gt;0</m>-д голоморф. Хариу: <m>0</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

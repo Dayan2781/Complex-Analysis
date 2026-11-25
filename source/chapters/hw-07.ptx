@@ -23,5 +23,25 @@
       <statement><p><m>z_1,z_2,z_3,z_4</m> цэгүүд нэг тойрог (эсвэл шулуун) дээр оршино <m>\iff</m> давхар харьцаа <m>(z_1,z_2,z_3,z_4)</m> бодит гэж батал.</p></statement>
       <solution><p><m>z_2,z_3,z_4</m>-ийг <m>1,0,\infty</m>-д буулгах <m>T(z)=(z,z_2,z_3,z_4)</m> бутархай шугаман буулгалт тойргийг тойрогт буулгана. <m>z_2,z_3,z_4</m>-ийг дайрах тойрог <m>1,0,\infty</m>-г дайрах тойрог, өөрөөр хэлбэл бодит тэнхлэгт шилжинэ. Иймд <m>z_1</m> тэр тойрог дээр <m>\iff T(z_1)\in\R</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw07-6">
+      <statement><p><m>|z|&lt;2</m> дугуйг <m>|w|&lt;1</m> дугуйд буулгаж, <m>1\mapsto0</m> байх буулгалтыг ол.</p></statement>
+      <solution><p><m>\zeta=\frac z2</m> нь нэгж дугуйд буулгаж, <m>1\mapsto\frac12</m>. <m>w=\frac{\zeta-1/2}{1-\zeta/2}=\frac{2(z-1)}{4-z}</m> (эргэлтийн үржигдэхүүнээр ялгаатай хувилбарууд бас тохирно).</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-7">
+      <statement><p><m>|z-1|&lt;1</m> дугуй <m>w=\dfrac{z-2}{z}</m> буулгалтаар юунд буух вэ?</p></statement>
+      <solution><p>Тойрог <m>0</m> ба <m>2</m>-ыг дайрна; <m>0\mapsto\infty</m>, <m>2\mapsto0</m> тул шулуун. <m>1+i\mapsto\frac{-1+i}{1+i}=i</m>: хуурмаг тэнхлэг. <m>1\mapsto-1</m> тул дугуй <m>\re w&lt;0</m> хагас хавтгайд буух.</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-8">
+      <statement><p>Дээд хагас хавтгайг нэгж дугуйд буулгаж, <m>w(2i)=0</m>, <m>\arg w'(2i)=0</m> байх буулгалтыг ол.</p></statement>
+      <solution><p><m>w=e^{i\theta}\frac{z-2i}{z+2i}</m>, <m>w'(2i)=\frac{e^{i\theta}}{4i}</m>, <m>\arg=\theta-\frac\pi2=0</m>. Хариу: <m>w=i\frac{z-2i}{z+2i}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-9">
+      <statement><p>Бутархай шугаман буулгалт давхар харьцааг хадгална гэж батал.</p></statement>
+      <solution><p>Аливаа бутархай шугаман буулгалт нь шилжүүлэлт, <m>z\mapsto az</m> ба <m>z\mapsto\frac1z</m>-ийн давхцуулалт. Эхний хоёрт ялгавар бүр нэг тогтмолоор үржигдэх тул харьцаа хадгалагдана. <m>\frac1z</m>-д <m>\frac1{z_i}-\frac1{z_j}=\frac{z_j-z_i}{z_iz_j}</m> бөгөөд давхар харьцаанд <m>z_iz_j</m> үржигдэхүүнүүд хураагдана.</p></solution>
+    </exercise>
+    <exercise xml:id="hw07-10">
+      <statement><p><m>0&lt;\im z&lt;\pi</m> зурвас <m>w=\dfrac{e^z-i}{e^z+i}</m> буулгалтаар юунд буух вэ?</p></statement>
+      <solution><p><m>\zeta=e^z</m> зурвасыг дээд хагас хавтгайд, <m>w=\frac{\zeta-i}{\zeta+i}</m> нь дээд хагас хавтгайг нэгж дугуйд буулгана. Хариу: <m>|w|&lt;1</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

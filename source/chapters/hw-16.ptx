@@ -23,5 +23,25 @@
       <statement><p><m>\displaystyle\frac{1}{2\pi i}\oint_{|z|=4}\cot z\,dz</m>-ийг аргументийн зарчмаар ол.</p></statement>
       <solution><p><m>\cot z=\frac{(\sin z)'}{\sin z}</m>. <m>|z|&lt;4</m> дахь <m>\sin z</m>-ийн тэгүүд: <m>0,\pm\pi</m> (бүгд энгийн), туйлгүй. Хариу: <m>3</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw16-6">
+      <statement><p><m>2z^5-6z^2+z+1</m> нь <m>1&lt;|z|&lt;2</m> цагирагт хэдэн тэгтэй вэ?</p></statement>
+      <solution><p><m>|z|=1</m>: <m>|-6z^2|=6&gt;2+1+1</m> тул <m>|z|&lt;1</m>-д <m>2</m> тэг (тойрог дээр тэг байхгүй). <m>|z|=2</m>: <m>|2z^5|=64&gt;24+2+1</m> тул <m>|z|&lt;2</m>-т <m>5</m> тэг. Хариу: <m>3</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-7">
+      <statement><p><m>\lambda&gt;1</m> үед <m>ze^{\lambda-z}=1</m> тэгшитгэл <m>|z|&lt;1</m> дугуйд яг нэг язгууртай бөгөөд тэр нь бодит гэж батал.</p></statement>
+      <solution><p><m>|z|=1</m> дээр <m>|ze^{\lambda-z}|=e^{\lambda-\re z}\ge e^{\lambda-1}&gt;1</m>. Рушегээр <m>ze^{\lambda-z}-1</m> ба <m>ze^{\lambda-z}</m> ижил тооны, өөрөөр хэлбэл <m>1</m> тэгтэй. <m>h(x)=xe^{\lambda-x}-1</m>: <m>h(0)=-1&lt;0</m>, <m>h(1)=e^{\lambda-1}-1&gt;0</m> тул <m>(0,1)</m>-д бодит язгуур бий, тэр нь цорын ганц.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-8">
+      <statement><p>Нэгж дугуйг өөрт нь харилцан нэг утгатай голоморфоор буулгаж, <m>f(\frac12)=0</m> байх бүх <m>f</m>-ийг ол.</p></statement>
+      <solution><p><m>\varphi(z)=\frac{z-1/2}{1-z/2}</m> тийм буулгалт. <m>f\circ\varphi^{-1}</m> нь <m>0</m>-ийг хөдөлгөхгүй автоморфизм тул <m>e^{i\theta}z</m>. Хариу: <m>f=e^{i\theta}\frac{z-1/2}{1-z/2}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-9">
+      <statement><p><m>f:\mathbb D\to\mathbb D</m> голоморф, <m>f(0)=0</m>, <m>|f'(0)|=1</m> бол <m>f(z)=e^{i\theta}z</m> гэж батал.</p></statement>
+      <solution><p><m>g(z)=\frac{f(z)}z</m> (<m>g(0)=f'(0)</m>) голоморф ба Шварцын леммийн баталгаагаар <m>|g|\le1</m>. <m>|g(0)|=1</m> тул максимум модулийн зарчмаар <m>g</m> тогтмол, <m>|g|=1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw16-10">
+      <statement><p><m>\displaystyle\frac{1}{2\pi i}\oint_{|z|=1}\frac{f'}{f}dz</m>-ийг ол, <m>f(z)=\frac{z^2(z-3)}{z-\frac12}</m>.</p></statement>
+      <solution><p>Дотор: <m>z=0</m> давхар тэг, <m>z=\frac12</m> энгийн туйл (<m>3</m> гадна). Аргументийн зарчмаар <m>2-1=1</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

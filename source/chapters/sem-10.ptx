@@ -27,5 +27,41 @@
       <statement><p><m>f</m> бүхэл ба <m>|f(z)|\le A|z|^n</m> (<m>|z|\ge1</m>) бол <m>f</m> нь хамгийн ихдээ <m>n</m>-р зэргийн олон гишүүнт гэж батал.</p></statement>
       <hint><p>Кошийн тэнцэтгэл биш <m>|f^{(k)}(0)|\le\frac{k!\max_{|z|=R}|f|}{R^k}</m>-ийг <m>k&gt;n</m> үед <m>R\to\infty</m>-д хэрэглэ.</p></hint>
     </exercise>
+    <exercise xml:id="sem10-7">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{e^z}{z^2}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>f=e^z</m>, <m>f'(0)=1</m>. Хариу: <m>2\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-8">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{z^2}{z+1}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>f=z^2</m>, <m>f(-1)=1</m>. Хариу: <m>2\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-9">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{\cos z}{z}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p>Хариу: <m>2\pi i\cos0=2\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-10">
+      <statement><p><m>\displaystyle\oint_{|z-2|=1}\frac{e^z}{(z-2)^2}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>f'(2)=e^2</m>. Хариу: <m>2\pi ie^2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-11">
+      <statement><p><m>\displaystyle\oint_{|z|=4}\frac{\sin z}{z(z-\pi)}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p>Хоёр цэг тус бүрт <m>\sin</m> тэг болно. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-12">
+      <statement><p>Дундаж утгын чанар <m>f(a)=\frac1{2\pi}\int_0^{2\pi}f(a+re^{it})dt</m>-ийг Кошийн томьёоноос гарга.</p></statement>
+      <hint><p><m>z=a+re^{it}</m>, <m>dz=ire^{it}dt</m> орлуул.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-13">
+      <statement><p><m>f</m> нь <m>|z|\le1</m>-ийн орчинд голоморф ба <m>|z|=1</m> дээр <m>|f|\le1</m> бол <m>|f^{(n)}(0)|\le n!</m> гэж батал.</p></statement>
+      <hint><p>Кошийн тэнцэтгэл биш, <m>R=1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-14">
+      <statement><p><m>|z^2-1|</m>-ийн <m>|z|\le1</m> дээрх хамгийн их утгыг ол.</p></statement>
+      <hint><p><m>|z^2-1|\le|z|^2+1\le2</m>, тэнцэл <m>z=\pm i</m> үед. Хариу: <m>2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem10-15">
+      <statement><p><m>|f|</m>-ийн хамгийн бага утга хил дээр байх албагүй жишээ гарга.</p></statement>
+      <hint><p><m>f(z)=z</m> ба <m>|z|\le1</m>: хамгийн бага нь <m>z=0</m> цэгт. (Хэрэв <m>f\ne0</m> бол <m>\frac1f</m>-д максимум зарчим хэрэглэгдэнэ.)</p></hint>
+    </exercise>
   </exercises>
 </section>

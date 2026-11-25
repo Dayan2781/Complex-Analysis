@@ -23,5 +23,25 @@
       <statement><p><m>u=r^n\cos n\theta</m> функц гармоник гэж туйлын координатад шалгаад, хосмог гармоник функцийг ол.</p></statement>
       <solution><p>Туйлын Лапласиан <m>\Delta u=u_{rr}+\frac1ru_r+\frac1{r^2}u_{\theta\theta}=r^{n-2}\cos n\theta\,(n(n-1)+n-n^2)=0</m>. <m>u_r=\frac1rv_\theta</m>-ээс <m>v=r^n\sin n\theta</m>; <m>f=z^n</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw06-6">
+      <statement><p><m>u=\sin x\ch y</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <solution><p><m>f'=u_x-iu_y=\cos x\ch y-i\sin x\sh y=\cos z</m>. Иймд <m>f=\sin z+iC</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-7">
+      <statement><p><m>u=\ln\sqrt{x^2+y^2}</m> (<m>x&gt;0</m>) байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <solution><p><m>u_x=\frac x{x^2+y^2}</m>, <m>u_y=\frac{y}{x^2+y^2}</m>. <m>f'=u_x-iu_y=\frac{x-iy}{|z|^2}=\frac1z</m>. <m>f=\ln z+iC</m> (гол салбар).</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-8">
+      <statement><p><m>u</m> гармоник бол <m>U(x,y)=u(x^2-y^2,2xy)</m> гармоник гэж батал.</p></statement>
+      <solution><p>Нэг холбоост орчинд <m>u=\re g</m>, <m>g</m> голоморф. <m>U=\re g(z^2)</m> ба <m>g(z^2)</m> голоморф тул <m>U</m> гармоник. (Шууд тооцоогоор: <m>\Delta U=4|z|^2(\Delta u)(z^2)=0</m>.)</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-9">
+      <statement><p><m>w=z^2</m> буулгалт хавтгайн аль хэсгийг сунгаж (<m>|f'|&gt;1</m>), аль хэсгийг агшаах вэ?</p></statement>
+      <solution><p><m>|f'|=2|z|</m>. <m>|z|&gt;\frac12</m> сунгана, <m>|z|&lt;\frac12</m> агшаана.</p></solution>
+    </exercise>
+    <exercise xml:id="hw06-10">
+      <statement><p><m>u=\varphi(r)</m>, <m>r=|z|</m> хэлбэрийн бүх гармоник функцийг (<m>z\ne0</m>) ол.</p></statement>
+      <solution><p>Туйлын Лапласиан: <m>\varphi''+\frac1r\varphi'=0</m>, <m>(r\varphi')'=0</m>, <m>r\varphi'=a</m>. Хариу: <m>u=a\ln|z|+b</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

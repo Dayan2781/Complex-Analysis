@@ -23,5 +23,25 @@
       <statement><p><m>\Arctan z=\dfrac1{2i}\Ln\dfrac{1+iz}{1-iz}</m> (<m>z\ne\pm i</m>) томьёог гарга.</p></statement>
       <solution><p><m>\tan w=z</m> гэвэл <m>\frac{e^{iw}-e^{-iw}}{i(e^{iw}+e^{-iw})}=z</m>. <m>e^{iw}</m>-ээр үржүүлбэл <m>e^{2iw}-1=iz(e^{2iw}+1)</m>, <m>e^{2iw}(1-iz)=1+iz</m>. Иймд <m>2iw=\Ln\frac{1+iz}{1-iz}</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw04-6">
+      <statement><p><m>\cos(1+i)</m>-ийн бодит ба хуурмаг хэсгийг ол.</p></statement>
+      <solution><p><m>\cos z=\cos x\ch y-i\sin x\sh y</m> тул <m>\cos(1+i)=\cos1\ch1-i\sin1\sh1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw04-7">
+      <statement><p><m>\Ln(1-i\sqrt3)</m>-ийн бүх утгыг ол.</p></statement>
+      <solution><p><m>|1-i\sqrt3|=2</m>, <m>\arg=-\frac\pi3</m>. Хариу: <m>\ln2+i(-\frac\pi3+2k\pi)</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw04-8">
+      <statement><p><m>\sin z=i</m> тэгшитгэлийг бод.</p></statement>
+      <solution><p><m>w=e^{iz}</m>: <m>\frac{w-w^{-1}}{2i}=i\Rightarrow w^2+2w-1=0</m>, <m>w=-1\pm\sqrt2</m>. <m>iz=\Ln w</m>: <m>w=\sqrt2-1</m>: <m>iz=\ln(\sqrt2-1)+2k\pi i</m>, <m>z=2k\pi+i\ln(\sqrt2+1)</m>. <m>w=-1-\sqrt2</m>: <m>iz=\ln(\sqrt2+1)+i(\pi+2k\pi)</m>, <m>z=\pi+2k\pi-i\ln(\sqrt2+1)</m>. Шалгалт: <m>\sin(i\ln(1+\sqrt2))=i\sh\ln(1+\sqrt2)=i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw04-9">
+      <statement><p><m>|\cos z|^2=\cos^2x+\sh^2y</m> гэж батал.</p></statement>
+      <solution><p><m>|\cos z|^2=\cos^2x\ch^2y+\sin^2x\sh^2y=\cos^2x(1+\sh^2y)+\sin^2x\sh^2y=\cos^2x+\sh^2y</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw04-10">
+      <statement><p>Олон утгат зэрэгт функцийн хувьд <m>i^{1/2}\cdot i^{1/2}</m> (утга бүрийн үржвэрүүдийн олонлог) нь <m>i^1</m>-тэй тэнцүү юу?</p></statement>
+      <solution><p><m>i^{1/2}=\{\pm e^{i\pi/4}\}</m>. Үржвэрүүд: <m>e^{i\pi/2}=i</m> ба <m>-e^{i\pi/2}=-i</m>. Иймд <m>\{i,-i\}\ne\{i\}=i^1</m>: <m>z^az^b=z^{a+b}</m> олонлогийн утгаар ерөнхийдөө биелэхгүй.</p></solution>
+    </exercise>
   </exercises>
 </section>

@@ -27,5 +27,41 @@
       <statement><p><m>f</m> нь <m>D</m> мужид голоморф ба <m>|f|</m> тогтмол бол <m>f</m> тогтмол гэж батал.</p></statement>
       <hint><p><m>u^2+v^2=c</m>-г <m>x,y</m>-ээр дифференциалчилж, Коши–Римантай хамт <m>u_x,u_y</m>-ийн хувьд шугаман систем гарга. Тодорхойлогч нь <m>u^2+v^2</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem05-7">
+      <statement><p><m>f=z^3</m> Коши–Риманы нөхцөлийг хангадгийг шалгаж, <m>f'</m>-г ол.</p></statement>
+      <hint><p><m>u=x^3-3xy^2</m>, <m>v=3x^2y-y^3</m>. <m>f'=3z^2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-8">
+      <statement><p><m>f=\re z</m> хаана ч дифференциалчлагдахгүй гэж батал.</p></statement>
+      <hint><p><m>u=x</m>, <m>v=0</m>: <m>u_x=1\ne0=v_y</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-9">
+      <statement><p><m>f=e^{\overline z}</m> хаана дифференциалчлагдах вэ?</p></statement>
+      <hint><p><m>u=e^x\cos y</m>, <m>v=-e^x\sin y</m>. Нөхцөлөөс <m>\cos y=0</m> ба <m>\sin y=0</m>: хаана ч үгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-10">
+      <statement><p><m>f=\dfrac{z}{z^2+1}</m>-ийн уламжлалыг ол.</p></statement>
+      <hint><p>Ноогдворын дүрэм: <m>\frac{1-z^2}{(z^2+1)^2}</m>, <m>z\ne\pm i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-11">
+      <statement><p><m>f=|z|</m> хаана ч дифференциалчлагдахгүй гэж батал.</p></statement>
+      <hint><p><m>z\ne0</m> үед <m>u=\sqrt{x^2+y^2}</m>, <m>v=0</m>, <m>u_x=\frac x{|z|}</m>, <m>u_y=\frac y{|z|}</m> хоёулаа тэг байж чадахгүй. <m>z=0</m>-д <m>u</m>-ийн хэсгийн уламжлал байхгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-12">
+      <statement><p><m>f=x+ay+i(bx+cy)</m> голоморф байх <m>a,b,c</m>-г ол.</p></statement>
+      <hint><p><m>c=1</m>, <m>a=-b</m>; <m>f=(1+ib)z</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-13">
+      <statement><p><m>f</m> голоморф ба <m>D</m> мужид <m>f'\equiv0</m> бол <m>f</m> тогтмол гэж батал.</p></statement>
+      <hint><p><m>u_x=u_y=v_x=v_y=0</m> ба муж холбоост.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-14">
+      <statement><p><m>f=u+iv</m> голоморф ба <m>v=u^2</m> бол <m>f</m> тогтмол гэж батал.</p></statement>
+      <hint><p>Коши–Риман: <m>u_x=2uu_y</m>, <m>u_y=-2uu_x</m>. Эндээс <m>u_x(1+4u^2)=0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem05-15">
+      <statement><p><m>f=\overline z^2</m> зөвхөн <m>z=0</m> цэгт дифференциалчлагдана гэж батал.</p></statement>
+      <hint><p><m>u=x^2-y^2</m>, <m>v=-2xy</m>: <m>2x=-2x</m>, <m>-2y=2y</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

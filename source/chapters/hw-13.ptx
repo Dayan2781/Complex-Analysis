@@ -23,5 +23,25 @@
       <statement><p><m>\displaystyle\oint_{|z|=2}\frac{z^9}{z^{10}-1}dz</m>-ийг (a) төгсгөлөг туйлуудын үлдэцээр; (b) <m>\infty</m> дахь үлдэцээр тооцоол.</p></statement>
       <solution><p>(a) <m>10</m> туйл бүгд <m>|z|=1</m> дээр, тус бүрт <m>\Res=\frac{z_k^9}{10z_k^9}=\frac1{10}</m>. Нийлбэр <m>1</m>, хариу <m>2\pi i</m>. (b) <m>f(z)=\frac1z\cdot\frac1{1-z^{-10}}=\frac1z+\frac1{z^{11}}+\dots</m> тул <m>\Res_\infty f=-1</m> ба <m>\oint=-2\pi i\Res_\infty f=2\pi i</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw13-6">
+      <statement><p><m>\frac{z^2}{z^2+1}</m>-ийн <m>z=i</m> дахь үлдэцийг ол.</p></statement>
+      <solution><p>Энгийн туйл: <m>\frac{i^2}{2i}=-\frac1{2i}=\frac i2</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-7">
+      <statement><p><m>\displaystyle\oint_{|z|=3}ze^{3/z}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>ze^{3/z}=z\sum\frac{3^nz^{-n}}{n!}</m>; <m>z^{-1}</m>-ийн коэффициент <m>n=2</m> үед: <m>\frac92</m>. Хариу: <m>2\pi i\cdot\frac92=9\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-8">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{dz}{z^3(z^{10}-2)}</m>-ийг тооцоол.</p></statement>
+      <solution><p>Бүх туйл (<m>0</m> ба <m>|z|=2^{1/10}</m> дээрх <m>10</m> цэг) дотор. Иймд интеграл <m>=-2\pi i\Res_\infty</m>. <m>f\sim z^{-13}</m> тул <m>\Res_\infty=0</m>. Хариу: <m>0</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-9">
+      <statement><p><m>\frac1{z^n-1}</m>-ийн <m>z=1</m> дахь үлдэцийг ол.</p></statement>
+      <solution><p>Энгийн туйл: <m>\frac1{nz^{n-1}}\big|_{z=1}=\frac1n</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw13-10">
+      <statement><p><m>\displaystyle\oint_{|z|=1}(z+1)^2e^{1/z}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>(z^2+2z+1)(1+\frac1z+\frac1{2z^2}+\frac1{6z^3}+\dots)</m>-ийн <m>z^{-1}</m>-ийн коэффициент: <m>\frac16+2\cdot\frac12+1=\frac{13}6</m>. Хариу: <m>\frac{13\pi i}{3}</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

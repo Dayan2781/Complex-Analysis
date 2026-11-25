@@ -27,5 +27,41 @@
       <statement><p>Олонлогийн утгаар <m>\Ln(z_1z_2)=\Ln z_1+\Ln z_2</m> гэж батал. Гэтэл гол утгын хувьд <m>\ln(z_1z_2)=\ln z_1+\ln z_2</m> үргэлж биелэх үү?</p></statement>
       <hint><p>Модуль үржигдэж, аргумент нэмэгдэнэ. Гол утгын хувьд <m>z_1=z_2=-1</m>: <m>\ln1=0</m>, харин <m>\ln(-1)+\ln(-1)=2\pi i</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem04-7">
+      <statement><p><m>\sin i</m> ба <m>\cos(\frac\pi2+i)</m>-г тооцоол.</p></statement>
+      <hint><p><m>\sin(iy)=i\sh y</m>. Хариу: <m>i\sh1</m> ба <m>-\sin i=-i\sh1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-8">
+      <statement><p><m>\Ln(-1)</m> ба <m>\Ln e</m>-ийн бүх утга, гол утгыг ол.</p></statement>
+      <hint><p><m>\Ln(-1)=i(\pi+2k\pi)</m>, гол утга <m>i\pi</m>; <m>\Ln e=1+2k\pi i</m>, гол утга <m>1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-9">
+      <statement><p><m>2^i</m>-ийн бүх утгыг ол.</p></statement>
+      <hint><p><m>2^i=e^{i\Ln2}=e^{-2k\pi}(\cos\ln2+i\sin\ln2)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-10">
+      <statement><p><m>e^z=i</m> тэгшитгэлийг бод.</p></statement>
+      <hint><p><m>z=\Ln i=i(\frac\pi2+2k\pi)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-11">
+      <statement><p><m>\sin z=\cos z</m> тэгшитгэлийг бод. Бодит бус шийд байх уу?</p></statement>
+      <hint><p><m>e^{2iz}=i</m> болгож хувирга. Хариу: <m>z=\frac\pi4+k\pi</m>, зөвхөн бодит.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-12">
+      <statement><p><m>|e^{iz}|</m>-ийг ол. <m>|e^{iz}|\le1\iff\im z\ge0</m> гэж харуул.</p></statement>
+      <hint><p><m>|e^{iz}|=e^{\re(iz)}=e^{-y}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-13">
+      <statement><p><m>e^{\overline z}=\overline{e^z}</m> гэж батал. <m>e^z</m> хаана бодит утга авах вэ?</p></statement>
+      <hint><p>Тодорхойлолтоор. <m>e^z</m> бодит <m>\iff\sin y=0\iff y=k\pi</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-14">
+      <statement><p><m>0&lt;\im z&lt;\frac\pi2</m> зурвас <m>w=e^z</m> буулгалтаар юунд буух вэ?</p></statement>
+      <hint><p><m>\arg w=y\in(0,\frac\pi2)</m>, <m>|w|=e^x\in(0,\infty)</m>: I мөч.</p></hint>
+    </exercise>
+    <exercise xml:id="sem04-15">
+      <statement><p><m>\sqrt{-4}</m>-ийн гол утга ба <m>\sqrt i</m>-ийн хоёр утгыг ол. <m>\sqrt z</m>-д яагаад зүсэлт хэрэгтэй вэ?</p></statement>
+      <hint><p><m>2i</m>; <m>\pm\frac{1+i}{\sqrt2}</m>. <m>0</m>-ийг тойрон нэг удаа эргэхэд <m>\sqrt z</m> тэмдгээ сольдог.</p></hint>
+    </exercise>
   </exercises>
 </section>

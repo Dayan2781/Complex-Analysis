@@ -23,5 +23,25 @@
       <statement><p><m>\int_\gamma\frac{dz}{z}</m>-ийг <m>1</m>-ээс <m>-1</m> хүртэл (a) нэгж тойргийн дээд хагасаар; (b) доод хагасаар тооцоол. Үр дүнгээс юу дүгнэх вэ?</p></statement>
       <solution><p>(a) <m>z=e^{it}</m>, <m>t:0\to\pi</m>: <m>\int_0^\pi i\,dt=\pi i</m>. (b) <m>t:0\to-\pi</m>: <m>-\pi i</m>. Ялгаа <m>2\pi i=\oint_{|z|=1}\frac{dz}z</m>. <m>\frac1z</m> нь <m>\C\setminus\{0\}</m> дээр эх функцгүй гэдгийн шинж.</p></solution>
     </exercise>
+    <exercise xml:id="hw08-6">
+      <statement><p><m>\oint_{|z|=1}\overline z^2dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>\overline z^2=z^{-2}</m> тул <m>0</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-7">
+      <statement><p><m>\oint_{|z|=1}\re z\,dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>\re z=\frac12(z+\frac1z)</m> тул <m>\frac12\cdot2\pi i=\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-8">
+      <statement><p><m>\int_\gamma\frac{dz}{z-a}</m>, <m>\gamma</m>: <m>|z-a|=r</m>-ийн дээд хагас, <m>a+r</m>-ээс <m>a-r</m> хүртэл.</p></statement>
+      <solution><p><m>z=a+re^{it}</m>, <m>0\le t\le\pi</m>: <m>\int_0^\pi i\,dt=\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-9">
+      <statement><p><m>\int_\gamma f\,dz</m> нь муруйн параметрчлэлээс (чиглэлийг хадгалсан) хамаарахгүй гэж батал.</p></statement>
+      <solution><p><m>z=\gamma(t)</m>, <m>t=\varphi(s)</m>, <m>\varphi'&gt;0</m> бол <m>\int f(\gamma(\varphi(s)))\gamma'(\varphi(s))\varphi'(s)ds=\int f(\gamma(t))\gamma'(t)dt</m> (хувьсагч солих).</p></solution>
+    </exercise>
+    <exercise xml:id="hw08-10">
+      <statement><p><m>\left|\oint_{|z|=3}\dfrac{e^z}{z^2+1}dz\right|\le\dfrac{6\pi e^3}{8}</m> гэж батал.</p></statement>
+      <solution><p><m>|z|=3</m> дээр <m>|e^z|=e^x\le e^3</m>, <m>|z^2+1|\ge9-1=8</m>, <m>L=6\pi</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

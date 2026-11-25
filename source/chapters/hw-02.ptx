@@ -19,5 +19,29 @@
       <statement><p><m>a_n\to a</m> бол <m>|a_n|\to|a|</m> ба <m>\overline{a_n}\to\overline a</m> гэж батал. Эсрэг дүгнэлт (модуль нийлэхээс дараалал нийлэх) үнэн үү?</p></statement>
       <solution><p><m>\bigl||a_n|-|a|\bigr|\le|a_n-a|</m> ба <m>|\overline{a_n}-\overline a|=|a_n-a|</m>. Эсрэг дүгнэлт буруу: <m>a_n=i^n</m> үед <m>|a_n|=1\to1</m>, гэвч <m>a_n</m> дараалал нийлэхгүй.</p></solution>
     </exercise>
+    <exercise xml:id="hw02-5">
+      <statement><p><m>M=\{|z|&lt;1\}\cup\{2\}</m> олонлогийн битүүрэлт, дотоод цэгүүд ба хилийг ол.</p></statement>
+      <solution><p>Битүүрэлт <m>\{|z|\le1\}\cup\{2\}</m>. Дотоод цэгүүд <m>\{|z|&lt;1\}</m> (<m>2</m> тусгаарлагдсан цэг тул дотоод биш). Хил <m>\{|z|=1\}\cup\{2\}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw02-6">
+      <statement><p>Риманы бөмбөлөг дээрх <m>(\frac12,\frac12,\frac{\sqrt2}2)</m> цэгийн эх дүрийг ол.</p></statement>
+      <solution><p><m>z=\frac{\xi+i\eta}{1-\zeta}=\frac{(1+i)/2}{1-\sqrt2/2}=\frac{1+i}{2-\sqrt2}=(1+i)\left(1+\frac{\sqrt2}{2}\right)</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw02-7">
+      <statement><p>Бөмбөлөг дээрх тойрог (<m>Aξ+Bη+Cζ=D</m> хавтгайтай огтлол) хавтгай дээр тойрог эсвэл шулуунд шилжинэ, <m>N</m>-ийг дайрах тойрог нь шулуунд шилжинэ гэж батал.</p></statement>
+      <solution><p><m>\xi=\frac{2x}{1+|z|^2}</m>, <m>\eta=\frac{2y}{1+|z|^2}</m>, <m>\zeta=\frac{|z|^2-1}{1+|z|^2}</m>-г орлуулж <m>1+|z|^2</m>-аар үржүүлбэл <me>(C-D)|z|^2+2Ax+2By-(C+D)=0.</me> <m>C\ne D</m> үед тойрог, <m>C=D</m> үед шулуун. <m>N=(0,0,1)</m> хавтгай дээр байх нь яг <m>C=D</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw02-8">
+      <statement><p><m>a_n\to a</m> бол <m>\frac{a_1+\dots+a_n}{n}\to a</m> гэж батал.</p></statement>
+      <solution><p><m>\varepsilon&gt;0</m>, <m>n&gt;N</m> үед <m>|a_n-a|&lt;\varepsilon</m> байг. Тэгвэл <me>\Bigl|\frac{a_1+\dots+a_n}{n}-a\Bigr|\le\frac{\sum_{k\le N}|a_k-a|}{n}+\frac{n-N}{n}\varepsilon.</me> Эхний гишүүн <m>n\to\infty</m> үед <m>0</m> руу тэмүүлэх тул <m>\limsup\le\varepsilon</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw02-9">
+      <statement><p><m>a_n=i^n+\frac1n</m> дарааллын хязгаарын цэгүүдийг ол.</p></statement>
+      <solution><p><m>\frac1n\to0</m> ба <m>i^n</m> нь <m>1,i,-1,-i</m> утгыг үечлэн авна. Хязгаарын цэгүүд: <m>\pm1,\pm i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw02-10">
+      <statement><p><m>\C\setminus\{0\}</m> нэг холбоост юу?</p></statement>
+      <solution><p>Үгүй. <m>|z|=1</m> тойрог <m>0</m>-ийг тойрдог тул муж дотор цэг болтол агшааж болохгүй. Мөн <m>\overline\C</m> дахь хил нь <m>\{0,\infty\}</m> гэсэн холбоост биш олонлог.</p></solution>
+    </exercise>
   </exercises>
 </section>

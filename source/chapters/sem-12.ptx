@@ -27,5 +27,41 @@
       <statement><p><m>z=\infty</m> цэгийг ангил: <m>z^3+z</m>, <m>e^z</m>, <m>\frac{z^2+1}{z-1}</m>.</p></statement>
       <hint><p><m>w=1/z</m> орлуулж, <m>w=0</m> цэгийг судал. <m>3</m>-р эрэмбийн туйл; нэн онцгой; энгийн туйл.</p></hint>
     </exercise>
+    <exercise xml:id="sem12-7">
+      <statement><p><m>\frac{\sin z}{z^4}</m>-ийн <m>0</m> орчмын Лораны цуваа ба үндсэн хэсгийг ол.</p></statement>
+      <hint><p><m>\frac1{z^3}-\frac1{6z}+\frac z{120}-\dots</m>; үндсэн хэсэг <m>\frac1{z^3}-\frac1{6z}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-8">
+      <statement><p><m>e^{1/z^2}</m>-ийн <m>z=0</m> онцгой цэгийг ангил.</p></statement>
+      <hint><p>Үндсэн хэсэг төгсгөлгүй: нэн онцгой.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-9">
+      <statement><p><m>\frac{z-1}{z^2-1}</m>-ийн онцгой цэгүүдийг ангил.</p></statement>
+      <hint><p><m>=\frac1{z+1}</m> (<m>z\ne1</m>): <m>1</m> зайлуулж болох, <m>-1</m> энгийн туйл.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-10">
+      <statement><p><m>\frac1{z(z-2)}</m>-ийг <m>|z|&gt;2</m> мужид задал.</p></statement>
+      <hint><p><m>\frac1{z^2}\cdot\frac1{1-2/z}</m>. Хариу: <m>\sum_{n\ge2}2^{n-2}z^{-n}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-11">
+      <statement><p><m>\frac1z</m>-ийг <m>|z-1|&gt;1</m> мужид <m>z-1</m>-ийн зэргээр задал.</p></statement>
+      <hint><p><m>\frac1{(z-1)(1+\frac1{z-1})}</m>. Хариу: <m>\sum_{n\ge0}(-1)^n(z-1)^{-n-1}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-12">
+      <statement><p><m>z=0</m> нь <m>\frac1{1-\cos z}</m>-ийн хэддүгээр эрэмбийн туйл вэ?</p></statement>
+      <hint><p><m>1-\cos z</m>-ийн тэг <m>2</m>-р эрэмбийн. Хариу: <m>2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-13">
+      <statement><p><m>\tan z</m>-ийн онцгой цэгүүдийг ангил.</p></statement>
+      <hint><p><m>z=\frac\pi2+k\pi</m>: энгийн туйлууд.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-14">
+      <statement><p><m>\sin\frac1z</m>-ийн <m>z=0</m> цэгийг ангилж, <m>0</m> руу нийлэх тэгүүдийг ол.</p></statement>
+      <hint><p>Нэн онцгой. Тэгүүд <m>z_k=\frac1{k\pi}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem12-15">
+      <statement><p><m>\frac{\sin z}{z}</m>-ийн <m>z=\infty</m> цэгийг ангил.</p></statement>
+      <hint><p><m>\sin\frac1w\cdot w</m>-ийн <m>w=0</m>: нэн онцгой.</p></hint>
+    </exercise>
   </exercises>
 </section>

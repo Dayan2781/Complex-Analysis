@@ -27,5 +27,41 @@
       <statement><p><m>\int_\gamma z^2dz</m>-ийг <m>0</m>-ээс <m>1+i</m> хүртэл (a) хэрчмээр; (b) <m>y=x^2</m> параболын дагуу тооцоол.</p></statement>
       <hint><p>(b)-д <m>z=t+it^2</m>, <m>dz=(1+2it)dt</m>. Хоёулаа <m>\frac{(1+i)^3}{3}=\frac{-2+2i}{3}</m> гарна. Дараагийн лекцээр яагаад ижил гарахыг тайлбарлана.</p></hint>
     </exercise>
+    <exercise xml:id="sem08-7">
+      <statement><p><m>\int_\gamma z\,dz</m>, <m>\gamma</m>: <m>|z|=1</m>-ийн дээд хагас, <m>1</m>-ээс <m>-1</m> хүртэл.</p></statement>
+      <hint><p>Параметрчил эсвэл <m>\frac{z^2}2</m> эх функц. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-8">
+      <statement><p><m>\int_\gamma|z|^2dz</m>, <m>\gamma</m>: <m>0</m>-ээс <m>1+i</m> хүртэлх хэрчим.</p></statement>
+      <hint><p><m>z=t(1+i)</m>. Хариу: <m>\frac{2(1+i)}3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-9">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{\overline z}{z}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\overline z=\frac4z</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-10">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{dz}{\overline z}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\frac1{\overline z}=z</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-11">
+      <statement><p><m>\int_\gamma e^zdz</m>, <m>\gamma</m>: <m>0</m>-ээс <m>i\pi</m> хүртэлх хэрчим (параметрчилж).</p></statement>
+      <hint><p><m>z=it</m>: <m>\int_0^\pi e^{it}i\,dt</m>. Хариу: <m>-2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-12">
+      <statement><p><m>\left|\int_\gamma f\,dz\right|\le\int_\gamma|f|\,|dz|</m> гэж батал.</p></statement>
+      <hint><p><m>\int_\gamma f\,dz=Re^{i\alpha}</m> гэж бичээд <m>R=\re\int e^{-i\alpha}f\,dz</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-13">
+      <statement><p><m>\left|\int_{[0,i]}e^zdz\right|\le1</m> гэж ML-ээр харуул.</p></statement>
+      <hint><p><m>|e^{it}|=1</m>, <m>L=1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-14">
+      <statement><p><m>\oint_{|z|=1}z^n\overline z^mdz</m>, <m>n,m\in\N</m>.</p></statement>
+      <hint><p><m>\overline z=\frac1z</m>. Хариу: <m>m=n+1</m> үед <m>2\pi i</m>, бусад үед <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem08-15">
+      <statement><p><m>\int_\gamma(x^2+iy^2)dz</m>, <m>\gamma</m>: <m>0</m>-ээс <m>1+i</m> хүртэлх хэрчим.</p></statement>
+      <hint><p><m>x=y=t</m>. Хариу: <m>\frac{2i}3</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

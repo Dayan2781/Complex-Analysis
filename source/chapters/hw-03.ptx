@@ -23,5 +23,25 @@
       <statement><p><m>\displaystyle\lim_{z\to0}\frac{\sin|z|}{|z|}\cdot\frac{z^2}{|z|^2}</m> хязгаар оршин байх уу?</p></statement>
       <solution><p>Эхний үржигдэхүүн <m>1</m> рүү тэмүүлнэ. <m>z=re^{i\theta}</m> үед хоёр дахь нь <m>e^{2i\theta}</m> бөгөөд чиглэлээс хамаарна (<m>\theta=0</m> үед <m>1</m>, <m>\theta=\frac\pi4</m> үед <m>i</m>). Иймд хязгаар байхгүй.</p></solution>
     </exercise>
+    <exercise xml:id="hw03-6">
+      <statement><p><m>f(z)=\dfrac{z+1}{z-1}</m>-ийн бодит ба хуурмаг хэсгийг ол.</p></statement>
+      <solution><p><m>\frac{(z+1)(\overline z-1)}{|z-1|^2}=\frac{|z|^2-1+\overline z-z}{|z-1|^2}</m>, <m>\overline z-z=-2iy</m>. Иймд <m>u=\frac{x^2+y^2-1}{(x-1)^2+y^2}</m>, <m>v=\frac{-2y}{(x-1)^2+y^2}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-7">
+      <statement><p><m>w=z^2</m> буулгалтаар <m>\re z&gt;0</m> хагас хавтгай юунд буух вэ?</p></statement>
+      <solution><p><m>\arg z\in(-\frac\pi2,\frac\pi2)</m> тул <m>\arg w\in(-\pi,\pi)</m>, <m>|w|=|z|^2</m> нь <m>(0,\infty)</m>-ийг бүхэлд нь авна. Хариу: <m>\C\setminus(-\infty,0]</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-8">
+      <statement><p><m>\lim_{z\to z_0}f(z)=A</m> байх зайлшгүй ба хүрэлцээтэй нөхцөл нь <m>z_n\to z_0</m> (<m>z_n\ne z_0</m>) дурын дарааллын хувьд <m>f(z_n)\to A</m> байх гэж батал.</p></statement>
+      <solution><p>Зайлшгүй: тодорхойлолтоос шууд. Хүрэлцээтэй: эсрэгээс нь, <m>\exists\varepsilon</m>: <m>\forall n</m> <m>\exists z_n</m>, <m>0&lt;|z_n-z_0|&lt;\frac1n</m>, <m>|f(z_n)-A|\ge\varepsilon</m>. Тэгвэл <m>z_n\to z_0</m> боловч <m>f(z_n)\not\to A</m>: зөрчил.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-9">
+      <statement><p><m>f(z)=\dfrac{z}{|z|}</m>-ийг <m>z=0</m> цэгт тасралтгүйгээр тодорхойлж болох уу?</p></statement>
+      <solution><p>Эерэг бодит тэнхлэгээр <m>1</m>, сөрөг бодит тэнхлэгээр <m>-1</m> рүү тэмүүлэх тул хязгаар байхгүй. Болохгүй.</p></solution>
+    </exercise>
+    <exercise xml:id="hw03-10">
+      <statement><p><m>f(z)=\dfrac1{1-z}</m> нь <m>|z|&lt;1</m> дээр тасралтгүй боловч жигд тасралтгүй биш гэж батал.</p></statement>
+      <solution><p>Тасралтгүй нь рационал функцээс. <m>z_n=1-\frac1n</m>, <m>w_n=1-\frac1{n+1}</m> үед <m>|z_n-w_n|\to0</m>, харин <m>|f(z_n)-f(w_n)|=|n-(n+1)|=1</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

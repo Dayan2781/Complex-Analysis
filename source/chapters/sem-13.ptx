@@ -27,5 +27,41 @@
       <statement><p><m>\displaystyle\oint_{|z|=1}e^{1/z}dz</m>-ийг тооцоол.</p></statement>
       <hint><p><m>e^{1/z}=1+\frac1z+\dots</m> Хариу: <m>2\pi i</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem13-7">
+      <statement><p><m>\frac{e^z}{z^3}</m>-ийн <m>0</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p><m>z^2</m>-ын коэффициент. Хариу: <m>\frac12</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-8">
+      <statement><p><m>\frac1{(z^2+1)^2}</m>-ийн <m>z=i</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p><m>\frac{d}{dz}(z+i)^{-2}\big|_i</m>. Хариу: <m>-\frac i4</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-9">
+      <statement><p><m>\frac{z}{\sin z}</m>-ийн <m>0</m> ба <m>\pi</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p><m>0</m> зайлуулж болох: <m>0</m>. <m>\pi</m>: <m>\frac{\pi}{\cos\pi}=-\pi</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-10">
+      <statement><p><m>z^2e^{1/z}</m>-ийн <m>0</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p><m>z^2\sum\frac{z^{-n}}{n!}</m>, <m>n=3</m>. Хариу: <m>\frac16</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-11">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{e^z}{z(z-1)}dz</m>-ийг тооцоол.</p></statement>
+      <hint><p>Үлдэцүүд <m>-1</m> ба <m>e</m>. Хариу: <m>2\pi i(e-1)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-12">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{dz}{\sin z}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Дотор зөвхөн <m>0</m>, үлдэц <m>1</m>. Хариу: <m>2\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-13">
+      <statement><p><m>\displaystyle\oint_{|z|=4}\frac{dz}{z^2+9}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\pm3i</m> дотор, үлдэцүүд <m>\pm\frac1{6i}</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-14">
+      <statement><p><m>e^{1/z}</m>-ийн <m>\infty</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p><m>\Res_\infty=-c_{-1}</m>. Хариу: <m>-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem13-15">
+      <statement><p><m>\frac{\cot z}{z}</m>-ийн <m>0</m> дахь үлдэцийг ол.</p></statement>
+      <hint><p><m>\cot z=\frac1z-\frac z3-\dots</m> тул <m>\frac{\cot z}z=\frac1{z^2}-\frac13-\dots</m> Хариу: <m>0</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

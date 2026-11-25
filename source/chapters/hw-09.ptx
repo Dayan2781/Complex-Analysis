@@ -23,5 +23,25 @@
       <statement><p><m>\int_\gamma(2z+1)dz</m>-ийг <m>0</m>-ээс <m>1+i</m> хүртэлх дурын замаар тооцоол.</p></statement>
       <solution><p>Эх функц <m>z^2+z</m>: <m>(1+i)^2+(1+i)=2i+1+i=1+3i</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw09-6">
+      <statement><p><m>\displaystyle\int_0^i\sin z\,dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>-\cos z\big|_0^i=1-\cos i=1-\ch1</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-7">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{2z-1}{z^2-z}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>\frac{2z-1}{z(z-1)}=\frac1z+\frac1{z-1}</m>, хоёр цэг дотор: <m>2\pi i+2\pi i=4\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-8">
+      <statement><p><m>\int_\gamma\frac{dz}{1+z^2}</m>-ийг <m>0</m>-ээс <m>1</m> хүртэл <m>|z|&lt;1</m> дугуйд орших замаар тооцоол.</p></statement>
+      <solution><p><m>|z|&lt;1</m> нэг холбоост бөгөөд <m>\pm i</m> хил дээр. Тэнд эх функц <m>\arctan z=\frac1{2i}\ln\frac{1+iz}{1-iz}</m> (гол салбар). Хариу: <m>\arctan1=\frac\pi4</m>, интеграл замаас хамаарахгүй.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-9">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{dz}{z^2+4z+1}</m>-ийг тооцоол.</p></statement>
+      <solution><p>Язгуурууд <m>z_{1,2}=-2\pm\sqrt3</m>; <m>|z_1|=2-\sqrt3&lt;1</m> дотор, <m>z_2</m> гадна. <m>\frac1{(z-z_1)(z-z_2)}=\frac1{z_1-z_2}\left(\frac1{z-z_1}-\frac1{z-z_2}\right)</m> тул <m>\frac{2\pi i}{z_1-z_2}=\frac{2\pi i}{2\sqrt3}=\frac{\pi i}{\sqrt3}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw09-10">
+      <statement><p><m>|a|&lt;R</m> бол <m>\oint_{|z|=R}\frac{dz}{z-a}=2\pi i</m> гэж батал.</p></statement>
+      <solution><p><m>|z-a|=r</m> (<m>r</m> бага) жижиг тойрог авъя. Хоёр тойргийн хоорондох мужид <m>\frac1{z-a}</m> голоморф тул олон холбоост мужийн Кошийн теоремоор интегралууд тэнцүү. Жижиг тойрог дээр <m>z=a+re^{it}</m>: <m>\int_0^{2\pi}i\,dt=2\pi i</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

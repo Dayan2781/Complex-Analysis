@@ -23,5 +23,25 @@
       <statement><p><m>f'(z)=\dfrac{\partial f}{\partial x}=-i\dfrac{\partial f}{\partial y}</m> гэж харуулаад, <m>f(z)=e^{z^2}</m>-ийн уламжлалыг Коши–Риманы нөхцөлөөр биш, гинжин дүрмээр ол.</p></statement>
       <solution><p><m>f'(z)</m>-ийг <m>h\to0</m> бодит ба <m>h=it\to0</m> хуурмаг чиглэлээр хязгаар авбал <m>f'=f_x</m> ба <m>f'=\frac{f_y}{i}=-if_y</m>. Гинжин дүрмээр <m>(e^{z^2})'=2ze^{z^2}</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw05-6">
+      <statement><p><m>f=x^3+i(1-y)^3</m> хаана дифференциалчлагдах вэ? Тэр цэгт <m>f'</m>-г ол.</p></statement>
+      <solution><p><m>u_x=3x^2</m>, <m>v_y=-3(1-y)^2</m>: <m>3x^2=-3(1-y)^2\iff x=0,\ y=1</m>. <m>u_y=0=-v_x</m> үргэлж. Иймд зөвхөн <m>z=i</m> цэгт, <m>f'(i)=u_x+iv_x=0</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-7">
+      <statement><p><m>\sin z</m> нь Коши–Риманы нөхцөлийг хангаж, <m>(\sin z)'=\cos z</m> гэж батал.</p></statement>
+      <solution><p><m>u=\sin x\ch y</m>, <m>v=\cos x\sh y</m>. <m>u_x=\cos x\ch y=v_y</m>; <m>u_y=\sin x\sh y=-v_x</m>. <m>f'=u_x+iv_x=\cos x\ch y-i\sin x\sh y=\cos z</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-8">
+      <statement><p><m>f</m> нь <m>D</m> мужид голоморф бөгөөд зөвхөн бодит утга авдаг бол тогтмол гэж батал.</p></statement>
+      <solution><p><m>v\equiv0</m> тул <m>v_x=v_y=0</m>, Коши–Риманаар <m>u_x=u_y=0</m>. Иймд <m>f'=0</m>, муж холбоост тул тогтмол.</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-9">
+      <statement><p><m>\dfrac{\partial}{\partial\overline z}=\frac12\left(\dfrac{\partial}{\partial x}+i\dfrac{\partial}{\partial y}\right)</m> гэвэл Коши–Риманы нөхцөл <m>\frac{\partial f}{\partial\overline z}=0</m> хэлбэртэй гэж харуулаад, <m>\frac{\partial}{\partial\overline z}(\overline zz^2)</m>-г ол.</p></statement>
+      <solution><p><m>f_x+if_y=(u_x-v_y)+i(v_x+u_y)</m> тул тэг байх нь Коши–Риманы нөхцөл. <m>\frac{\partial z}{\partial\overline z}=0</m>, <m>\frac{\partial\overline z}{\partial\overline z}=1</m> тул <m>\frac{\partial}{\partial\overline z}(\overline zz^2)=z^2</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw05-10">
+      <statement><p>Туйлын Коши–Риманы нөхцөлөөр <m>\sqrt z=\sqrt r\,e^{i\theta/2}</m> (гол салбар) голоморф бөгөөд <m>(\sqrt z)'=\frac1{2\sqrt z}</m> гэж батал.</p></statement>
+      <solution><p><m>u=\sqrt r\cos\frac\theta2</m>, <m>v=\sqrt r\sin\frac\theta2</m>. <m>u_r=\frac{\cos(\theta/2)}{2\sqrt r}=\frac1rv_\theta</m>, <m>v_r=\frac{\sin(\theta/2)}{2\sqrt r}=-\frac1ru_\theta</m>. <m>f'=e^{-i\theta}(u_r+iv_r)=e^{-i\theta}\frac{e^{i\theta/2}}{2\sqrt r}=\frac1{2\sqrt z}</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

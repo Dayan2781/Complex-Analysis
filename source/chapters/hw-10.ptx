@@ -23,5 +23,25 @@
       <statement><p>Максимум модулийн зарчмаар <m>|z^2+z|</m> ба <m>|e^z|</m>-ийн <m>|z|\le1</m> дугуй дээрх хамгийн их утгыг ол.</p></statement>
       <solution><p>Хамгийн их утга хил дээр. <m>|z^2+z|=|z||z+1|\le2</m>, тэнцэл <m>z=1</m> үед: max <m>=2</m>. <m>|e^z|=e^{\re z}\le e</m>, тэнцэл <m>z=1</m> үед: max <m>=e</m>.</p></solution>
     </exercise>
+    <exercise xml:id="hw10-6">
+      <statement><p><m>\displaystyle\oint_{|z|=1}\frac{e^z\sin z}{z^3}dz</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>e^z\sin z=(1+z+\frac{z^2}2+\dots)(z-\frac{z^3}6+\dots)=z+z^2+\frac{z^3}3+\dots</m> тул <m>\frac{f''(0)}{2!}=1</m>. Хариу: <m>2\pi i</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw10-7">
+      <statement><p><m>\displaystyle\oint_{|z|=2}\frac{dz}{(z-1)^2(z+3)}</m>-ийг тооцоол.</p></statement>
+      <solution><p><m>-3</m> гадна. <m>f=\frac1{z+3}</m>, <m>f'(1)=-\frac1{16}</m>. Хариу: <m>2\pi i\cdot(-\frac1{16})=-\frac{\pi i}8</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw10-8">
+      <statement><p><m>f</m> бүхэл ба <m>|f(z)|\ge1</m> бол <m>f</m> тогтмол гэж батал.</p></statement>
+      <solution><p><m>g=\frac1f</m> бүхэл (<m>f\ne0</m>) ба <m>|g|\le1</m>. Лиувиллийн теоремоор <m>g</m>, иймд <m>f</m> тогтмол.</p></solution>
+    </exercise>
+    <exercise xml:id="hw10-9">
+      <statement><p><m>f</m> бүхэл ба <m>f(z+1)=f(z)</m>, <m>f(z+i)=f(z)</m> бол <m>f</m> тогтмол гэж батал.</p></statement>
+      <solution><p><m>f</m>-ийн утгууд бүгд <m>[0,1]\times[0,1]</m> квадрат дээрх утгуудаар илэрхийлэгдэнэ. Квадрат компакт тул <m>|f|</m> тэнд зааглагдсан, иймд <m>\C</m> дээр зааглагдсан. Лиувилл.</p></solution>
+    </exercise>
+    <exercise xml:id="hw10-10">
+      <statement><p><m>|e^{z^2}|</m>-ийн <m>|z|\le1</m> дээрх хамгийн их утгыг ол.</p></statement>
+      <solution><p><m>|e^{z^2}|=e^{\re z^2}=e^{x^2-y^2}</m>. Хил дээр <m>x^2-y^2=\cos2\theta\le1</m>, тэнцэл <m>z=\pm1</m>. Хариу: <m>e</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

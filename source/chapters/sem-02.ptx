@@ -27,5 +27,41 @@
       <statement><p><m>a_n\to\infty</m> (<m>\overline\C</m> дотор) байх зайлшгүй ба хүрэлцээтэй нөхцөл нь Риманы бөмбөлөг дээрх дүрүүд нь <m>N</m> туйл руу нийлэх явдал гэж батал.</p></statement>
       <hint><p><m>1-\zeta=\frac{2}{1+|z|^2}</m> ба <m>\xi^2+\eta^2=1-\zeta^2</m> томьёог ашигла: <m>|a_n|\to\infty\iff\zeta_n\to1</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem02-7">
+      <statement><p><m>\{0&lt;|z|&lt;1\}</m> олонлогийн битүүрэлт ба хилийг ол.</p></statement>
+      <hint><p>Битүүрэлт <m>\{|z|\le1\}</m>; хил <m>\{0\}\cup\{|z|=1\}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-8">
+      <statement><p><m>M=\{\frac1n:n\in\N\}</m> олонлогийн хязгаарын цэгүүдийг ол. <m>M</m> битүү юу?</p></statement>
+      <hint><p>Цорын ганц хязгаарын цэг <m>0\notin M</m> тул битүү биш.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-9">
+      <statement><p>Нээлттэй дугуй гүдгэр, иймд холбоост гэж батал.</p></statement>
+      <hint><p><m>|z|,|w|&lt;r</m> бол <m>|tz+(1-t)w|\le t|z|+(1-t)|w|&lt;r</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-10">
+      <statement><p>Нэгж тойрог ба дээд хагас хавтгай Риманы бөмбөлөг дээр юунд буух вэ?</p></statement>
+      <hint><p><m>|z|=1\iff\zeta=0</m>: экватор. <m>y&gt;0\iff\eta&gt;0</m>: хагас бөмбөлөг.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-11">
+      <statement><p>Хөвчийн зай <m>\rho(1,i)</m>-г ол.</p></statement>
+      <hint><p><m>\rho=\frac{2|1-i|}{\sqrt{2\cdot2}}=\sqrt2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-12">
+      <statement><p><m>\overline\C</m> дотор <m>a_n=ni^n</m> дараалал нийлэх үү?</p></statement>
+      <hint><p><m>|a_n|=n\to\infty</m> тул <m>\overline\C</m> дотор <m>\infty</m> руу нийлнэ (<m>\C</m> дотор нийлэхгүй).</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-13">
+      <statement><p><m>a_n=\dfrac{(1+i)^n}{n!}</m> дарааллын хязгаарыг ол.</p></statement>
+      <hint><p><m>|a_n|=\frac{2^{n/2}}{n!}\to0</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-14">
+      <statement><p><m>\{1&lt;|z|&lt;2\}</m> цагираг холбоост боловч нэг холбоост биш гэж тайлбарла.</p></statement>
+      <hint><p>Дурын хоёр цэгийг нум ба радиусын хэсгээр холбож болно. <m>|z|=\frac32</m> тойргийг цагирагт үлдээж цэг болгон агшааж болохгүй (хил нь хоёр хэсэгтэй).</p></hint>
+    </exercise>
+    <exercise xml:id="sem02-15">
+      <statement><p><m>\{\re z\ne0\}</m> нээлттэй боловч муж биш. Түүнд <m>0</m> цэгийг нэмбэл нээлттэй хэвээр байх уу?</p></statement>
+      <hint><p>Хоёр хагас хавтгайг холбосон зам хуурмаг тэнхлэгийг огтолно. <m>0</m>-ийн аль ч орчинд хуурмаг тэнхлэгийн цэг орох тул нээлттэй биш болно.</p></hint>
+    </exercise>
   </exercises>
 </section>

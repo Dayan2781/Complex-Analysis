@@ -23,5 +23,25 @@
       <statement><p><m>f(z)=\sum_{n\ge1}z^{n!}</m> нь <m>|z|=1</m> тойргоос цааш аналитик үргэлжлэлгүй гэж батал.</p></statement>
       <solution><p><m>\zeta=e^{2\pi ip/q}</m> ба <m>z=r\zeta</m>, <m>0&lt;r&lt;1</m> гэе. <m>n\ge q</m> үед <m>n!</m> нь <m>q</m>-д хуваагдах тул <m>\zeta^{n!}=1</m>. Иймд <m>f(r\zeta)=\sum_{n&lt;q}(r\zeta)^{n!}+\sum_{n\ge q}r^{n!}</m>; эхний нийлбэр зааглагдсан, хоёр дахь нь <m>r\to1-</m> үед <m>\infty</m> руу тэмүүлнэ. Ийм <m>\zeta</m> цэгүүд тойрог дээр нягт тул тойргийн ямар ч нум дээр <m>f</m> голоморфоор үргэлжлэхгүй.</p></solution>
     </exercise>
+    <exercise xml:id="hw15-6">
+      <statement><p><m>\Gamma(s)\Gamma(1-s)=\dfrac{\pi}{\sin\pi s}</m> томьёогоос <m>\Gamma(\frac12)=\sqrt\pi</m> гэж гарга.</p></statement>
+      <solution><p><m>s=\frac12</m>: <m>\Gamma(\frac12)^2=\pi</m>. <m>\Gamma(\frac12)=\int_0^\infty t^{-1/2}e^{-t}dt&gt;0</m> тул <m>\Gamma(\frac12)=\sqrt\pi</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-7">
+      <statement><p><m>\Gamma</m> тэггүй гэж мэдэгдсэн бол <m>\frac1\Gamma</m> бүхэл функц бөгөөд түүний тэгүүд яг <m>0,-1,-2,\dots</m> гэж батал.</p></statement>
+      <solution><p><m>\Gamma</m> мероморф, туйлууд нь <m>0,-1,\dots</m> (энгийн), тэггүй тул <m>\frac1\Gamma</m> нь туйлгүй, өөрөөр хэлбэл бүхэл. Тэгүүд нь яг <m>\Gamma</m>-ийн туйлууд, бүгд энгийн.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-8">
+      <statement><p><m>\zeta(-7)</m>-г ол (<m>B_8=-\frac1{30}</m>).</p></statement>
+      <solution><p><m>\zeta(-7)=(-1)^7\frac{B_8}{8}=\frac{1}{240}</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-9">
+      <statement><p><m>\zeta(\overline s)=\overline{\zeta(s)}</m> (<m>s\ne1</m>) гэж батал.</p></statement>
+      <solution><p><m>g(s)=\overline{\zeta(\overline s)}</m> нь <m>\C\setminus\{1\}</m> дээр голоморф (Лекц 5-ын гэрийн даалгаврыг үз). Бодит <m>s&gt;1</m> дээр <m>\zeta(s)\in\R</m> тул <m>g=\zeta</m>. Ялгамжгүйн теоремоор бүх мужид <m>g\equiv\zeta</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw15-10">
+      <statement><p><m>\lambda(s)=\sum_{n\ \text{сондгой}}n^{-s}=(1-2^{-s})\zeta(s)</m> (<m>\re s&gt;1</m>) гэж батлаад, <m>\lambda</m>-ийн аналитик үргэлжлэлээр <m>\lambda(0)</m> ба <m>\lambda(-1)</m>-ийг ол.</p></statement>
+      <solution><p><m>\zeta(s)-\lambda(s)=\sum(2n)^{-s}=2^{-s}\zeta(s)</m>. Баруун тал <m>\C\setminus\{1\}</m> дээр голоморф тул үргэлжлэл болно. <m>\lambda(0)=0\cdot(-\frac12)=0</m>; <m>\lambda(-1)=(1-2)(-\frac1{12})=\frac1{12}</m>.</p></solution>
+    </exercise>
   </exercises>
 </section>

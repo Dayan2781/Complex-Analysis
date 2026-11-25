@@ -31,5 +31,37 @@
       <statement><p><m>z^2-(3+i)z+4+3i=0</m> тэгшитгэлийг бод.</p></statement>
       <hint><p>Дискриминант <m>D=(3+i)^2-4(4+3i)=-8-6i</m>. <m>\sqrt{D}=a+bi</m> гэж <m>a^2-b^2=-8</m>, <m>ab=-3</m> системийг бод: <m>\sqrt D=\pm(1-3i)</m>. Хариу: <m>z_1=2-i</m>, <m>z_2=1+2i</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem01-8">
+      <statement><p><m>\left(\dfrac{1+i}{1-i}\right)^3</m>-ийн бодит ба хуурмаг хэсгийг ол.</p></statement>
+      <hint><p><m>\frac{1+i}{1-i}=i</m>. Хариу: <m>i^3=-i</m>, бодит хэсэг <m>0</m>, хуурмаг хэсэг <m>-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-9">
+      <statement><p><m>\overline z=z^2</m> тэгшитгэлийг бод.</p></statement>
+      <hint><p>Хоёр талыг <m>z</m>-ээр үржүүлбэл <m>|z|^2=z^3</m>. Иймд <m>z=0</m> эсвэл <m>|z|=1</m> ба <m>z^3=1</m>. Хариу: <m>0,\ 1,\ -\frac12\pm\frac{\sqrt3}2i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-10">
+      <statement><p><m>|z_1z_2|=|z_1||z_2|</m> ба <m>|z_1+z_2|\le|z_1|+|z_2|</m> гэж батал. Тэнцэл хэзээ биелэх вэ?</p></statement>
+      <hint><p><m>|w|^2=w\overline w</m> ба <m>\re w\le|w|</m>-ийг ашигла. Тэнцэл нь <m>z_1\overline{z_2}\ge0</m>, өөрөөр хэлбэл векторууд ижил чиглэлтэй үед.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-11">
+      <statement><p><m>z^6=1</m> тэгшитгэлийн бүх язгуурыг ол. Тэдгээрийн нийлбэр ба үржвэр хэд вэ?</p></statement>
+      <hint><p><m>z_k=e^{2\pi ik/6}</m>. Виетийн теоремоор нийлбэр <m>0</m>, үржвэр <m>(-1)^6\cdot(-1)=-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-12">
+      <statement><p><m>(1+i\sqrt3)^{-6}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>1+i\sqrt3=2e^{i\pi/3}</m>. Хариу: <m>2^{-6}e^{-2\pi i}=\frac1{64}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-13">
+      <statement><p><m>\arg(z-i)=\frac\pi4</m> нөхцөлийг хангах цэгүүдийн олонлогийг зур.</p></statement>
+      <hint><p><m>z-i</m> векторын чиглэл <m>\frac\pi4</m>: <m>i</m> цэгээс гарсан, бодит тэнхлэгтэй <m>45^\circ</m> өнцөг үүсгэх цацраг (<m>i</m> өөрөө орохгүй).</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-14">
+      <statement><p><m>z_1,z_2,z_3</m> цэгүүд зөв гурвалжны оройнууд байх зайлшгүй ба хүрэлцээтэй нөхцөл нь <m>z_1^2+z_2^2+z_3^2=z_1z_2+z_2z_3+z_3z_1</m> гэж батал.</p></statement>
+      <hint><p>Зөв гурвалжин <m>\iff z_3-z_1=e^{\pm i\pi/3}(z_2-z_1)</m>. <m>e^{\pm i\pi/3}</m> нь <m>\omega^2-\omega+1=0</m>-ийн язгуур гэдгийг ашигла.</p></hint>
+    </exercise>
+    <exercise xml:id="sem01-15">
+      <statement><p><m>(a+bi)^2=3+4i</m> байх бодит <m>a,b</m>-г ол.</p></statement>
+      <hint><p><m>a^2-b^2=3</m>, <m>2ab=4</m>, <m>a^2+b^2=|3+4i|=5</m>. Хариу: <m>\pm(2+i)</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

@@ -27,5 +27,41 @@
       <statement><p><m>|z-1|=1</m> тойрог <m>w=1/z</m> буулгалтаар юунд буух вэ?</p></statement>
       <hint><p>Тойрог <m>0</m>-ийг дайрч байгаа тул шулуунд буух. <m>2\mapsto\frac12</m>, <m>1+i\mapsto\frac{1-i}{2}</m>. Хариу: <m>\re w=\frac12</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem07-7">
+      <statement><p><m>|z|&lt;1</m> дугуй <m>w=\dfrac{1+z}{1-z}</m> буулгалтаар юунд буух вэ?</p></statement>
+      <hint><p><m>|z|=1</m> хуурмаг тэнхлэгт, <m>0\mapsto1</m>. Хариу: <m>\re w&gt;0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-8">
+      <statement><p><m>0\mapsto0</m>, <m>1\mapsto\infty</m>, <m>\infty\mapsto-1</m> байх бутархай шугаман буулгалтыг олж, дээд хагас хавтгайг өөрт нь буулгах эсэхийг шалга.</p></statement>
+      <hint><p><m>w=\frac{z}{1-z}</m>. Бодит коэффициенттэй, <m>ad-bc=1&gt;0</m> тул тийм.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-9">
+      <statement><p><m>0&lt;\re z&lt;1</m> зурвас <m>w=1/z</m> буулгалтаар юунд буух вэ?</p></statement>
+      <hint><p><m>\re z&gt;0\mapsto\re w&gt;0</m>; <m>\re z=1\mapsto|w-\frac12|=\frac12</m>. Хариу: <m>\{\re w&gt;0\}\setminus\{|w-\frac12|\le\frac12\}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-10">
+      <statement><p><m>w=\dfrac{2z+1}{z-3}</m>-ийн урвуу буулгалтыг ол.</p></statement>
+      <hint><p><m>z=\frac{3w+1}{w-2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-11">
+      <statement><p>Бутархай шугаман буулгалтуудын давхцуулалт нь матрицын үржвэрт харгалзахыг харуул.</p></statement>
+      <hint><p><m>\frac{az+b}{cz+d}\leftrightarrow\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}</m>-ийг давхцуулан шалга.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-12">
+      <statement><p><m>z_0=2</m> цэгийн <m>|z|=1</m> ба <m>|z-1|=2</m> тойргуудын хувьд тэгш хэмтэй цэгийг ол.</p></statement>
+      <hint><p><m>z^*=a+\frac{R^2}{\overline{z_0-a}}</m>. Хариу: <m>\frac12</m> ба <m>5</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-13">
+      <statement><p><m>0&lt;\arg z&lt;\frac\pi3</m> өнцгийг нэгж дугуйд буулгах буулгалт байгуул.</p></statement>
+      <hint><p><m>\zeta=z^3</m> дээд хагас хавтгайд, дараа нь <m>w=\frac{\zeta-i}{\zeta+i}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-14">
+      <statement><p><m>\{\re z&lt;0,\ 0&lt;\im z&lt;\pi\}</m> хагас зурвас <m>w=e^z</m> буулгалтаар юунд буух вэ?</p></statement>
+      <hint><p><m>|w|=e^x&lt;1</m>, <m>0&lt;\arg w&lt;\pi</m>: дээд хагас дугуй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem07-15">
+      <statement><p>Жуковскийн функц дээд хагас нэгж дугуйг юунд буулгах вэ?</p></statement>
+      <hint><p><m>z=\frac i2\mapsto-\frac{3i}4</m>. Хариу: доод хагас хавтгай.</p></hint>
+    </exercise>
   </exercises>
 </section>

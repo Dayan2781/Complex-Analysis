@@ -27,5 +27,41 @@
       <statement><p><m>u</m> нь <m>D</m>-д гармоник бол <m>g=u_x-iu_y</m> голоморф гэж батал.</p></statement>
       <hint><p><m>g</m>-ийн бодит ба хуурмаг хэсэг <m>U=u_x</m>, <m>V=-u_y</m> дээр Коши–Римааныг шалга: <m>U_x=u_{xx}=-u_{yy}=V_y</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem06-7">
+      <statement><p><m>u=2xy</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <hint><p>Хариу: <m>f=-iz^2+iC</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-8">
+      <statement><p><m>u=\dfrac{x}{x^2+y^2}</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <hint><p>Хариу: <m>f=\frac1z+iC</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-9">
+      <statement><p><m>u=e^{-y}\cos x</m> байх голоморф <m>f</m>-ийг ол.</p></statement>
+      <hint><p>Хариу: <m>f=e^{iz}+iC</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-10">
+      <statement><p><m>u=\ln(x^2+y^2)</m>-ийн хосмог гармоник функцийг ол.</p></statement>
+      <hint><p><m>v=2\arg z</m> (зүсэлттэй мужид), <m>f=2\ln z</m>. <m>\C\setminus\{0\}</m> дээр нэг утгат хосмог байхгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-11">
+      <statement><p><m>u=x^2-y^2+2xy</m> гармоник уу? Тийм бол <m>f</m>-ийг ол.</p></statement>
+      <hint><p>Тийм. <m>f=(1-i)z^2+iC</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-12">
+      <statement><p><m>u=x^3+axy^2</m> гармоник байх <m>a</m>-г ол.</p></statement>
+      <hint><p><m>\Delta u=6x+2ax=0</m>: <m>a=-3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-13">
+      <statement><p><m>w=e^z</m> буулгалтын <m>z_0=1+\frac{i\pi}2</m> цэг дэх сунгалт ба эргэлтийг ол.</p></statement>
+      <hint><p><m>f'(z_0)=e^{z_0}=ie</m>: сунгалт <m>e</m>, эргэлт <m>\frac\pi2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-14">
+      <statement><p><m>w=z^2+2z</m> хаана конформ вэ?</p></statement>
+      <hint><p><m>f'=2z+2\ne0</m>: <m>z\ne-1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem06-15">
+      <statement><p><m>f'\ne0</m> бол <m>u=\text{const}</m> ба <m>v=\text{const}</m> шугамууд перпендикуляр огтлолцоно гэж батал.</p></statement>
+      <hint><p><m>\nabla u\cdot\nabla v=u_xv_x+u_yv_y=0</m> (Коши–Риман).</p></hint>
+    </exercise>
   </exercises>
 </section>

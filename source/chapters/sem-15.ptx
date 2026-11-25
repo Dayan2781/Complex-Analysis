@@ -27,5 +27,41 @@
       <statement><p>Функциональ тэгшитгэл ба <m>\zeta(4)=\frac{\pi^4}{90}</m>-ийг ашиглан <m>\zeta(-3)</m>-ийг ол. Мөн <m>\zeta(-2k)=0</m> (<m>k\in\N</m>) гэж харуул.</p></statement>
       <hint><p><m>s=-3</m>: <m>\sin(-\frac{3\pi}2)=1</m>, <m>\Gamma(4)=6</m>. Хариу <m>\frac1{120}</m> нь өмнөх бодлоготой таарна. <m>s=-2k</m> үед <m>\sin(-k\pi)=0</m>, бусад үржигдэхүүн төгсгөлөг.</p></hint>
     </exercise>
+    <exercise xml:id="sem15-7">
+      <statement><p>Бодит тэнхлэг дээр <m>f(x)=|x|</m> байх бүхэл функц оршин байх уу?</p></statement>
+      <hint><p><m>x&gt;0</m> дээр <m>f=z</m> тул ялгамжгүйн теоремоор <m>f\equiv z</m>, гэтэл <m>x&lt;0</m> дээр <m>-x</m>. Үгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-8">
+      <statement><p><m>F(z)=\int_0^\infty e^{-zt}dt</m> (<m>\re z&gt;0</m>)-ийн аналитик үргэлжлэлийг ол.</p></statement>
+      <hint><p><m>F(z)=\frac1z</m>; <m>\C\setminus\{0\}</m> руу үргэлжилнэ.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-9">
+      <statement><p><m>\sum(-1)^nz^{2n}</m> (<m>|z|&lt;1</m>)-ийн аналитик үргэлжлэлийг ол.</p></statement>
+      <hint><p><m>\frac1{1+z^2}</m>, <m>\C\setminus\{\pm i\}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-10">
+      <statement><p><m>\Gamma(\frac32)</m> ба <m>\Gamma(\frac52)</m>-г ол.</p></statement>
+      <hint><p><m>\Gamma(s+1)=s\Gamma(s)</m>. Хариу: <m>\frac{\sqrt\pi}2</m>, <m>\frac{3\sqrt\pi}4</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-11">
+      <statement><p><m>\Res_{s=-1}\Gamma(s)</m> ба <m>\Res_{s=-2}\Gamma(s)</m>-г ол.</p></statement>
+      <hint><p><m>\frac{(-1)^n}{n!}</m>. Хариу: <m>-1</m> ба <m>\frac12</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-12">
+      <statement><p><m>\re s&gt;1</m> үед <m>\zeta(s)\ne0</m> байхыг Эйлерийн үржвэрээр тайлбарла.</p></statement>
+      <hint><p>Абсолют нийлэх үржвэрийн хүчин зүйл бүр тэг биш.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-13">
+      <statement><p><m>\lim_{s\to1}(1-2^{1-s})\zeta(s)=\eta(1)=\ln2</m> гэдгийг <m>\Res_{s=1}\zeta=1</m>-тэй уялдуул.</p></statement>
+      <hint><p><m>1-2^{1-s}=(s-1)\ln2+O((s-1)^2)</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-14">
+      <statement><p><m>B_2=\frac16</m>-аар <m>\zeta(-1)=-\frac1{12}</m> гэж шалга.</p></statement>
+      <hint><p><m>\zeta(-1)=(-1)^1\frac{B_2}{2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem15-15">
+      <statement><p><m>\zeta(\overline s)=\overline{\zeta(s)}</m> гэж батлаад, тривиал биш тэгүүд <m>\re s=\frac12</m> болон бодит тэнхлэгийн хувьд тэгш хэмтэй гэж дүгнэ.</p></statement>
+      <hint><p>Бодит <m>s&gt;1</m> дээр <m>\zeta</m> бодит; тэгш хэмийн зарчим. Функциональ тэгшитгэлээс <m>s\leftrightarrow1-s</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

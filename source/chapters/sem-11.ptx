@@ -27,5 +27,41 @@
       <statement><p><m>|z|&lt;1</m> дээр голоморф ба (a) <m>f(\frac1n)=f(-\frac1n)=\frac1n</m>; (b) <m>f(\frac1n)=f(-\frac1n)=\frac1{n^2}</m> байх <m>f</m> оршин байх уу?</p></statement>
       <hint><p>Ялгамжгүйн теорем. (a) Эерэг цэгүүдээс <m>f(z)=z</m>, сөрөг цэгүүдээс <m>f(z)=-z</m> гарах ёстой: зөрчил, байхгүй. (b) <m>f(z)=z^2</m>.</p></hint>
     </exercise>
+    <exercise xml:id="sem11-7">
+      <statement><p>Нийлэлтийн радиусыг ол: <m>\sum nz^n</m>, <m>\sum\frac{z^n}{n^n}</m>, <m>\sum2^nz^{3n}</m>.</p></statement>
+      <hint><p>Хариу: <m>1</m>, <m>\infty</m>, <m>2^{-1/3}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-8">
+      <statement><p><m>\sum\frac{(z-i)^n}{n3^n}</m> цувааны нийлэлтийн дугуйг ол.</p></statement>
+      <hint><p>Хариу: <m>|z-i|&lt;3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-9">
+      <statement><p><m>e^z</m>-ийг <m>z_0=1</m> орчимд Тейлорын цуваанд задал.</p></statement>
+      <hint><p><m>e^z=e\cdot e^{z-1}</m>. Хариу: <m>e\sum\frac{(z-1)^n}{n!}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-10">
+      <statement><p><m>\sin z</m>-ийг <m>z_0=\frac\pi2</m> орчимд задал.</p></statement>
+      <hint><p><m>\sin z=\cos(z-\frac\pi2)</m>. Хариу: <m>\sum\frac{(-1)^n(z-\pi/2)^{2n}}{(2n)!}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-11">
+      <statement><p><m>\frac1{1+z^2}</m>-ийг <m>z=0</m> орчимд задал. Бодит <m>x</m>-ийн хувьд функц хаа сайгүй гөлгөр байхад радиус яагаад <m>1</m> вэ?</p></statement>
+      <hint><p><m>\sum(-1)^nz^{2n}</m>. Комплекс онцгой цэгүүд <m>\pm i</m> хүртэлх зай <m>1</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-12">
+      <statement><p><m>\frac1{z^2+4}</m>-ийн <m>z_0=1</m> цэг дэх Тейлорын цувааны радиусыг ол.</p></statement>
+      <hint><p>Хамгийн ойрын онцгой цэг <m>\pm2i</m> хүртэлх зай. Хариу: <m>\sqrt5</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-13">
+      <statement><p><m>\sum\frac{z^n}{n}</m> цуваа <m>z=1</m> ба <m>z=-1</m> цэгт нийлэх үү?</p></statement>
+      <hint><p><m>z=1</m>: гармоник цуваа, сарнина. <m>z=-1</m>: Лейбницийн шинжүүрээр нийлнэ.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-14">
+      <statement><p><m>\sum\frac{z^n}{n^2}</m> цуваа <m>|z|\le1</m> дээр жигд нийлнэ гэж батал.</p></statement>
+      <hint><p>Вейерштрассын M-шинжүүр: <m>|\frac{z^n}{n^2}|\le\frac1{n^2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem11-15">
+      <statement><p><m>\sin(z^2)-z^2</m>-ийн <m>z=0</m> тэгийн эрэмбийг ол.</p></statement>
+      <hint><p><m>\sin w-w=-\frac{w^3}6+\dots</m>, <m>w=z^2</m>. Хариу: <m>6</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

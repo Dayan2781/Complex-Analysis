@@ -27,5 +27,41 @@
       <statement><p><m>\displaystyle\sum_{n=1}^\infty\frac1{n^4}=\frac{\pi^4}{90}</m> гэж батал.</p></statement>
       <hint><p><m>\frac{\pi\cot\pi z}{z^4}</m> ба <m>\pi\cot\pi z=\frac1z-\frac{\pi^2z}3-\frac{\pi^4z^3}{45}-\dots</m> Жорданы леммийн хэсгийн <m>\zeta(2)</m>-ын жишээг давт.</p></hint>
     </exercise>
+    <exercise xml:id="sem14-7">
+      <statement><p><m>\displaystyle\int_0^{2\pi}\frac{dt}{5+4\cos t}</m>-ийг тооцоол.</p></statement>
+      <hint><p><m>\int_0^{2\pi}\frac{dt}{a+b\cos t}=\frac{2\pi}{\sqrt{a^2-b^2}}</m>. Хариу: <m>\frac{2\pi}3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-8">
+      <statement><p><m>\int_0^{2\pi}\sin^2t\,dt</m>-ийг үлдэцээр тооцоол.</p></statement>
+      <hint><p><m>\sin^2t=-\frac14(z-z^{-1})^2</m>. Хариу: <m>\pi</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-9">
+      <statement><p><m>\displaystyle\int_{-\infty}^\infty\frac{dx}{x^2+4}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Хариу: <m>\frac\pi2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-10">
+      <statement><p><m>\displaystyle\int_{-\infty}^\infty\frac{dx}{(x^2+1)(x^2+4)}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Үлдэцүүд <m>\frac1{6i}</m>, <m>-\frac1{12i}</m>. Хариу: <m>\frac\pi6</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-11">
+      <statement><p><m>\displaystyle\int_{-\infty}^\infty\frac{\cos x}{x^2+4}dx</m>-ийг тооцоол.</p></statement>
+      <hint><p>Хариу: <m>\frac{\pi e^{-2}}{2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-12">
+      <statement><p><m>\displaystyle\int_0^\infty\frac{dx}{x^6+1}</m>-ийг тооцоол.</p></statement>
+      <hint><p>Дээд хагас хавтгайн <m>3</m> туйл, эсвэл <m>\frac{2\pi}{6}</m> өнцөгт секторын контур. Хариу: <m>\frac\pi3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-13">
+      <statement><p><m>a&gt;0</m> үед <m>\displaystyle\int_{-\infty}^\infty\frac{e^{iax}}{x^2+1}dx</m>-ийг тооцоол.</p></statement>
+      <hint><p>Жорданы лемм. Хариу: <m>\pi e^{-a}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-14">
+      <statement><p><m>\mathrm{v.p.}\displaystyle\int_{-\infty}^\infty\frac{e^{ix}}{x}dx</m>-ийг ол.</p></statement>
+      <hint><p>Жорданы леммийн хэсгийн Дирихлегийн интегралыг үз. Хариу: <m>\pi i</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem14-15">
+      <statement><p><m>\displaystyle\int_0^\infty\frac{\sin^2x}{x^2}dx=\frac\pi2</m> гэж батал.</p></statement>
+      <hint><p><m>\frac{1-e^{2iz}}{z^2}</m> функц ба <m>0</m>-ийг тойрсон жижиг хагас тойрог; <m>\re(1-e^{2ix})=2\sin^2x</m>.</p></hint>
+    </exercise>
   </exercises>
 </section>

@@ -27,5 +27,41 @@
       <statement><p><m>f(z)=\dfrac1z</m> функц <m>0&lt;|z|&lt;1</m> дээр жигд тасралтгүй юу? <m>|z|&gt;1</m> дээр яах вэ?</p></statement>
       <hint><p><m>z_n=\frac1n</m>, <m>w_n=\frac1{n+1}</m> үед <m>|z_n-w_n|\to0</m> боловч <m>|f(z_n)-f(w_n)|=1</m>: жигд тасралтгүй биш. <m>|z|,|w|&gt;1</m> үед <m>\bigl|\frac1z-\frac1w\bigr|=\frac{|z-w|}{|z||w|}\le|z-w|</m>: жигд тасралтгүй.</p></hint>
     </exercise>
+    <exercise xml:id="sem03-7">
+      <statement><p><m>w=1/z</m> буулгалтаар <m>y=1</m> шулуун юунд буух вэ?</p></statement>
+      <hint><p><m>w=\frac{x-i}{x^2+1}</m>. Хариу: <m>|w+\frac i2|=\frac12</m> тойрог (<m>0</m>-ээс бусад).</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-8">
+      <statement><p><m>w=2z+i</m> буулгалтаар <m>|z|&lt;1</m> дугуй юунд буух вэ?</p></statement>
+      <hint><p>Сунгалт <m>2</m> ба шилжүүлэлт: <m>|w-i|&lt;2</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-9">
+      <statement><p><m>f(z)=\dfrac{z}{\overline z}</m>-ийн бодит ба хуурмаг хэсгийг ол.</p></statement>
+      <hint><p><m>\frac z{\overline z}=\frac{z^2}{|z|^2}</m>: <m>u=\frac{x^2-y^2}{x^2+y^2}</m>, <m>v=\frac{2xy}{x^2+y^2}</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-10">
+      <statement><p><m>\displaystyle\lim_{z\to1}\frac{z^3-1}{z-1}</m>-ийг ол.</p></statement>
+      <hint><p><m>z^3-1=(z-1)(z^2+z+1)</m>. Хариу: <m>3</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-11">
+      <statement><p><m>\overline\C</m> дотор <m>\displaystyle\lim_{z\to\infty}\frac{z^2+1}{z}</m>-г ол.</p></statement>
+      <hint><p><m>\bigl|\frac{z^2+1}{z}\bigr|\ge|z|-\frac1{|z|}\to\infty</m>. Хариу: <m>\infty</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-12">
+      <statement><p>Аргументын гол утга <m>\arg z\in(-\pi,\pi]</m> сөрөг бодит хагас тэнхлэг дээр тасралттай гэж харуул.</p></statement>
+      <hint><p><m>z=-1</m> рүү дээрээс ойртоход <m>\arg z\to\pi</m>, доороос ойртоход <m>-\pi</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-13">
+      <statement><p>Олон гишүүнт хаа сайгүй, рационал функц хуваарь нь тэг биш цэгүүдэд тасралтгүй гэж батал.</p></statement>
+      <hint><p><m>z</m> ба тогтмол тасралтгүй; нийлбэр, үржвэр, ноогдвор (хуваарь <m>\ne0</m>) тасралтгүй.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-14">
+      <statement><p><m>\displaystyle\lim_{z\to0}\frac{\overline z^2}{z}</m> оршин байх уу?</p></statement>
+      <hint><p><m>\bigl|\frac{\overline z^2}{z}\bigr|=|z|\to0</m>. Хариу: <m>0</m>.</p></hint>
+    </exercise>
+    <exercise xml:id="sem03-15">
+      <statement><p><m>|z^2+1|</m>-ийн <m>|z|\le1</m> дээрх хамгийн их утгыг ол.</p></statement>
+      <hint><p>Вейерштрассын теоремоор хамгийн их утга оршино. <m>|z^2+1|\le|z|^2+1\le2</m>, тэнцэл <m>z=\pm1</m> үед.</p></hint>
+    </exercise>
   </exercises>
 </section>

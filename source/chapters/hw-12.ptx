@@ -23,5 +23,25 @@
       <statement><p><m>e^{1/z}</m> функц <m>z=0</m>-ийн дурын цоорхойт орчинд тэгээс бусад аливаа <m>w</m> утгыг (төгсгөлгүй олон удаа) авдаг гэж батал.</p></statement>
       <solution><p><m>e^{1/z}=w</m> <m>\iff\frac1z=\ln|w|+i(\arg w+2k\pi)</m>. Иймд <m>z_k=\frac{1}{\ln|w|+i(\arg w+2k\pi)}</m> бөгөөд <m>k\to\infty</m> үед <m>z_k\to0</m>. Аливаа орчинд эдгээрийн төгсгөлгүй олон нь орно.</p></solution>
     </exercise>
+    <exercise xml:id="hw12-6">
+      <statement><p><m>\frac1{z^2(1-z)}</m>-ийг <m>0&lt;|z|&lt;1</m> мужид Лораны цуваанд задал.</p></statement>
+      <solution><p><m>\frac1{z^2}\sum_{n\ge0}z^n=\sum_{n\ge-2}z^n</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="hw12-7">
+      <statement><p><m>\cos\frac1z</m>-ийн Лораны цувааг олж, <m>0</m> цэгийг ангил.</p></statement>
+      <solution><p><m>\cos\frac1z=\sum_{n\ge0}\frac{(-1)^nz^{-2n}}{(2n)!}</m>. Үндсэн хэсэг төгсгөлгүй тул нэн онцгой.</p></solution>
+    </exercise>
+    <exercise xml:id="hw12-8">
+      <statement><p><m>\frac1{(z-1)(z-2)}</m>-ийг <m>|z|&gt;2</m> мужид задал.</p></statement>
+      <solution><p><m>\frac1{z-2}=\sum_{n\ge1}2^{n-1}z^{-n}</m>, <m>\frac1{z-1}=\sum_{n\ge1}z^{-n}</m>. Ялгавар: <m>\sum_{n\ge1}(2^{n-1}-1)z^{-n}=\frac1{z^2}+\frac3{z^3}+\frac7{z^4}+\dots</m></p></solution>
+    </exercise>
+    <exercise xml:id="hw12-9">
+      <statement><p><m>z_0</m> нь <m>f</m>-ийн <m>m</m>-р эрэмбийн туйл байх зайлшгүй ба хүрэлцээтэй нөхцөл нь <m>f=\frac{g}{(z-z_0)^m}</m>, <m>g</m> голоморф, <m>g(z_0)\ne0</m> гэж батал.</p></statement>
+      <solution><p>Лораны цуваа <m>f=\sum_{n\ge-m}c_n(z-z_0)^n</m>, <m>c_{-m}\ne0</m> бол <m>g=\sum_{n\ge-m}c_n(z-z_0)^{n+m}</m> голоморф, <m>g(z_0)=c_{-m}\ne0</m>. Эсрэгээр <m>g</m>-ийн Тейлорын цувааг <m>(z-z_0)^m</m>-д хуваавал Лораны цуваа гарна.</p></solution>
+    </exercise>
+    <exercise xml:id="hw12-10">
+      <statement><p><m>f=\frac1{e^z-1}-\frac1z</m>-ийн бүх онцгой цэгийг (<m>\infty</m>-г оролцуулан) ангил.</p></statement>
+      <solution><p><m>\frac1{e^z-1}=\frac1z-\frac12+\frac z{12}-\dots</m> тул <m>z=0</m> зайлуулж болох (<m>f(0)=-\frac12</m>). <m>z=2\pi ik</m> (<m>k\ne0</m>): <m>\frac1{e^z-1}</m>-ийн энгийн туйл, <m>\frac1z</m> тэнд голоморф тул энгийн туйл. <m>\infty</m> нь туйлуудын хязгаарын цэг тул тусгаарлагдсан биш.</p></solution>
+    </exercise>
   </exercises>
 </section>
