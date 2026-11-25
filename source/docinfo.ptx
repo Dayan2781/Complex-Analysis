@@ -18,7 +18,6 @@
     \newcommand{\Res}{\operatorname{Res}}
     \newcommand{\ch}{\operatorname{ch}}
     \newcommand{\sh}{\operatorname{sh}}
-    \newcommand{\th}{\operatorname{th}}
     \newcommand{\bint}{\displaystyle\int}
     \newcommand{\ml}[1]{\mathcal{L}\{#1\}}
     \newcommand{\undertilde}[1]{\underset{\sim}{#1}}
