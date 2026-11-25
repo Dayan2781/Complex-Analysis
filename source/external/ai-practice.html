@@ -117,50 +117,108 @@ document.querySelectorAll('#levels .level').forEach(b => b.onclick = () => {
 
 const SYSTEM = `Та Монгол Улсын Их Сургуулийн MATH311 "Комплекс анализ" (бакалавр) хичээлийн бодлого зохиогч багш.
 ДҮРЭМ:
-(1) Зөвхөн нэг JSON объект буцаа. Өөр текст, тайлбар, \`\`\` тэмдэг бүү бич.
-(2) Бүх текст монгол хэлээр. Математик томьёог LaTeX-ээр \\( ... \\) дотор бич. JSON мөр доторх backslash-ийг давхарлаж бич: жишээ нь "\\\\(e^{i\\\\pi}=-1\\\\)".
-(3) JSON утгад шинэ мөр бүү оруул.
-(4) Бодлого нь заасан лекцийн агуулгаас хэтрэхгүй, бакалаврын түвшинд, нэг утгатай байх.
-(5) Хариугаа өгөхөөсөө өмнө бодолтоо дотроо алхам алхмаар шалга; буруу эсвэл хоёрдмол утгатай бодлого бүү гарга.`;
+(1) Хариугаа ЗӨВХӨН доор заасан ### гарчигтай хэсгүүдээр бич. Өөр оршил, тайлбар, JSON, \`\`\` тэмдэг бүү бич.
+(2) Бүх текст монгол хэлээр. Математик томьёог LaTeX-ээр \\( ... \\) дотор бич (жишээ нь \\(e^{i\\pi}=-1\\)). Backslash-ийг давхарлах шаардлагагүй.
+(3) Бодлого нь заасан лекцийн агуулгаас хэтрэхгүй, бакалаврын түвшинд, нэг утгатай байх.
+(4) Хариугаа өгөхөөсөө өмнө бодолтоо шалга; буруу эсвэл хоёрдмол утгатай бодлого бүү гарга.
+(5) Бодолтыг товч, гэхдээ бүрэн бич (ихдээ 10 өгүүлбэр).`;
 
 function prompt() {
   const avoid = history.length ? ` Өмнө нь гарсан дараах бодлогуудаас ялгаатай бай: ${history.slice(-4).join(' | ')}.` : '';
   const ctx = `Лекц: "${LECTURE}". Сэдэв: "${topic}".`;
   if (level === 'easy') {
-    return `${ctx} Хөнгөн түвшний ЗӨВ/БУРУУ асуулт үүсгэ: лекцийн тодорхойлолт, теорем, чанарын тухай нэг өгүүлбэр. Өгүүлбэр нь ойлголтыг шалгахуйц байх (заримдаа нөхцөлийг нь өөрчилж худал болго, заримдаа үнэн үлдээ).${avoid}
-JSON: {"statement":"шалгах өгүүлбэр","answer":"зөв" эсвэл "буруу","explanation":"яагаад зөв/буруу болох 1-3 өгүүлбэр; буруу бол сөрөг жишээ эсвэл зөв хувилбарыг заа"}`;
+    return `${ctx} Хөнгөн түвшний ЗӨВ/БУРУУ асуулт үүсгэ: лекцийн тодорхойлолт, теорем, чанарын тухай нэг өгүүлбэр. Заримдаа нөхцөлийг өөрчилж худал болго, заримдаа үнэн үлдээ.${avoid}
+Яг ийм хэлбэрээр бич:
+###STATEMENT
+шалгах өгүүлбэр
+###ANSWER
+зөв (эсвэл буруу)
+###EXPLANATION
+яагаад зөв/буруу болох тайлбар; буруу бол сөрөг жишээ эсвэл зөв хувилбарыг заа`;
   }
   if (level === 'medium') {
-    return `${ctx} Дунд түвшний ТООЦООЛОХ бодлого үүсгэ (утга, хязгаар, уламжлал, интеграл, үлдэц, цуваа, нийлэлтийн радиус гэх мэт тухайн сэдэвт тохирох). 4 сонголт (A, B, C, D), зөвхөн нэг нь зөв; бусад нь түгээмэл алдаанаас гарах хариу. Эхлээд бодолтоо бич, дараа нь хариугаа.${avoid}
-JSON: {"problem":"бодлогын текст","solution":"алхам алхмаар бодолт","choices":{"A":"...","B":"...","C":"...","D":"..."},"answer":"A|B|C|D"}`;
+    return `${ctx} Дунд түвшний ТООЦООЛОХ бодлого үүсгэ (утга, хязгаар, уламжлал, интеграл, үлдэц, цуваа, нийлэлтийн радиус гэх мэт тухайн сэдэвт тохирох). 4 сонголт, зөвхөн нэг нь зөв; бусад нь түгээмэл алдаанаас гарах хариу. Эхлээд бодолтоо бич, дараа нь сонголтуудаа.${avoid}
+Яг ийм хэлбэрээр бич:
+###PROBLEM
+бодлогын текст
+###SOLUTION
+алхам алхмаар бодолт
+###A
+сонголт
+###B
+сонголт
+###C
+сонголт
+###D
+сонголт
+###ANSWER
+зөв сонголтын үсэг (A, B, C эсвэл D)`;
   }
   return `${ctx} Хүнд түвшний бодлого үүсгэ: БАТЛАХ (теорем, чанар, тэнцэтгэл биш) эсвэл ЖИШЭЭ/СӨРӨГ ЖИШЭЭ БАЙГУУЛАХ бодлого. Бакалаврын оюутан 15-30 минутад бодохуйц байх.${avoid}
-JSON: {"problem":"бодлогын текст","hint":"гол санааг заасан 1-3 өгүүлбэр заавар (бодолтыг бүрэн бүү хэл)","solution":"бүрэн, алхам алхмаар баталгаа эсвэл бодолт"}`;
+Яг ийм хэлбэрээр бич:
+###PROBLEM
+бодлогын текст
+###HINT
+гол санааг заасан 1-3 өгүүлбэр (бодолтыг бүрэн бүү хэл)
+###SOLUTION
+бүрэн, алхам алхмаар баталгаа эсвэл бодолт`;
 }
 
 async function callClaude(userText) {
-  const res = await fetch(API, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ model: MODEL, max_tokens: 2000, system: SYSTEM,
-                           messages: [{ role: 'user', content: userText }] })
-  });
-  if (!res.ok) throw new Error('Сервер ' + res.status + ' алдаа буцаалаа');
-  const data = await res.json();
-  return data.content[0].text;
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 90000);
+  let res;
+  try {
+    res = await fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal: ctrl.signal,
+      body: JSON.stringify({ model: MODEL, max_tokens: 2000, system: SYSTEM,
+                             messages: [{ role: 'user', content: userText }] })
+    });
+  } catch (e) {
+    throw new Error(e.name === 'AbortError' ? 'хариу удаан ирлээ' : 'сүлжээний алдаа');
+  } finally { clearTimeout(timer); }
+  const data = await res.json().catch(() => null);
+  if (!res.ok || !data || !data.content) {
+    const msg = data && data.error ? (data.error.message || JSON.stringify(data.error)) : res.status;
+    throw new Error('сервер: ' + msg);
+  }
+  return data.content.map(c => c.text || '').join('');
 }
 
-// LaTeX-ийн ганц "\" тэмдгийг JSON-д тохирох "\\" болгоно (аль хэдийн давхар бол хөндөхгүй).
-function parseJSON(text) {
-  let s = (text.match(/\{[\s\S]*\}/) || [null])[0];
-  if (!s) throw new Error('JSON олдсонгүй');
-  s = s.replace(/[\r\n]+/g, ' ');
-  const fixed = s.replace(/\\\\|\\(?!")/g, m => (m === '\\\\' ? m : '\\\\'));
-  try { return JSON.parse(fixed); } catch (e) { return JSON.parse(s); }
+// ###KEY гарчигтай хэсгүүдийг задлах (JSON биш тул LaTeX-ийн backslash асуудалгүй).
+function parseSections(text) {
+  const out = {};
+  const re = /^\s*#{2,}\s*([A-Za-z]+)\s*:?\s*$/gm;
+  const marks = [];
+  let m;
+  while ((m = re.exec(text))) marks.push({ key: m[1].toLowerCase(), start: m.index, end: re.lastIndex });
+  marks.forEach((mk, i) => {
+    out[mk.key] = text.slice(mk.end, i + 1 < marks.length ? marks[i + 1].start : text.length).trim();
+  });
+  return out;
+}
+
+function buildQuestion(text) {
+  const s = parseSections(text);
+  if (level === 'easy') {
+    if (!s.statement || !s.answer) throw new Error('хариу бүрэн биш');
+    const a = s.answer.toLowerCase().includes('буруу') ? 'буруу' : 'зөв';
+    return { statement: s.statement, answer: a, explanation: s.explanation || '' };
+  }
+  if (level === 'medium') {
+    const ans = (s.answer || '').toUpperCase().match(/[ABCD]/);
+    if (!s.problem || !s.a || !s.b || !s.c || !s.d || !ans) throw new Error('хариу бүрэн биш');
+    return { problem: s.problem, solution: s.solution || '', answer: ans[0],
+             choices: { A: s.a, B: s.b, C: s.c, D: s.d } };
+  }
+  if (!s.problem || !s.solution) throw new Error('хариу бүрэн биш');
+  return { problem: s.problem, hint: s.hint || '', solution: s.solution };
 }
 
 function esc(s) {
-  return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
 }
 function typeset(el) {
   if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([el]).catch(() => {});
@@ -183,7 +241,7 @@ async function generate() {
   try {
     let q = null;
     for (let k = 0; k < 2 && !q; k++) {
-      try { q = parseJSON(await callClaude(prompt())); } catch (e) { if (k === 1) throw e; }
+      try { q = buildQuestion(await callClaude(prompt())); } catch (e) { if (k === 1) throw e; }
     }
     currentQ = q;
     currentQ.level = level;
